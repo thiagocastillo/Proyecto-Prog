@@ -7,7 +7,7 @@ public class Mapa
 
     public Mapa(int ancho, int alto)
     {
-        Ancho = ancho;
-        Alto = alto;
+        Ancho = 100;
+        Alto = 100;
     }
 }

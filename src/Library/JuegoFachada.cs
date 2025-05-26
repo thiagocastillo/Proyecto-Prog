@@ -8,9 +8,9 @@ public class JuegoFachada
     private Partida? _partidaActual;
     private List<Civilizacion> _civilizacionesDisponibles = new List<Civilizacion>()
     {
-        new Civilizacion("Armenios", new List<string> { "Infantería +10 vida" }, "Arquero Compuesto"),
+        new Civilizacion("Armenios", new List<string> { "Infantería +10 vida", "Arqueros +10 ataque" }, "Arquero Compuesto"),
         new Civilizacion("Aztecas", new List<string> { "Aldeanos cargan +3 recursos", "Unidades militares +10% velocidad de creación" }, "Guerrero Jaguar"),
-        new Civilizacion("Bengalíes", new List<string> { "Al construir CC, +1 aldeano" }, "Ratha")
+        new Civilizacion("Bengalíes", new List<string> { "Al construir CC, +1 aldeano", "Caballeria +10 velocidad" }, "Ratha")
     };
 
     public void CrearNuevaPartida(int tamañoMapa, int cantidadJugadores)

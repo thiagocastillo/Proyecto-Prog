@@ -10,8 +10,13 @@ public class Partida
         Mapa = new Mapa(tamañoMapa, tamañoMapa);
     }
 
-    public void AgregarJugador(Jugador jugador)
+    public string AgregarJugador(Jugador jugador)
     {
         Jugadores.Add(jugador);
+        if (Jugadores.Count != 2)
+        {
+           return "solo se permiten dos jugadores";
+            }
+        return "Jugador agregado correctamente";
     }
 }

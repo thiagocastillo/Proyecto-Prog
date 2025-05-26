@@ -23,8 +23,8 @@ public class Program
         string jugador1Nombre = "Juancito";
         string jugador2Nombre = "Roberto";
 
-        juego.AgregarJugadorAPartida(jugador1Nombre, "Armenios");
-        juego.AgregarJugadorAPartida(jugador2Nombre, "Aztecas");
+        juego.AgregarJugadorAPartida("Juancito", "Armenios");
+        juego.AgregarJugadorAPartida("Roberto", "Aztecas");
 
         Console.WriteLine($"\nJugador {jugador1Nombre} se unió como Armenios.");
         Console.WriteLine($"Jugador {jugador2Nombre} se unió como Aztecas.");
