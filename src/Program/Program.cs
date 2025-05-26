@@ -20,8 +20,8 @@ public class Program
         }
 
         // Agregar jugadores y seleccionar civilizaciones
-        string jugador1Nombre = "Alice";
-        string jugador2Nombre = "Bob";
+        string jugador1Nombre = "Juancito";
+        string jugador2Nombre = "Roberto";
 
         juego.AgregarJugadorAPartida(jugador1Nombre, "Armenios");
         juego.AgregarJugadorAPartida(jugador2Nombre, "Aztecas");
