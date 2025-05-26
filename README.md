@@ -183,7 +183,6 @@ Criterios de aceptación:
 Criterios de aceptación:
 * Los comandos deben seguir una estructura consistente (verbo + objeto + parámetros)
 * Proporcionar ayuda y ejemplos de comandos
-* Ofrecer autocompletado o sugerencias
 
 15.	Como jugador, quiero ver un mapa simplificado del juego en ASCII, para visualizar la disposición del terreno y unidades.
 
