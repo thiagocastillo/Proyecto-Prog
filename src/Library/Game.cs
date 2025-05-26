@@ -13,7 +13,12 @@ public class Game
         CurrentPlayerIndex = 0;
     }
 
-    public void StartGame();
+    public void StartGame(string[] playerNames, string[] civilizations);
+    public string ExcecuteCommand(string command);
+    public string GetMap();
+    
     public void PlayTurn();
     public bool IsGameOver();
+    
+    
 }
