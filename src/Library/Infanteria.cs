@@ -32,4 +32,4 @@ public class Infanteria : IUnidadMilitar
         int daño = ataqueFinal - objetivo.Defensa;
         // Registrar daño
     }
-}x
+}
