@@ -1,4 +1,4 @@
-namespace Library;
+namespace DefaultNamespace;
 
 public interface IUnidad
 {

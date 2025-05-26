@@ -1,9 +1,10 @@
 namespace DefaultNamespace;
 
+
 public class Arquero : IUnidadMilitar
 {
     public Jugador Propietario { get; private set; }
-    public int Ataque { get; private set; } = 8;
+    public int Ataque { get; set; } = 8; // Añadimos 'set;'
     public int Defensa { get; private set; } = 3;
     public double Velocidad { get; private set; } = 1.2;
     public Point Posicion { get; set; }

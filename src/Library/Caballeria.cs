@@ -1,7 +1,6 @@
 namespace DefaultNamespace;
 
-public class Caballeria
-{
+
     public class Caballeria : IUnidadMilitar
     {
         public Jugador Propietario { get; private set; }
@@ -26,4 +25,3 @@ public class Caballeria
             // Registrar daño
         }
     }
-}

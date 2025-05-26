@@ -1,9 +1,11 @@
 namespace DefaultNamespace;
 
-public class ArqueroCompuesto : Arquero, IUnidadMilitar // Implementa la interfaz aunque herede de una que ya lo hace
+public class ArqueroCompuesto : Arquero, IUnidadMilitar
 {
     public ArqueroCompuesto(Jugador propietario) : base(propietario)
     {
-        Ataque += 2; // La bonificación ya se aplica en el constructor base de Arquero
+        // La bonificación de ataque para el Arquero Compuesto (armenio) ya se aplica
+        // en el constructor de la clase Arquero si la civilización es la correcta.
+        // No necesitamos modificar Ataque aquí directamente.
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+namespace DefaultNamespace;
 
 public class Program
 {
