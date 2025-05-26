@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DefaultNamespace;
+namespace Library;
 
 public class Program
 {

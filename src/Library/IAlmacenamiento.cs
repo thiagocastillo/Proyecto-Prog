@@ -1,4 +1,4 @@
-namespace DefaultNamespace;
+namespace Library;
 
 public interface IAlmacenamiento : IEdificio
 {

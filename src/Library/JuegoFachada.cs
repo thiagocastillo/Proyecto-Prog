@@ -1,4 +1,4 @@
-namespace DefaultNamespace;
+namespace Library;
 
 using System.Collections.Generic;
 using System.Linq;
