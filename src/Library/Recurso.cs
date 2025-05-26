@@ -1,0 +1,20 @@
+namespace DefaultNamespace;
+
+
+public class Recurso
+{
+    public enum TipoRecurso
+    {
+        Madera,
+        Alimento,
+        Oro,
+        Piedra
+    }
+
+    public TipoRecurso Tipo { get; private set; }
+
+    public Recurso(TipoRecurso tipo)
+    {
+        Tipo = tipo;
+    }
+}
