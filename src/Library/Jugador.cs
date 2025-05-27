@@ -47,4 +47,11 @@ public class Jugador
         Unidades.Add(unidad);
         PoblacionActual++;
     }
+    
+    public bool PuedeCrearAldeano()
+    {
+        int cantidadCentroCivico = Edificios.Count(e => e is CentroCivico);
+        int aldeanosActuales = Aldeanos.Count;
+        return cantidadCentroCivico > 0 && aldeanosActuales < 10;
+    }
 }

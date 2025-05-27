@@ -147,12 +147,19 @@ public class JuegoFachada
                 switch (tipoUnidad.ToLower())
                 {
                     case "aldeano":
-                        if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 50)
+                        if (jugador.PuedeCrearAldeano() && jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 50)
                         {
-                            nuevaUnidad = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
+                            var nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
+                            jugador.Aldeanos.Add(nuevoAldeano);
+                            jugador.Unidades.Add(nuevoAldeano);
+                            //nuevaUnidad = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };  
+                            //LA LINEA DE ARRIBA NOS PUEDE CAGAR SI EL JUGADOR NO LLEGA A TENER CENTRO CIVICO X ALGUNA RAZON
+                            //LO PODEMOS VER DE HACER IGUAL, PENSAMOS OTRA MANERA, LO VEMOS!
                             jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 50;
+                            jugador.PoblacionActual++;
                         }
                         break;
+                    
                     case "infanteria":
                         if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 60)
                         {
