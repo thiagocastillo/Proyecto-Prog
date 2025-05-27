@@ -49,13 +49,16 @@ public class JuegoFachada
         }
     }
 
-    public Dictionary<Recurso.TipoRecurso, int> ObtenerRecursosJugador(string nombreJugador)
+    //public Dictionary<Recurso.TipoRecurso, int> ObtenerRecursosJugador(string nombreJugador)
+    public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        return jugador?.Recursos ?? new Dictionary<Recurso.TipoRecurso, int>();
+        //return jugador?.Recursos ?? new Dictionary<Recurso.TipoRecurso, int>();
+        return jugador?.Recursos ?? new Dictionary<string, int>();
     }
 
-    public void OrdenarRecolectar(string nombreJugador, int idAldeano, Recurso.TipoRecurso tipoRecurso)
+    //public void OrdenarRecolectar(string nombreJugador, int idAldeano, Recurso.TipoRecurso tipoRecurso)
+    public void OrdenarRecolectar(string nombreJugador, int idAldeano, ITipoRecurso tipoRecurso)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var aldeano = jugador?.Aldeanos.ElementAtOrDefault(idAldeano);
@@ -74,56 +77,79 @@ public class JuegoFachada
             switch (tipoEdificio.ToLower())
             {
                 case "casa":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 50)
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 50)
+                    if (jugador.Recursos["Madera"] >= 50)
                     {
                         nuevoEdificio = new Casa(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 50;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 50;
+                        jugador.Recursos["Madera"] -= 50;
                     }
                     break;
                 case "cuartel":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 100)
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 100)
+                    if(jugador.Recursos["Madera"] >= 100)
                     {
                         nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 100;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 100;
+                        jugador.Recursos["Madera"] -= 100;
                     }
                     break;
+                
                 case "molino":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 75)
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 75)
+                    if (jugador.Recursos["Madera"] >= 75)
                     {
                         nuevoEdificio = new Molino(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 75;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 75;
+                        jugador.Recursos["Madera"] -= 75;
                     }
                     break;
+                
                 case "depositomadera":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                    
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                    if (jugador.Recursos["Madera"] >= 60)
                     {
                         nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                        jugador.Recursos["Madera"] -= 60;
                     }
                     break;
+                
                 case "depositooro":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                    if (jugador.Recursos["Madera"] >= 60)
                     {
                         nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                        jugador.Recursos["Madera"] -= 60;
                     }
                     break;
+                
                 case "depositopiedra":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                    
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                    if (jugador.Recursos["Madera"] >= 60)
                     {
                         nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                        jugador.Recursos["Madera"] -= 60;
                     }
                     break;
+                
                 case "centroCivico":
-                    if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 200)
+                    
+                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 200)
+                    if (jugador.Recursos["Madera"] >= 200)
                     {
                         nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
-                        jugador.Recursos[Recurso.TipoRecurso.Madera] -= 200;
+                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 200;
+                        jugador.Recursos["Madera"] -= 200;
                     }
                     break;
                 // Añadir más casos para otros edificios
             }
+            
             if (nuevoEdificio != null)
             {
                 jugador.AgregarEdificio(nuevoEdificio);
@@ -147,7 +173,8 @@ public class JuegoFachada
                 switch (tipoUnidad.ToLower())
                 {
                     case "aldeano":
-                        if (jugador.PuedeCrearAldeano() && jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 50)
+                        //if (jugador.PuedeCrearAldeano() && jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 50)
+                        if(jugador.PuedeCrearAldeano() && jugador.Recursos["Alimento"] >= 50)
                         {
                             var nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
                             jugador.Aldeanos.Add(nuevoAldeano);
@@ -155,43 +182,54 @@ public class JuegoFachada
                             //nuevaUnidad = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };  
                             //LA LINEA DE ARRIBA NOS PUEDE CAGAR SI EL JUGADOR NO LLEGA A TENER CENTRO CIVICO X ALGUNA RAZON
                             //LO PODEMOS VER DE HACER IGUAL, PENSAMOS OTRA MANERA, LO VEMOS!
-                            jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 50;
+                            jugador.Recursos["Alimento"] -= 50;
                             jugador.PoblacionActual++;
                         }
                         break;
                     
                     case "infanteria":
-                        if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 60)
+                        
+                        //if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 60)
+                        if (jugador.Recursos["Alimento"] >= 60)
                         {
                             nuevaUnidad = new Infanteria(jugador) { Posicion = cuartel.Posicion };
                             if (jugador.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
                             {
                                 nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = cuartel.Posicion };
                             }
-                            jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 60;
+                            //jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 60;
+                            jugador.Recursos["Alimento"] -= 60;
                         }
                         break;
+                    
                     case "arquero":
-                        if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 70)
+                       
+                        //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 70)
+                        if (jugador.Recursos["Madera"] >= 70)
                         {
                             nuevaUnidad = new Arquero(jugador) { Posicion = cuartel.Posicion };
                             if (jugador.Civilizacion.UnidadEspecial == "Arquero Compuesto")
                             {
                                 nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = cuartel.Posicion };
                             }
-                            jugador.Recursos[Recurso.TipoRecurso.Madera] -= 70;
+                            jugador.Recursos["Madera"] -= 70;
                         }
                         break;
+                    
                     case "caballeria":
-                        if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 80 && jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                        
+                        //if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 80 && jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
+                        if (jugador.Recursos["Alimento"] >= 80 && jugador.Recursos["Madera"] >= 60)
                         {
                             nuevaUnidad = new Caballeria(jugador) { Posicion = cuartel.Posicion };
                             if (jugador.Civilizacion.UnidadEspecial == "Ratha")
                             {
                                 nuevaUnidad = new Ratha(jugador) { Posicion = cuartel.Posicion };
                             }
-                            jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 80;
-                            jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                            //jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 80;
+                            //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
+                            jugador.Recursos["Alimento"] -= 80;
+                            jugador.Recursos["Madera"] -= 60;
                         }
                         break;
                     // Añadir más unidades si las hubiera

@@ -1,9 +1,8 @@
 namespace Library;
 
-
 public class Recurso
 {
-    public enum TipoRecurso
+   /* public enum TipoRecurso
     {
         Madera,
         Alimento,
@@ -14,6 +13,13 @@ public class Recurso
     public TipoRecurso Tipo { get; private set; }
 
     public Recurso(TipoRecurso tipo)
+    {
+        Tipo = tipo;
+    }*/
+   
+    public ITipoRecurso Tipo { get; private set; }
+    
+    public Recurso(ITipoRecurso tipo)
     {
         Tipo = tipo;
     }
