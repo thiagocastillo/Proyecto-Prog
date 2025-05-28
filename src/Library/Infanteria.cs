@@ -28,7 +28,7 @@ public class Infanteria : IUnidadMilitar
         return true;
     }
 
-    public void Atacar(IUnidad objetivo)
+    public void AtacarU(IUnidad objetivo)
     {
         int ataqueFinal = Ataque;
         if (objetivo is Infanteria && Propietario.Civilizacion.Nombre == "Aztecas" && Propietario.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
@@ -36,6 +36,12 @@ public class Infanteria : IUnidadMilitar
             ataqueFinal += 3;
         }
         int daño = ataqueFinal - objetivo.Defensa;
+        // Registrar daño
+    }
+   
+    public void AtacarE(IEdificio objetivo)
+    {
+        int daño = Ataque - objetivo.Vida;
         // Registrar daño
     }
 }

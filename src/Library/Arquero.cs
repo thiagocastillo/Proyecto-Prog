@@ -30,9 +30,14 @@ public class Arquero : IUnidadMilitar
         return true;
     }
 
-    public void Atacar(IUnidad objetivo)
+    public void AtacarU(IUnidad objetivo)
     {
         int daño = Ataque - objetivo.Defensa;
+        // Registrar daño
+    }
+    public void AtacarE(IEdificio objetivo)
+    {
+        int daño = Ataque - objetivo.Vida;
         // Registrar daño
     }
 }

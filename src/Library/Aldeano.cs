@@ -25,7 +25,11 @@ public class Aldeano : IUnidad, IRecolector
         return true;
     }
 
-    public void Atacar(IUnidad objetivo)
+    public void AtacarE(IEdificio objetivo)
+    {
+        // Los aldeanos normalmente no atacan
+    }
+    public void AtacarU(IUnidad objetivo)
     {
         // Los aldeanos normalmente no atacan
     }
