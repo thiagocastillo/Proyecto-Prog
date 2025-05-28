@@ -207,11 +207,12 @@ public class JuegoFachada
 
     public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
     {
+        
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
         if (unidad != null)
         {
-            unidad.Mover(destino);
+            unidad.Mover(destino, _partidaActual?.Mapa);
         }
     }
 
