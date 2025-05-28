@@ -269,7 +269,7 @@ public class JuegoFachada
 
         if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
         {
-            unidadAtacante.Atacar(unidadObjetivo);
+            unidadAtacante.AtacarU(unidadObjetivo);
             // Aquí podríamos añadir lógica para ver si la unidad objetivo fue destruida
         }
     }

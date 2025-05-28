@@ -8,5 +8,6 @@ public interface IUnidad
     double Velocidad { get; }
     Point Posicion { get; set; }
     bool Mover(Point destino, Mapa mapa);
-    void Atacar(IUnidad objetivo);
+    void AtacarU(IUnidad objetivo);
+    void AtacarE(IEdificio objetivo);
 }
