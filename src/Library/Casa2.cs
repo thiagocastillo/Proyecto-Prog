@@ -1,6 +1,6 @@
 ﻿namespace Library;
 
-public class Casa2 : IEdificio
+public class Casa : IEdificio
 { 
     public Jugador Propietario { get; private set; }
     public Point Posicion { get; set; }
@@ -12,7 +12,7 @@ public class Casa2 : IEdificio
     public int CantidadAldeanos { get; set; }
     public int CantidadUnidadesMilitar { get; set; }
     
-    public Casa2(Jugador propietario)
+    public Casa(Jugador propietario)
     {
         Propietario = propietario;
         propietario.AumentarPoblacionMaxima(AumentoPoblacion);
