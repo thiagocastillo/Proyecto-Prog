@@ -34,7 +34,8 @@ public class Aldeano : IUnidad, IRecolector
     }*/
 
   
-   public void Recolectar(Recurso.TipoRecurso tipoRecurso, IAlmacenamiento? almacenCercano = null)
+   //public void Recolectar(Recurso.TipoRecurso tipoRecurso, IAlmacenamiento? almacenCercano = null)
+   public void Recolectar(ITipoRecurso tipoRecurso, IAlmacenamiento almacenCercano = null)
    {
        int cantidadRecolectada = 10;
        if (Propietario.Civilizacion.Nombre == "Aztecas")
@@ -43,7 +44,7 @@ public class Aldeano : IUnidad, IRecolector
        }
 
        // Buscar el edificio de almacenamiento compatible más cercano
-       IAlmacenamiento? almacenMasCercano = null;
+       IAlmacenamiento almacenMasCercano = null;
        double distanciaMinima = double.MaxValue;
 
        foreach (var edificio in Propietario.Edificios)
@@ -53,6 +54,7 @@ public class Aldeano : IUnidad, IRecolector
                if (EsCompatible(almacen, tipoRecurso))
                {
                    double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
+                   
                    if (distancia < distanciaMinima)
                    {
                        distanciaMinima = distancia;
@@ -67,14 +69,19 @@ public class Aldeano : IUnidad, IRecolector
        {
            throw new InvalidOperationException("No existe un edificio de almacenamiento compatible para recolectar este recurso.");
        }
-
+       
+       string claveTipoRecurso = tipoRecurso.Nombre;
+       
        // Simular traslado y depósito de recursos
-       if (!Propietario.Recursos.ContainsKey(tipoRecurso))
+       if (!Propietario.Recursos.ContainsKey(claveTipoRecurso))
        {
-           Propietario.Recursos[tipoRecurso] = 0;
+           Propietario.Recursos[claveTipoRecurso] = 0;
+       }
+       {
+           Propietario.Recursos[claveTipoRecurso] = 0;
        }
 
-       Propietario.Recursos[tipoRecurso] += cantidadRecolectada;
+       Propietario.Recursos[claveTipoRecurso] += cantidadRecolectada;
    }
 
 
@@ -85,11 +92,14 @@ public class Aldeano : IUnidad, IRecolector
         return Math.Sqrt(dx * dx + dy * dy);
     }
 
-    private bool EsCompatible(IAlmacenamiento almacen, Recurso.TipoRecurso tipo)
+    private bool EsCompatible(IAlmacenamiento almacen, ITipoRecurso tipo)
     {
-        return (tipo == Recurso.TipoRecurso.Madera && almacen is DepositoMadera) ||
-               (tipo == Recurso.TipoRecurso.Alimento && (almacen is Granja || almacen is Molino)) ||
-               (tipo == Recurso.TipoRecurso.Oro && almacen is DepositoOro) ||
-               (tipo == Recurso.TipoRecurso.Piedra && almacen is DepositoPiedra);
+        string nombre = tipo.Nombre;
+
+        return (nombre == "Madera" && almacen is DepositoMadera) ||
+               (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
+               (nombre == "Oro" && almacen is DepositoOro) ||
+               (nombre == "Piedra" && almacen is DepositoPiedra);
     }
+
 }
