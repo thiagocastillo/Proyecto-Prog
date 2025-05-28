@@ -6,13 +6,30 @@ public class Jugador
     public Civilizacion Civilizacion { get; set; }
     public CentroCivico CentroCivico { get; set; }
     public List<Aldeano> Aldeanos { get; set; } = new List<Aldeano>();
-    public Dictionary<Recurso.TipoRecurso, int> Recursos { get; set; } = new Dictionary<Recurso.TipoRecurso, int>()
+   /* public Dictionary<Recurso.TipoRecurso, int> Recursos { get; set; } = new Dictionary<Recurso.TipoRecurso, int>()
     {
         { Recurso.TipoRecurso.Alimento, 100 },
         { Recurso.TipoRecurso.Madera, 100 },
         { Recurso.TipoRecurso.Oro, 0 },
         { Recurso.TipoRecurso.Piedra, 0 }
+    };*/
+   
+    public Dictionary<string, int> Recursos { get; set; } = new Dictionary<string, int>()
+    {
+        { "Alimento", 100 },
+        {  "Madera", 100 },
+        { "Oro", 0 },
+        { "Piedra", 0 }
     };
+    
+    public void AgregarRecurso(ITipoRecurso tipo, int cantidad)
+    {
+        if (!Recursos.ContainsKey(tipo.Nombre))
+            Recursos[tipo.Nombre] = 0;
+
+        Recursos[tipo.Nombre] += cantidad;
+    }
+    
     public int PoblacionActual { get; set; } = 3;
     public int PoblacionMaxima { get; set; } = 5;
     public List<IEdificio> Edificios { get; set; } = new List<IEdificio>();
@@ -46,5 +63,12 @@ public class Jugador
     {
         Unidades.Add(unidad);
         PoblacionActual++;
+    }
+    
+    public bool PuedeCrearAldeano()
+    {
+        int cantidadCentroCivico = Edificios.Count(e => e is CentroCivico);
+        int aldeanosActuales = Aldeanos.Count;
+        return cantidadCentroCivico > 0 && aldeanosActuales < 10;
     }
 }
