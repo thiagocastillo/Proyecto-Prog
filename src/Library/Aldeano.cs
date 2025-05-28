@@ -7,6 +7,8 @@ public class Aldeano : IUnidad, IRecolector
     public int Defensa { get; private set; } = 0;
     public double Velocidad { get; private set; } = 1.0;
     public Point Posicion { get; set; }
+    
+    public int TiempoDeCreacion { get; private set; } = 10;
 
     public Aldeano(Jugador propietario)
     {

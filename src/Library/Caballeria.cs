@@ -8,6 +8,8 @@ namespace Library;
         public int Defensa { get; private set; } = 7;
         public double Velocidad { get; private set; } = 1.5;
         public Point Posicion { get; set; }
+        
+        public int TiempoDeCreacion { get; private set; } = 10;
 
         public Caballeria(Jugador propietario)
         {
