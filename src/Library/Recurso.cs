@@ -3,7 +3,7 @@ namespace Library;
 
 public class Recurso
 {
-    public enum TipoRecurso
+   /* public enum TipoRecurso
     {
         Madera,
         Alimento,
@@ -12,20 +12,16 @@ public class Recurso
     }
 
     public TipoRecurso Tipo { get; private set; }
-    
-    public int Cantidad { get; private set; }
 
-    public Recurso(TipoRecurso tipo, int cantidadinicial)
+    public Recurso(TipoRecurso tipo)
     {
         Tipo = tipo;
-        Cantidad = cantidadinicial;
-    }
-
-    public void Alerta(int Cantidad)
+    }*/
+   
+    public ITipoRecurso Tipo { get; private set; }
+    
+    public Recurso(ITipoRecurso tipo)
     {
-        if (Cantidad <= 10)
-        {
-            Console.WriteLine($"¡ Cuidado ! {Tipo} esta por agotarse. {Tipo} restante: {Cantidad}");
-        }
+        Tipo = tipo;
     }
 }

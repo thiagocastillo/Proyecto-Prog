@@ -7,6 +7,10 @@ public interface IUnidad
     int Defensa { get; }
     double Velocidad { get; }
     Point Posicion { get; set; }
-    void Mover(Point destino);
+    bool Mover(Point destino, Mapa mapa);
+    void AtacarU(IUnidad objetivo);
+    void AtacarE(IEdificio objetivo);
     void Atacar(IUnidad objetivo);
+    
+    int TiempoDeCreacion { get; }
 }

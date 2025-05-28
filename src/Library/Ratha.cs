@@ -7,20 +7,33 @@ public class Ratha : IUnidadMilitar
     public int Defensa { get; private set; } = 6;
     public double Velocidad { get; private set; } = 1.6;
     public Point Posicion { get; set; }
+    
+    public int TiempoDeCreacion { get; private set; } = 10;
+
 
     public Ratha(Jugador propietario)
     {
         Propietario = propietario;
     }
 
-    public void Mover(Point destino)
+    public bool Mover(Point destino, Mapa mapa)
     {
+        if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
+        {
+            return false; 
+        }
         Posicion = destino;
+        return true;
     }
 
-    public void Atacar(IUnidad objetivo)
+    public void AtacarU(IUnidad objetivo)
     {
         int daño = Ataque - objetivo.Defensa;
+        // Registrar daño
+    }
+    public void AtacarE(IEdificio objetivo)
+    {
+        int daño = Ataque - objetivo.Vida;
         // Registrar daño
     }
 }

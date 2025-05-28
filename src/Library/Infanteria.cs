@@ -8,6 +8,7 @@ public class Infanteria : IUnidadMilitar
     public double Velocidad { get; private set; } = 1.0;
     public Point Posicion { get; set; }
 
+    public int TiempoDeCreacion { get; private set; } = 10;
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;
@@ -17,12 +18,17 @@ public class Infanteria : IUnidadMilitar
         }
     }
 
-    public void Mover(Point destino)
+    public bool Mover(Point destino, Mapa mapa)
     {
+        if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
+        {
+            return false; 
+        }
         Posicion = destino;
+        return true;
     }
 
-    public void Atacar(IUnidad objetivo)
+    public void AtacarU(IUnidad objetivo)
     {
         int ataqueFinal = Ataque;
         if (objetivo is Infanteria && Propietario.Civilizacion.Nombre == "Aztecas" && Propietario.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
@@ -30,6 +36,12 @@ public class Infanteria : IUnidadMilitar
             ataqueFinal += 3;
         }
         int daño = ataqueFinal - objetivo.Defensa;
+        // Registrar daño
+    }
+   
+    public void AtacarE(IEdificio objetivo)
+    {
+        int daño = Ataque - objetivo.Vida;
         // Registrar daño
     }
 }
