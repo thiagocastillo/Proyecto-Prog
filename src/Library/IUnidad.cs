@@ -9,4 +9,6 @@ public interface IUnidad
     Point Posicion { get; set; }
     void Mover(Point destino);
     void Atacar(IUnidad objetivo);
+    
+    int TiempoDeCreacion { get; }
 }

@@ -8,6 +8,7 @@ public class Infanteria : IUnidadMilitar
     public double Velocidad { get; private set; } = 1.0;
     public Point Posicion { get; set; }
 
+    public int TiempoDeCreacion { get; private set; } = 10;
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;

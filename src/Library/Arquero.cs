@@ -8,6 +8,8 @@ public class Arquero : IUnidadMilitar
     public int Defensa { get; private set; } = 3;
     public double Velocidad { get; private set; } = 1.2;
     public Point Posicion { get; set; }
+    
+    public int TiempoDeCreacion { get; private set; } = 10;
 
     public Arquero(Jugador propietario)
     {
