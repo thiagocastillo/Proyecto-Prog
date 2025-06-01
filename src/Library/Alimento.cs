@@ -1,6 +1,7 @@
 namespace Library;
 
-public class Alimento : ITipoRecurso
+public class Alimento : RecursoNatural
 {
-    public string Nombre { get; } = "Alimento";
+    public Alimento () : base("Alimento", 100, 2){}
+    
 }

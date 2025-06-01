@@ -1,6 +1,6 @@
 namespace Library;
 
-public class Piedra : ITipoRecurso
+public class Piedra : RecursoNatural
 {
-    public string Nombre { get; } = "Piedra";
+    public Piedra() : base("Piedra", 150, 4) { }
 }

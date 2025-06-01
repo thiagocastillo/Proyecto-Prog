@@ -44,38 +44,32 @@ public class Aldeano : IUnidad, IRecolector
         return "Los aldeanos no atacan unidades.";
     }
 
-   /* public void Recolectar(Recurso.TipoRecurso tipoRecurso, IAlmacenamiento? almacenCercano)
-    {
-        int cantidadRecolectada = 10;
-        if (Propietario.Civilizacion.Nombre == "Aztecas")
-        {
-            cantidadRecolectada += 3;
-        }
-        Propietario.Recursos[tipoRecurso] += cantidadRecolectada;
-    }*/
+  
 
   
    //public void Recolectar(Recurso.TipoRecurso tipoRecurso, IAlmacenamiento? almacenCercano = null)
-   public void Recolectar(ITipoRecurso tipoRecurso, IAlmacenamiento almacenCercano = null)
+   public void Recolectar(RecursoNatural recurso, IAlmacenamiento almacenCercano = null)
    {
-       int cantidadRecolectada = 10;
+       if (recurso.EstaAgotado())
+           throw new InvalidOperationException("El recurso está agotado.");
+
+       int cantidadRecolectada = (int)recurso.TasaRecoleccion;
        if (Propietario.Civilizacion.Nombre == "Aztecas")
-       {
            cantidadRecolectada += 3;
-       }
+
+       int extraido = recurso.Recolectar(cantidadRecolectada);
 
        // Buscar el edificio de almacenamiento compatible más cercano
-       IAlmacenamiento almacenMasCercano = null;
+       IAlmacenamiento almacenMasCercano = almacenCercano;
        double distanciaMinima = double.MaxValue;
 
        foreach (var edificio in Propietario.Edificios)
        {
            if (edificio is IAlmacenamiento almacen)
            {
-               if (EsCompatible(almacen, tipoRecurso))
+               if (EsCompatible(almacen, recurso.Nombre))
                {
                    double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
-                   
                    if (distancia < distanciaMinima)
                    {
                        distanciaMinima = distancia;
@@ -85,26 +79,22 @@ public class Aldeano : IUnidad, IRecolector
            }
        }
 
-       // Si no hay edificio compatible, no se recolecta
        if (almacenMasCercano == null)
-       {
            throw new InvalidOperationException("No existe un edificio de almacenamiento compatible para recolectar este recurso.");
-       }
-       
-       string claveTipoRecurso = tipoRecurso.Nombre;
-       
-       // Simular traslado y depósito de recursos
-       if (!Propietario.Recursos.ContainsKey(claveTipoRecurso))
-       {
-           Propietario.Recursos[claveTipoRecurso] = 0;
-       }
-       {
-           Propietario.Recursos[claveTipoRecurso] = 0;
-       }
 
-       Propietario.Recursos[claveTipoRecurso] += cantidadRecolectada;
+       if (!Propietario.Recursos.ContainsKey(recurso.Nombre))
+           Propietario.Recursos[recurso.Nombre] = 0;
+
+       Propietario.Recursos[recurso.Nombre] += extraido;
    }
 
+   private bool EsCompatible(IAlmacenamiento almacen, string nombre)
+   {
+       return (nombre == "Madera" && almacen is DepositoMadera) ||
+              (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
+              (nombre == "Oro" && almacen is DepositoOro) ||
+              (nombre == "Piedra" && almacen is DepositoPiedra);
+   }
 
    private double CalcularDistancia(Point a, Point b)
     {

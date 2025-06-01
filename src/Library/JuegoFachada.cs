@@ -29,7 +29,7 @@ public class JuegoFachada
         var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
         if (civilizacion == null) return false;
         var jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        
+
         if (jugador != null)
         {
             jugador.Civilizacion = civilizacion;
@@ -50,22 +50,30 @@ public class JuegoFachada
         }
     }
 
-    //public Dictionary<Recurso.TipoRecurso, int> ObtenerRecursosJugador(string nombreJugador)
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        //return jugador?.Recursos ?? new Dictionary<Recurso.TipoRecurso, int>();
         return jugador?.Recursos ?? new Dictionary<string, int>();
     }
 
-    //public void OrdenarRecolectar(string nombreJugador, int idAldeano, Recurso.TipoRecurso tipoRecurso)
-    public void OrdenarRecolectar(string nombreJugador, int idAldeano, ITipoRecurso tipoRecurso)
+    // Ahora recibe el nombre del recurso y busca el recurso natural en el mapa
+    public void OrdenarRecolectar(string nombreJugador, int idAldeano, string nombreRecurso)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var aldeano = jugador?.Aldeanos.ElementAtOrDefault(idAldeano);
-        if (aldeano != null)
+
+        if (aldeano != null && _partidaActual != null)
         {
-            aldeano.Recolectar(tipoRecurso, null); // Necesitaríamos lógica para el almacén
+            // Busca el recurso natural más cercano del tipo solicitado y que no esté agotado
+            var recurso = _partidaActual.Mapa.Recursos
+                .OfType<RecursoNatural>()
+                .FirstOrDefault(r => r.Nombre == nombreRecurso && !r.EstaAgotado());
+
+            if (recurso != null)
+            {
+                aldeano.Recolectar(recurso, null); // Puedes agregar lógica para almacén si lo necesitas
+            }
+            // Si no hay recurso, podrías lanzar una excepción o manejar el error
         }
     }
 
@@ -78,80 +86,63 @@ public class JuegoFachada
             switch (tipoEdificio.ToLower())
             {
                 case "casa":
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 50)
                     if (jugador.Recursos["Madera"] >= 50)
                     {
                         nuevoEdificio = new Casa(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 50;
                         jugador.Recursos["Madera"] -= 50;
                     }
                     break;
-                
+
                 case "cuartel":
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 100)
-                    if(jugador.Recursos["Madera"] >= 100)
+                    if (jugador.Recursos["Madera"] >= 100)
                     {
                         nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 100;
                         jugador.Recursos["Madera"] -= 100;
                     }
                     break;
-                
+
                 case "molino":
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 75)
                     if (jugador.Recursos["Madera"] >= 75)
                     {
                         nuevoEdificio = new Molino(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 75;
                         jugador.Recursos["Madera"] -= 75;
                     }
                     break;
-                
+
                 case "depositomadera":
-                    
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
                     if (jugador.Recursos["Madera"] >= 60)
                     {
                         nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
                         jugador.Recursos["Madera"] -= 60;
                     }
                     break;
-                
+
                 case "depositooro":
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
                     if (jugador.Recursos["Madera"] >= 60)
                     {
                         nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
                         jugador.Recursos["Madera"] -= 60;
                     }
                     break;
-                
+
                 case "depositopiedra":
-                    
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
                     if (jugador.Recursos["Madera"] >= 60)
                     {
                         nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
                         jugador.Recursos["Madera"] -= 60;
                     }
                     break;
-                
-                case "centroCivico":
-                    
-                    //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 200)
+
+                case "centrocivico":
                     if (jugador.Recursos["Madera"] >= 200)
                     {
                         nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
-                        //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 200;
                         jugador.Recursos["Madera"] -= 200;
                     }
                     break;
                 // Añadir más casos para otros edificios
             }
-            
+
             if (nuevoEdificio != null)
             {
                 jugador.AgregarEdificio(nuevoEdificio);
@@ -166,35 +157,28 @@ public class JuegoFachada
     public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        
+
         if (jugador != null && jugador.PoblacionActual < jugador.PoblacionMaxima)
         {
             var cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
-            
+
             if (cuartel != null)
             {
                 IUnidad? nuevaUnidad = null;
                 switch (tipoUnidad.ToLower())
                 {
                     case "aldeano":
-                        //if (jugador.PuedeCrearAldeano() && jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 50)
-                        
-                        if(jugador.PuedeCrearAldeano() && jugador.Recursos["Alimento"] >= 50)
+                        if (jugador.PuedeCrearAldeano() && jugador.Recursos["Alimento"] >= 50)
                         {
                             var nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
                             jugador.Aldeanos.Add(nuevoAldeano);
                             jugador.Unidades.Add(nuevoAldeano);
-                            //nuevaUnidad = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };  
-                            //LA LINEA DE ARRIBA NOS PUEDE CAGAR SI EL JUGADOR NO LLEGA A TENER CENTRO CIVICO X ALGUNA RAZON
-                            //LO PODEMOS VER DE HACER IGUAL, PENSAMOS OTRA MANERA, LO VEMOS!
                             jugador.Recursos["Alimento"] -= 50;
                             jugador.PoblacionActual++;
                         }
                         break;
-                    
+
                     case "infanteria":
-                        
-                        //if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 60)
                         if (jugador.Recursos["Alimento"] >= 60)
                         {
                             nuevaUnidad = new Infanteria(jugador) { Posicion = cuartel.Posicion };
@@ -202,14 +186,11 @@ public class JuegoFachada
                             {
                                 nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = cuartel.Posicion };
                             }
-                            //jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 60;
                             jugador.Recursos["Alimento"] -= 60;
                         }
                         break;
-                    
+
                     case "arquero":
-                       
-                        //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 70)
                         if (jugador.Recursos["Madera"] >= 70)
                         {
                             nuevaUnidad = new Arquero(jugador) { Posicion = cuartel.Posicion };
@@ -220,10 +201,8 @@ public class JuegoFachada
                             jugador.Recursos["Madera"] -= 70;
                         }
                         break;
-                    
+
                     case "caballeria":
-                        
-                        //if (jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 80 && jugador.Recursos[Recurso.TipoRecurso.Madera] >= 60)
                         if (jugador.Recursos["Alimento"] >= 80 && jugador.Recursos["Madera"] >= 60)
                         {
                             nuevaUnidad = new Caballeria(jugador) { Posicion = cuartel.Posicion };
@@ -231,15 +210,13 @@ public class JuegoFachada
                             {
                                 nuevaUnidad = new Ratha(jugador) { Posicion = cuartel.Posicion };
                             }
-                            //jugador.Recursos[Recurso.TipoRecurso.Alimento] -= 80;
-                            //jugador.Recursos[Recurso.TipoRecurso.Madera] -= 60;
                             jugador.Recursos["Alimento"] -= 80;
                             jugador.Recursos["Madera"] -= 60;
                         }
                         break;
                     // Añadir más unidades si las hubiera
                 }
-                
+
                 if (nuevaUnidad != null)
                 {
                     jugador.AgregarUnidad(nuevaUnidad);
@@ -258,27 +235,24 @@ public class JuegoFachada
 
     public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
     {
-        
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
-        
+
         if (unidad != null)
         {
             unidad.Mover(destino, _partidaActual?.Mapa);
         }
     }
-    
+
     public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, int idUnidadObjetivo)
     {
         var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
-        var unidadObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Unidades).ElementAtOrDefault(idUnidadObjetivo); // Buscar en todas las unidades
+        var unidadObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Unidades).ElementAtOrDefault(idUnidadObjetivo);
 
         if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
         {
             return unidadAtacante.AtacarU(unidadObjetivo);
-            // Aquí podríamos añadir lógica para ver si la unidad objetivo fue destruida
-            
         }
         return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
     }

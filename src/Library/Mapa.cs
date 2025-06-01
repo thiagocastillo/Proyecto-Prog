@@ -4,6 +4,8 @@ public class Mapa
 {
     public int Ancho { get; private set; }
     public int Alto { get; private set; }
+    public List<RecursoNatural> Recursos { get; set; } = new List<RecursoNatural>();
+
 
     public Mapa(int ancho, int alto)
     {
