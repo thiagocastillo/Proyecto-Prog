@@ -11,7 +11,15 @@ public class Aldeano : IUnidad, IRecolector
     public int Salud { get; set; }
     public Point Posicion { get; set; }
     
-    public int TiempoDeCreacion { get; } 
+    public int TiempoDeCreacion { get; }
+
+    public TipoUnidad Tipo
+    {
+        get
+        {
+            return TipoUnidad.Aldeano;
+        }
+    }
     public Aldeano(Jugador propietario)
     {
         Propietario = propietario;
@@ -25,6 +33,11 @@ public class Aldeano : IUnidad, IRecolector
         }
         Posicion = destino;
         return true;
+    }
+
+    public double CalcularDaño(IUnidad objetivo)
+    {
+        return 0;
     }
 
     public void AtacarE(IEdificio objetivo)

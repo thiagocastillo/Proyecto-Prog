@@ -13,6 +13,13 @@ public class Infanteria : IUnidadMilitar
 
     public int TiempoDeCreacion { get; private set; } = 10;
    
+    public TipoUnidad Tipo
+    {
+        get
+        {
+            return TipoUnidad.Arquero;
+        }
+    }
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;
@@ -22,6 +29,21 @@ public class Infanteria : IUnidadMilitar
         }
     }
 
+    public double CalcularDaño(IUnidad objetivo)
+    {
+        double dañoBase = this.Ataque - objetivo.Defensa;
+        if (objetivo.Tipo == TipoUnidad.Caballeria)
+        {
+            dañoBase += 2;
+        }
+
+        if (dañoBase < 0)
+        {
+            dañoBase = 0;
+        }
+
+        return dañoBase;
+    }
     public bool Mover(Point destino, Mapa mapa)
     {
         if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)

@@ -13,7 +13,25 @@ public class Ratha : IUnidadMilitar
     
     public int TiempoDeCreacion { get; private set; } = 10;
 
+    public TipoUnidad Tipo
+    {
+        get
+        {
+            return TipoUnidad.Arquero;
+        }
+    }
+    
+    public double CalcularDaño(IUnidad objetivo)
+    {
+        double dañoBase = this.Ataque - objetivo.Defensa;
 
+        if (dañoBase < 0)
+        {
+            dañoBase = 0;
+        }
+
+        return dañoBase;
+    }
     public Ratha(Jugador propietario)
     {
         Propietario = propietario;
