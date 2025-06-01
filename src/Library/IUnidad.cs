@@ -12,6 +12,5 @@ public interface IUnidad
     string AtacarU(IUnidad objetivo); //cambiar a string
     string AtacarE(IEdificio objetivo); //cambiar a string
     int TiempoDeCreacion { get; }
-    TipoUnidad Tipo { get; }
     double CalcularDaño(IUnidad objetivo);
 }

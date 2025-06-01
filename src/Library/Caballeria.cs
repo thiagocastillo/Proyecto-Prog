@@ -12,14 +12,7 @@ namespace Library;
         public Point Posicion { get; set; }
         
         public int TiempoDeCreacion { get; private set; } = 10;
-
-        public TipoUnidad Tipo
-        {
-            get
-            {
-                return TipoUnidad.Caballeria;
-            }
-        }
+        
         public Caballeria(Jugador propietario)
         {
             Propietario = propietario;
@@ -28,7 +21,7 @@ namespace Library;
         public double CalcularDaño(IUnidad objetivo)
         {
             double dañoBase = this.Ataque - objetivo.Defensa;
-            if (objetivo.Tipo == TipoUnidad.Arquero)
+            if (objetivo is Arquero)
             {
                 dañoBase += 2;
             }

@@ -12,14 +12,6 @@ public class Ratha : IUnidadMilitar
     public Point Posicion { get; set; }
     
     public int TiempoDeCreacion { get; private set; } = 10;
-
-    public TipoUnidad Tipo
-    {
-        get
-        {
-            return TipoUnidad.Arquero;
-        }
-    }
     
     public double CalcularDaño(IUnidad objetivo)
     {

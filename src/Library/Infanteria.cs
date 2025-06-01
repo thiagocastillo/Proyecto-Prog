@@ -12,14 +12,7 @@ public class Infanteria : IUnidadMilitar
     public Point Posicion { get; set; }
 
     public int TiempoDeCreacion { get; private set; } = 10;
-   
-    public TipoUnidad Tipo
-    {
-        get
-        {
-            return TipoUnidad.Arquero;
-        }
-    }
+    
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;
@@ -32,7 +25,7 @@ public class Infanteria : IUnidadMilitar
     public double CalcularDaño(IUnidad objetivo)
     {
         double dañoBase = this.Ataque - objetivo.Defensa;
-        if (objetivo.Tipo == TipoUnidad.Caballeria)
+        if (objetivo is Caballeria)
         {
             dañoBase += 2;
         }

@@ -12,14 +12,7 @@ public class Aldeano : IUnidad, IRecolector
     public Point Posicion { get; set; }
     
     public int TiempoDeCreacion { get; }
-
-    public TipoUnidad Tipo
-    {
-        get
-        {
-            return TipoUnidad.Aldeano;
-        }
-    }
+    
     public Aldeano(Jugador propietario)
     {
         Propietario = propietario;
