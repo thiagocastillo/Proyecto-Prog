@@ -7,7 +7,6 @@ public class CentroCivico : IEdificio
     public int MaxAldeanos { get; private set; } = 10;
     public int Vida { get; set; }
 
-
     public CentroCivico(Jugador propietario)
     {
         Propietario = propietario;

@@ -15,8 +15,8 @@ public class Partida
         Jugadores.Add(jugador);
         if (Jugadores.Count != 2)
         {
-           return "solo se permiten dos jugadores";
-            }
+           return "Solo se permiten dos jugadores";
+        }
         return "Jugador agregado correctamente";
     }
     public Jugador? VerificarGanador()

@@ -6,7 +6,6 @@ public class Cuartel : IEdificio
     public Point Posicion { get; set; }
     public int Vida { get; set; }
 
-
     public Cuartel(Jugador propietario)
     {
         Propietario = propietario;

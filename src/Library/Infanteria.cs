@@ -50,6 +50,7 @@ public class Infanteria : IUnidadMilitar
         {
             return false; 
         }
+        
         Posicion = destino;
         return true;
     }
