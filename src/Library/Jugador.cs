@@ -2,34 +2,21 @@ namespace Library;
 
 public class Jugador
 {
+    public const int LimiteAldeanos = 20;
+    public const int LimiteMilitares = 30;
+
     public string Nombre { get; set; }
     public Civilizacion Civilizacion { get; set; }
     public CentroCivico CentroCivico { get; set; }
     public List<Aldeano> Aldeanos { get; set; } = new List<Aldeano>();
-   /* public Dictionary<Recurso.TipoRecurso, int> Recursos { get; set; } = new Dictionary<Recurso.TipoRecurso, int>()
-    {
-        { Recurso.TipoRecurso.Alimento, 100 },
-        { Recurso.TipoRecurso.Madera, 100 },
-        { Recurso.TipoRecurso.Oro, 0 },
-        { Recurso.TipoRecurso.Piedra, 0 }
-    };*/
-   
     public Dictionary<string, int> Recursos { get; set; } = new Dictionary<string, int>()
     {
         { "Alimento", 100 },
-        {  "Madera", 100 },
+        { "Madera", 100 },
         { "Oro", 0 },
         { "Piedra", 0 }
     };
-    
-    public void AgregarRecurso(ITipoRecurso tipo, int cantidad)
-    {
-        if (!Recursos.ContainsKey(tipo.Nombre))
-            Recursos[tipo.Nombre] = 0;
 
-        Recursos[tipo.Nombre] += cantidad;
-    }
-    
     public int PoblacionActual { get; set; } = 3;
     public int PoblacionMaxima { get; set; } = 5;
     public List<IEdificio> Edificios { get; set; } = new List<IEdificio>();
@@ -49,9 +36,22 @@ public class Jugador
         }
     }
 
+    public void AgregarRecurso(ITipoRecurso tipo, int cantidad)
+    {
+        if (!Recursos.ContainsKey(tipo.Nombre))
+            Recursos[tipo.Nombre] = 0;
+
+        Recursos[tipo.Nombre] += cantidad;
+    }
+
     public void AumentarPoblacionMaxima(int incremento)
     {
-        PoblacionMaxima += incremento;
+        // No permite superar el máximo absoluto de aldeanos + militares
+        int maxTotal = LimiteAldeanos + LimiteMilitares;
+        if (PoblacionMaxima + incremento > maxTotal)
+            PoblacionMaxima = maxTotal;
+        else
+            PoblacionMaxima += incremento;
     }
 
     public void AgregarEdificio(IEdificio edificio)
@@ -61,14 +61,31 @@ public class Jugador
 
     public void AgregarUnidad(IUnidad unidad)
     {
+        if (unidad is Aldeano)
+        {
+            if (Aldeanos.Count >= LimiteAldeanos)
+                throw new InvalidOperationException("No se pueden tener más de 20 aldeanos.");
+            Aldeanos.Add((Aldeano)unidad);
+        }
+        else
+        {
+            int militares = Unidades.Count(u => !(u is Aldeano));
+            if (militares >= LimiteMilitares)
+                throw new InvalidOperationException("No se pueden tener más de 30 unidades militares.");
+        }
+
         Unidades.Add(unidad);
         PoblacionActual++;
     }
-    
+    public string ObtenerResumenPoblacion()
+    {
+        return $"Población: {PoblacionActual}/{PoblacionMaxima}";
+    }
+
     public bool PuedeCrearAldeano()
     {
         int cantidadCentroCivico = Edificios.Count(e => e is CentroCivico);
         int aldeanosActuales = Aldeanos.Count;
-        return cantidadCentroCivico > 0 && aldeanosActuales < 10;
+        return cantidadCentroCivico > 0 && aldeanosActuales < LimiteAldeanos;
     }
 }

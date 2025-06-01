@@ -19,4 +19,16 @@ public class Partida
             }
         return "Jugador agregado correctamente";
     }
+    public Jugador? VerificarGanador()
+    {
+        foreach (var jugador in Jugadores)
+        {
+            bool tieneCentroCivico = jugador.Edificios.Any(e => e is CentroCivico);
+            if (!tieneCentroCivico)
+            {
+                return Jugadores.FirstOrDefault(j => j != jugador);
+            }
+        }
+        return null; 
+    }
 }
