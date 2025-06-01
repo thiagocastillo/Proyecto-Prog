@@ -10,7 +10,5 @@ public interface IUnidad
     bool Mover(Point destino, Mapa mapa);
     void AtacarU(IUnidad objetivo);
     void AtacarE(IEdificio objetivo);
-    void Atacar(IUnidad objetivo);
-    
     int TiempoDeCreacion { get; }
 }
