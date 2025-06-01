@@ -11,4 +11,6 @@ public interface IUnidad
     void AtacarU(IUnidad objetivo);
     void AtacarE(IEdificio objetivo);
     int TiempoDeCreacion { get; }
+    TipoUnidad Tipo { get; }
+    double CalcularDaño(IUnidad objetivo);
 }

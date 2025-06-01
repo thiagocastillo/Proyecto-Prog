@@ -34,6 +34,11 @@ public class Arquero : IUnidadMilitar
     {
         int daño = Ataque - objetivo.Defensa;
         // Registrar daño
+
+        if (objetivo is Infanteria)
+        {
+            daño += 2;
+        }
     }
     public void AtacarE(IEdificio objetivo)
     {
