@@ -40,13 +40,15 @@ public class Aldeano : IUnidad, IRecolector
         return 0;
     }
 
-    public void AtacarE(IEdificio objetivo)
+    public string AtacarE(IEdificio objetivo)
     {
         // Los aldeanos normalmente no atacan
+        return "Los aldeanos no atacan edificios.";
     }
-    public void AtacarU(IUnidad objetivo)
+    public string AtacarU(IUnidad objetivo)
     {
         // Los aldeanos normalmente no atacan
+        return "Los aldeanos no atacan unidades.";
     }
 
    /* public void Recolectar(Recurso.TipoRecurso tipoRecurso, IAlmacenamiento? almacenCercano)
@@ -127,5 +129,4 @@ public class Aldeano : IUnidad, IRecolector
                (nombre == "Oro" && almacen is DepositoOro) ||
                (nombre == "Piedra" && almacen is DepositoPiedra);
     }
-
 }

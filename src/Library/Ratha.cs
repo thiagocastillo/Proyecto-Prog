@@ -47,14 +47,42 @@ public class Ratha : IUnidadMilitar
         return true;
     }
 
-    public void AtacarU(IUnidad objetivo)
+    public string AtacarU(IUnidad objetivo)
     {
-        int daño = Ataque - objetivo.Defensa;
-        // Registrar daño
+        int ataqueFinal = Ataque;
+        int daño = ataqueFinal - objetivo.Defensa;
+        
+        if (objetivo is Arquero)
+        {
+            daño += 2; // Bonus contra arqueros
+        }
+        
+        daño = Math.Max(daño, 0);
+        objetivo.Salud -= daño;   
+        
+        string info = $"{GetType().Name} atacó a {objetivo.GetType().Name} e hizo {daño} de daño.";
+        info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
+        
+        if (objetivo.Salud <= 0)
+        {
+            objetivo.Propietario.Unidades.Remove(objetivo);
+            info += $" {objetivo.GetType().Name} fue destruido.";
+        }
+        return info;
     }
-    public void AtacarE(IEdificio objetivo)
+    public string AtacarE(IEdificio objetivo)
     {
-        int daño = Ataque - objetivo.Vida;
-        // Registrar daño
+        int daño = Ataque;
+        objetivo.Vida -= daño;
+        
+        string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño.";
+        info += $" Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
+
+        if (objetivo.Vida <= 0)
+        {
+            objetivo.Propietario.Edificios.Remove(objetivo);
+            info += $" El edificio fue destruido.";
+        }
+        return info;
     }
 }
