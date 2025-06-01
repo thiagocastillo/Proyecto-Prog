@@ -6,9 +6,10 @@ public interface IUnidad
     int Ataque { get; }
     int Defensa { get; }
     double Velocidad { get; }
+    int Salud { get; set; }
     Point Posicion { get; set; }
     bool Mover(Point destino, Mapa mapa);
-    void AtacarU(IUnidad objetivo);
-    void AtacarE(IEdificio objetivo);
+    void AtacarU(IUnidad objetivo); //cambiar a string
+    void AtacarE(IEdificio objetivo); //cambiar a string
     int TiempoDeCreacion { get; }
 }

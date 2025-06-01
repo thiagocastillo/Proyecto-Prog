@@ -5,7 +5,10 @@ public class Ratha : IUnidadMilitar
     public Jugador Propietario { get; private set; }
     public int Ataque { get; private set; } = 10;
     public int Defensa { get; private set; } = 6;
+    
     public double Velocidad { get; private set; } = 1.6;
+
+    public int Salud { get; set; } = 100;
     public Point Posicion { get; set; }
     
     public int TiempoDeCreacion { get; private set; } = 10;
