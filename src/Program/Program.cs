@@ -68,5 +68,9 @@ public class Program
         {
             Console.WriteLine($"- {recurso.Key}: {recurso.Value}");
         }
+        
+        // Resumen combate
+        string resumenCombate = juego.AtacarUnidad("Juancito", 0, 1); // ID 0 ataca al 1
+        Console.WriteLine(resumenCombate);
     }
 }

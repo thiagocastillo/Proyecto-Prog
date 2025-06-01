@@ -260,8 +260,8 @@ public class JuegoFachada
             unidad.Mover(destino, _partidaActual?.Mapa);
         }
     }
-
-    public void AtacarUnidad(string nombreJugador, int idUnidadAtacante, int idUnidadObjetivo)
+    
+    public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, int idUnidadObjetivo)
     {
         var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
@@ -269,9 +269,11 @@ public class JuegoFachada
 
         if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
         {
-            unidadAtacante.AtacarU(unidadObjetivo);
+            return unidadAtacante.AtacarU(unidadObjetivo);
             // Aquí podríamos añadir lógica para ver si la unidad objetivo fue destruida
+            
         }
+        return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
     }
 
     public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
