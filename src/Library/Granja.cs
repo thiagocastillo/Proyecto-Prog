@@ -14,7 +14,6 @@ public class Granja : IAlmacenamiento
         Vida = 10000;
 
     }
-    
     public double Eficiencia(int distancia)
     {
         if (distancia <= 1) return 1.0;

@@ -14,6 +14,7 @@ public class Program
         // Obtener las civilizaciones disponibles
         var civilizaciones = juego.ObtenerCivilizacionesDisponibles();
         Console.WriteLine("\nCivilizaciones disponibles:");
+        
         foreach (var civilizacion in civilizaciones)
         {
             Console.WriteLine($"- {civilizacion}");
@@ -32,6 +33,7 @@ public class Program
         // Obtener recursos iniciales del jugador 1
         var recursosAlice = juego.ObtenerRecursosJugador(jugador1Nombre);
         Console.WriteLine($"\nRecursos iniciales de {jugador1Nombre}:");
+        
         foreach (var recurso in recursosAlice)
         {
             Console.WriteLine($"- {recurso.Key}: {recurso.Value}");
@@ -64,6 +66,7 @@ public class Program
         // Obtener recursos actualizados del jugador 1
         recursosAlice = juego.ObtenerRecursosJugador(jugador1Nombre);
         Console.WriteLine($"\nRecursos de {jugador1Nombre} después de construir y entrenar:");
+        
         foreach (var recurso in recursosAlice)
         {
             Console.WriteLine($"- {recurso.Key}: {recurso.Value}");

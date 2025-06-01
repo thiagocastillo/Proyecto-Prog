@@ -29,6 +29,7 @@ public class JuegoFachada
         var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
         if (civilizacion == null) return false;
         var jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        
         if (jugador != null)
         {
             jugador.Civilizacion = civilizacion;
@@ -85,6 +86,7 @@ public class JuegoFachada
                         jugador.Recursos["Madera"] -= 50;
                     }
                     break;
+                
                 case "cuartel":
                     //if (jugador.Recursos[Recurso.TipoRecurso.Madera] >= 100)
                     if(jugador.Recursos["Madera"] >= 100)
@@ -164,9 +166,11 @@ public class JuegoFachada
     public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        
         if (jugador != null && jugador.PoblacionActual < jugador.PoblacionMaxima)
         {
             var cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
+            
             if (cuartel != null)
             {
                 IUnidad? nuevaUnidad = null;
@@ -174,6 +178,7 @@ public class JuegoFachada
                 {
                     case "aldeano":
                         //if (jugador.PuedeCrearAldeano() && jugador.Recursos[Recurso.TipoRecurso.Alimento] >= 50)
+                        
                         if(jugador.PuedeCrearAldeano() && jugador.Recursos["Alimento"] >= 50)
                         {
                             var nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
@@ -234,6 +239,7 @@ public class JuegoFachada
                         break;
                     // Añadir más unidades si las hubiera
                 }
+                
                 if (nuevaUnidad != null)
                 {
                     jugador.AgregarUnidad(nuevaUnidad);
@@ -255,6 +261,7 @@ public class JuegoFachada
         
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
+        
         if (unidad != null)
         {
             unidad.Mover(destino, _partidaActual?.Mapa);

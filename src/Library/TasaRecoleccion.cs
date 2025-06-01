@@ -1,6 +1,5 @@
 ﻿namespace Library;
 
-
 public class Recurso
 {
     public enum TipoRecurso
