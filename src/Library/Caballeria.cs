@@ -32,6 +32,10 @@ namespace Library;
         {
             int daño = Ataque - objetivo.Defensa;
             // Registrar daño
+            if (objetivo is Arquero)
+            {
+                daño += 2;
+            }
         }
         public void AtacarE(IEdificio objetivo)
         {

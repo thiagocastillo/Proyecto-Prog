@@ -39,6 +39,11 @@ public class Infanteria : IUnidadMilitar
         {
             ataqueFinal += 3;
         }
+
+        if (objetivo is Caballeria)
+        {
+            ataqueFinal += 2;
+        }
         int daño = ataqueFinal - objetivo.Defensa;
         // Registrar daño
     }
