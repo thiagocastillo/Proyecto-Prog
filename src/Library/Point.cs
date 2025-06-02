@@ -5,7 +5,7 @@ namespace Library;
        public int X { get; set; }
        public int Y { get; set; }
 
-       public Point() { } // Constructor sin parámetros (opcional, pero común en clases)
+       public Point() { } 
 
        public Point(int x, int y)
        {
