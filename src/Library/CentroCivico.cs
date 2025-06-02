@@ -1,5 +1,5 @@
 namespace Library;
-// AGREGAR CANTIDAD MAXIMA DE CENTRO CIVICO POR JUGADOR == 1
+
 public class CentroCivico : IEdificio
 {
     public Jugador Propietario { get; private set; }

@@ -7,7 +7,7 @@ public class Granja : IAlmacenamiento
     public int CapacidadMaxima { get; private set; } = 500;
     public int Vida { get; set; }
 
-
+    
     public Granja(Jugador propietario)
     {
         Propietario = propietario;
