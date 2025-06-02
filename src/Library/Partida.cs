@@ -32,13 +32,5 @@ public class Partida
         return null; 
     }
 
-    public string InterpretarComando(string comando)
-    {
-        if (comando == "ayuda")
-        {
-            return Ayuda.ObtenerAyuda();
-        }
-
-        return "No se reconoce ese comando";
-    }
+   
 }
