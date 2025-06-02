@@ -17,6 +17,7 @@ public class DepositoOro : IAlmacenamiento
     {
         Propietario = propietario;
         Vida= 5000;
+        tiempoconstruccion = new TiempoConstruccion(3);
     }
     
     public double Eficiencia(int distancia)
