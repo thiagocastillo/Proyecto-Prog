@@ -13,6 +13,12 @@ public class Casa : IEdificio
     public int CantidadAldeanos { get; set; }
     public int CantidadUnidadesMilitar { get; set; }
     
+    private TiempoConstruccion tiempoconstruccion;
+
+    public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
+    public int TiempoConstruccionRestante => tiempoconstruccion.TiempoRestante;
+    public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
+    
     public Casa(Jugador propietario)
     {
         Propietario = propietario;
