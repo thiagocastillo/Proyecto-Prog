@@ -56,7 +56,6 @@ public class JuegoFachada
         return jugador?.Recursos ?? new Dictionary<string, int>();
     }
 
-    // Ahora recibe el nombre del recurso y busca el recurso natural en el mapa
     public void OrdenarRecolectar(string nombreJugador, int idAldeano, string nombreRecurso)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -64,16 +63,14 @@ public class JuegoFachada
 
         if (aldeano != null && _partidaActual != null)
         {
-            // Busca el recurso natural más cercano del tipo solicitado y que no esté agotado
             var recurso = _partidaActual.Mapa.Recursos
                 .OfType<RecursoNatural>()
                 .FirstOrDefault(r => r.Nombre == nombreRecurso && !r.EstaAgotado());
 
             if (recurso != null)
             {
-                aldeano.Recolectar(recurso, null); // Puedes agregar lógica para almacén si lo necesitas
+                aldeano.Recolectar(recurso, null); 
             }
-            // Si no hay recurso, podrías lanzar una excepción o manejar el error
         }
     }
 
@@ -140,7 +137,6 @@ public class JuegoFachada
                         jugador.Recursos["Madera"] -= 200;
                     }
                     break;
-                // Añadir más casos para otros edificios
             }
 
             if (nuevoEdificio != null)
@@ -149,7 +145,6 @@ public class JuegoFachada
             }
             else
             {
-                // Manejar el caso de no poder construir (recursos insuficientes, etc.)
             }
         }
     }
@@ -214,7 +209,6 @@ public class JuegoFachada
                             jugador.Recursos["Madera"] -= 60;
                         }
                         break;
-                    // Añadir más unidades si las hubiera
                 }
 
                 if (nuevaUnidad != null)
@@ -223,12 +217,10 @@ public class JuegoFachada
                 }
                 else
                 {
-                    // Manejar el caso de no poder entrenar (recursos, sin cuartel, población)
                 }
             }
             else
             {
-                // Informar que se necesita un cuartel
             }
         }
     }
@@ -269,5 +261,4 @@ public class JuegoFachada
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
 
-    // Métodos adicionales según las historias de usuario (visualizar mapa, etc.) irían aquí
 }
