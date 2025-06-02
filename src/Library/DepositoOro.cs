@@ -6,7 +6,13 @@ public class DepositoOro : IAlmacenamiento
     public Point Posicion { get; set; }
     public int CapacidadMaxima { get; private set; } = 500;
     public int Vida { get; set; }
+    
+    private TiempoConstruccion tiempoconstruccion;
 
+    public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
+    public int TiempoConstruccionRestante => tiempoconstruccion.TiempoRestante;
+    public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
+    
     public DepositoOro(Jugador propietario)
     {
         Propietario = propietario;
