@@ -3,6 +3,7 @@ namespace Library;
 public class Aldeano : IUnidad, IRecolector
 {
     public Jugador Propietario { get; private set; }
+    
     public int Ataque { get; private set; } = 0;
     public int Defensa { get; private set; } = 0;
     
