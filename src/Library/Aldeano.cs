@@ -103,7 +103,7 @@ public class Aldeano : IUnidad, IRecolector
         return Math.Sqrt(dx * dx + dy * dy);
     }
 
-    private bool EsCompatible(IAlmacenamiento almacen, ITipoRecurso tipo)
+    /*private bool EsCompatible(IAlmacenamiento almacen, ITipoRecurso tipo)
     {
         string nombre = tipo.Nombre;
 
@@ -111,5 +111,5 @@ public class Aldeano : IUnidad, IRecolector
                (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
                (nombre == "Oro" && almacen is DepositoOro) ||
                (nombre == "Piedra" && almacen is DepositoPiedra);
-    }
+    }*/
 }
