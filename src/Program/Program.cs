@@ -5,6 +5,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine(Ayuda.ObtenerAyuda());
         JuegoFachada juego = new JuegoFachada();
 
         // Crear una nueva partida
