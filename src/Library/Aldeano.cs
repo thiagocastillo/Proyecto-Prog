@@ -35,19 +35,16 @@ public class Aldeano : IUnidad, IRecolector
 
     public string AtacarE(IEdificio objetivo)
     {
-        // Los aldeanos normalmente no atacan
         return "Los aldeanos no atacan edificios.";
     }
     public string AtacarU(IUnidad objetivo)
     {
-        // Los aldeanos normalmente no atacan
         return "Los aldeanos no atacan unidades.";
     }
 
   
 
   
-   //public void Recolectar(Recurso.TipoRecurso tipoRecurso, IAlmacenamiento? almacenCercano = null)
    public void Recolectar(RecursoNatural recurso, IAlmacenamiento almacenCercano = null)
    {
        if (recurso.EstaAgotado())
@@ -59,7 +56,6 @@ public class Aldeano : IUnidad, IRecolector
 
        int extraido = recurso.Recolectar(cantidadRecolectada);
 
-       // Buscar el edificio de almacenamiento compatible más cercano
        IAlmacenamiento almacenMasCercano = almacenCercano;
        double distanciaMinima = double.MaxValue;
 
@@ -103,13 +99,5 @@ public class Aldeano : IUnidad, IRecolector
         return Math.Sqrt(dx * dx + dy * dy);
     }
 
-    /*private bool EsCompatible(IAlmacenamiento almacen, ITipoRecurso tipo)
-    {
-        string nombre = tipo.Nombre;
-
-        return (nombre == "Madera" && almacen is DepositoMadera) ||
-               (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
-               (nombre == "Oro" && almacen is DepositoOro) ||
-               (nombre == "Piedra" && almacen is DepositoPiedra);
-    }*/
+ 
 }
