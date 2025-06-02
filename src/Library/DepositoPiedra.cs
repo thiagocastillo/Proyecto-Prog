@@ -7,7 +7,6 @@ public class DepositoPiedra : IAlmacenamiento
     public int CapacidadMaxima { get; private set; } = 500;
     public int Vida { get; set; }
 
-
     public DepositoPiedra(Jugador propietario)
     {
         Propietario = propietario;

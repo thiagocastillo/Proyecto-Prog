@@ -7,6 +7,11 @@ public class Molino : IAlmacenamiento
     public int CapacidadMaxima { get; private set; } = 500;
     public int Vida { get; set; }
 
+    private TiempoConstruccion tiempoconstruccion;
+
+    public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
+    public int TiempoConstruccionRestante => tiempoconstruccion.TiempoRestante;
+    public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
     public Molino(Jugador propietario)
     {
         Propietario = propietario;
