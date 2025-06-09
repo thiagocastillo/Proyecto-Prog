@@ -39,17 +39,41 @@ public class Infanteria : IUnidadMilitar
     }
     public bool Mover(Point destino, Mapa mapa)
     {
-        if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
+        try
         {
-            return false; 
+            if(mapa == null)
+            {
+                throw new ArgumentNullException(nameof(mapa), "El mapa no puede ser nulo.");
+            }
+            
+            if (destino == null)
+            {
+                throw new ArgumentNullException(nameof(destino), "El destino no puede ser nulo.");
+            }
+            
+            if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
+            {
+                throw new ArgumentOutOfRangeException("Destino fuera de los límites del mapa.");
+                return false;
+            }
+
+            Posicion = destino;
+            return true;
         }
-        
-        Posicion = destino;
-        return true;
+        catch(Exception e)
+        {
+            throw new InvalidOperationException("No se pudo mover la unidad.", e);
+            return false;
+        }
     }
 
     public string AtacarU(IUnidad objetivo)
     {
+        if (objetivo == null)
+        {
+            throw new ArgumentNullException(nameof(objetivo), "El objetivo no puede ser nulo.");
+        }
+        
         int ataqueFinal = Ataque;
         int daño = ataqueFinal - objetivo.Defensa;
         
