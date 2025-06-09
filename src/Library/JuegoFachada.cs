@@ -22,6 +22,15 @@ public class JuegoFachada
     {
         return _civilizacionesDisponibles.Select(c => c.Nombre).ToList();
     }
+    public Mapa ObtenerMapa()
+    {
+        return _partidaActual?.Mapa!;
+    }
+
+    public List<Jugador> ObtenerJugadores()
+    {
+        return _partidaActual?.Jugadores!;
+    }
 
     public bool SeleccionarCivilizacion(string nombreJugador, string nombreCivilizacion)
     {

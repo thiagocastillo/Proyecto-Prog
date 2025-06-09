@@ -42,7 +42,7 @@ public class Program
 
         // Jugador 1 construye una casa
         Console.WriteLine($"\n{jugador1Nombre} intenta construir una casa en (1, 1).");
-        juego.ConstruirEdificio(jugador1Nombre, "casa", new Point { X = 1, Y = 1 });
+        juego.ConstruirEdificio(jugador1Nombre, "casa", new Point { X = 36, Y = 35 });
         var edificiosAlice = juego.ObtenerEdificiosJugador(jugador1Nombre);
         Console.WriteLine($"Edificios de {jugador1Nombre}: {edificiosAlice.Count}");
 
@@ -76,5 +76,13 @@ public class Program
         // Resumen combate
         string resumenCombate = juego.AtacarUnidad("Juancito", 0, 1); // ID 0 ataca al 1
         Console.WriteLine(resumenCombate);
+        
+        Console.WriteLine(juego);
+
+        // Mostrar el mapa al final
+        var mapa = juego.ObtenerMapa(); // Debe devolver la instancia de Mapa
+        var jugadores = juego.ObtenerJugadores(); // Debe devolver la lista de Jugador
+        Console.WriteLine("\nMapa actual:");
+        Console.WriteLine(mapa.MostrarMapa(jugadores));
     }
 }
