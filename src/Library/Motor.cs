@@ -1,4 +1,3 @@
-// src/Program/Motor.cs
 using System.Collections.Generic;
 using System.Text;
 namespace Library;
