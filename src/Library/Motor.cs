@@ -22,7 +22,7 @@ public class Motor
                     var civs = _fachada.ObtenerCivilizacionesDisponibles();
                     return "Civilizaciones disponibles:\n" + string.Join("\n", civs);
                 case "agregarjugador":
-                    _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1]);
+                    _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
                 case "seleccionarcivilizacion":
                     return _fachada.SeleccionarCivilizacion(argumentos[0], argumentos[1])
