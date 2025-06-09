@@ -38,6 +38,9 @@ public class Jugador
 
     public void AgregarRecurso(ITipoRecurso tipo, int cantidad)
     {
+        if (cantidad <= 0)
+            throw new ArgumentException("La cantidad de recursos debe ser mayor que cero.");
+        
         if (!Recursos.ContainsKey(tipo.Nombre))
             Recursos[tipo.Nombre] = 0;
 
@@ -47,11 +50,22 @@ public class Jugador
     public void AumentarPoblacionMaxima(int incremento)
     {
         // No permite superar el máximo absoluto de aldeanos + militares
-        int maxTotal = LimiteAldeanos + LimiteMilitares;
-        if (PoblacionMaxima + incremento > maxTotal)
-            PoblacionMaxima = maxTotal;
-        else
-            PoblacionMaxima += incremento;
+
+        try
+        {
+            if (incremento <= 0)
+                throw new ArgumentException("El incremento debe ser mayor que cero.");
+
+            int maxTotal = LimiteAldeanos + LimiteMilitares;
+            if (PoblacionMaxima + incremento > maxTotal)
+                PoblacionMaxima = maxTotal;
+            else
+                PoblacionMaxima += incremento;
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"Error al aumentar población máxima: {ex.Message}");
+        }
     }
 
     public void AgregarEdificio(IEdificio edificio)
@@ -61,21 +75,29 @@ public class Jugador
 
     public void AgregarUnidad(IUnidad unidad)
     {
-        if (unidad is Aldeano)
+        try
         {
-            if (Aldeanos.Count >= LimiteAldeanos)
-                throw new InvalidOperationException("No se pueden tener más de 20 aldeanos.");
-            Aldeanos.Add((Aldeano)unidad);
-        }
-        else
-        {
-            int militares = Unidades.Count(u => !(u is Aldeano));
-            if (militares >= LimiteMilitares)
-                throw new InvalidOperationException("No se pueden tener más de 30 unidades militares.");
-        }
 
-        Unidades.Add(unidad);
-        PoblacionActual++;
+            if (unidad is Aldeano)
+            {
+                if (Aldeanos.Count >= LimiteAldeanos)
+                    throw new InvalidOperationException("No se pueden tener más de 20 aldeanos.");
+                Aldeanos.Add((Aldeano)unidad);
+            }
+            else
+            {
+                int militares = Unidades.Count(u => !(u is Aldeano));
+                if (militares >= LimiteMilitares)
+                    throw new InvalidOperationException("No se pueden tener más de 30 unidades militares.");
+            }
+
+            Unidades.Add(unidad);
+            PoblacionActual++;
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine($"Error al agregar unidad: {ex.Message}");
+        }
     }
     public string ObtenerResumenPoblacion()
     {
