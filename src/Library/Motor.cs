@@ -64,7 +64,8 @@ public class Motor
                     foreach (var jugador in jugadores)
                         sbJ.AppendLine($"Nombre: {jugador.Nombre}, Civilización: {jugador.Civilizacion?.Nombre ?? "Sin civilización"}");
                     return sbJ.ToString().TrimEnd();
-                case "salir":
+                case "mostrarmapa":
+                    return _fachada.MostrarMapa();                case "salir":
                     return "Saliendo...";
                 default:
                     return "Comando no reconocido.";

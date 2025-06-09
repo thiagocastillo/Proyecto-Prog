@@ -19,6 +19,7 @@ public static class Ayuda
         unidadesjugador <nombre>                      - Ver unidades de un jugador
         edificiosjugador <nombre>                     - Ver edificios de un jugador
         listarjugadores                              - Listar todos los jugadores en la partida
+        mostrarMapa                                   - Mostrar el mapa del juego
         salir                                         - Salir del juego";
     }
 }

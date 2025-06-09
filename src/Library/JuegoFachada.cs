@@ -22,9 +22,11 @@ public class JuegoFachada
     {
         return _civilizacionesDisponibles.Select(c => c.Nombre).ToList();
     }
-    public Mapa ObtenerMapa()
+    public string MostrarMapa()
     {
-        return _partidaActual?.Mapa!;
+        if (_partidaActual == null || _partidaActual.Mapa == null)
+            return "No hay partida o mapa disponible.";
+        return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
 
     public List<Jugador> ObtenerJugadores()
