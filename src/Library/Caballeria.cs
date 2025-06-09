@@ -1,6 +1,5 @@
 namespace Library;
 
-
     public class Caballeria : IUnidadMilitar
     {
         public Jugador Propietario { get; private set; }
