@@ -13,9 +13,9 @@ public class JuegoFachada
         new Civilizacion("bengalíes", new List<string> { "Al construir CC, +1 aldeano", "Caballeria +10 velocidad" }, "Ratha")
     };
 
-    public void CrearNuevaPartida(int tamañoMapa, int cantidadJugadores)
+    public void CrearNuevaPartida()
     {
-        _partidaActual = new Partida(tamañoMapa, cantidadJugadores);
+        _partidaActual = new Partida();
     }
 
     public List<string> ObtenerCivilizacionesDisponibles()

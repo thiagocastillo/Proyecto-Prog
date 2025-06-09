@@ -2,15 +2,14 @@ namespace Library;
 
 public class Mapa
 {
-    public int Ancho { get; private set; }
-    public int Alto { get; private set; }
+    public int Ancho { get; private set; }=100;
+    public int Alto { get; private set; } = 100;
     public List<RecursoNatural> Recursos { get; set; } = new List<RecursoNatural>();
 
 
-    public Mapa(int ancho, int alto)
+    public Mapa()
     {
-        Ancho = 100;
-        Alto = 100;
+        
     }
     public string MostrarMapa(List<Jugador> jugadores)
     {
