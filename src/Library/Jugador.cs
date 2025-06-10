@@ -1,10 +1,12 @@
 namespace Library;
-
+using System.Collections.Generic;
 public class Jugador
 {
     public const int LimiteAldeanos = 20;
     public const int LimiteMilitares = 30;
-
+    public static Random random = new Random();
+    int x = random.Next(0, 100);
+    int y = random.Next(0, 100);
     public string Nombre { get; set; }
     public Civilizacion Civilizacion { get; set; }
     public CentroCivico CentroCivico { get; set; }
@@ -26,11 +28,11 @@ public class Jugador
     {
         Nombre = nombre;
         Civilizacion = civilizacion;
-        CentroCivico = new CentroCivico(this) { Posicion = new Point { X = 0, Y = 0 } };
+        CentroCivico = new CentroCivico(this) { Posicion = new Point { X = x, Y = y } };
         Edificios.Add(CentroCivico);
         for (int i = 0; i < 3; i++)
         {
-            var aldeano = new Aldeano(this) { Posicion = new Point { X = i + 1, Y = 0 } };
+            var aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
             Aldeanos.Add(aldeano);
             Unidades.Add(aldeano);
         }
