@@ -23,10 +23,6 @@ public class Motor
                 case "agregarjugador":
                     _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
-                case "seleccionarcivilizacion":
-                    return _fachada.SeleccionarCivilizacion(argumentos[0], argumentos[1])
-                        ? "Civilización seleccionada."
-                        : "No se pudo seleccionar la civilización.";
                 case "construiredificio":
                     _fachada.ConstruirEdificio(argumentos[0], argumentos[1], new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
                     return "Edificio construido.";
@@ -65,7 +61,8 @@ public class Motor
                         sbJ.AppendLine($"Nombre: {jugador.Nombre}, Civilización: {jugador.Civilizacion?.Nombre ?? "Sin civilización"}");
                     return sbJ.ToString().TrimEnd();
                 case "mostrarmapa":
-                    return _fachada.MostrarMapa();                case "salir":
+                    return _fachada.MostrarMapa();               
+                case "salir":
                     return "Saliendo...";
                 default:
                     return "Comando no reconocido.";

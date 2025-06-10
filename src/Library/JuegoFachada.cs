@@ -33,22 +33,7 @@ public class JuegoFachada
     {
         return _partidaActual?.Jugadores!;
     }
-
-    public bool SeleccionarCivilizacion(string nombreJugador, string nombreCivilizacion)
-    {
-        if (_partidaActual == null) return false;
-        var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
-        if (civilizacion == null) return false;
-        var jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-
-        if (jugador != null)
-        {
-            jugador.Civilizacion = civilizacion;
-            return true;
-        }
-        return false;
-    }
-
+    
     public void AgregarJugadorAPartida(string nombreJugador, string nombreCivilizacion)
     {
         if (_partidaActual != null)
