@@ -15,6 +15,7 @@ public static class Ayuda
         entrenarunidad <nombre> <tipo>                - Entrenar una unidad
         moverunidad <nombre> <idUnidad> <x> <y>       - Mover una unidad
         atacarunidad <nombre> <idAtacante> <idObjetivo> - Atacar con una unidad
+        estadojugador <nombre>                        - Ver informacion detallada del jugador
         recursosjugador <nombre>                      - Ver recursos de un jugador
         unidadesjugador <nombre>                      - Ver unidades de un jugador
         edificiosjugador <nombre>                     - Ver edificios de un jugador
