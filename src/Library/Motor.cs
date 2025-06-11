@@ -35,7 +35,7 @@ public class Motor
                 case "atacarunidad":
                     return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
                 case "estadojugador":
-                    return _fachada.MostrarEstadoJugador(argumentos[1]);
+                    return _fachada.MostrarEstadoJugador(argumentos[0]);
                 case "recursosjugador":
                     var recursos = _fachada.ObtenerRecursosJugador(argumentos[0]);
                     var sb = new StringBuilder();
