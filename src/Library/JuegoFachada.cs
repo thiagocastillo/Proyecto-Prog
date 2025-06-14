@@ -39,6 +39,7 @@ public class JuegoFachada
         if (_partidaActual != null)
         {
             var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
+            
             if (civilizacion != null)
             {
                 _partidaActual.AgregarJugador(new Jugador(nombreJugador, civilizacion));
