@@ -10,7 +10,7 @@ public static class Ayuda
         crearpartida                                  - Crear una nueva partida
         civilizaciones                                - Ver civilizaciones disponibles
         agregarjugador <nombre> <civilización>        - Agregar un jugador a la partida
-        seleccionarcivilizacion <nombre> <civilización> - Seleccionar civilización para un jugador
+        seleccionarcivilizacion <nombre> <civilización> - Seleccionar civilización para un jugador  //falta aun
         construiredificio <nombre> <tipo> <x> <y>     - Construir un edificio
         entrenarunidad <nombre> <tipo>                - Entrenar una unidad
         moverunidad <nombre> <idUnidad> <x> <y>       - Mover una unidad
