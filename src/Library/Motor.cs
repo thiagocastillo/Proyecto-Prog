@@ -8,7 +8,7 @@ public class Motor
 
     public string ProcesarComando(string comando, List<string> argumentos)
     {
-        try
+        try    //ver esto: Proporcionar ayuda y ejemplos de comandos: a q se refieren con ejemplos de comandos?
         {
             switch (comando.ToLower())
             {
