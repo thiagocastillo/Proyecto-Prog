@@ -291,7 +291,14 @@ public class JuegoFachada
 
     public List<IEdificio> ObtenerEdificiosJugador(string nombreJugador)
     {
+        if(_partidaActual == null)
+            throw new InvalidOperationException("No hay partida activa, cree una con el comando correspondiente.");
+        
+        if (_partidaActual.Jugadores.Count == 0)
+            throw new InvalidOperationException("No hay jugadores en la partida actual, cree al menos uno con el comando correspondiente.");
+        
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
 }

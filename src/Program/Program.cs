@@ -14,6 +14,7 @@ class Program
         {
             Console.Write("\nComando: ");
             var entrada = Console.ReadLine();
+            
             if (string.IsNullOrWhiteSpace(entrada))
                 continue;
 
@@ -24,7 +25,7 @@ class Program
             var resultado = motor.ProcesarComando(comando, argumentos);
             Console.WriteLine(resultado);
 
-            if (comando == "salir")
+            if (comando == "salir" || comando == "exit")
                 break;
         }
     }

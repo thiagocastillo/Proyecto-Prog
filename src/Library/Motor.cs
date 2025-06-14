@@ -27,7 +27,7 @@ public class Motor
                 case "agregarjugador":
                     
                     if (argumentos.Count < 2)
-                        return "Faltan argumentos en comando, recordar: agregarjugador <nombre> <civilización>";
+                        return "Faltan argumentos en comando, recordar sintaxis: agregarjugador <nombre> <civilización>";
                    
                     _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
@@ -35,7 +35,7 @@ public class Motor
                 case "construiredificio":
                     
                     if (argumentos.Count < 4)
-                        return "Faltan argumentos en comando, recordar: construiredificio <nombre> <tipo> <x> <y>";
+                        return "Faltan argumentos en comando, recordar sintaxis: construiredificio <nombre> <tipo> <x> <y>";
                         
                     
                     _fachada.ConstruirEdificio(argumentos[0], argumentos[1], new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
@@ -44,14 +44,14 @@ public class Motor
                 case "entrenarunidad":
                     
                     if (argumentos.Count < 2)
-                        return "Faltan argumentos en comando, recordar: entrenarunidad <nombre> <tipo>";
+                        return "Faltan argumentos en comando, recordar sintaxis: entrenarunidad <nombre> <tipo>";
                     _fachada.EntrenarUnidad(argumentos[0], argumentos[1]);
                     return "Unidad entrenada.";
                 
                 case "moverunidad":
                     
                     if (argumentos.Count < 4)
-                        return "Faltan argumentos en comando, recordar: moverunidad <nombre> <idUnidad> <x> <y>";
+                        return "Faltan argumentos en comando, recordar sintaxis: moverunidad <nombre> <idUnidad> <x> <y>";
                    
                     _fachada.MoverUnidad(argumentos[0], int.Parse(argumentos[1]), new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
                     return "Unidad movida.";
@@ -59,16 +59,20 @@ public class Motor
                 case "atacarunidad":               //ver...
                     
                     if (argumentos.Count < 3)
-                        return "Faltan argumentos en comando, recordar: atacarunidad <nombre> <idAtacante> <idObjetivo>";
+                        return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombre> <idAtacante> <idObjetivo>";
                     
                     return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
                 
-                case "recursosjugador":   //ver si no seleccionan un jugador q exista no muestre nada
+                case "recursosjugador":   
                     
                     if (argumentos.Count < 1)
-                        return "Faltan argumentos en comando, recordar: recursosjugador <nombre>";
+                        return "Faltan argumentos en comando, recordar sintaxis: recursosjugador <nombre>";
                     
                     var recursos = _fachada.ObtenerRecursosJugador(argumentos[0]);
+                    
+                    if (recursos.Count == 0) //testear, no me funcionó con recursos == null xq es un diccionario, ver si no arma quilombo luego cuando se empieze a llenar el diccionario
+                        return "El jugador no existe, cree uno usando el comando correspondiente.";
+                    
                     var sb = new StringBuilder();
                     foreach (var r in recursos)
                         sb.AppendLine($"{r.Key}: {r.Value}");
@@ -77,7 +81,7 @@ public class Motor
                 case "unidadesjugador":   //aca si ponen un jugador que no existe, da error al obtener las unidades del jugador
                     
                     if (argumentos.Count < 1)
-                        return "Faltan argumentos en comando, recordar: unidadesjugador <nombre>";
+                        return "Faltan argumentos en comando, recordar sintaxis: unidadesjugador <nombre>";
                     
                     var unidades = _fachada.ObtenerUnidadesJugador(argumentos[0]);
                     var sbU = new StringBuilder();
@@ -87,10 +91,10 @@ public class Motor
                     
                     return sbU.ToString().TrimEnd();
                 
-                case "edificiosjugador":  //si el jugador no existe, da error al obtener los edificios del jugador
+                case "edificiosjugador":  
                     
                     if (argumentos.Count < 1)
-                        return "Faltan argumentos en comando, recordar: edificiosjugador <nombre>";
+                        return "Faltan argumentos en comando, recordar sintaxis: edificiosjugador <nombre>";
                     
                     var edificios = _fachada.ObtenerEdificiosJugador(argumentos[0]);
                     var sbE = new StringBuilder();
@@ -117,6 +121,10 @@ public class Motor
                     return _fachada.MostrarMapa();               
                 
                 case "salir":
+                    
+                    return "Saliendo...";
+                
+                case "exit":  // ST se puso ladilla y necesita un exit para salir del programa jajajaajajaj
                     
                     return "Saliendo...";
                 
