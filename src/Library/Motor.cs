@@ -20,7 +20,12 @@ public class Motor
                 case "civilizaciones":
                     var civs = _fachada.ObtenerCivilizacionesDisponibles();
                     return "Civilizaciones disponibles:\n" + string.Join("\n", civs);
+                
                 case "agregarjugador":
+                    
+                    if (argumentos.Count < 2)
+                        return "Faltan argumentos en comando, recordar: agregarjugador <nombre> <civilización>";
+                   
                     _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
                 case "construiredificio":

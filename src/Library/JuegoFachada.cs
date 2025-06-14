@@ -44,6 +44,10 @@ public class JuegoFachada
                 _partidaActual.AgregarJugador(new Jugador(nombreJugador, civilizacion));
             }
         }
+        else
+        {
+            throw new InvalidOperationException("No hay partida activa al momento.");
+        }
     }
 
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
