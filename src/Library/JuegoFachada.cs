@@ -269,8 +269,19 @@ public class JuegoFachada
 
     public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        return jugador?.Unidades.ToList() ?? new List<IUnidad>();
+        try
+        {
+            var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+
+            if (nombreJugador != jugador.Nombre || jugador == null)
+                throw new ArgumentException("Jugador no encontrado.");
+            
+            return jugador?.Unidades.ToList() ?? new List<IUnidad>();
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException("Error al obtener las unidades del jugador.", ex);
+        }
     }
 
     public List<IEdificio> ObtenerEdificiosJugador(string nombreJugador)
