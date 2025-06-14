@@ -32,6 +32,10 @@ public class Motor
                     _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
                 
+                case "seleccionarcivilizacion":
+                   
+                    return "A implementar, ver que hace";
+                
                 case "construiredificio":
                     
                     if (argumentos.Count < 4)
