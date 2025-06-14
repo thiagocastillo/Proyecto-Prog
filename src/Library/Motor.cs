@@ -78,7 +78,7 @@ public class Motor
                         sb.AppendLine($"{r.Key}: {r.Value}");
                     return sb.ToString().TrimEnd();
                 
-                case "unidadesjugador":   //aca si ponen un jugador que no existe, da error al obtener las unidades del jugador
+                case "unidadesjugador":   
                     
                     if (argumentos.Count < 1)
                         return "Faltan argumentos en comando, recordar sintaxis: unidadesjugador <nombre>";
