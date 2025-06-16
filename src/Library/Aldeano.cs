@@ -40,12 +40,12 @@ public class Aldeano : IUnidad, IRecolector
         return 0;
     }
 
-    public string AtacarE(IEdificio objetivo)
+    public string AtacarEdificio(IEdificio objetivo)
     {
         return "Los aldeanos no atacan edificios.";
     }
 
-    public string AtacarU(IUnidad objetivo)
+    public string AtacarUnidad(IUnidad objetivo)
     {
         return "Los aldeanos no atacan unidades.";
     }
@@ -56,6 +56,7 @@ public class Aldeano : IUnidad, IRecolector
             throw new InvalidOperationException("El recurso está agotado.");
 
         int cantidadRecolectada = (int)recurso.TasaRecoleccion;
+       
         if (Propietario.Civilizacion.Nombre == "Aztecas")
             cantidadRecolectada += 3;
 
@@ -71,6 +72,7 @@ public class Aldeano : IUnidad, IRecolector
                 if (EsCompatible(almacen, recurso.Nombre))
                 {
                     double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
+                    
                     if (distancia < distanciaMinima)
                     {
                         distanciaMinima = distancia;

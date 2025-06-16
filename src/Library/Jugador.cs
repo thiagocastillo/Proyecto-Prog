@@ -30,6 +30,7 @@ public class Jugador
         Civilizacion = civilizacion;
         CentroCivico = new CentroCivico(this) { Posicion = new Point { X = x, Y = y } };
         Edificios.Add(CentroCivico);
+        
         for (int i = 0; i < 3; i++)
         {
             var aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
@@ -52,13 +53,13 @@ public class Jugador
     public void AumentarPoblacionMaxima(int incremento)
     {
         // No permite superar el máximo absoluto de aldeanos + militares
-
         try
         {
             if (incremento <= 0)
                 throw new ArgumentException("El incremento debe ser mayor que cero.");
 
             int maxTotal = LimiteAldeanos + LimiteMilitares;
+            
             if (PoblacionMaxima + incremento > maxTotal)
                 PoblacionMaxima = maxTotal;
             else
@@ -66,7 +67,7 @@ public class Jugador
         }
         catch (ArgumentException ex)
         {
-            Console.WriteLine($"Error al aumentar población máxima: {ex.Message}");
+            throw new InvalidOperationException($"Error al aumentar población máxima: {ex.Message}", ex);
         }
     }
 
@@ -98,7 +99,7 @@ public class Jugador
         }
         catch (InvalidOperationException ex)
         {
-            Console.WriteLine($"Error al agregar unidad: {ex.Message}");
+            throw new InvalidOperationException($"Error al agregar unidad: {ex.Message}", ex);
         }
     }
     public string ObtenerResumenPoblacion()

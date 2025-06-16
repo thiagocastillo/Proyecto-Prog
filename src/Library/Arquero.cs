@@ -2,8 +2,8 @@ namespace Library;
 public class Arquero : IUnidadMilitar
 {
     public Jugador Propietario { get; private set; }
-    public int Ataque { get; set; } = 8; // Añadimos 'set;'
-    public int Defensa { get; private set; } = 3;
+    public int Ataque { get; set; } = 8; 
+    public int Defensa { get; set; } = 3;
     
     public double Velocidad { get; private set; } = 1.2;
 
@@ -46,7 +46,7 @@ public class Arquero : IUnidadMilitar
         return true;
     }
 
-    public string AtacarU(IUnidad objetivo)
+    public string AtacarUnidad(IUnidad objetivo)
     {
         int daño = Ataque - objetivo.Defensa;
        
@@ -59,7 +59,7 @@ public class Arquero : IUnidadMilitar
         daño = Math.Max(daño, 0);
         objetivo.Salud -= daño;   
         
-        string info = $"{GetType().Name} atacó a {objetivo.GetType().Name} e hizo {daño} de daño.";
+        string info = $"{GetType().Name} ataco a {objetivo.GetType().Name} e hizo {daño} de daño.";
         info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
         
         if (objetivo.Salud <= 0)
@@ -69,7 +69,7 @@ public class Arquero : IUnidadMilitar
         }
         return info;
     }
-    public string AtacarE(IEdificio objetivo)
+    public string AtacarEdificio(IEdificio objetivo)
     {
         int daño = Ataque;
         objetivo.Vida -= daño;

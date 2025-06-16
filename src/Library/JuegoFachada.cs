@@ -39,10 +39,15 @@ public class JuegoFachada
         if (_partidaActual != null)
         {
             var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
+            
             if (civilizacion != null)
             {
                 _partidaActual.AgregarJugador(new Jugador(nombreJugador, civilizacion));
             }
+        }
+        else
+        {
+            throw new InvalidOperationException("No hay partida activa al momento.");
         }
     }
 
@@ -303,7 +308,7 @@ public class JuegoFachada
 
         if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
         {
-            return unidadAtacante.AtacarU(unidadObjetivo);
+            return unidadAtacante.AtacarUnidad(unidadObjetivo);
         }
         
         return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
@@ -311,13 +316,31 @@ public class JuegoFachada
 
     public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        return jugador?.Unidades.ToList() ?? new List<IUnidad>();
+        try
+        {
+            var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+
+            if (nombreJugador != jugador.Nombre || jugador == null)
+                throw new ArgumentException("Jugador no encontrado.");
+            
+            return jugador?.Unidades.ToList() ?? new List<IUnidad>();
+        }
+        catch (Exception ex)
+        {
+            throw new InvalidOperationException("Error al obtener las unidades del jugador.", ex);
+        }
     }
 
     public List<IEdificio> ObtenerEdificiosJugador(string nombreJugador)
     {
+        if(_partidaActual == null)
+            throw new InvalidOperationException("No hay partida activa, cree una con el comando correspondiente.");
+        
+        if (_partidaActual.Jugadores.Count == 0)
+            throw new InvalidOperationException("No hay jugadores en la partida actual, cree al menos uno con el comando correspondiente.");
+        
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
 }

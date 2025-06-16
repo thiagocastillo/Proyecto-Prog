@@ -11,6 +11,7 @@ public class CentroCivico : IEdificio
     {
         Propietario = propietario;
         Vida = 100000;
+        
         if (propietario.Civilizacion.Nombre == "Bengalíes")
         {
             propietario.Aldeanos.Add(new Aldeano(propietario) { Posicion = new Point { X = Posicion.X + 1, Y = Posicion.Y } });

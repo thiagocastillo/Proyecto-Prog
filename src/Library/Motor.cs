@@ -8,65 +8,128 @@ public class Motor
 
     public string ProcesarComando(string comando, List<string> argumentos)
     {
-        try
+        try    //ver esto: Proporcionar ayuda y ejemplos de comandos: a q se refieren con ejemplos de comandos?
         {
             switch (comando.ToLower())
             {
                 case "ayuda":
                     return Ayuda.ObtenerComandos();
+                
                 case "crearpartida":
                     _fachada.CrearNuevaPartida();
                     return "Partida creada.";
+                
                 case "civilizaciones":
+                    
                     var civs = _fachada.ObtenerCivilizacionesDisponibles();
                     return "Civilizaciones disponibles:\n" + string.Join("\n", civs);
+                
                 case "agregarjugador":
+                    
+                    if (argumentos.Count < 2)
+                        return "Faltan argumentos en comando, recordar sintaxis: agregarjugador <nombre> <civilización>";
+                   
                     _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
+                
                 case "construiredificio":
+                    
+                    if (argumentos.Count < 4)
+                        return "Faltan argumentos en comando, recordar sintaxis: construiredificio <nombre> <tipo> <x> <y>";
+                        
+                    
                     _fachada.ConstruirEdificio(argumentos[0], argumentos[1], new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
                     return "Edificio construido.";
+                
                 case "entrenarunidad":
+                    
+                    if (argumentos.Count < 2)
+                        return "Faltan argumentos en comando, recordar sintaxis: entrenarunidad <nombre> <tipo>";
                     _fachada.EntrenarUnidad(argumentos[0], argumentos[1]);
                     return "Unidad entrenada.";
+                
                 case "moverunidad":
+                    
+                    if (argumentos.Count < 4)
+                        return "Faltan argumentos en comando, recordar sintaxis: moverunidad <nombre> <idUnidad> <x> <y>";
+                   
                     _fachada.MoverUnidad(argumentos[0], int.Parse(argumentos[1]), new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
                     return "Unidad movida.";
-                case "atacarunidad":
+                
+                case "atacarunidad":               //ver...
+                    
+                    if (argumentos.Count < 3)
+                        return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombre> <idAtacante> <idObjetivo>";
+                    
                     return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
-                case "estadojugador":
-                    return _fachada.MostrarEstadoJugador(argumentos[0]);
-                case "recursosjugador":
+                
+                case "recursosjugador":   
+                    
+                    if (argumentos.Count < 1)
+                        return "Faltan argumentos en comando, recordar sintaxis: recursosjugador <nombre>";
+                    
                     var recursos = _fachada.ObtenerRecursosJugador(argumentos[0]);
+                    
+                    if (recursos.Count == 0) //testear, no me funcionó con recursos == null xq es un diccionario, ver si no arma quilombo luego cuando se empieze a llenar el diccionario
+                        return "El jugador no existe, cree uno usando el comando correspondiente.";
+                    
                     var sb = new StringBuilder();
                     foreach (var r in recursos)
                         sb.AppendLine($"{r.Key}: {r.Value}");
                     return sb.ToString().TrimEnd();
-                case "unidadesjugador":
+                
+                case "unidadesjugador":   
+                    
+                    if (argumentos.Count < 1)
+                        return "Faltan argumentos en comando, recordar sintaxis: unidadesjugador <nombre>";
+                    
                     var unidades = _fachada.ObtenerUnidadesJugador(argumentos[0]);
                     var sbU = new StringBuilder();
+                    
                     for (int i = 0; i < unidades.Count; i++)
                         sbU.AppendLine($"{i}: {unidades[i].GetType().Name}");
+                    
                     return sbU.ToString().TrimEnd();
-                case "edificiosjugador":
+                
+                case "edificiosjugador":  
+                    
+                    if (argumentos.Count < 1)
+                        return "Faltan argumentos en comando, recordar sintaxis: edificiosjugador <nombre>";
+                    
                     var edificios = _fachada.ObtenerEdificiosJugador(argumentos[0]);
                     var sbE = new StringBuilder();
+                    
                     for (int i = 0; i < edificios.Count; i++)
                         sbE.AppendLine($"{i}: {edificios[i].GetType().Name}");
                     return sbE.ToString().TrimEnd();
+                
                 case "listarjugadores":
+                    
                     var jugadores = _fachada.ObtenerJugadores();
-                    if (jugadores == null || jugadores.Count == 0)
-                        return "No hay jugadores en la partida.";
                     var sbJ = new StringBuilder();
+                    
+                    if(jugadores == null || jugadores.Count == 0)
+                        return "No hay jugadores en la partida.";
+                    
                     foreach (var jugador in jugadores)
                         sbJ.AppendLine($"Nombre: {jugador.Nombre}, Civilización: {jugador.Civilizacion?.Nombre ?? "Sin civilización"}");
+                    
                     return sbJ.ToString().TrimEnd();
+                
                 case "mostrarmapa":
+                   
                     return _fachada.MostrarMapa();               
+                
                 case "salir":
+                    
                     return "Saliendo...";
+                
+                case "exit":  // ST se puso ladilla y necesita un exit para salir del programa jajajaajajaj
+                    
+                    return "Saliendo...";
+                
                 default:
+                    
                     return "Comando no reconocido.";
             }
         }
