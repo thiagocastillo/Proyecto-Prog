@@ -266,7 +266,7 @@ public class JuegoFachada
 
         if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
         {
-            return unidadAtacante.AtacarU(unidadObjetivo);
+            return unidadAtacante.AtacarUnidad(unidadObjetivo);
         }
         
         return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";

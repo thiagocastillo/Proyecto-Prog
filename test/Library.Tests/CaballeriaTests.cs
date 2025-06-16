@@ -51,7 +51,7 @@ public class CaballeriaTests
         public void AtacarU_ConEnemigo_DeberiaReducirSaludYRetornarInfo()
         {
             var arquero = new Arquero(jugadorRival) { Salud = 100 };
-            string resultado = caballeria.AtacarU(arquero);
+            string resultado = caballeria.AtacarUnidad(arquero);
 
             Assert.That(arquero.Salud, Is.LessThan(100));
             Assert.IsTrue(resultado.Contains("Caballeria atacó"));
@@ -63,7 +63,7 @@ public class CaballeriaTests
             var unidad = new Arquero(jugadorRival) { Salud = 5 }; // daño mínimo = 5
             jugadorRival.Unidades.Add(unidad);
 
-            string resultado = caballeria.AtacarU(unidad);
+            string resultado = caballeria.AtacarUnidad(unidad);
 
             Assert.That(jugadorRival.Unidades.Contains(unidad), Is.False);
             Assert.IsTrue(resultado.Contains("fue destruido"));
@@ -75,7 +75,7 @@ public class CaballeriaTests
             var edificio = new Cuartel(jugadorRival) { Vida = 10 };
             jugadorRival.Edificios.Add(edificio);
 
-            string resultado = caballeria.AtacarE(edificio);
+            string resultado = caballeria.AtacarEdificio(edificio);
 
             Assert.That(edificio.Vida, Is.LessThan(10));
             Assert.IsTrue(resultado.Contains("causando"));

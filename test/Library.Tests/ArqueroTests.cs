@@ -41,7 +41,7 @@ public class ArqueroTests
         public void Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus()
         {
             var infanteria = new Infanteria(jugadorEnemigo) { Salud = 100 };
-            string resultado = arquero.AtacarU(infanteria);
+            string resultado = arquero.AtacarUnidad(infanteria);
 
             Assert.IsTrue(resultado.Contains("hizo"));
             Assert.That(infanteria.Salud, Is.LessThan(100));
@@ -56,7 +56,7 @@ public class ArqueroTests
                 Posicion = new Point(2, 2)
             };
 
-            string resultado = arquero.AtacarU(unidadDefensiva);
+            string resultado = arquero.AtacarUnidad(unidadDefensiva);
 
             Assert.That(unidadDefensiva.Salud, Is.LessThanOrEqualTo(100));
             Assert.IsTrue(resultado.Contains("daño"));
@@ -67,7 +67,7 @@ public class ArqueroTests
         {
             var edificio = new Casa(jugadorEnemigo) { Vida = 1000 };
 
-            string resultado = arquero.AtacarE(edificio);
+            string resultado = arquero.AtacarEdificio(edificio);
 
             Assert.IsTrue(resultado.Contains("causando"));
             Assert.That(edificio.Vida, Is.LessThan(1000));

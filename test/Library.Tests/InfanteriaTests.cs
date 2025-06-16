@@ -45,7 +45,7 @@ public class InfanteriaTests
         public void AtacarU_ContraCaballeria_AplicaBonus()
         {
             var caballeria = new Caballeria(jugadorRival) { Salud = 100 };
-            string resultado = infanteria.AtacarU(caballeria);
+            string resultado = infanteria.AtacarUnidad(caballeria);
 
             Assert.That(caballeria.Salud, Is.LessThan(100));
             Assert.IsTrue(resultado.Contains("Infanteria atacó a Caballeria"));
@@ -56,7 +56,7 @@ public class InfanteriaTests
         {
             var infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100 };
 
-            string resultado = infanteria.AtacarU(infanteriaObjetivo);
+            string resultado = infanteria.AtacarUnidad(infanteriaObjetivo);
 
             Assert.That(infanteriaObjetivo.Salud, Is.LessThan(100));
             Assert.IsTrue(resultado.Contains("Infanteria atacó"));
@@ -67,7 +67,7 @@ public class InfanteriaTests
         {
             var casa = new Casa(jugadorRival) { Vida = 1000 };
 
-            string resultado = infanteria.AtacarE(casa);
+            string resultado = infanteria.AtacarEdificio(casa);
 
             Assert.That(casa.Vida, Is.LessThan(1000));
             Assert.IsTrue(resultado.Contains("atacó el edificio"));
@@ -79,7 +79,7 @@ public class InfanteriaTests
             var objetivo = new Arquero(jugadorRival) { Salud = 1 }; // Aseguramos su destrucción
             jugadorRival.Unidades.Add(objetivo);
 
-            string resultado = infanteria.AtacarU(objetivo);
+            string resultado = infanteria.AtacarUnidad(objetivo);
 
             Assert.IsFalse(jugadorRival.Unidades.Contains(objetivo));
             Assert.IsTrue(resultado.Contains("fue destruido"));

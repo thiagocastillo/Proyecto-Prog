@@ -46,7 +46,7 @@ public class Arquero : IUnidadMilitar
         return true;
     }
 
-    public string AtacarU(IUnidad objetivo)
+    public string AtacarUnidad(IUnidad objetivo)
     {
         int daño = Ataque - objetivo.Defensa;
        
@@ -69,7 +69,7 @@ public class Arquero : IUnidadMilitar
         }
         return info;
     }
-    public string AtacarE(IEdificio objetivo)
+    public string AtacarEdificio(IEdificio objetivo)
     {
         int daño = Ataque;
         objetivo.Vida -= daño;

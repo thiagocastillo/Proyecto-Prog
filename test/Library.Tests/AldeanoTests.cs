@@ -44,7 +44,7 @@ public class AldeanoTests
             var otroJugador = new Jugador("Otro", jugador.Civilizacion);
             var objetivo = new Infanteria(otroJugador);
 
-            string resultado = aldeano.AtacarU(objetivo);
+            string resultado = aldeano.AtacarUnidad(objetivo);
 
             Assert.That(resultado, Is.EqualTo("Los aldeanos no atacan unidades."));
         }
@@ -55,7 +55,7 @@ public class AldeanoTests
             var aldeano = new Aldeano(jugador);
             var edificio = new Casa(jugador);
 
-            string resultado = aldeano.AtacarE(edificio);
+            string resultado = aldeano.AtacarEdificio(edificio);
 
             Assert.That(resultado, Is.EqualTo("Los aldeanos no atacan edificios."));
         }

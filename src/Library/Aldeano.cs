@@ -40,12 +40,12 @@ public class Aldeano : IUnidad, IRecolector
         return 0;
     }
 
-    public string AtacarE(IEdificio objetivo)
+    public string AtacarEdificio(IEdificio objetivo)
     {
         return "Los aldeanos no atacan edificios.";
     }
 
-    public string AtacarU(IUnidad objetivo)
+    public string AtacarUnidad(IUnidad objetivo)
     {
         return "Los aldeanos no atacan unidades.";
     }
