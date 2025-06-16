@@ -41,6 +41,7 @@ public class Mapa
 
         // Construye el string del mapa
         var sb = new System.Text.StringBuilder();
+        
         for (int y = 0; y < Alto; y++)
         {
             for (int x = 0; x < Ancho; x++)

@@ -59,7 +59,7 @@ public class Arquero : IUnidadMilitar
         daño = Math.Max(daño, 0);
         objetivo.Salud -= daño;   
         
-        string info = $"{GetType().Name} atacó a {objetivo.GetType().Name} e hizo {daño} de daño.";
+        string info = $"{GetType().Name} ataco a {objetivo.GetType().Name} e hizo {daño} de daño.";
         info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
         
         if (objetivo.Salud <= 0)

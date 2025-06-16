@@ -56,6 +56,7 @@ public class Aldeano : IUnidad, IRecolector
             throw new InvalidOperationException("El recurso está agotado.");
 
         int cantidadRecolectada = (int)recurso.TasaRecoleccion;
+       
         if (Propietario.Civilizacion.Nombre == "Aztecas")
             cantidadRecolectada += 3;
 
@@ -71,6 +72,7 @@ public class Aldeano : IUnidad, IRecolector
                 if (EsCompatible(almacen, recurso.Nombre))
                 {
                     double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
+                    
                     if (distancia < distanciaMinima)
                     {
                         distanciaMinima = distancia;

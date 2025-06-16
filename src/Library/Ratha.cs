@@ -52,7 +52,7 @@ public class Ratha : IUnidadMilitar
         daño = Math.Max(daño, 0);
         objetivo.Salud -= daño;   
         
-        string info = $"{GetType().Name} atacó a {objetivo.GetType().Name} e hizo {daño} de daño.";
+        string info = $"{GetType().Name} ataco a {objetivo.GetType().Name} e hizo {daño} de daño.";
         info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
         
         if (objetivo.Salud <= 0)
@@ -67,7 +67,7 @@ public class Ratha : IUnidadMilitar
         int daño = Ataque;
         objetivo.Vida -= daño;
         
-        string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño.";
+        string info = $"{GetType().Name} ataco el edificio {objetivo.GetType().Name} causando {daño} de daño.";
         info += $" Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
 
         if (objetivo.Vida <= 0)

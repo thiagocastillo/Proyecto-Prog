@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Library;
 
-
 class Program
 {
     static void Main(string[] args)
