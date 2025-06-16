@@ -2,23 +2,25 @@ namespace Library;
 
 public abstract class RecursoNatural
 {
-    public int Vida { get; protected set; }
-    public double TasaRecoleccion { get; protected set; }
-    public string Nombre { get; protected set; }
+    public string Nombre { get; }
+    public int VidaBase { get; }
+    public double TasaRecoleccion { get; }
+    public int Cantidad { get; set; }
+    public bool EstaAgotado => Cantidad <= 0;
+    public Point Ubicacion { get; set; }
 
-    protected RecursoNatural(string nombre, int vida, double tasaRecoleccion)
+    protected RecursoNatural(string nombre, int vidaBase, double tasaRecoleccion)
     {
         Nombre = nombre;
-        Vida = vida;
+        VidaBase = vidaBase;
         TasaRecoleccion = tasaRecoleccion;
+        Cantidad = (int)(vidaBase * tasaRecoleccion);
     }
 
-    public int Recolectar(int cantidad)
+    public int Recolectar(double cantidad)
     {
-        int recolectado = Math.Min(cantidad, Vida);
-        Vida -= recolectado;
-        return recolectado;
+        int extraido = Math.Min(Cantidad, (int)Math.Floor(cantidad));
+        Cantidad -= extraido;
+        return extraido;
     }
-
-    public bool EstaAgotado() => Vida <= 0;
 }

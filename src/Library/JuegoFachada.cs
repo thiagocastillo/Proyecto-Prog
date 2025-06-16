@@ -25,7 +25,7 @@ public class JuegoFachada
     public string MostrarMapa()
     {
         if (_partidaActual == null || _partidaActual.Mapa == null)
-            return "No hay partida o mapa disponible.";
+            return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el mapa.";
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
 
@@ -108,8 +108,7 @@ public class JuegoFachada
         {
             var recurso = _partidaActual.Mapa.Recursos
                 .OfType<RecursoNatural>()
-                .FirstOrDefault(r => r.Nombre == nombreRecurso && !r.EstaAgotado());
-
+                .FirstOrDefault(r => r.Nombre == nombreRecurso && !r.EstaAgotado);
             if (recurso != null)
             {
                 aldeano.Recolectar(recurso, null); 

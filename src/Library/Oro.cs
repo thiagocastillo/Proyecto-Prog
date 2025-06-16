@@ -1,6 +1,10 @@
 namespace Library;
 
-public class Oro : RecursoNatural, ITipoRecurso
+public class Oro : RecursoNatural
 {
-    public Oro() : base("Oro", 200, 3) { }
+    public Oro(int vidaBase, Point ubicacion)
+        : base("Oro", vidaBase, 0.50)
+    {
+        Ubicacion = ubicacion;
+    }
 }
