@@ -1,0 +1,87 @@
+namespace Library.Tests;
+
+public class InfanteriaTests
+{
+    private Jugador jugadorAzteca;
+    private Jugador jugadorRival;
+    private Infanteria infanteria;
+
+        [SetUp]
+        public void SetUp()
+        {
+            var civilizacionAzteca = new Civilizacion("aztecas", new List<string>(), "Guerrero Jaguar");
+            jugadorAzteca = new Jugador("Azteca", civilizacionAzteca);
+
+            var civilizacionRival = new Civilizacion("armenios", new List<string>(), "Arquero Compuesto");
+            jugadorRival = new Jugador("Rival", civilizacionRival);
+
+            infanteria = new Infanteria(jugadorAzteca) { Posicion = new Point(0, 0), Salud = 100 };
+        }
+
+        [Test]
+        public void Mover_DestinoValido_MueveCorrectamente()
+        {
+            var mapa = new Mapa();
+            var destino = new Point(10, 10);
+
+            var resultado = infanteria.Mover(destino, mapa);
+
+            Assert.IsTrue(resultado);
+            Assert.That(infanteria.Posicion.X, Is.EqualTo(10));
+            Assert.That(infanteria.Posicion.Y, Is.EqualTo(10));
+        }
+
+        [Test]
+        public void Mover_DestinoFueraDeMapa_LanzaExcepcion()
+        {
+            var mapa = new Mapa();
+            var destino = new Point(-1, 200);
+
+            var ex = Assert.Throws<InvalidOperationException>(() => infanteria.Mover(destino, mapa));
+            Assert.That(ex.Message, Does.Contain("No se pudo mover la unidad"));
+        }
+
+        [Test]
+        public void AtacarU_ContraCaballeria_AplicaBonus()
+        {
+            var caballeria = new Caballeria(jugadorRival) { Salud = 100 };
+            string resultado = infanteria.AtacarU(caballeria);
+
+            Assert.That(caballeria.Salud, Is.LessThan(100));
+            Assert.IsTrue(resultado.Contains("Infanteria atacó a Caballeria"));
+        }
+
+        [Test]
+        public void AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus()
+        {
+            var infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100 };
+
+            string resultado = infanteria.AtacarU(infanteriaObjetivo);
+
+            Assert.That(infanteriaObjetivo.Salud, Is.LessThan(100));
+            Assert.IsTrue(resultado.Contains("Infanteria atacó"));
+        }
+
+        [Test]
+        public void AtacarE_ContraEdificio_CausaDaño()
+        {
+            var casa = new Casa(jugadorRival) { Vida = 1000 };
+
+            string resultado = infanteria.AtacarE(casa);
+
+            Assert.That(casa.Vida, Is.LessThan(1000));
+            Assert.IsTrue(resultado.Contains("atacó el edificio"));
+        }
+
+        [Test]
+        public void AtacarU_UnidadEliminada_SeEliminaDeLista()
+        {
+            var objetivo = new Arquero(jugadorRival) { Salud = 1 }; // Aseguramos su destrucción
+            jugadorRival.Unidades.Add(objetivo);
+
+            string resultado = infanteria.AtacarU(objetivo);
+
+            Assert.IsFalse(jugadorRival.Unidades.Contains(objetivo));
+            Assert.IsTrue(resultado.Contains("fue destruido"));
+        }
+}
