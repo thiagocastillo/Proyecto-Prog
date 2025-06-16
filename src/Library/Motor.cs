@@ -139,3 +139,6 @@ public class Motor
         }
     }
 }
+
+
+// falta recolectar recursos, ver si se puede hacer con el comando recolectar recurso <nombre> <tipo> <x> <y> o algo así

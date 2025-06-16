@@ -213,7 +213,7 @@ Criterios de aceptación:
 | Evaluación docente de propuestas | 30 de abril al 5 de mayo | |
 | Votación de propuestas | 5 de mayo | |
 | Lanzamiento de proyectos | 7 de mayo | |
-| [Primera entrega] | 2 de junio | Tarjetas CRC, diagrama de clases, código de clases de dominio + [fachada](https://refactoring.guru/design-patterns/facade) |
-| [Segunda entrega] | 23 de junio | Entrega de [user stories](https://es.wikipedia.org/wiki/Historias_de_usuario) implementadas. Las historias de usuario deberán ser implementadas mediante [casos de prueba](https://en.wikipedia.org/wiki/Test_case) usando la fachada. |
-| [Entrega final] | 7 de julio | Bot funcionando y entregables según se indica en la [consigna de la entrega](./Entregas/Entrega3.md) |
+| [Primera entrega](Entregas/Entrega1.md) | 2 de junio | Tarjetas CRC, diagrama de clases, código de clases de dominio + [fachada](https://refactoring.guru/design-patterns/facade) |
+| [Segunda entrega](Entregas/Entrega2.md) | 23 de junio | Entrega de [user stories](https://es.wikipedia.org/wiki/Historias_de_usuario) implementadas. Las historias de usuario deberán ser implementadas mediante [casos de prueba](https://en.wikipedia.org/wiki/Test_case) usando la fachada. |
+| [Entrega final](Entregas/Entrega3.md) | 7 de julio | Bot funcionando y entregables según se indica en la [consigna de la entrega](./Entregas/Entrega3.md) |
 | Defensa | 7 al 9 de julio |
