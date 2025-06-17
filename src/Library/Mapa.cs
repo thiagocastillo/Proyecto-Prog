@@ -9,7 +9,7 @@ public class Mapa
 
     public Mapa()
     {
-        GenerarRecursosAleatorios(50, 200);
+        GenerarRecursosAleatorios(50, 200); 
     }
 
     public void GenerarRecursosAleatorios(int min, int max)
