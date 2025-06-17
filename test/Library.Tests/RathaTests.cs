@@ -21,8 +21,8 @@ public class RathaTests
 
         bool resultado = ratha.Mover(destino, mapa);
         
-        Assert.IsTrue(resultado);
-        Assert.AreEqual(destino, ratha.Posicion);
+        Assert.IsTrue(resultado); // Verifica que el movimiento fue exitoso
+        Assert.AreEqual(destino, ratha.Posicion); // Verifica que la posicion de la unidad cambio al destino
     }
 
     [Test]
@@ -33,7 +33,7 @@ public class RathaTests
 
         bool resultado = ratha.Mover(destino, mapa);
         
-        Assert.IsFalse(resultado);
+        Assert.IsFalse(resultado); // Se espera que devuelva false por ser fuera del mapa
     }
 
     [Test]
@@ -44,8 +44,8 @@ public class RathaTests
 
         string resultado = ratha.AtacarUnidad(enemigo);
         
-        Assert.IsTrue(resultado.Contains("Ataco a Arquero"));
-        Assert.Less(enemigo.Salud, 50);
+        Assert.IsTrue(resultado.Contains("Ataco a Arquero")); // Se espera que el mensaje contenga "Ataco a Arquero"
+        Assert.Less(enemigo.Salud, 50); // Se espera que el arquero haya perdido salud
     }
 
     [Test]
@@ -57,7 +57,7 @@ public class RathaTests
 
         string resultado = ratha.AtacarEdificio(casa);
         
-        Assert.IsTrue(resultado.Contains("Ataco el edificio Casa"));
-        Assert.Less(casa.Vida, vidaInicial);
+        Assert.IsTrue(resultado.Contains("Ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
+        Assert.Less(casa.Vida, vidaInicial); // Se espera que la vida del edificio haya disminuido
     }
 }
