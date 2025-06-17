@@ -15,8 +15,8 @@ public class CentroCivicoTests
     public void Constructor_AsignacionCorrecta()
     {
         var centro = new CentroCivico(jugador);
-        Assert.AreEqual(jugador, centro.Propietario);
-        Assert.AreEqual(10000, centro.Vida);
+        Assert.AreEqual(jugador, centro.Propietario); // El propietario debe ser el jugador creado
+        Assert.AreEqual(10000, centro.Vida); // La vida inicial debe ser 10000
     }
 
     [Test]
@@ -26,6 +26,6 @@ public class CentroCivicoTests
         var centro = new CentroCivico(jugador);
         int despues = jugador.Aldeanos.Count;
         
-        Assert.AreEqual(antes + 1, despues);
+        Assert.AreEqual(antes + 1, despues); // Debe haberse agregado un aldeano mas
     }
 }

@@ -17,7 +17,7 @@ public class CasaTests
         int poblacionAntes = jugador.PoblacionMaxima;
         var casa = new Casa(jugador);
         
-        Assert.AreEqual(poblacionAntes + 5, jugador.PoblacionMaxima);
+        Assert.AreEqual(poblacionAntes + 5, jugador.PoblacionMaxima); // Se espera un aumento de 5
     }
 
     [Test]
@@ -25,7 +25,7 @@ public class CasaTests
     {
         var casa = new Casa(jugador);
         casa.CantidadAldeanos = 10;
-        Assert.IsTrue(casa.CantidadAldeano());
+        Assert.IsTrue(casa.CantidadAldeano()); 
     }
 
     [Test]
@@ -33,7 +33,7 @@ public class CasaTests
     {
         var casa = new Casa(jugador);
         casa.CantidadAldeanos = 25;
-        Assert.IsFalse(casa.CantidadAldeano());
+        Assert.IsFalse(casa.CantidadAldeano()); 
     }
 
     [Test]
