@@ -9,10 +9,10 @@ public class InfanteriaTests
         [SetUp]
         public void SetUp()
         {
-            var civilizacionAzteca = new Civilizacion("aztecas", new List<string>(), "Guerrero Jaguar");
+            Civilizacion civilizacionAzteca = new Civilizacion("aztecas", new List<string>(), "Guerrero Jaguar");
             jugadorAzteca = new Jugador("Azteca", civilizacionAzteca);
 
-            var civilizacionRival = new Civilizacion("armenios", new List<string>(), "Arquero Compuesto");
+            Civilizacion civilizacionRival = new Civilizacion("armenios", new List<string>(), "Arquero Compuesto");
             jugadorRival = new Jugador("Rival", civilizacionRival);
 
             infanteria = new Infanteria(jugadorAzteca) { Posicion = new Point(0, 0), Salud = 100 };
@@ -21,10 +21,10 @@ public class InfanteriaTests
         [Test]
         public void Mover_DestinoValido_MueveCorrectamente()
         {
-            var mapa = new Mapa();
-            var destino = new Point(10, 10);
+            Mapa mapa = new Mapa();
+            Point destino = new Point(10, 10);
 
-            var resultado = infanteria.Mover(destino, mapa);
+            bool resultado = infanteria.Mover(destino, mapa);
 
             Assert.IsTrue(resultado);
             Assert.That(infanteria.Posicion.X, Is.EqualTo(10));
@@ -34,17 +34,17 @@ public class InfanteriaTests
         [Test]
         public void Mover_DestinoFueraDeMapa_LanzaExcepcion()
         {
-            var mapa = new Mapa();
-            var destino = new Point(-1, 200);
+            Mapa mapa = new Mapa();
+            Point destino = new Point(-1, 200);
 
-            var ex = Assert.Throws<InvalidOperationException>(() => infanteria.Mover(destino, mapa));
+            InvalidOperationException  ex = Assert.Throws<InvalidOperationException>(() => infanteria.Mover(destino, mapa));
             Assert.That(ex.Message, Does.Contain("No se pudo mover la unidad"));
         }
 
         [Test]
         public void AtacarU_ContraCaballeria_AplicaBonus()
         {
-            var caballeria = new Caballeria(jugadorRival) { Salud = 100 };
+            Caballeria caballeria = new Caballeria(jugadorRival) { Salud = 100 };
             string resultado = infanteria.AtacarUnidad(caballeria);
 
             Assert.That(caballeria.Salud, Is.LessThan(100));
@@ -54,7 +54,7 @@ public class InfanteriaTests
         [Test]
         public void AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus()
         {
-            var infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100 };
+            Infanteria infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100 };
 
             string resultado = infanteria.AtacarUnidad(infanteriaObjetivo);
 
@@ -65,7 +65,7 @@ public class InfanteriaTests
         [Test]
         public void AtacarE_ContraEdificio_CausaDaño()
         {
-            var casa = new Casa(jugadorRival) { Vida = 1000 };
+            Casa casa = new Casa(jugadorRival) { Vida = 1000 };
 
             string resultado = infanteria.AtacarEdificio(casa);
 
@@ -76,7 +76,7 @@ public class InfanteriaTests
         [Test]
         public void AtacarU_UnidadEliminada_SeEliminaDeLista()
         {
-            var objetivo = new Arquero(jugadorRival) { Salud = 1 }; // Aseguramos su destrucción
+            Arquero objetivo = new Arquero(jugadorRival) { Salud = 1 }; // Aseguramos su destrucción
             jugadorRival.Unidades.Add(objetivo);
 
             string resultado = infanteria.AtacarUnidad(objetivo);
