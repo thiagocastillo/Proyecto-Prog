@@ -13,12 +13,13 @@ public class CentroCivico : IAlmacenamiento
     {
         Propietario = propietario;
         Vida = 100000;
+        Posicion = new Point { X = 0, Y = 0 }; // Posición inicial por defecto
 
         // Inicializa recursos con 100 de alimento y 100 de madera
         Recursos["alimento"] = 100;
         Recursos["madera"] = 100;
 
-        if (propietario.Civilizacion.Nombre == "Bengalíes")
+        if (propietario.Civilizacion.Nombre == "Bengalies")
         {
             propietario.Aldeanos.Add(new Aldeano(propietario) { Posicion = new Point { X = Posicion.X + 1, Y = Posicion.Y } });
             propietario.PoblacionActual++;

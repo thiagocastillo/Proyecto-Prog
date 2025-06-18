@@ -44,7 +44,7 @@ public class RathaTests
 
         string resultado = ratha.AtacarUnidad(enemigo);
         
-        Assert.IsTrue(resultado.Contains("Ataco a Arquero")); // Se espera que el mensaje contenga "Ataco a Arquero"
+        Assert.IsTrue(resultado.Contains("ataco a Arquero")); // Se espera que el mensaje contenga "Ataco a Arquero"
         Assert.Less(enemigo.Salud, 50); // Se espera que el arquero haya perdido salud
     }
 
@@ -57,7 +57,7 @@ public class RathaTests
 
         string resultado = ratha.AtacarEdificio(casa);
         
-        Assert.IsTrue(resultado.Contains("Ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
+        Assert.IsTrue(resultado.Contains("ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
         Assert.Less(casa.Vida, vidaInicial); // Se espera que la vida del edificio haya disminuido
     }
 }

@@ -93,21 +93,13 @@ public class Jugador
 
     public void AumentarPoblacionMaxima(int incremento)
     {
-        try
+        if (incremento > 0)
         {
-            if (incremento <= 0)
-                throw new ArgumentException("El incremento debe ser mayor que cero.");
-
             int maxTotal = LimiteAldeanos + LimiteMilitares;
-
             if (PoblacionMaxima + incremento > maxTotal)
                 PoblacionMaxima = maxTotal;
             else
                 PoblacionMaxima += incremento;
-        }
-        catch (ArgumentException ex)
-        {
-            throw new InvalidOperationException($"Error al aumentar población máxima: {ex.Message}", ex);
         }
     }
 
