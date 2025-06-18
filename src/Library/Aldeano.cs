@@ -65,7 +65,7 @@ public class Aldeano : IUnidad, IRecolector
         double distanciaMinima = double.MaxValue;
 
         foreach (var edificio in Propietario.Edificios)
-        {
+        { 
             if (edificio is IAlmacenamiento almacen)
             {
                 if (EsCompatible(almacen, recurso.Nombre))
