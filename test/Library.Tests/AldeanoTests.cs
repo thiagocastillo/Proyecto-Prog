@@ -64,7 +64,7 @@ public class AldeanoTests
         public void Recolectar_RecursoValido_AlmacenaEnJugador()
         {
             var aldeano = new Aldeano(jugador) { Posicion = new Point(5, 5) };
-            var recurso = new Madera();
+            var recurso = new Arbol(100, new Point { X = 5, Y = 5});
             var almacen = new DepositoMadera(jugador) { Posicion = new Point(6, 5) };
 
             jugador.AgregarEdificio(almacen);
@@ -81,7 +81,7 @@ public class AldeanoTests
         public void Recolectar_RecursoAgotado_LanzaExcepcion()
         {
             var aldeano = new Aldeano(jugador);
-            var recurso = new Madera();
+            var recurso = new Arbol(100, new Point { X = 0, Y = 0});
             recurso.Recolectar(200); // Agotar recurso
 
             Assert.Throws<InvalidOperationException>(() => aldeano.Recolectar(recurso));
@@ -91,7 +91,7 @@ public class AldeanoTests
         public void Recolectar_SinAlmacenCompatible_LanzaExcepcion()
         {
             var aldeano = new Aldeano(jugador) { Posicion = new Point(0, 0) };
-            var recurso = new Madera();
+            var recurso = new Arbol(100, new Point { X = 0, Y = 0});
 
             // No hay depósito agregado
             Assert.Throws<InvalidOperationException>(() => aldeano.Recolectar(recurso));
