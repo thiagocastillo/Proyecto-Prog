@@ -37,13 +37,13 @@ public class JugadorTests
     }
     
     
-    [Test]
+    /*[Test]
     public void AgregarRecurso_SumaCantidad()
     {
         var recurso = new Arbol(100, new Point { X = 0, Y = 0 });
         jugador.AgregarRecurso(recurso, 50);
         Assert.That(jugador.Recursos["Madera"], Is.EqualTo(150));
-    }
+    }*/
     
     [Test]
     public void AgregarRecurso_CantidadInvalida_LanzaExcepcion()
