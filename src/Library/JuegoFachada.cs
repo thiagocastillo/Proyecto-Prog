@@ -96,7 +96,7 @@ public class JuegoFachada
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        return jugador?.Recursos ?? new Dictionary<string, int>();
+        return jugador?.ObtenerResumenRecursosTotales() ?? new Dictionary<string, int>();
     }
 
     public void OrdenarRecolectar(string nombreJugador, int idAldeano, string nombreRecurso)

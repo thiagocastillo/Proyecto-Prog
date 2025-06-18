@@ -6,7 +6,8 @@ public class DepositoPiedra : IAlmacenamiento
     public Point Posicion { get; set; }
     public int CapacidadMaxima { get; private set; } = 500;
     public int Vida { get; set; }
-    
+    public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
+
     private TiempoConstruccion tiempoconstruccion;
 
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
@@ -17,7 +18,6 @@ public class DepositoPiedra : IAlmacenamiento
     {
         Propietario = propietario;
         Vida = 5000;
-
     }
     
     public double Eficiencia(int distancia)

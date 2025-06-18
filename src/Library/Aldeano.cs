@@ -92,7 +92,7 @@ public class Aldeano : IUnidad, IRecolector
 
     private bool EsCompatible(IAlmacenamiento almacen, string nombre)
     {
-        return (nombre == "Madera" && almacen is DepositoMadera) ||
+        return (nombre == "Madera" && (almacen is DepositoMadera || almacen is CentroCivico)) ||
                (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
                (nombre == "Oro" && almacen is DepositoOro) ||
                (nombre == "Piedra" && almacen is DepositoPiedra);

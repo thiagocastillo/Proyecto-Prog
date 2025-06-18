@@ -47,7 +47,11 @@ public class Motor
                         return "Faltan argumentos en comando, recordar sintaxis: entrenarunidad <nombre> <tipo>";
                     _fachada.EntrenarUnidad(argumentos[0], argumentos[1]);
                     return "Unidad entrenada.";
-                
+                case "recolectar":
+                    if (argumentos.Count < 3)
+                        return "Faltan argumentos: recolectar <nombreJugador> <idAldeano> <nombreRecurso>";
+                    _fachada.OrdenarRecolectar(argumentos[0], int.Parse(argumentos[1]), argumentos[2]);
+                    return "Orden de recolección enviada.";
                 case "moverunidad":
                     
                     if (argumentos.Count < 4)
@@ -64,15 +68,14 @@ public class Motor
                     return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
                 
                 case "recursosjugador":   
-                    
                     if (argumentos.Count < 1)
                         return "Faltan argumentos en comando, recordar sintaxis: recursosjugador <nombre>";
-                    
+
                     var recursos = _fachada.ObtenerRecursosJugador(argumentos[0]);
-                    
-                    if (recursos.Count == 0) //testear, no me funcionó con recursos == null xq es un diccionario, ver si no arma quilombo luego cuando se empieze a llenar el diccionario
+
+                    if (recursos.Count == 0)
                         return "El jugador no existe, cree uno usando el comando correspondiente.";
-                    
+
                     var sb = new StringBuilder();
                     foreach (var r in recursos)
                         sb.AppendLine($"{r.Key}: {r.Value}");
