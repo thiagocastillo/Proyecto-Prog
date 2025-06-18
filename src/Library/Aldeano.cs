@@ -50,44 +50,49 @@ public class Aldeano : IUnidad, IRecolector
         return "Los aldeanos no atacan unidades.";
     }
 
-    public void Recolectar(RecursoNatural recurso, IAlmacenamiento almacenCercano = null)
+    public void RecolectarEn(Point coordenada, Mapa mapa)
     {
+        // Buscar el recurso natural en la coordenada
+        var recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.Equals(coordenada));        if (recurso == null)
+            throw new InvalidOperationException("No hay recurso natural en la coordenada especificada.");
+
         if (recurso.EstaAgotado)
             throw new InvalidOperationException("El recurso está agotado.");
 
+        // Mover al aldeano a la coordenada
+        this.Posicion = coordenada;
+
+        // Calcular cantidad a recolectar
         double cantidadRecolectada = recurso.TasaRecoleccion;
         if (Propietario.Civilizacion.Nombre == "Aztecas")
             cantidadRecolectada += 3;
 
         int extraido = recurso.Recolectar(cantidadRecolectada);
 
-        IAlmacenamiento almacenMasCercano = almacenCercano;
+        // Buscar el edificio de almacenamiento compatible más cercano
+        IAlmacenamiento almacenMasCercano = null;
         double distanciaMinima = double.MaxValue;
 
         foreach (var edificio in Propietario.Edificios)
         {
-            if (edificio is IAlmacenamiento almacen)
+            if (edificio is IAlmacenamiento almacen && EsCompatible(almacen, recurso.Nombre))
             {
-                if (EsCompatible(almacen, recurso.Nombre))
+                double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
+                if (distancia < distanciaMinima)
                 {
-                    double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
-                    if (distancia < distanciaMinima)
-                    {
-                        distanciaMinima = distancia;
-                        almacenMasCercano = almacen;
-                    }
+                    distanciaMinima = distancia;
+                    almacenMasCercano = almacen;
                 }
             }
         }
 
         if (almacenMasCercano == null)
-            throw new InvalidOperationException(
-                "No existe un edificio de almacenamiento compatible para recolectar este recurso.");
+            throw new InvalidOperationException("No existe un edificio de almacenamiento compatible para este recurso.");
 
-        if (!Propietario.Recursos.ContainsKey(recurso.Nombre))
-            Propietario.Recursos[recurso.Nombre] = 0;
-
-        Propietario.Recursos[recurso.Nombre] += extraido;
+        // Registrar el recurso en el almacenamiento
+        if (!almacenMasCercano.Recursos.ContainsKey(recurso.Nombre))
+            almacenMasCercano.Recursos[recurso.Nombre] = 0;
+        almacenMasCercano.Recursos[recurso.Nombre] += extraido;
     }
 
     private bool EsCompatible(IAlmacenamiento almacen, string nombre)

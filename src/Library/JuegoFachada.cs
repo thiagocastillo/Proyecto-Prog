@@ -99,24 +99,16 @@ public class JuegoFachada
         return jugador?.ObtenerResumenRecursosTotales() ?? new Dictionary<string, int>();
     }
 
-    public void OrdenarRecolectar(string nombreJugador, int idAldeano, string nombreRecurso)
+    public void OrdenarRecolectar(string nombreJugador, int idAldeano, int x, int y)
     {
         var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var aldeano = jugador?.Aldeanos.ElementAtOrDefault(idAldeano);
 
         if (aldeano != null && _partidaActual != null)
         {
-            var recurso = _partidaActual.Mapa.Recursos
-                .OfType<RecursoNatural>()
-                .FirstOrDefault(r => r.Nombre == nombreRecurso && !r.EstaAgotado);
-            if (recurso != null)
-            {
-                aldeano.Recolectar(recurso, null); 
-            }
+            aldeano.RecolectarEn(new Point(x, y), _partidaActual.Mapa);
         }
-    }
-
-    public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
+    }    public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
     {
         if (_partidaActual == null)
             throw new InvalidOperationException("No hay partida activa.");
