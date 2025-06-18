@@ -7,14 +7,14 @@ public class CentroCivicoTests
     [SetUp]
     public void Setup()
     {
-        var civilizacion = new Civilizacion("Bengalies", new List<string>(), "Ratha");
+        Civilizacion civilizacion = new Civilizacion("Bengalies", new List<string>(), "Ratha");
         jugador = new Jugador("Ana", civilizacion);
     }
 
     [Test]
     public void Constructor_AsignacionCorrecta()
     {
-        var centro = new CentroCivico(jugador);
+        CentroCivico centro = new CentroCivico(jugador);
         Assert.AreEqual(jugador, centro.Propietario); // El propietario debe ser el jugador creado
         Assert.AreEqual(10000, centro.Vida); // La vida inicial debe ser 10000
     }
@@ -23,7 +23,7 @@ public class CentroCivicoTests
     public void Constructor_Bengalies_AgregaAldeanoInicial()
     {
         int antes = jugador.Aldeanos.Count;
-        var centro = new CentroCivico(jugador);
+        CentroCivico centro = new CentroCivico(jugador);
         int despues = jugador.Aldeanos.Count;
         
         Assert.AreEqual(antes + 1, despues); // Debe haberse agregado un aldeano mas
