@@ -43,6 +43,6 @@ public class DepositoMaderaTests
     {
         var depositoMadera = new DepositoMadera(jugador);
         double eficiencia = depositoMadera.Eficiencia(5);
-        Assert.AreEqual(0.5, eficiencia); // Se espera que sea 0.5 (50%)
+        Assert.AreEqual(0.5, eficiencia); 
     }
 }
