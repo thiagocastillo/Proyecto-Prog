@@ -36,6 +36,7 @@ public class JugadorTests
         Assert.That(jugador.PoblacionMaxima, Is.EqualTo(poblacionAntes));
     }
     
+    
     [Test]
     public void AgregarRecurso_SumaCantidad()
     {
