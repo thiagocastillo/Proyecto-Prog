@@ -141,6 +141,6 @@ public string MostrarMapa(List<Jugador> jugadores)
 
     Process.Start(new ProcessStartInfo("notepad.exe", ruta) { UseShellExecute = true });
 
-    return sb.ToString();
+    return "Abriendo mapa en el bloc de notas...";
 }
 }

@@ -28,6 +28,18 @@ public class JuegoFachada
             return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el mapa.";
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
+    public string ListarRecursos()
+    {
+        if (_partidaActual == null || _partidaActual.Mapa == null || _partidaActual.Mapa.Recursos == null || !_partidaActual.Mapa.Recursos.Any())
+            return "No hay recursos en el mapa.";
+
+        var sb = new System.Text.StringBuilder();
+        foreach (var recurso in _partidaActual.Mapa.Recursos)
+        {
+            sb.AppendLine($"{recurso.Nombre} en ({recurso.Ubicacion.X}, {recurso.Ubicacion.Y})");
+        }
+        return sb.ToString().TrimEnd();
+    }
 
     public List<Jugador> ObtenerJugadores()
     {
@@ -108,7 +120,10 @@ public class JuegoFachada
         {
             aldeano.RecolectarEn(new Point(x, y), _partidaActual.Mapa);
         }
-    }    public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
+    }    
+    
+    
+    public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
     {
         if (_partidaActual == null)
             throw new InvalidOperationException("No hay partida activa.");

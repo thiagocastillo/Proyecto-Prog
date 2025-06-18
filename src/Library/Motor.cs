@@ -104,6 +104,8 @@ public class Motor
                     for (int i = 0; i < edificios.Count; i++)
                         sbE.AppendLine($"{i}: {edificios[i].GetType().Name}");
                     return sbE.ToString().TrimEnd();
+                case "listarrecursos":
+                    return _fachada.ListarRecursos();
                 
                 case "listarjugadores":
                     
