@@ -139,7 +139,6 @@ public string MostrarMapa(List<Jugador> jugadores)
     string ruta = "mapa.txt";
     File.WriteAllText(ruta, sb.ToString());
 
-    // Abrir el archivo en el Bloc de notas
     Process.Start(new ProcessStartInfo("notepad.exe", ruta) { UseShellExecute = true });
 
     return sb.ToString();
