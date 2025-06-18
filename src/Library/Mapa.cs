@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Library;
 
 public class Mapa
@@ -81,12 +83,12 @@ public class Mapa
         }
 
         // Mostrar jugadores
-        foreach (var jugador in jugadores)
+        foreach (Jugador jugador in jugadores)
         {
             if (jugador == null) continue;
             if (jugador.Edificios != null)
             {
-                foreach (var edificio in jugador.Edificios)
+                foreach (Edificio edificio in jugador.Edificios)
                 {
                     if (edificio?.Posicion == null) continue;
                     int x = edificio.Posicion.X;
@@ -104,7 +106,7 @@ public class Mapa
             }
             if (jugador.Unidades != null)
             {
-                foreach (var unidad in jugador.Unidades)
+                foreach (IUnidad unidad in jugador.Unidades)
                 {
                     if (unidad?.Posicion == null) continue;
                     int x = unidad.Posicion.X;
@@ -120,7 +122,7 @@ public class Mapa
             }
         }
 
-        var sb = new System.Text.StringBuilder();
+        StringBuilder sb = new System.Text.StringBuilder();
         for (int y = 0; y < Alto; y++)
         {
             for (int x = 0; x < Ancho; x++)

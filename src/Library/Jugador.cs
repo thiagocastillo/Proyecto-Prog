@@ -36,31 +36,31 @@ public class Jugador
 
         for (int i = 0; i < 3; i++)
         {
-            var aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
+            Aldeano aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
             Aldeanos.Add(aldeano);
             Unidades.Add(aldeano);
         }
     }
     public Dictionary<string, int> ObtenerResumenRecursosTotales()
     {
-        var total = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+        Dictionary<string, int> total = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
         // Sumar recursos del jugador
-        foreach (var par in Recursos)
+        foreach (KeyValuePair<string, int> par in Recursos)
         {
-            var key = par.Key.ToLower();
+            string key = par.Key.ToLower();
             if (!total.ContainsKey(key))
                 total[key] = 0;
             total[key] += par.Value;
         }
 
         // Sumar recursos de los edificios de almacenamiento
-        var almacenamientos = Edificios.OfType<IAlmacenamiento>();
-        foreach (var almacen in almacenamientos)
+        IEnumerable<IAlmacenamiento> almacenamientos = Edificios.OfType<IAlmacenamiento>();
+        foreach (IAlmacenamiento almacen in almacenamientos)
         {
-            foreach (var par in almacen.Recursos)
+            foreach (KeyValuePair<string, int> par in almacen.Recursos)
             {
-                var key = par.Key.ToLower();
+                string key = par.Key.ToLower();
                 if (!total.ContainsKey(key))
                     total[key] = 0;
                 total[key] += par.Value;
@@ -83,7 +83,7 @@ public class Jugador
 
     public void DepositarRecursos(Dictionary<string, int> recursosEdificio)
     {
-        foreach (var par in recursosEdificio)
+        foreach (KeyValuePair<string, int> par in recursosEdificio)
         {
             if (!Recursos.ContainsKey(par.Key))
                 Recursos[par.Key] = 0;

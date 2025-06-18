@@ -38,7 +38,7 @@ public class JuegoFachada
     {
         if (_partidaActual != null)
         {
-            var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
+            Civilizacion civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
             
             if (civilizacion != null)
             {
@@ -72,20 +72,20 @@ public class JuegoFachada
         string resultado = "Estado del jugador: " + nombreJugador + "\n";
         resultado += "Recursos: \n";
 
-        foreach (var recurso in jugadorEncontrado.Recursos)
+        foreach (KeyValuePair<string, int> recurso in jugadorEncontrado.Recursos)
         {
             resultado += " - " + recurso.Key + ": " + recurso.Value + "\n";
         }
 
         resultado += "\n Edificios:\n";
-        foreach (var edificio in jugadorEncontrado.Edificios)
+        foreach (IEdificio edificio in jugadorEncontrado.Edificios)
         {
             resultado += " - " + edificio.GetType().Name + " en (" + edificio.Posicion.X + ", " + edificio.Posicion.Y + ")\n";
         }
 
         resultado += "\n Unidades: \n";
         int i = 0;
-        foreach (var unidad  in jugadorEncontrado.Unidades)
+        foreach (IUnidad unidad  in jugadorEncontrado.Unidades)
         {
             resultado += "  #" + i + " - " + unidad.GetType().Name + " en (" + unidad.Posicion.X + ", " + unidad.Posicion.Y + ") | Vida: " + unidad.Salud + "\n";
             i++;
@@ -95,18 +95,18 @@ public class JuegoFachada
     }
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         return jugador?.ObtenerResumenRecursosTotales() ?? new Dictionary<string, int>();
     }
 
     public void OrdenarRecolectar(string nombreJugador, int idAldeano, string nombreRecurso)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        var aldeano = jugador?.Aldeanos.ElementAtOrDefault(idAldeano);
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        Aldeano aldeano = jugador?.Aldeanos.ElementAtOrDefault(idAldeano);
 
         if (aldeano != null && _partidaActual != null)
         {
-            var recurso = _partidaActual.Mapa.Recursos
+            RecursoNatural recurso = _partidaActual.Mapa.Recursos
                 .OfType<RecursoNatural>()
                 .FirstOrDefault(r => r.Nombre == nombreRecurso && !r.EstaAgotado);
             if (recurso != null)
@@ -121,7 +121,7 @@ public class JuegoFachada
         if (_partidaActual == null)
             throw new InvalidOperationException("No hay partida activa.");
 
-        var jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        Jugador jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         
         if (jugador == null)
             throw new ArgumentException("Jugador no encontrado.");
@@ -208,11 +208,11 @@ public class JuegoFachada
     }
     public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
 
         if (jugador != null && jugador.PoblacionActual < jugador.PoblacionMaxima)
         {
-            var cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
+            Cuartel cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
 
             if (cuartel != null)
             {
@@ -224,7 +224,7 @@ public class JuegoFachada
 
                         if (jugador.PuedeCrearAldeano() && jugador.Recursos["Alimento"] >= 50)
                         {
-                            var nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
+                            Aldeano nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
                             jugador.Aldeanos.Add(nuevoAldeano);
                             jugador.Unidades.Add(nuevoAldeano);
                             jugador.Recursos["Alimento"] -= 50;
@@ -290,8 +290,8 @@ public class JuegoFachada
 
     public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        var unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        IUnidad unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
 
         if (unidad != null)
         {
@@ -301,9 +301,9 @@ public class JuegoFachada
 
     public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, int idUnidadObjetivo)
     {
-        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
-        var unidadObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Unidades).ElementAtOrDefault(idUnidadObjetivo);
+        Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        IUnidad unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
+        IUnidad unidadObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Unidades).ElementAtOrDefault(idUnidadObjetivo);
 
         if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
         {
@@ -317,7 +317,7 @@ public class JuegoFachada
     {
         try
         {
-            var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+            Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
 
             if (nombreJugador != jugador.Nombre || jugador == null)
                 throw new ArgumentException("Jugador no encontrado.");
@@ -338,7 +338,7 @@ public class JuegoFachada
         if (_partidaActual.Jugadores.Count == 0)
             throw new InvalidOperationException("No hay jugadores en la partida actual, cree al menos uno con el comando correspondiente.");
         
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
