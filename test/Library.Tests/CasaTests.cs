@@ -7,7 +7,7 @@ public class CasaTests
     [SetUp]
     public void Setup()
     {
-        var civilizacion = new Civilizacion("Mayas", new List<string>(), "Arquero");
+        Civilizacion civilizacion = new Civilizacion("Mayas", new List<string>(), "Arquero");
         jugador = new Jugador("Maria", civilizacion);
     }
 
@@ -15,7 +15,7 @@ public class CasaTests
     public void Constructor_AumentaPoblacionMaxima()
     {
         int poblacionAntes = jugador.PoblacionMaxima;
-        var casa = new Casa(jugador);
+        Casa casa = new Casa(jugador);
         
         Assert.AreEqual(poblacionAntes + 5, jugador.PoblacionMaxima); // Se espera un aumento de 5
     }
@@ -23,7 +23,7 @@ public class CasaTests
     [Test]
     public void CantidadAldeano_MenosQueMaximo_True()
     {
-        var casa = new Casa(jugador);
+        Casa casa = new Casa(jugador);
         casa.CantidadAldeanos = 10;
         Assert.IsTrue(casa.CantidadAldeano()); 
     }
@@ -31,7 +31,7 @@ public class CasaTests
     [Test]
     public void CantidadAldeano_MayorQueMaximo_False()
     {
-        var casa = new Casa(jugador);
+        Casa casa = new Casa(jugador);
         casa.CantidadAldeanos = 25;
         Assert.IsFalse(casa.CantidadAldeano()); 
     }
@@ -39,7 +39,7 @@ public class CasaTests
     [Test]
     public void CantidadUnidadMilitar_MenosQueMaximo_True()
     {
-        var casa = new Casa(jugador);
+        Casa casa = new Casa(jugador);
         casa.CantidadUnidadesMilitar = 10;
         Assert.IsTrue(casa.CantidadUnidadMilitar());
     }
@@ -47,7 +47,7 @@ public class CasaTests
     [Test]
     public void CantidadUnidadMilitar_MayorQueMaximo_False()
     {
-        var casa = new Casa(jugador);
+        Casa casa = new Casa(jugador);
         casa.CantidadUnidadesMilitar = 40;
         Assert.IsFalse(casa.CantidadUnidadMilitar());
     }

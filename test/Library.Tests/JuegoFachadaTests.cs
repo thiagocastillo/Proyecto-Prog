@@ -6,18 +6,18 @@ public class JuegoFachadaTests
     [Test]
     public void CrearNuevaPartida_InstanciaCorrecta()
     {
-        var fachada = new JuegoFachada();
+        JuegoFachada fachada = new JuegoFachada();
 
         fachada.CrearNuevaPartida();
 
-        var jugadores = fachada.ObtenerJugadores();
+        List<Jugador> jugadores = fachada.ObtenerJugadores();
         Assert.That(jugadores, Is.Not.Null);
     }
     
     [Test]
     public void ObtenerCivilizacionesDisponibles()
     {
-        var fachada = new JuegoFachada();
+        JuegoFachada fachada = new JuegoFachada();
 
         var civilizaciones = fachada.ObtenerCivilizacionesDisponibles();
 
@@ -28,23 +28,23 @@ public class JuegoFachadaTests
     [Test]
     public void AgregarJugadorAPartida_ConDatosValidos()
     {
-        var fachada = new JuegoFachada();
+        JuegoFachada fachada = new JuegoFachada();
         fachada.CrearNuevaPartida();
 
         fachada.AgregarJugadorAPartida("Carlos", "armenios");
 
-        var jugadores = fachada.ObtenerJugadores();
+        List<Jugador> jugadores = fachada.ObtenerJugadores();
         Assert.That(jugadores.Any(j => j.Nombre == "Carlos"), Is.True);
     }
     
     [Test]
     public void ObtenerRecursosJugadorExistente()
     {
-        var fachada = new JuegoFachada();
+        JuegoFachada fachada = new JuegoFachada();
         fachada.CrearNuevaPartida();
         fachada.AgregarJugadorAPartida("Carlos", "armenios");
 
-        var recursos = fachada.ObtenerRecursosJugador("Carlos");
+        Dictionary<string, int> recursos = fachada.ObtenerRecursosJugador("Carlos");
 
         Assert.That(recursos.ContainsKey("Madera"));
         Assert.That(recursos["Madera"], Is.EqualTo(100));
@@ -53,13 +53,13 @@ public class JuegoFachadaTests
     [Test]
     public void ConstruirEdificio_Casa_SeAgregaEdificioYDescuentaRecursos()
     {
-        var fachada = new JuegoFachada();
+        JuegoFachada fachada = new JuegoFachada();
         fachada.CrearNuevaPartida();
         fachada.AgregarJugadorAPartida("Carlos", "armenios");
 
         fachada.ConstruirEdificio("Carlos", "casa", new Point(5, 5));
     
-        var edificios = fachada.ObtenerEdificiosJugador("Carlos");
+        List<IEdificio> edificios = fachada.ObtenerEdificiosJugador("Carlos");
 
         Assert.That(edificios.Any(e => e is Casa), Is.True);
         Assert.That(fachada.ObtenerRecursosJugador("Carlos")["Madera"], Is.EqualTo(50)); // 100 - 50
@@ -68,7 +68,7 @@ public class JuegoFachadaTests
     [Test]
     public void AtacarUnidad_UnidadAtacaAOtra_DevuelveMensajeDeCombate()
     {
-        var fachada = new JuegoFachada();
+        JuegoFachada fachada = new JuegoFachada();
         fachada.CrearNuevaPartida();
 
         fachada.AgregarJugadorAPartida("Jugador1", "armenios");
@@ -81,8 +81,8 @@ public class JuegoFachadaTests
         fachada.EntrenarUnidad("Jugador2", "infanteria");
 
         // Obtenemos índices correctos
-        var unidadesJugador1 = fachada.ObtenerUnidadesJugador("Jugador1");
-        var unidadesJugador2 = fachada.ObtenerUnidadesJugador("Jugador2");
+        List<IUnidad> unidadesJugador1 = fachada.ObtenerUnidadesJugador("Jugador1");
+        List<IUnidad> unidadesJugador2 = fachada.ObtenerUnidadesJugador("Jugador2");
 
         int idAtacante = fachada.ObtenerUnidadesJugador("Jugador1").Count - 1; // la última unidad creada
         int idObjetivoGlobal = fachada.ObtenerJugadores()[0].Unidades.Count + unidadesJugador2.Count - 1;

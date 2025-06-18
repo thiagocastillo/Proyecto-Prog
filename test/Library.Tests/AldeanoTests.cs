@@ -8,7 +8,7 @@ public class AldeanoTests
     [SetUp]
         public void Setup()
         {
-            var civilizacion = new Civilizacion("Aztecas", new List<string>(), "Guerrero Jaguar");
+            Civilizacion civilizacion = new Civilizacion("Aztecas", new List<string>(), "Guerrero Jaguar");
             jugador = new Jugador("Juan", civilizacion);
             mapa = new Mapa();
         }
@@ -16,8 +16,8 @@ public class AldeanoTests
         [Test]
         public void Mover_PosicionValida_ActualizaPosicion()
         {
-            var aldeano = new Aldeano(jugador);
-            var destino = new Point(10, 10);
+            Aldeano aldeano = new Aldeano(jugador);
+            Point destino = new Point(10, 10);
             
             bool resultado = aldeano.Mover(destino, mapa);
 
@@ -29,8 +29,8 @@ public class AldeanoTests
         [Test]
         public void Mover_PosicionInvalidaDevuelveFalse()
         {
-            var aldeano = new Aldeano(jugador);
-            var destino = new Point(-1, 200);
+            Aldeano aldeano = new Aldeano(jugador);
+            Point destino = new Point(-1, 200);
 
             bool resultado = aldeano.Mover(destino, mapa);
 
@@ -40,9 +40,9 @@ public class AldeanoTests
         [Test]
         public void AtacarUnidad_DevuelveMensajeNoAtaca()
         {
-            var aldeano = new Aldeano(jugador);
-            var otroJugador = new Jugador("Otro", jugador.Civilizacion);
-            var objetivo = new Infanteria(otroJugador);
+            Aldeano aldeano = new Aldeano(jugador);
+            Jugador otroJugador = new Jugador("Otro", jugador.Civilizacion);
+            Infanteria objetivo = new Infanteria(otroJugador);
 
             string resultado = aldeano.AtacarUnidad(objetivo);
 
@@ -52,8 +52,8 @@ public class AldeanoTests
         [Test]
         public void AtacarEdificio_DevuelveMensajeNoAtaca()
         {
-            var aldeano = new Aldeano(jugador);
-            var edificio = new Casa(jugador);
+            Aldeano aldeano = new Aldeano(jugador);
+            Casa edificio = new Casa(jugador);
 
             string resultado = aldeano.AtacarEdificio(edificio);
 
@@ -63,9 +63,9 @@ public class AldeanoTests
         [Test]
         public void Recolectar_RecursoValido_AlmacenaEnJugador()
         {
-            var aldeano = new Aldeano(jugador) { Posicion = new Point(5, 5) };
-            var recurso = new Arbol(100, new Point { X = 5, Y = 5});
-            var almacen = new DepositoMadera(jugador) { Posicion = new Point(6, 5) };
+            Aldeano aldeano = new Aldeano(jugador) { Posicion = new Point(5, 5) };
+            Arbol recurso = new Arbol(100, new Point { X = 5, Y = 5});
+            DepositoMadera almacen = new DepositoMadera(jugador) { Posicion = new Point(6, 5) };
 
             jugador.AgregarEdificio(almacen);
 
@@ -80,8 +80,8 @@ public class AldeanoTests
         [Test]
         public void Recolectar_RecursoAgotado_LanzaExcepcion()
         {
-            var aldeano = new Aldeano(jugador);
-            var recurso = new Arbol(100, new Point { X = 0, Y = 0});
+            Aldeano aldeano = new Aldeano(jugador);
+            Arbol recurso = new Arbol(100, new Point { X = 0, Y = 0});
             recurso.Recolectar(200); // Agotar recurso
 
             Assert.Throws<InvalidOperationException>(() => aldeano.Recolectar(recurso));
@@ -90,8 +90,8 @@ public class AldeanoTests
         [Test]
         public void Recolectar_SinAlmacenCompatible_LanzaExcepcion()
         {
-            var aldeano = new Aldeano(jugador) { Posicion = new Point(0, 0) };
-            var recurso = new Arbol(100, new Point { X = 0, Y = 0});
+            Aldeano aldeano = new Aldeano(jugador) { Posicion = new Point(0, 0) };
+            Arbol recurso = new Arbol(100, new Point { X = 0, Y = 0});
 
             // No hay depósito agregado
             Assert.Throws<InvalidOperationException>(() => aldeano.Recolectar(recurso));
