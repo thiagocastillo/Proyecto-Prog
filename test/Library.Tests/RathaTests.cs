@@ -57,7 +57,7 @@ public class RathaTests
 
         string resultado = ratha.AtacarEdificio(casa);
         
-        Assert.IsTrue(resultado.Contains("Ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
+        Assert.IsTrue(resultado.Contains("ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
         Assert.Less(casa.Vida, vidaInicial); // Se espera que la vida del edificio haya disminuido
     }
 }
