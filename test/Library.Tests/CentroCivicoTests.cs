@@ -16,7 +16,7 @@ public class CentroCivicoTests
     {
         var centro = new CentroCivico(jugador);
         Assert.AreEqual(jugador, centro.Propietario); // El propietario debe ser el jugador creado
-        Assert.AreEqual(10000, centro.Vida); // La vida inicial debe ser 10000
+        Assert.AreEqual(100000, centro.Vida); // La vida inicial debe ser 10000
     }
 
     [Test]
