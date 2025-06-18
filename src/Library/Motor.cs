@@ -21,7 +21,7 @@ public class Motor
                 
                 case "civilizaciones":
                     
-                    var civs = _fachada.ObtenerCivilizacionesDisponibles();
+                    List<string> civs = _fachada.ObtenerCivilizacionesDisponibles();
                     return "Civilizaciones disponibles:\n" + string.Join("\n", civs);
                 
                 case "agregarjugador":
@@ -71,13 +71,13 @@ public class Motor
                     if (argumentos.Count < 1)
                         return "Faltan argumentos en comando, recordar sintaxis: recursosjugador <nombre>";
 
-                    var recursos = _fachada.ObtenerRecursosJugador(argumentos[0]);
+                    Dictionary<string, int> recursos = _fachada.ObtenerRecursosJugador(argumentos[0]);
 
                     if (recursos.Count == 0)
                         return "El jugador no existe, cree uno usando el comando correspondiente.";
 
-                    var sb = new StringBuilder();
-                    foreach (var r in recursos)
+                    StringBuilder sb = new StringBuilder();
+                    foreach (KeyValuePair<string, int> r in recursos)
                         sb.AppendLine($"{r.Key}: {r.Value}");
                     return sb.ToString().TrimEnd();
                 
@@ -86,8 +86,8 @@ public class Motor
                     if (argumentos.Count < 1)
                         return "Faltan argumentos en comando, recordar sintaxis: unidadesjugador <nombre>";
                     
-                    var unidades = _fachada.ObtenerUnidadesJugador(argumentos[0]);
-                    var sbU = new StringBuilder();
+                    List<IUnidad> unidades = _fachada.ObtenerUnidadesJugador(argumentos[0]);
+                    StringBuilder sbU = new StringBuilder();
                     
                     for (int i = 0; i < unidades.Count; i++)
                         sbU.AppendLine($"{i}: {unidades[i].GetType().Name}");
@@ -99,8 +99,8 @@ public class Motor
                     if (argumentos.Count < 1)
                         return "Faltan argumentos en comando, recordar sintaxis: edificiosjugador <nombre>";
                     
-                    var edificios = _fachada.ObtenerEdificiosJugador(argumentos[0]);
-                    var sbE = new StringBuilder();
+                    List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(argumentos[0]);
+                    StringBuilder sbE = new StringBuilder();
                     
                     for (int i = 0; i < edificios.Count; i++)
                         sbE.AppendLine($"{i}: {edificios[i].GetType().Name}");
@@ -108,13 +108,13 @@ public class Motor
                 
                 case "listarjugadores":
                     
-                    var jugadores = _fachada.ObtenerJugadores();
-                    var sbJ = new StringBuilder();
+                    List<Jugador> jugadores = _fachada.ObtenerJugadores();
+                    StringBuilder sbJ = new StringBuilder();
                     
                     if(jugadores == null || jugadores.Count == 0)
                         return "No hay jugadores en la partida.";
                     
-                    foreach (var jugador in jugadores)
+                    foreach (Jugador jugador in jugadores)
                         sbJ.AppendLine($"Nombre: {jugador.Nombre}, Civilización: {jugador.Civilizacion?.Nombre ?? "Sin civilización"}");
                     
                     return sbJ.ToString().TrimEnd();
