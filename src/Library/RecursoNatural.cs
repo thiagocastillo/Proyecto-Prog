@@ -1,4 +1,3 @@
-
 namespace Library;
 
 public abstract class RecursoNatural
@@ -23,6 +22,7 @@ public abstract class RecursoNatural
     {
         int extraido = Math.Min(Cantidad, (int)Math.Floor(cantidad));
         Cantidad -= extraido;
+        if (Cantidad < 0) Cantidad = 0;
         return extraido;
     }
 }

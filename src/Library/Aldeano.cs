@@ -61,6 +61,8 @@ public class Aldeano : IUnidad, IRecolector
 
         // Mover al aldeano a la coordenada
         this.Posicion = coordenada;
+        
+       
 
         // Calcular cantidad a recolectar según vida restante y tasa de recolección
         double cantidadRecolectada = recurso.Cantidad * recurso.TasaRecoleccion;
@@ -93,6 +95,10 @@ public class Aldeano : IUnidad, IRecolector
         if (!almacenMasCercano.Recursos.ContainsKey(recurso.Nombre))
             almacenMasCercano.Recursos[recurso.Nombre] = 0;
         almacenMasCercano.Recursos[recurso.Nombre] += extraido;
+        if (recurso.EstaAgotado)
+        {
+            mapa.Recursos.Remove(recurso);
+        }
     }
     private bool EsCompatible(IAlmacenamiento almacen, string nombre)
     {

@@ -123,97 +123,82 @@ public class JuegoFachada
     }    
     
     
-    public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
+public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
+{
+    if (_partidaActual == null)
+        throw new InvalidOperationException("No hay partida activa.");
+
+    Jugador jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+
+    if (jugador == null)
+        throw new ArgumentException("Jugador no encontrado.");
+
+    bool ocupado = _partidaActual.Jugadores
+        .SelectMany(j => j.Edificios)
+        .Any(e => e.Posicion.X == posicion.X && e.Posicion.Y == posicion.Y);
+
+    if (ocupado)
+        throw new InvalidOperationException("Ya hay un edificio en esa posición.");
+
+    var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+    IEdificio? nuevoEdificio = null;
+
+    switch (tipoEdificio.ToLower())
     {
-        if (_partidaActual == null)
-            throw new InvalidOperationException("No hay partida activa.");
+        case "casa":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 50)
+                throw new InvalidOperationException("No hay suficiente madera para construir una casa.");
+            nuevoEdificio = new Casa(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 50;
+            break;
 
-        Jugador jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        
-        if (jugador == null)
-            throw new ArgumentException("Jugador no encontrado.");
+        case "cuartel":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 100)
+                throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
+            nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 100;
+            break;
 
-        bool ocupado = _partidaActual.Jugadores
-            .SelectMany(j => j.Edificios)
-            .Any(e => e.Posicion.X == posicion.X && e.Posicion.Y == posicion.Y);
+        case "molino":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 75)
+                throw new InvalidOperationException("No hay suficiente madera para construir un molino.");
+            nuevoEdificio = new Molino(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 75;
+            break;
 
-        if (ocupado)
-            throw new InvalidOperationException("Ya hay un edificio en esa posición.");
+        case "depositomadera":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
+                throw new InvalidOperationException("No hay suficiente madera para construir un depósito de madera.");
+            nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 60;
+            break;
 
-        IEdificio? nuevoEdificio = null;
-        
-        switch (tipoEdificio.ToLower())
-        {
-            case "casa":
-                
-                if (jugador.Recursos["Madera"] < 50)
-                    throw new InvalidOperationException("No hay suficiente madera para construir una casa.");
-                nuevoEdificio = new Casa(jugador) { Posicion = posicion };
-                
-                jugador.Recursos["Madera"] -= 50;
-                break;
+        case "depositooro":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
+                throw new InvalidOperationException("No hay suficiente madera para construir un depósito de oro.");
+            nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 60;
+            break;
 
-            case "cuartel":
-                
-                if (jugador.Recursos["Madera"] < 100)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
-                
-                nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
-                jugador.Recursos["Madera"] -= 100;
-                break;
+        case "depositopiedra":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
+                throw new InvalidOperationException("No hay suficiente madera para construir un depósito de piedra.");
+            nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 60;
+            break;
 
-            case "molino":
-                
-                if (jugador.Recursos["Madera"] < 75)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un molino.");
-                
-                nuevoEdificio = new Molino(jugador) { Posicion = posicion };        
-                jugador.Recursos["Madera"] -= 75;
-                break;
+        case "centrocivico":
+            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 200)
+                throw new InvalidOperationException("No hay suficiente madera para construir un centro cívico.");
+            nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
+            jugador.Recursos["Madera"] -= 200;
+            break;
 
-            case "depositomadera":
-                
-                if (jugador.Recursos["Madera"] < 60)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de madera.");
-                
-                nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
-                jugador.Recursos["Madera"] -= 60;
-                break;
-
-            case "depositooro":
-                
-                if (jugador.Recursos["Madera"] < 60)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de oro.");
-                
-                nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
-                jugador.Recursos["Madera"] -= 60;
-                break;
-
-            case "depositopiedra":
-                
-                if (jugador.Recursos["Madera"] < 60)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de piedra.");
-                
-                nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
-                jugador.Recursos["Madera"] -= 60;
-                break;
-
-            case "centrocivico":
-                
-                if (jugador.Recursos["Madera"] < 200)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un centro cívico.");
-                
-                nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
-                jugador.Recursos["Madera"] -= 200;
-                break;
-
-            default:
-                
-                throw new ArgumentException("Tipo de edificio no válido.");
-        } 
-        jugador.AgregarEdificio(nuevoEdificio);
+        default:
+            throw new ArgumentException("Tipo de edificio no válido.");
     }
-    public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
+    jugador.AgregarEdificio(nuevoEdificio);
+}    public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
 
