@@ -63,8 +63,8 @@ public class Aldeano : IUnidad, IRecolector
         // Mover al aldeano a la coordenada
         this.Posicion = coordenada;
 
-        // Calcular cantidad a recolectar
-        double cantidadRecolectada = recurso.TasaRecoleccion;
+        // Calcular cantidad a recolectar según vida restante y tasa de recolección
+        double cantidadRecolectada = recurso.Cantidad * recurso.TasaRecoleccion;
         if (Propietario.Civilizacion.Nombre == "Aztecas")
             cantidadRecolectada += 3;
 
@@ -95,13 +95,12 @@ public class Aldeano : IUnidad, IRecolector
             almacenMasCercano.Recursos[recurso.Nombre] = 0;
         almacenMasCercano.Recursos[recurso.Nombre] += extraido;
     }
-
     private bool EsCompatible(IAlmacenamiento almacen, string nombre)
     {
         return (nombre == "Madera" && (almacen is DepositoMadera || almacen is CentroCivico)) ||
-               (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
-               (nombre == "Oro" && almacen is DepositoOro) ||
-               (nombre == "Piedra" && almacen is DepositoPiedra);
+               (nombre == "Alimento" && (almacen is Granja || almacen is Molino|| almacen is CentroCivico)) ||
+               (nombre == "Oro" && (almacen is DepositoOro || almacen is CentroCivico)) ||
+               (nombre == "Piedra" && (almacen is DepositoPiedra || almacen is CentroCivico));
     }
 
     private double CalcularDistancia(Point a, Point b)

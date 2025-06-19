@@ -1,3 +1,4 @@
+
 namespace Library;
 
 public abstract class RecursoNatural
@@ -9,12 +10,13 @@ public abstract class RecursoNatural
     public bool EstaAgotado => Cantidad <= 0;
     public Point Ubicacion { get; set; }
 
-    protected RecursoNatural(string nombre, int vidaBase, double tasaRecoleccion)
+    protected RecursoNatural(string nombre, int vidaBase, double tasaRecoleccion, Point ubicacion)
     {
         Nombre = nombre;
         VidaBase = vidaBase;
         TasaRecoleccion = tasaRecoleccion;
         Cantidad = (int)(vidaBase * tasaRecoleccion);
+        Ubicacion = ubicacion;
     }
 
     public int Recolectar(double cantidad)
