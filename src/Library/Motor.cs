@@ -48,11 +48,10 @@ public class Motor
                     _fachada.EntrenarUnidad(argumentos[0], argumentos[1]);
                     return "Unidad entrenada.";
                 case "recolectar":
-                    if (argumentos.Count < 3)
-                        return "Faltan argumentos: recolectar <nombreJugador> <idAldeano> <nombreRecurso>";
-                    _fachada.OrdenarRecolectar(argumentos[0], int.Parse(argumentos[1]), argumentos[2]);
-                    return "Orden de recolección enviada.";
-                case "moverunidad":
+                    if (argumentos.Count < 4)
+                        return "Faltan argumentos: recolectar <nombreJugador> <idAldeano> <x> <y>";
+                    _fachada.OrdenarRecolectar(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]), int.Parse(argumentos[3]));
+                    return "Orden de recolección enviada.";case "moverunidad":
                     
                     if (argumentos.Count < 4)
                         return "Faltan argumentos en comando, recordar sintaxis: moverunidad <nombre> <idUnidad> <x> <y>";
@@ -105,6 +104,8 @@ public class Motor
                     for (int i = 0; i < edificios.Count; i++)
                         sbE.AppendLine($"{i}: {edificios[i].GetType().Name}");
                     return sbE.ToString().TrimEnd();
+                case "listarrecursos":
+                    return _fachada.ListarRecursos();
                 
                 case "listarjugadores":
                     

@@ -19,25 +19,25 @@ public class Aldeano : IUnidad, IRecolector
         Propietario = propietario;
     }
 
-    public bool Mover(Point destino, Mapa mapa) // Metodo para mover al aldeano a un destino valido dentro del mapa
+    public bool Mover(Point destino, Mapa mapa)
     {
         if (destino == null)
         {
             throw new ArgumentNullException(nameof(destino), "El destino no puede ser nulo.");
         }
 
-        if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto) // Verifica que el destino este dentro de los limites del mapa
+        if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
         {
-            return false; // Movimiento invalido
+            return false;
         }
 
-        Posicion = destino; // Actualiza la posicion
+        Posicion = destino;
         return true;
     }
 
     public double CalcularDaño(IUnidad objetivo)
     {
-        return 0; // Los aldeanos no pueden hacer daño
+        return 0;
     }
 
     public string AtacarEdificio(IEdificio objetivo)
@@ -50,55 +50,59 @@ public class Aldeano : IUnidad, IRecolector
         return "Los aldeanos no atacan unidades.";
     }
 
-    public void Recolectar(RecursoNatural recurso, IAlmacenamiento almacenCercano = null) // Metodo para recolectar recursos naturales y depositarlos
-    {
-        if (recurso.EstaAgotado) // Verifica que el recurso no este agotado
+    public void RecolectarEn(Point coordenada, Mapa mapa)    {
+        // Buscar el recurso natural en la coordenada
+        var recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.X == coordenada.X && r.Ubicacion.Y == coordenada.Y);
+        if (recurso == null)
+            throw new InvalidOperationException("No hay recurso natural en la coordenada especificada.");
+
+        if (recurso.EstaAgotado)
             throw new InvalidOperationException("El recurso está agotado.");
 
-        double cantidadRecolectada = recurso.TasaRecoleccion;
-        if (Propietario.Civilizacion.Nombre == "Aztecas") // Si la civilizacion es Azteca, el aldeano recolecta 3 unidades extras
+        // Mover al aldeano a la coordenada
+        this.Posicion = coordenada;
+
+        // Calcular cantidad a recolectar según vida restante y tasa de recolección
+        double cantidadRecolectada = recurso.Cantidad * recurso.TasaRecoleccion;
+        if (Propietario.Civilizacion.Nombre == "Aztecas")
             cantidadRecolectada += 3;
 
         int extraido = recurso.Recolectar(cantidadRecolectada);
 
-        IAlmacenamiento almacenMasCercano = almacenCercano; // Busca el almacen compatible mas cercano para depositar el recurso
+        // Buscar el edificio de almacenamiento compatible más cercano
+        IAlmacenamiento almacenMasCercano = null;
         double distanciaMinima = double.MaxValue;
 
-        foreach (IEdificio edificio in Propietario.Edificios)
-        { 
-            if (edificio is IAlmacenamiento almacen)
+        foreach (var edificio in Propietario.Edificios)
+        {
+            if (edificio is IAlmacenamiento almacen && EsCompatible(almacen, recurso.Nombre))
             {
-                if (EsCompatible(almacen, recurso.Nombre))
+                double distancia = CalcularDistancia(this.Posicion, almacen.Posicion);
+                if (distancia < distanciaMinima)
                 {
-                    double distancia = CalcularDistancia(this.Posicion, almacen.Posicion); // Calcula la distancia entre el aldeano y el almacen
-                    if (distancia < distanciaMinima)
-                    {
-                        distanciaMinima = distancia;
-                        almacenMasCercano = almacen;
-                    }
+                    distanciaMinima = distancia;
+                    almacenMasCercano = almacen;
                 }
             }
         }
 
-        if (almacenMasCercano == null) // Si no se encontro almacen compatible lanza excepcion
-            throw new InvalidOperationException(
-                "No existe un edificio de almacenamiento compatible para recolectar este recurso.");
+        if (almacenMasCercano == null)
+            throw new InvalidOperationException("No existe un edificio de almacenamiento compatible para este recurso.");
 
-        if (!Propietario.Recursos.ContainsKey(recurso.Nombre)) // Si el propietario aun no tiene el recurso, lo inicializa
-            Propietario.Recursos[recurso.Nombre] = 0;
-
-        Propietario.Recursos[recurso.Nombre] += extraido; // Se suma la cantidad recolectad a los recursos del propietario
+        // Registrar el recurso en el almacenamiento
+        if (!almacenMasCercano.Recursos.ContainsKey(recurso.Nombre))
+            almacenMasCercano.Recursos[recurso.Nombre] = 0;
+        almacenMasCercano.Recursos[recurso.Nombre] += extraido;
     }
-
-    private bool EsCompatible(IAlmacenamiento almacen, string nombre) // Verifica si un almacen es compatible con el tipo de recurso
+    private bool EsCompatible(IAlmacenamiento almacen, string nombre)
     {
         return (nombre == "Madera" && (almacen is DepositoMadera || almacen is CentroCivico)) ||
-               (nombre == "Alimento" && (almacen is Granja || almacen is Molino)) ||
-               (nombre == "Oro" && almacen is DepositoOro) ||
-               (nombre == "Piedra" && almacen is DepositoPiedra);
+               (nombre == "Alimento" && (almacen is Granja || almacen is Molino|| almacen is CentroCivico)) ||
+               (nombre == "Oro" && (almacen is DepositoOro || almacen is CentroCivico)) ||
+               (nombre == "Piedra" && (almacen is DepositoPiedra || almacen is CentroCivico));
     }
 
-    private double CalcularDistancia(Point a, Point b) // Calcula la distancia entre 2 puntos del mapa
+    private double CalcularDistancia(Point a, Point b)
     {
         int dx = a.X - b.X;
         int dy = a.Y - b.Y;

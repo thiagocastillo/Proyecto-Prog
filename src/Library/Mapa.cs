@@ -1,6 +1,6 @@
-using System.Text;
-
 namespace Library;
+using System.IO;
+using System.Diagnostics;
 
 public class Mapa
 {
@@ -29,6 +29,7 @@ public class Mapa
                 x = random.Next(0, Ancho);
                 y = random.Next(0, Alto);
             } while (!posicionesOcupadas.Add((x, y)));
+
             int vidaBase = random.Next(80, 151);
             Recursos.Add(new Arbol(vidaBase, new Point(x, y)));
         }
@@ -56,79 +57,91 @@ public class Mapa
         }
     }
 
-    public string MostrarMapa(List<Jugador> jugadores)
-    {
-        char[,] grid = new char[Alto, Ancho];
-        for (int y = 0; y < Alto; y++)
+
+public string MostrarMapa(List<Jugador> jugadores)
+{
+    char[,] grid = new char[Alto, Ancho];
+
+    for (int y = 0; y < Alto; y++)
         for (int x = 0; x < Ancho; x++)
             grid[y, x] = '.';
 
-        // Mostrar recursos
-        foreach (var recurso in Recursos)
+    foreach (var recurso in Recursos)
+    {
+        if (recurso?.Ubicacion == null) continue;
+        int x = recurso.Ubicacion.X;
+        int y = recurso.Ubicacion.Y;
+        if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
         {
-            if (recurso?.Ubicacion == null) continue;
-            int x = recurso.Ubicacion.X;
-            int y = recurso.Ubicacion.Y;
-            if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
+            char simbolo = recurso switch
             {
-                char simbolo = recurso switch
-                {
-                    Arbol => 'T',
-                    Piedra => '#',
-                    Oro => '$',
-                    _ => 'R'
-                };
-                grid[y, x] = simbolo;
-            }
+                Arbol => 'T',
+                Piedra => '#',
+                Oro => '$',
+                _ => 'R'
+            };
+            grid[y, x] = simbolo;
         }
-
-        // Mostrar jugadores
-        foreach (Jugador jugador in jugadores)
-        {
-            if (jugador == null) continue;
-            if (jugador.Edificios != null)
-            {
-                foreach (Edificio edificio in jugador.Edificios)
-                {
-                    if (edificio?.Posicion == null) continue;
-                    int x = edificio.Posicion.X;
-                    int y = edificio.Posicion.Y;
-                    if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
-                    {
-                        if (edificio is CentroCivico)
-                            grid[y, x] = 'C';
-                        else if (edificio is Granja)
-                            grid[y, x] = 'G';
-                        else
-                            grid[y, x] = 'X';
-                    }
-                }
-            }
-            if (jugador.Unidades != null)
-            {
-                foreach (IUnidad unidad in jugador.Unidades)
-                {
-                    if (unidad?.Posicion == null) continue;
-                    int x = unidad.Posicion.X;
-                    int y = unidad.Posicion.Y;
-                    if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
-                    {
-                        if (unidad is Aldeano)
-                            grid[y, x] = 'A';
-                        else
-                            grid[y, x] = 'M';
-                    }
-                }
-            }
-        }
-
-        StringBuilder sb = new System.Text.StringBuilder();
-        for (int y = 0; y < Alto; y++)
-        {
-            for (int x = 0; x < Ancho; x++)
-                sb.Append(grid[y, x]);
-            sb.AppendLine();
-        }
-        return sb.ToString();
     }
+
+    foreach (var jugador in jugadores)
+    {
+        if (jugador == null) continue;
+
+        if (jugador.Edificios != null)
+        {
+            foreach (var edificio in jugador.Edificios)
+            {
+                if (edificio?.Posicion == null) continue;
+                int x = edificio.Posicion.X;
+                int y = edificio.Posicion.Y;
+                if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
+                {
+                    grid[y, x] = edificio switch
+                    {
+                        CentroCivico => 'C',
+                        Granja => 'G',
+                        _ => 'X'
+                    };
+                }
+            }
+        }
+
+        if (jugador.Unidades != null)
+        {
+            foreach (var unidad in jugador.Unidades)
+            {
+                if (unidad?.Posicion == null) continue;
+                int x = unidad.Posicion.X;
+                int y = unidad.Posicion.Y;
+                if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
+                {
+                    grid[y, x] = unidad is Aldeano ? 'A' : 'M';
+                }
+            }
+        }
+    }
+
+    var sb = new System.Text.StringBuilder();
+
+    sb.Append("    ");
+    for (int x = 0; x < Ancho; x++)
+        sb.Append(x.ToString("D2") + " ");
+    sb.AppendLine();
+
+    for (int y = 0; y < Alto; y++)
+    {
+        sb.Append(y.ToString("D2") + "  ");
+        for (int x = 0; x < Ancho; x++)
+            sb.Append(grid[y, x] + "  ");
+        sb.AppendLine();
+    }
+
+    string ruta = "mapa.txt";
+    File.WriteAllText(ruta, sb.ToString());
+
+    Process.Start(new ProcessStartInfo("notepad.exe", ruta) { UseShellExecute = true });
+
+    return "Abriendo mapa en el bloc de notas...";
+}
 }
