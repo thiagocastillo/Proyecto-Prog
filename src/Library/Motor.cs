@@ -27,7 +27,7 @@ public class Motor
                 case "agregarjugador":
                     
                     if (argumentos.Count < 2)
-                        return "Faltan argumentos en comando, recordar sintaxis: agregarjugador <nombre> <civilización>";
+                        return "Faltan argumentos en comando, recordar sintaxis: agregarjugador <nombreJugador> <civilización>";
                    
                     _fachada.AgregarJugadorAPartida(argumentos[0], argumentos[1].ToLower());
                     return "Jugador agregado.";
@@ -35,7 +35,7 @@ public class Motor
                 case "construiredificio":
                     
                     if (argumentos.Count < 4)
-                        return "Faltan argumentos en comando, recordar sintaxis: construiredificio <nombre> <tipo> <x> <y>";
+                        return "Faltan argumentos en comando, recordar sintaxis: construiredificio <nombreJugador> <tipo> <x> <y>";
                         
                     
                     _fachada.ConstruirEdificio(argumentos[0], argumentos[1], new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
@@ -44,7 +44,7 @@ public class Motor
                 case "entrenarunidad":
                     
                     if (argumentos.Count < 2)
-                        return "Faltan argumentos en comando, recordar sintaxis: entrenarunidad <nombre> <tipo>";
+                        return "Faltan argumentos en comando, recordar sintaxis: entrenarunidad <nombreJugador> <tipo>";
                     _fachada.EntrenarUnidad(argumentos[0], argumentos[1]);
                     return "Unidad entrenada.";
                 
@@ -55,7 +55,7 @@ public class Motor
                     return "Orden de recolección enviada.";case "moverunidad":
                     
                     if (argumentos.Count < 4)
-                        return "Faltan argumentos en comando, recordar sintaxis: moverunidad <nombre> <idUnidad> <x> <y>";
+                        return "Faltan argumentos en comando, recordar sintaxis: moverunidad <nombreJugador> <idUnidad> <x> <y>";
                    
                     _fachada.MoverUnidad(argumentos[0], int.Parse(argumentos[1]), new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
                     return "Unidad movida.";
@@ -63,14 +63,14 @@ public class Motor
                 case "atacarunidad":               //ver...
                     
                     if (argumentos.Count < 3)
-                        return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombre> <idAtacante> <idObjetivo>";
+                        return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombreJugador> <idAtacante> <idObjetivo>";
                     
                     return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
                 
                 case "atacaredificio":               //ver...
                     
                     if (argumentos.Count < 3)
-                        return "Faltan argumentos en comando, recordar sintaxis: atacaredificio <nombre> <idAtacante> <idObjetivo>";
+                        return "Faltan argumentos en comando, recordar sintaxis: atacaredificio <nombreJugador> <idAtacante> <idObjetivo>";
                     
                     return _fachada.AtacarEdificio(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
 
@@ -113,9 +113,12 @@ public class Motor
                     for (int i = 0; i < edificios.Count; i++)
                         sbE.AppendLine($"{i}: {edificios[i].GetType().Name}");
                     return sbE.ToString().TrimEnd();
+                
+                
                 case "listarrecursos":
                     return _fachada.ListarRecursos();
                 
+               
                 case "listarjugadores":
                     
                     List<Jugador> jugadores = _fachada.ObtenerJugadores();
@@ -137,7 +140,7 @@ public class Motor
                     
                     return "Saliendo...";
                 
-                case "exit":  // ST se puso ladilla y necesita un exit para salir del programa jajajaajajaj
+                case "exit":  
                     
                     return "Saliendo...";
                 
@@ -152,6 +155,3 @@ public class Motor
         }
     }
 }
-
-
-// falta recolectar recursos, ver si se puede hacer con el comando recolectar recurso <nombre> <tipo> <x> <y> o algo así
