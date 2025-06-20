@@ -67,7 +67,7 @@ public class Motor
                     
                     return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
                 
-                case "atacarudificio":               //ver...
+                case "atacaredificio":               //ver...
                     
                     if (argumentos.Count < 3)
                         return "Faltan argumentos en comando, recordar sintaxis: atacaredificio <nombre> <idAtacante> <idObjetivo>";
