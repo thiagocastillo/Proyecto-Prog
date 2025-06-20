@@ -9,10 +9,10 @@ public class ArqueroTests
         [SetUp]
         public void Setup()
         {
-            var civilizacionArmenia = new Civilizacion("armenios", new List<string>(), "Arquero Compuesto");
+            Civilizacion civilizacionArmenia = new Civilizacion("armenios", new List<string>(), "Arquero Compuesto");
             jugadorArmenio = new Jugador("Jugador1", civilizacionArmenia);
 
-            var civilizacionEnemiga = new Civilizacion("aztecas", new List<string>(), "Guerrero Jaguar");
+            Civilizacion civilizacionEnemiga = new Civilizacion("aztecas", new List<string>(), "Guerrero Jaguar");
             jugadorEnemigo = new Jugador("Jugador2", civilizacionEnemiga);
 
             arquero = new Arquero(jugadorArmenio) { Salud = 100, Posicion = new Point(1, 1) };
@@ -27,8 +27,8 @@ public class ArqueroTests
         [Test]
         public void Arquero_Mover_PosicionValida_MueveCorrectamente()
         {
-            var mapa = new Mapa();
-            var destino = new Point(5, 5);
+            Mapa mapa = new Mapa();
+            Point destino = new Point(5, 5);
 
             bool resultado = arquero.Mover(destino, mapa);
 
@@ -40,7 +40,7 @@ public class ArqueroTests
         [Test]
         public void Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus()
         {
-            var infanteria = new Infanteria(jugadorEnemigo) { Salud = 100 };
+            Infanteria infanteria = new Infanteria(jugadorEnemigo) { Salud = 100 };
             string resultado = arquero.AtacarUnidad(infanteria);
 
             Assert.IsTrue(resultado.Contains("hizo"));
@@ -50,7 +50,7 @@ public class ArqueroTests
         [Test]
         public void Arquero_AtacarU_ContraUnidadConDefensaAlta_NoDañoNegativo()
         {
-            var unidadDefensiva = new Caballeria(jugadorEnemigo)
+            Caballeria unidadDefensiva = new Caballeria(jugadorEnemigo)
             {
                 Salud = 100,
                 Posicion = new Point(2, 2)
@@ -65,7 +65,7 @@ public class ArqueroTests
         [Test]
         public void Arquero_AtacarE_EdificioRecibeDaño()
         {
-            var edificio = new Casa(jugadorEnemigo) { Vida = 1000 };
+            Casa edificio = new Casa(jugadorEnemigo) { Vida = 1000 };
 
             string resultado = arquero.AtacarEdificio(edificio);
 

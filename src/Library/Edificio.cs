@@ -1,6 +1,6 @@
 ﻿namespace Library;
 
-public abstract class Edificio : IEdificio
+public class Edificio : IEdificio
 {
     public Jugador Propietario { get; protected set; }
     public Point Posicion { get; set; }

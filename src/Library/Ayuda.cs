@@ -12,7 +12,7 @@ public static class Ayuda
         agregarjugador <nombre> <civilización>        - Agregar un jugador a la partida
         construiredificio <nombre> <tipo> <x> <y>     - Construir un edificio
         entrenarunidad <nombre> <tipo>                - Entrenar una unidad
-        recolectar <nombreJugador> <idAldeano> <nombreRecurso> - Ordenar a un aldeano recolectar un recurso
+        recolectar <nombreJugador> <idAldeano> <x> <y> - Ordenar a un aldeano recolectar un recurso
         moverunidad <nombre> <idUnidad> <x> <y>       - Mover una unidad
         atacarunidad <nombre> <idAtacante> <idObjetivo> - Atacar con una unidad
         estadojugador <nombre>                        - Ver información detallada del jugador

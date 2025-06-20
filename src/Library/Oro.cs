@@ -3,8 +3,7 @@ namespace Library;
 public class Oro : RecursoNatural
 {
     public Oro(int vidaBase, Point ubicacion)
-        : base("Oro", vidaBase, 0.50)
+        : base("Oro", vidaBase, 0.50, ubicacion)
     {
-        Ubicacion = ubicacion;
     }
 }

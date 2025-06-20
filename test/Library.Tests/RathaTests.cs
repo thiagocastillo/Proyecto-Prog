@@ -8,7 +8,7 @@ public class RathaTests
     [SetUp]
     public void Setup()
     {
-        var civilizacion = new Civilizacion("Mayas", new List<string>(), "Ratha");
+        Civilizacion civilizacion = new Civilizacion("Mayas", new List<string>(), "Ratha");
         jugador = new Jugador("Pedro", civilizacion);
         mapa = new Mapa();
     }
@@ -16,8 +16,8 @@ public class RathaTests
     [Test]
     public void Mover_PosicionValida_MueveCorrectamente()
     {
-        var ratha = new Ratha(jugador);
-        var destino = new Point(2, 2);
+        Ratha ratha = new Ratha(jugador);
+        Point destino = new Point(2, 2);
 
         bool resultado = ratha.Mover(destino, mapa);
         
@@ -28,8 +28,8 @@ public class RathaTests
     [Test]
     public void Mover_PosicionInvalida_DevuelveFalse()
     {
-        var ratha = new Ratha(jugador);
-        var destino = new Point(-5, 100);
+        Ratha ratha = new Ratha(jugador);
+        Point destino = new Point(-5, 100);
 
         bool resultado = ratha.Mover(destino, mapa);
         
@@ -39,25 +39,25 @@ public class RathaTests
     [Test]
     public void AtacarUnidad_ContraArquero_BonusAplicado()
     {
-        var ratha = new Ratha(jugador);
-        var enemigo = new Arquero(new Jugador("Otro", jugador.Civilizacion)) { Salud = 50 };
+        Ratha ratha = new Ratha(jugador);
+        Arquero enemigo = new Arquero(new Jugador("Otro", jugador.Civilizacion)) { Salud = 50 };
 
         string resultado = ratha.AtacarUnidad(enemigo);
         
-        Assert.IsTrue(resultado.Contains("Ataco a Arquero")); // Se espera que el mensaje contenga "Ataco a Arquero"
+        Assert.IsTrue(resultado.Contains("ataco a Arquero")); // Se espera que el mensaje contenga "Ataco a Arquero"
         Assert.Less(enemigo.Salud, 50); // Se espera que el arquero haya perdido salud
     }
 
     [Test]
     public void AtacarEdificio_DisminuyeVida()
     {
-        var ratha = new Ratha(jugador);
-        var casa = new Casa(new Jugador("Otro", jugador.Civilizacion));
+        Ratha ratha = new Ratha(jugador);
+        Casa casa = new Casa(new Jugador("Otro", jugador.Civilizacion));
         int vidaInicial = casa.Vida;
 
         string resultado = ratha.AtacarEdificio(casa);
         
-        Assert.IsTrue(resultado.Contains("Ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
+        Assert.IsTrue(resultado.Contains("ataco el edificio Casa")); // Se espera que el mensaje contenga el texto correcto
         Assert.Less(casa.Vida, vidaInicial); // Se espera que la vida del edificio haya disminuido
     }
 }
