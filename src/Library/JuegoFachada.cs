@@ -81,154 +81,154 @@ public class JuegoFachada
     }    
     
     
-public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
-{
-    if (_partidaActual == null)
-        throw new InvalidOperationException("No hay partida activa.");
-
-    Jugador jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-
-    if (jugador == null)
-        throw new ArgumentException("Jugador no encontrado.");
-
-    bool ocupado = _partidaActual.Jugadores
-        .SelectMany(j => j.Edificios)
-        .Any(e => e.Posicion.X == posicion.X && e.Posicion.Y == posicion.Y);
-
-    if (ocupado)
-        throw new InvalidOperationException("Ya hay un edificio en esa posición.");
-
-    var recursosTotales = jugador.ObtenerResumenRecursosTotales();
-    IEdificio? nuevoEdificio = null;
-
-    switch (tipoEdificio.ToLower())
+    public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
     {
-        case "casa":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 50)
-                throw new InvalidOperationException("No hay suficiente madera para construir una casa.");
-            nuevoEdificio = new Casa(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 50;
-            break;
+        if (_partidaActual == null)
+            throw new InvalidOperationException("No hay partida activa.");
 
-        case "cuartel":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 100)
-                throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
-            nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 100;
-            break;
+        Jugador jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
 
-        case "molino":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 75)
-                throw new InvalidOperationException("No hay suficiente madera para construir un molino.");
-            nuevoEdificio = new Molino(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 75;
-            break;
+        if (jugador == null)
+            throw new ArgumentException("Jugador no encontrado.");
 
-        case "depositomadera":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
-                throw new InvalidOperationException("No hay suficiente madera para construir un depósito de madera.");
-            nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 60;
-            break;
+        bool ocupado = _partidaActual.Jugadores
+            .SelectMany(j => j.Edificios)
+            .Any(e => e.Posicion.X == posicion.X && e.Posicion.Y == posicion.Y);
 
-        case "depositooro":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
-                throw new InvalidOperationException("No hay suficiente madera para construir un depósito de oro.");
-            nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 60;
-            break;
+        if (ocupado)
+            throw new InvalidOperationException("Ya hay un edificio en esa posición.");
 
-        case "depositopiedra":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
-                throw new InvalidOperationException("No hay suficiente madera para construir un depósito de piedra.");
-            nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 60;
-            break;
+        var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+        IEdificio? nuevoEdificio = null;
 
-        case "centrocivico":
-            if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 200)
-                throw new InvalidOperationException("No hay suficiente madera para construir un centro cívico.");
-            nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
-            jugador.Recursos["Madera"] -= 200;
-            break;
-
-        default:
-            throw new ArgumentException("Tipo de edificio no válido.");
-    }
-    jugador.AgregarEdificio(nuevoEdificio);
-}    
-public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
-{
-    Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-
-    if (jugador != null && jugador.PoblacionActual < jugador.PoblacionMaxima)
-    {
-        Cuartel cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
-
-        if (cuartel != null)
+        switch (tipoEdificio.ToLower())
         {
-            var recursosTotales = jugador.ObtenerResumenRecursosTotales();
-            IUnidad? nuevaUnidad = null;
+            case "casa":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 50)
+                    throw new InvalidOperationException("No hay suficiente madera para construir una casa.");
+                nuevoEdificio = new Casa(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 50;
+                break;
 
-            switch (tipoUnidad.ToLower())
+            case "cuartel":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 100)
+                    throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
+                nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 100;
+                break;
+
+            case "molino":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 75)
+                    throw new InvalidOperationException("No hay suficiente madera para construir un molino.");
+                nuevoEdificio = new Molino(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 75;
+                break;
+
+            case "depositomadera":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
+                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de madera.");
+                nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 60;
+                break;
+
+            case "depositooro":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
+                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de oro.");
+                nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 60;
+                break;
+
+            case "depositopiedra":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
+                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de piedra.");
+                nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 60;
+                break;
+
+            case "centrocivico":
+                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 200)
+                    throw new InvalidOperationException("No hay suficiente madera para construir un centro cívico.");
+                nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 200;
+                break;
+
+            default:
+                throw new ArgumentException("Tipo de edificio no válido.");
+        }
+        jugador.AgregarEdificio(nuevoEdificio);
+    }    
+    public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
+    {
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+
+        if (jugador != null && jugador.PoblacionActual < jugador.PoblacionMaxima)
+        {
+            Cuartel cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
+
+            if (cuartel != null)
             {
-                case "aldeano":
-                    if (jugador.PuedeCrearAldeano() && recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 50)
-                    {
-                        Aldeano nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
-                        jugador.Aldeanos.Add(nuevoAldeano);
-                        jugador.Unidades.Add(nuevoAldeano);
-                        jugador.Recursos["Alimento"] -= 50;
-                        jugador.PoblacionActual++;
-                    }
-                    break;
+                var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+                IUnidad? nuevaUnidad = null;
 
-                case "infanteria":
-                    if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
-                    {
-                        nuevaUnidad = new Infanteria(jugador) { Posicion = cuartel.Posicion };
-                        if (jugador.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
+                switch (tipoUnidad.ToLower())
+                {
+                    case "aldeano":
+                        if (jugador.PuedeCrearAldeano() && recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 50)
                         {
-                            nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = cuartel.Posicion };
+                            Aldeano nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
+                            jugador.Aldeanos.Add(nuevoAldeano);
+                            jugador.Unidades.Add(nuevoAldeano);
+                            jugador.Recursos["Alimento"] -= 50;
+                            jugador.PoblacionActual++;
                         }
-                        jugador.Recursos["Alimento"] -= 60;
-                    }
-                    break;
+                        break;
 
-                case "arquero":
-                    if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
-                    {
-                        nuevaUnidad = new Arquero(jugador) { Posicion = cuartel.Posicion };
-                        if (jugador.Civilizacion.UnidadEspecial == "Arquero Compuesto")
+                    case "infanteria":
+                        if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
                         {
-                            nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = cuartel.Posicion };
+                            nuevaUnidad = new Infanteria(jugador) { Posicion = cuartel.Posicion };
+                            if (jugador.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
+                            {
+                                nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = cuartel.Posicion };
+                            }
+                            jugador.Recursos["Alimento"] -= 60;
                         }
-                        jugador.Recursos["Madera"] -= 70;
-                    }
-                    break;
+                        break;
 
-                case "caballeria":
-                    if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
-                        recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
-                    {
-                        nuevaUnidad = new Caballeria(jugador) { Posicion = cuartel.Posicion };
-                        if (jugador.Civilizacion.UnidadEspecial == "Ratha")
+                    case "arquero":
+                        if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
                         {
-                            nuevaUnidad = new Ratha(jugador) { Posicion = cuartel.Posicion };
+                            nuevaUnidad = new Arquero(jugador) { Posicion = cuartel.Posicion };
+                            if (jugador.Civilizacion.UnidadEspecial == "Arquero Compuesto")
+                            {
+                                nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = cuartel.Posicion };
+                            }
+                            jugador.Recursos["Madera"] -= 70;
                         }
-                        jugador.Recursos["Alimento"] -= 80;
-                        jugador.Recursos["Madera"] -= 60;
-                    }
-                    break;
-            }
+                        break;
 
-            if (nuevaUnidad != null)
-            {
-                jugador.AgregarUnidad(nuevaUnidad);
+                    case "caballeria":
+                        if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
+                            recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
+                        {
+                            nuevaUnidad = new Caballeria(jugador) { Posicion = cuartel.Posicion };
+                            if (jugador.Civilizacion.UnidadEspecial == "Ratha")
+                            {
+                                nuevaUnidad = new Ratha(jugador) { Posicion = cuartel.Posicion };
+                            }
+                            jugador.Recursos["Alimento"] -= 80;
+                            jugador.Recursos["Madera"] -= 60;
+                        }
+                        break;
+                }
+
+                if (nuevaUnidad != null)
+                {
+                    jugador.AgregarUnidad(nuevaUnidad);
+                }
             }
         }
     }
-}
     public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -252,6 +252,20 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
         }
         
         return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
+    }
+    
+    public string AtacarEdificio(string nombreJugador, int idUnidadAtacante, int idEdificioObjetivo)
+    {
+        Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        IUnidad unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
+        IEdificio edificioObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Edificios).ElementAtOrDefault(idEdificioObjetivo);
+
+        if (unidadAtacante != null && edificioObjetivo != null && unidadAtacante.Propietario != edificioObjetivo.Propietario)
+        {
+            return unidadAtacante.AtacarEdificio(edificioObjetivo);
+        }
+        
+        return "Ataque fallido: unidad atacante o edificio objetivo no válidos. No se pudo realizar el ataque.";
     }
 
     public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
