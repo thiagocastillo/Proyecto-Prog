@@ -38,7 +38,7 @@ public class AldeanoTests
         }
 
         [Test]
-        public void AtacarU_DevuelveMensajeNoAtaca()
+        public void AtacarUnidad_DevuelveMensajeNoAtaca()
         {
             var aldeano = new Aldeano(jugador);
             var otroJugador = new Jugador("Otro", jugador.Civilizacion);
@@ -50,7 +50,7 @@ public class AldeanoTests
         }
 
         [Test]
-        public void AtacarE_DevuelveMensajeNoAtaca()
+        public void AtacarEdificio_DevuelveMensajeNoAtaca()
         {
             var aldeano = new Aldeano(jugador);
             var edificio = new Casa(jugador);
