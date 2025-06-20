@@ -15,7 +15,6 @@ public static class Ayuda
         recolectar <nombreJugador> <idAldeano> <x> <y> - Ordenar a un aldeano recolectar un recurso
         moverunidad <nombre> <idUnidad> <x> <y>       - Mover una unidad
         atacarunidad <nombre> <idAtacante> <idObjetivo> - Atacar con una unidad
-        estadojugador <nombre>                        - Ver información detallada del jugador
         recursosjugador <nombre>                      - Ver recursos de un jugador
         unidadesjugador <nombre>                      - Ver unidades de un jugador
         edificiosjugador <nombre>                     - Ver edificios de un jugador

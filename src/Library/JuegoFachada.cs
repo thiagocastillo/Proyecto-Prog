@@ -62,49 +62,7 @@ public class JuegoFachada
             throw new InvalidOperationException("No hay partida activa al momento.");
         }
     }
-
-    public string MostrarEstadoJugador(string nombreJugador)
-    {
-        Jugador jugadorEncontrado = null;
-
-        foreach (Jugador j in _partidaActual.Jugadores)
-        {
-            if (j.Nombre == nombreJugador)
-            {
-                jugadorEncontrado = j;
-                break;
-            }
-        }
-
-        if (jugadorEncontrado == null)
-        {
-            return "Jugador" + nombreJugador + "no encontrado";
-        }
-
-        string resultado = "Estado del jugador: " + nombreJugador + "\n";
-        resultado += "Recursos: \n";
-
-        foreach (KeyValuePair<string, int> recurso in jugadorEncontrado.Recursos)
-        {
-            resultado += " - " + recurso.Key + ": " + recurso.Value + "\n";
-        }
-
-        resultado += "\n Edificios:\n";
-        foreach (IEdificio edificio in jugadorEncontrado.Edificios)
-        {
-            resultado += " - " + edificio.GetType().Name + " en (" + edificio.Posicion.X + ", " + edificio.Posicion.Y + ")\n";
-        }
-
-        resultado += "\n Unidades: \n";
-        int i = 0;
-        foreach (IUnidad unidad  in jugadorEncontrado.Unidades)
-        {
-            resultado += "  #" + i + " - " + unidad.GetType().Name + " en (" + unidad.Posicion.X + ", " + unidad.Posicion.Y + ") | Vida: " + unidad.Salud + "\n";
-            i++;
-        }
-
-        return resultado;
-    }
+    
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
