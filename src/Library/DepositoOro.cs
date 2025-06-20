@@ -6,20 +6,21 @@ public class DepositoOro : IAlmacenamiento
     public Point Posicion { get; set; }
     public int CapacidadMaxima { get; private set; } = 500;
     public int Vida { get; set; }
-    
+    public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
+
     private TiempoConstruccion tiempoconstruccion;
 
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
     public int TiempoConstruccionRestante => tiempoconstruccion.TiempoRestante;
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
-    
+
     public DepositoOro(Jugador propietario)
     {
         Propietario = propietario;
-        Vida= 5000;
+        Vida = 5000;
         tiempoconstruccion = new TiempoConstruccion(3);
     }
-    
+
     public double Eficiencia(int distancia)
     {
         if (distancia <= 1) return 1.0;

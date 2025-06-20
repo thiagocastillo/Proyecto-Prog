@@ -1,5 +1,8 @@
 namespace Library;
 using System.Collections.Generic;
+using System;
+using System.Linq;
+
 public class Jugador
 {
     public const int LimiteAldeanos = 20;
@@ -13,8 +16,8 @@ public class Jugador
     public List<Aldeano> Aldeanos { get; set; } = new List<Aldeano>();
     public Dictionary<string, int> Recursos { get; set; } = new Dictionary<string, int>()
     {
-        { "Alimento", 100 },
-        { "Madera", 100 },
+        { "Alimento", 0 },
+        { "Madera", 0 },
         { "Oro", 0 },
         { "Piedra", 0 }
     };
@@ -30,44 +33,73 @@ public class Jugador
         Civilizacion = civilizacion;
         CentroCivico = new CentroCivico(this) { Posicion = new Point { X = x, Y = y } };
         Edificios.Add(CentroCivico);
-        
+
         for (int i = 0; i < 3; i++)
         {
-            var aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
+            Aldeano aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
             Aldeanos.Add(aldeano);
             Unidades.Add(aldeano);
         }
+    }
+    public Dictionary<string, int> ObtenerResumenRecursosTotales()
+    {
+        Dictionary<string, int> total = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+
+        // Sumar recursos del jugador
+        foreach (KeyValuePair<string, int> par in Recursos)
+        {
+            string key = par.Key.ToLower();
+            if (!total.ContainsKey(key))
+                total[key] = 0;
+            total[key] += par.Value;
+        }
+
+        // Sumar recursos de los edificios de almacenamiento
+        IEnumerable<IAlmacenamiento> almacenamientos = Edificios.OfType<IAlmacenamiento>();
+        foreach (IAlmacenamiento almacen in almacenamientos)
+        {
+            foreach (KeyValuePair<string, int> par in almacen.Recursos)
+            {
+                string key = par.Key.ToLower();
+                if (!total.ContainsKey(key))
+                    total[key] = 0;
+                total[key] += par.Value;
+            }
+        }
+
+        return total;
     }
 
     public void AgregarRecurso(ITipoRecurso tipo, int cantidad)
     {
         if (cantidad <= 0)
             throw new ArgumentException("La cantidad de recursos debe ser mayor que cero.");
-        
+
         if (!Recursos.ContainsKey(tipo.Nombre))
             Recursos[tipo.Nombre] = 0;
 
         Recursos[tipo.Nombre] += cantidad;
     }
 
+    public void DepositarRecursos(Dictionary<string, int> recursosEdificio)
+    {
+        foreach (KeyValuePair<string, int> par in recursosEdificio)
+        {
+            if (!Recursos.ContainsKey(par.Key))
+                Recursos[par.Key] = 0;
+            Recursos[par.Key] += par.Value;
+        }
+    }
+
     public void AumentarPoblacionMaxima(int incremento)
     {
-        // No permite superar el máximo absoluto de aldeanos + militares
-        try
+        if (incremento > 0)
         {
-            if (incremento <= 0)
-                throw new ArgumentException("El incremento debe ser mayor que cero.");
-
             int maxTotal = LimiteAldeanos + LimiteMilitares;
-            
             if (PoblacionMaxima + incremento > maxTotal)
                 PoblacionMaxima = maxTotal;
             else
                 PoblacionMaxima += incremento;
-        }
-        catch (ArgumentException ex)
-        {
-            throw new InvalidOperationException($"Error al aumentar población máxima: {ex.Message}", ex);
         }
     }
 
@@ -80,7 +112,6 @@ public class Jugador
     {
         try
         {
-
             if (unidad is Aldeano)
             {
                 if (Aldeanos.Count >= LimiteAldeanos)
@@ -102,6 +133,7 @@ public class Jugador
             throw new InvalidOperationException($"Error al agregar unidad: {ex.Message}", ex);
         }
     }
+
     public string ObtenerResumenPoblacion()
     {
         return $"Población: {PoblacionActual}/{PoblacionMaxima}";
