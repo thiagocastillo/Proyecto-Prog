@@ -6,21 +6,22 @@ public static class Ayuda
     {
         return
             @"Comandos disponibles:
-        ayuda                                                             - Muestra este menú de ayuda
-        crearpartida                                                      - Crear una nueva partida
-        civilizaciones                                                    - Ver civilizaciones disponibles
-        agregarjugador <nombreJugador> <civilización>                     - Agregar un jugador a la partida
-        construiredificio <nombreJugador> <tipo> <x> <y>                  - Construir un edificio
-        entrenarunidad <nombreJugador> <tipo>                             - Entrenar una unidad
-        recolectar <nombreJugador> <idAldeano> <x> <y>                    - Ordenar a un aldeano recolectar un recurso
-        moverunidad <nombreJugador> <idUnidad> <x> <y>                    - Mover una unidad
-        atacarunidad <nombreJugador> <idAtacante> <idObjetivo>            - Atacar con una unidad
-        atacarEdificio <nombreJugador> <idAtacante> <idEdificio>          - Atacar un edificio
-        recursosjugador <nombreJugador>                                   - Ver recursos de un jugador
-        unidadesjugador <nombreJugador>                                   - Ver unidades de un jugador
-        edificiosjugador <nombreJugador>                                  - Ver edificios de un jugador
-        listarjugadores                                                   - Listar todos los jugadores en la partida
-        mostrarMapa                                                       - Mostrar el mapa del juego
-        salir                                                             - Salir del juego";
+        
+        - Muestra este menú de ayuda:                   Ayuda                                                             
+        - Crear una nueva partida:                      CrearPartida                                                      
+        - Ver civilizaciones disponibles:               Civilizaciones                                                    
+        - Agregar un jugador a la partida:              AgregarJugador <nombreJugador> <civilización>                     
+        - Construir un edificio:                        ConstruirEdificio <nombreJugador> <tipo> <x> <y>                  
+        - Entrenar una unidad:                          EntrenarUnidad <nombreJugador> <tipo>                             
+        - Ordenar a un aldeano recolectar un recurso:   Recolectar <nombreJugador> <idAldeano> <x> <y>                    
+        - Mover una unidad:                             Moverunidad <nombreJugador> <idUnidad> <x> <y>                    
+        - Atacar con una unidad:                        Atacarunidad <nombreJugador> <idAtacante> <idObjetivo>            
+        - Atacar un edificio:                           AtacarEdificio <nombreJugador> <idAtacante> <idEdificio>         
+        - Ver recursos de un jugador:                   Recursosjugador <nombreJugador>                                   
+        - Ver unidades de un jugador:                   Unidadesjugador <nombreJugador>                                   
+        - Ver edificios de un jugador:                  Edificiosjugador <nombreJugador>                                  
+        - Listar todos los jugadores en la partida:     Listarjugadores                                                   
+        - Mostrar el mapa del juego:                    MostrarMapa                                                       
+        - Salir del juego:                              Salir or Exit";
     }
 }
