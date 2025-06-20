@@ -50,7 +50,8 @@ public class Aldeano : IUnidad, IRecolector
         return "Los aldeanos no atacan unidades.";
     }
 
-    public void RecolectarEn(Point coordenada, Mapa mapa)    {
+    public void RecolectarEn(Point coordenada, Mapa mapa)   
+    {
         // Buscar el recurso natural en la coordenada
         var recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.X == coordenada.X && r.Ubicacion.Y == coordenada.Y);
         if (recurso == null)
