@@ -13,7 +13,27 @@ public class Mapa
     {
         GenerarRecursosAleatorios(50, 200);
     }
+    public List<IUnidad> ObtenerUnidadesEn(Point coordenada, List<Jugador> jugadores)
+    {
+        var unidades = new List<IUnidad>();
+        foreach (var jugador in jugadores)
+        {
+            if (jugador?.Unidades == null) continue;
+            unidades.AddRange(jugador.Unidades.Where(u => u.Posicion.Equals(coordenada)));
+        }
+        return unidades;
+    }
 
+    public List<IEdificio> ObtenerEdificiosEn(Point coordenada, List<Jugador> jugadores)
+    {
+        var edificios = new List<IEdificio>();
+        foreach (var jugador in jugadores)
+        {
+            if (jugador?.Edificios == null) continue;
+            edificios.AddRange(jugador.Edificios.Where(e => e.Posicion.Equals(coordenada)));
+        }
+        return edificios;
+    }
     public void GenerarRecursosAleatorios(int min, int max)
     {
         Recursos.Clear();
@@ -56,6 +76,7 @@ public class Mapa
             Recursos.Add(recurso);
         }
     }
+
 
 
 public string MostrarMapa(List<Jugador> jugadores)
@@ -116,7 +137,16 @@ public string MostrarMapa(List<Jugador> jugadores)
                 int y = unidad.Posicion.Y;
                 if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
                 {
-                    grid[y, x] = unidad is Aldeano ? 'A' : 'M';
+                    grid[y, x] = unidad switch
+                    {
+                        Aldeano => 'A',
+                        Arquero => 'Æ',
+                        Caballeria => '©',
+                        Ratha => '®',
+                        GuerreroJaguar => 'J',
+                        Infanteria => 'I',
+                        _ => '?'
+                    };
                 }
             }
         }

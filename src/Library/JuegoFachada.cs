@@ -157,79 +157,115 @@ public class JuegoFachada
         }
         jugador.AgregarEdificio(nuevoEdificio);
     }    
-    public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
+public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posicion)
+{
+    if (_partidaActual == null)
+        throw new InvalidOperationException("No hay partida activa.");
+
+    Jugador jugador = _partidaActual.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+
+    if (jugador == null)
+        throw new ArgumentException("Jugador no encontrado.");
+
+    // Verifica si la posición está ocupada por otra unidad
+    bool ocupado = _partidaActual.Jugadores
+        .SelectMany(j => j.Unidades)
+        .Any(u => u.Posicion.X == posicion.X && u.Posicion.Y == posicion.Y);
+
+    if (ocupado)
+        throw new InvalidOperationException("Ya hay una unidad en esa posición.");
+
+    var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+    IUnidad? nuevaUnidad = null;
+
+    switch (tipoUnidad.ToLower())
     {
-        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-
-        if (jugador != null && jugador.PoblacionActual < jugador.PoblacionMaxima)
-        {
-            Cuartel cuartel = jugador.Edificios.OfType<Cuartel>().FirstOrDefault();
-
-            if (cuartel != null)
+        case "aldeano":
+            if (jugador.PuedeCrearAldeano() && recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 50)
             {
-                var recursosTotales = jugador.ObtenerResumenRecursosTotales();
-                IUnidad? nuevaUnidad = null;
-
-                switch (tipoUnidad.ToLower())
-                {
-                    case "aldeano":
-                        if (jugador.PuedeCrearAldeano() && recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 50)
-                        {
-                            Aldeano nuevoAldeano = new Aldeano(jugador) { Posicion = jugador.CentroCivico.Posicion };
-                            jugador.Aldeanos.Add(nuevoAldeano);
-                            jugador.Unidades.Add(nuevoAldeano);
-                            jugador.Recursos["Alimento"] -= 50;
-                            jugador.PoblacionActual++;
-                        }
-                        break;
-
-                    case "infanteria":
-                        if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
-                        {
-                            nuevaUnidad = new Infanteria(jugador) { Posicion = cuartel.Posicion };
-                            if (jugador.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
-                            {
-                                nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = cuartel.Posicion };
-                            }
-                            jugador.Recursos["Alimento"] -= 60;
-                        }
-                        break;
-
-                    case "arquero":
-                        if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
-                        {
-                            nuevaUnidad = new Arquero(jugador) { Posicion = cuartel.Posicion };
-                            if (jugador.Civilizacion.UnidadEspecial == "Arquero Compuesto")
-                            {
-                                nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = cuartel.Posicion };
-                            }
-                            jugador.Recursos["Madera"] -= 70;
-                        }
-                        break;
-
-                    case "caballeria":
-                        if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
-                            recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
-                        {
-                            nuevaUnidad = new Caballeria(jugador) { Posicion = cuartel.Posicion };
-                            if (jugador.Civilizacion.UnidadEspecial == "Ratha")
-                            {
-                                nuevaUnidad = new Ratha(jugador) { Posicion = cuartel.Posicion };
-                            }
-                            jugador.Recursos["Alimento"] -= 80;
-                            jugador.Recursos["Madera"] -= 60;
-                        }
-                        break;
-                }
-
-                if (nuevaUnidad != null)
-                {
-                    jugador.AgregarUnidad(nuevaUnidad);
-                }
+                var nuevoAldeano = new Aldeano(jugador) { Posicion = posicion };
+                jugador.Aldeanos.Add(nuevoAldeano);
+                jugador.Unidades.Add(nuevoAldeano);
+                jugador.Recursos["Alimento"] -= 50;
+                jugador.PoblacionActual++;
             }
-        }
+            break;
+
+        case "guerrerojaguar":
+            if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
+            {
+                nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = posicion };
+                jugador.Recursos["Alimento"] -= 60;
+            }
+            break;
+
+        case "arquerocompuesto":
+            if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
+            {
+                nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 70;
+            }
+            break;
+
+        case "ratha":
+            if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
+                recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
+            {
+                nuevaUnidad = new Ratha(jugador) { Posicion = posicion };
+                jugador.Recursos["Alimento"] -= 80;
+                jugador.Recursos["Madera"] -= 60;
+            }
+            break;
+
+        case "infanteria":
+            if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
+            {
+                nuevaUnidad = new Infanteria(jugador) { Posicion = posicion };
+                jugador.Recursos["Alimento"] -= 60;
+            }
+            break;
+
+        case "arquero":
+            if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
+            {
+                nuevaUnidad = new Arquero(jugador) { Posicion = posicion };
+                jugador.Recursos["Madera"] -= 70;
+            }
+            break;
+
+        case "caballeria":
+            if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
+                recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
+            {
+                nuevaUnidad = new Caballeria(jugador) { Posicion = posicion };
+                jugador.Recursos["Alimento"] -= 80;
+                jugador.Recursos["Madera"] -= 60;
+            }
+            break;
     }
-    public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
+
+    if (nuevaUnidad != null)
+    {
+        jugador.Unidades.Add(nuevaUnidad);
+        jugador.PoblacionActual++;
+    }
+}private Point BuscarPosicionLibreCercana(Point origen, Jugador jugador)
+{
+    var adyacentes = new List<Point>
+    {
+        new Point { X = origen.X + 1, Y = origen.Y },
+        new Point { X = origen.X - 1, Y = origen.Y },
+        new Point { X = origen.X, Y = origen.Y + 1 },
+        new Point { X = origen.X, Y = origen.Y - 1 },
+        new Point { X = origen.X + 1, Y = origen.Y + 1 },
+        new Point { X = origen.X - 1, Y = origen.Y - 1 },
+        new Point { X = origen.X + 1, Y = origen.Y - 1 },
+        new Point { X = origen.X - 1, Y = origen.Y + 1 }
+    };
+    var ocupadas = jugador.Unidades.Select(u => u.Posicion).ToHashSet();
+    return adyacentes.FirstOrDefault(p => !ocupadas.Contains(p), origen);
+}   
+public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         IUnidad unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
@@ -240,34 +276,39 @@ public class JuegoFachada
         }
     }
 
-    public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, int idUnidadObjetivo)
+    public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, string tipoUnidad, int cantidad, Point coordenada)
     {
-        Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        IUnidad unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
-        IUnidad unidadObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Unidades).ElementAtOrDefault(idUnidadObjetivo);
+        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
 
-        if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
+        if (jugadorAtacante != null && unidadAtacante != null)
         {
-            return unidadAtacante.AtacarUnidad(unidadObjetivo);
+            return unidadAtacante.AtacarUnidad(
+                jugadorAtacante,
+                tipoUnidad,
+                cantidad,
+                coordenada,
+                _partidaActual.Mapa,
+                _partidaActual.Jugadores
+            );
         }
-        
-        return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
+
+        return "Ataque fallido: unidad atacante no válida. No se pudo realizar el ataque.";
     }
-    
+
     public string AtacarEdificio(string nombreJugador, int idUnidadAtacante, int idEdificioObjetivo)
     {
-        Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        IUnidad unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante);
-        IEdificio edificioObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Edificios).ElementAtOrDefault(idEdificioObjetivo);
+        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
+        var edificioObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Edificios).ElementAtOrDefault(idEdificioObjetivo);
 
         if (unidadAtacante != null && edificioObjetivo != null && unidadAtacante.Propietario != edificioObjetivo.Propietario)
         {
             return unidadAtacante.AtacarEdificio(edificioObjetivo);
         }
-        
+
         return "Ataque fallido: unidad atacante o edificio objetivo no válidos. No se pudo realizar el ataque.";
     }
-
     public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
     {
         try

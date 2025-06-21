@@ -39,41 +39,41 @@ public class Ratha : IUnidadMilitar
         return true;
     }
 
-    public string AtacarUnidad(IUnidad objetivo)
+    
+    public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List<Jugador> jugadores)
     {
-        int ataqueFinal = Ataque;
-        int daño = ataqueFinal - objetivo.Defensa;
-        
-        if (objetivo is Arquero)
+        var unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
+            .Where(u => u.Propietario != atacante && u.GetType().Name.ToLower() == tipoUnidad.ToLower())
+            .Take(cantidad)
+            .ToList();
+
+        if (!unidadesEnCoordenada.Any())
+            return $"No se encontraron unidades de tipo {tipoUnidad} en la coordenada ({coordenada.X},{coordenada.Y}).";
+
+        string resultado = "";
+        foreach (var unidad in unidadesEnCoordenada)
         {
-            daño += 2; // Bonus contra arqueros
+            int daño = (int)CalcularDaño(unidad);
+            unidad.Salud -= daño;
+            resultado += $"{GetType().Name} atacó a {unidad.GetType().Name} causando {daño} de daño. Salud restante: {Math.Max(0, unidad.Salud)}.";
+            if (unidad.Salud <= 0)
+            {
+                unidad.Propietario.Unidades.Remove(unidad);
+                resultado += " La unidad fue destruida.";
+            }
+            resultado += "\n";
         }
-        
-        daño = Math.Max(daño, 0);
-        objetivo.Salud -= daño;   
-        
-        string info = $"{GetType().Name} ataco a {objetivo.GetType().Name} e hizo {daño} de daño.";
-        info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
-        
-        if (objetivo.Salud <= 0)
-        {
-            objetivo.Propietario.Unidades.Remove(objetivo);
-            info += $" {objetivo.GetType().Name} fue destruido.";
-        }
-        return info;
+        return resultado;
     }
     public string AtacarEdificio(IEdificio objetivo)
     {
-        int daño = Ataque;
+        int daño = this.Ataque;
         objetivo.Vida -= daño;
-        
-        string info = $"{GetType().Name} ataco el edificio {objetivo.GetType().Name} causando {daño} de daño.";
-        info += $" Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
-
+        string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño. Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
         if (objetivo.Vida <= 0)
         {
             objetivo.Propietario.Edificios.Remove(objetivo);
-            info += $" El edificio fue destruido.";
+            info += " El edificio fue destruido.";
         }
         return info;
     }

@@ -15,7 +15,7 @@ public static class Ayuda
         - Entrenar una unidad:                             EntrenarUnidad <nombreJugador> <tipo>                             
         - Ordenar a un aldeano recolectar un recurso:      Recolectar <nombreJugador> <idAldeano> <x> <y>                    
         - Mover una unidad:                                Moverunidad <nombreJugador> <idUnidad> <x> <y>                    
-        - Atacar con una unidad:                           Atacarunidad <nombreJugador> <idAtacante> <idObjetivo>            
+        - Atacar con una unidad:                           Atacarunidad <nombreJugador> <idAtacante> <tipoUnidad> <cantidad> <x> <y>
         - Atacar un edificio:                              AtacarEdificio <nombreJugador> <idAtacante> <idEdificio>         
         - Ver recursos de un jugador:                      Recursosjugador <nombreJugador>                                   
         - Ver unidades de un jugador:                      Unidadesjugador <nombreJugador>                                   

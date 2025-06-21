@@ -16,9 +16,27 @@ public class Infanteria : IUnidadMilitar
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;
+
+        var ccPos = propietario.CentroCivico.Posicion;
+        var adyacentes = new List<Point>
+        {
+            new Point { X = ccPos.X + 1, Y = ccPos.Y },
+            new Point { X = ccPos.X - 1, Y = ccPos.Y },
+            new Point { X = ccPos.X, Y = ccPos.Y + 1 },
+            new Point { X = ccPos.X, Y = ccPos.Y - 1 },
+            new Point { X = ccPos.X + 1, Y = ccPos.Y + 1 },
+            new Point { X = ccPos.X - 1, Y = ccPos.Y - 1 },
+            new Point { X = ccPos.X + 1, Y = ccPos.Y - 1 },
+            new Point { X = ccPos.X - 1, Y = ccPos.Y + 1 }
+        };
+
+        var ocupadas = propietario.Unidades.Select(u => u.Posicion).ToHashSet();
+
+        this.Posicion = adyacentes.FirstOrDefault(p => !ocupadas.Contains(p), ccPos);
+
         if (propietario.Civilizacion.Nombre == "Armenios")
         {
-            // Podríamos manejar la bonificación de vida de otra manera con interfaces si fuera necesario
+            Salud= Salud + 20; 
         }
     }
 
@@ -67,53 +85,42 @@ public class Infanteria : IUnidadMilitar
         }
     }
 
-    public string AtacarUnidad(IUnidad objetivo)
+    
+    public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List<Jugador> jugadores)
     {
-        if (objetivo == null)
-        {
-            throw new ArgumentNullException(nameof(objetivo), "El objetivo no puede ser nulo.");
-        }
-        
-        int ataqueFinal = Ataque;
-        int daño = ataqueFinal - objetivo.Defensa;
-        
-        if (objetivo is Infanteria && Propietario.Civilizacion.Nombre == "Aztecas" && Propietario.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
-        {
-            ataqueFinal += 3;
-        }
-        
-        daño = Math.Max(daño, 0);
-        objetivo.Salud -= daño;   
-        
-        string info = $"{GetType().Name} atacó a {objetivo.GetType().Name} e hizo {daño} de daño.";
-        info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
+        var unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
+            .Where(u => u.Propietario != atacante && u.GetType().Name.ToLower() == tipoUnidad.ToLower())
+            .Take(cantidad)
+            .ToList();
 
+        if (!unidadesEnCoordenada.Any())
+            return $"No se encontraron unidades de tipo {tipoUnidad} en la coordenada ({coordenada.X},{coordenada.Y}).";
 
-        if (objetivo is Caballeria)
+        string resultado = "";
+        foreach (var unidad in unidadesEnCoordenada)
         {
-            ataqueFinal += 2;
+            int daño = (int)CalcularDaño(unidad);
+            unidad.Salud -= daño;
+            resultado += $"{GetType().Name} atacó a {unidad.GetType().Name} causando {daño} de daño. Salud restante: {Math.Max(0, unidad.Salud)}.";
+            if (unidad.Salud <= 0)
+            {
+                unidad.Propietario.Unidades.Remove(unidad);
+                resultado += " La unidad fue destruida.";
+            }
+            resultado += "\n";
         }
-        
-        if (objetivo.Salud <= 0)
-        {
-            objetivo.Propietario.Unidades.Remove(objetivo);
-            info += $" {objetivo.GetType().Name} fue destruido.";
-        }
-        return info;
+        return resultado;
     }
    
     public string AtacarEdificio(IEdificio objetivo)
     {
-        int daño = Ataque;
+        int daño = this.Ataque;
         objetivo.Vida -= daño;
-        
-        string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño.";
-        info += $" Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
-
+        string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño. Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
         if (objetivo.Vida <= 0)
         {
             objetivo.Propietario.Edificios.Remove(objetivo);
-            info += $" El edificio fue destruido.";
+            info += " El edificio fue destruido.";
         }
         return info;
     }
