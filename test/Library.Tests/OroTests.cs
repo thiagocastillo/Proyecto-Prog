@@ -32,7 +32,8 @@ public class OroTests
     [Test]
     public void OroSeExtraeTodo()
     {
-        var oroAgotable = new Oro(vidaBase: 2, ubicacion: ubicacion); 
+        Point ubicacion = new Point();
+        Oro oroAgotable = new Oro(vidaBase: 2, ubicacion: ubicacion); 
 
         int extraido = oroAgotable.Recolectar(1);
         Assert.AreEqual(1, extraido);
