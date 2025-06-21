@@ -21,7 +21,7 @@ public class PiedraTests
     }
 
     [Test]
-    public void SePuedeRecolectarOro()
+    public void SePuedeRecolectarPiedra()
     {
         int cantidadInicial = piedra.Cantidad;
         int extraido = piedra.Recolectar(piedra.TasaRecoleccion);
@@ -32,7 +32,8 @@ public class PiedraTests
     [Test]
     public void PiedraSeExtraeTodo()
     {
-        var oroAgotable = new Piedra(vidaBase: 2, ubicacion: ubicacion); 
+        Point ubicacion = new Point();
+        Piedra piedraAgotable = new Piedra(vidaBase: 2, ubicacion: ubicacion); 
 
         int extraido = oroAgotable.Recolectar(1);
         Assert.AreEqual(1, extraido);
