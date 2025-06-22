@@ -2,17 +2,20 @@ namespace Library;
 
 public class Infanteria : IUnidadMilitar
 {
+    // Jugador dueño de la unidad
     public Jugador Propietario { get; private set; }
     public int Ataque { get; private set; } = 10;
     public int Defensa { get; private set; } = 5;
     
     public double Velocidad { get; private set; } = 1.0;
     
+    // Salud inicial
     public int Salud { get; set; } = 100;
     public Point Posicion { get; set; }
 
     public int TiempoDeCreacion { get; private set; } = 10;
     
+    // Constructor de la unidad, recibe el jugador que la controla
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;
@@ -24,7 +27,9 @@ public class Infanteria : IUnidadMilitar
 
     public double CalcularDaño(IUnidad objetivo)
     {
+        // Daño base = ataque - defensa
         double dañoBase = this.Ataque - objetivo.Defensa;
+        // Bonificacion contra caballeria
         if (objetivo is Caballeria)
         {
             dañoBase += 2;
@@ -37,6 +42,8 @@ public class Infanteria : IUnidadMilitar
 
         return dañoBase;
     }
+    
+    // Mueve la unidad a na nueva posicion si es valida
     public bool Mover(Point destino, Mapa mapa)
     {
         try
@@ -50,15 +57,15 @@ public class Infanteria : IUnidadMilitar
             {
                 throw new ArgumentNullException(nameof(destino), "El destino no puede ser nulo.");
             }
-            
+            // Verifica que el destino este dentro de los limites del mapa
             if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
             {
                 throw new ArgumentOutOfRangeException("Destino fuera de los límites del mapa.");
-                return false;
+                return false; 
             }
 
-            Posicion = destino;
-            return true;
+            Posicion = destino; // Actualiza la posicion
+            return true; // Movimiento exitoso
         }
         catch(Exception e)
         {
@@ -67,6 +74,7 @@ public class Infanteria : IUnidadMilitar
         }
     }
 
+    // Ataca a otra unidad enemiga y aplica daño segun logica de combate
     public string AtacarUnidad(IUnidad objetivo)
     {
         if (objetivo == null)
@@ -77,6 +85,7 @@ public class Infanteria : IUnidadMilitar
         int ataqueFinal = Ataque;
         int daño = ataqueFinal - objetivo.Defensa;
         
+        // Bonificacion especial si es azteca con unidad especial "Guerrero Jaguar"
         if (objetivo is Infanteria && Propietario.Civilizacion.Nombre == "Aztecas" && Propietario.Civilizacion.UnidadEspecial == "Guerrero Jaguar")
         {
             ataqueFinal += 3;
@@ -88,12 +97,12 @@ public class Infanteria : IUnidadMilitar
         string info = $"{GetType().Name} atacó a {objetivo.GetType().Name} e hizo {daño} de daño.";
         info += $" {objetivo.GetType().Name} tiene {Math.Max(0, objetivo.Salud)} de salud restante.";
 
-
+        
         if (objetivo is Caballeria)
         {
             ataqueFinal += 2;
         }
-        
+        // Si la unidad murio, se elimina de la lista del jugador
         if (objetivo.Salud <= 0)
         {
             objetivo.Propietario.Unidades.Remove(objetivo);
@@ -102,6 +111,7 @@ public class Infanteria : IUnidadMilitar
         return info;
     }
    
+    // Ataca un edificio enemigo y aplica daño
     public string AtacarEdificio(IEdificio objetivo)
     {
         int daño = Ataque;
@@ -110,6 +120,7 @@ public class Infanteria : IUnidadMilitar
         string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño.";
         info += $" Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
 
+        // Si el edificio fue destruido, se elimina de la lista del jugador
         if (objetivo.Vida <= 0)
         {
             objetivo.Propietario.Edificios.Remove(objetivo);

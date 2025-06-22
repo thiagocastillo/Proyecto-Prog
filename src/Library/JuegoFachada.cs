@@ -5,7 +5,9 @@ using System.Linq;
 
 public class JuegoFachada
 {
+    // Instancia de la partida actual en juego
     private Partida? _partidaActual;
+    // Lista de civilizaciones disponibles al momento de crear jugadores
     private List<Civilizacion> _civilizacionesDisponibles = new List<Civilizacion>()
     {
         new Civilizacion("armenios", new List<string> { "Infantería +10 vida", "Arqueros +10 ataque" }, "Arquero Compuesto"),
@@ -13,21 +15,27 @@ public class JuegoFachada
         new Civilizacion("bengalies", new List<string> { "Al construir CC, +1 aldeano", "Caballeria +10 velocidad" }, "Ratha")
     };
 
+    // Inicializa una nueva partida
     public void CrearNuevaPartida()
     {
         _partidaActual = new Partida();
     }
 
+    // Devuelve la lista de nombres de civilizaciones disponibles
     public List<string> ObtenerCivilizacionesDisponibles()
     {
         return _civilizacionesDisponibles.Select(c => c.Nombre).ToList();
     }
+    
+    // Devuelve el estado visual del mapa, si existe
     public string MostrarMapa()
     {
         if (_partidaActual == null || _partidaActual.Mapa == null)
             return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el mapa.";
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
+    
+    // Lista todos los recursos que hay en el mapa con sus ubicaciones
     public string ListarRecursos()
     {
         if (_partidaActual == null || _partidaActual.Mapa == null || _partidaActual.Mapa.Recursos == null || !_partidaActual.Mapa.Recursos.Any())
@@ -41,11 +49,13 @@ public class JuegoFachada
         return sb.ToString().TrimEnd();
     }
 
+    // Devuelve la lista de jugadores en la partida actual
     public List<Jugador> ObtenerJugadores()
     {
         return _partidaActual?.Jugadores!;
     }
     
+    // Agrega un nuevo jugador a la partida con la civilizacion especificada
     public void AgregarJugadorAPartida(string nombreJugador, string nombreCivilizacion)
     {
         if (_partidaActual != null)
@@ -63,12 +73,14 @@ public class JuegoFachada
         }
     }
     
+    // Devuelve los recursos actuales de un jugador
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         return jugador?.ObtenerResumenRecursosTotales() ?? new Dictionary<string, int>();
     }
 
+    // Ordena a un aldeano especifico recolectar recursos en una ubicacion
     public void OrdenarRecolectar(string nombreJugador, int idAldeano, int x, int y)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -80,7 +92,7 @@ public class JuegoFachada
         }
     }    
     
-    
+    // Construye un edificio en una posicion si el jugador tiene recursos suficientes
     public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
     {
         if (_partidaActual == null)
@@ -100,7 +112,7 @@ public class JuegoFachada
 
         var recursosTotales = jugador.ObtenerResumenRecursosTotales();
         IEdificio? nuevoEdificio = null;
-
+        // Determina el tipo de edificio y verifica recursos
         switch (tipoEdificio.ToLower())
         {
             case "casa":
@@ -109,7 +121,7 @@ public class JuegoFachada
                 nuevoEdificio = new Casa(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 50;
                 break;
-
+            // Casos similares para cuartel, molino, depositos ...
             case "cuartel":
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 100)
                     throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
@@ -157,6 +169,8 @@ public class JuegoFachada
         }
         jugador.AgregarEdificio(nuevoEdificio);
     }    
+    
+    // Entrena una unidad del tipo indicado, si hay poblacion y recursos
     public void EntrenarUnidad(string nombreJugador, string tipoUnidad)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -169,7 +183,7 @@ public class JuegoFachada
             {
                 var recursosTotales = jugador.ObtenerResumenRecursosTotales();
                 IUnidad? nuevaUnidad = null;
-
+                // Entrena unidades segun tipo y civilizacion especial
                 switch (tipoUnidad.ToLower())
                 {
                     case "aldeano":
@@ -182,6 +196,7 @@ public class JuegoFachada
                             jugador.PoblacionActual++;
                         }
                         break;
+                    // Casos para infanteria, arquero, caballeria ...
 
                     case "infanteria":
                         if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
@@ -229,6 +244,7 @@ public class JuegoFachada
             }
         }
     }
+    // Mueve una unidad del jugador a una posicion especifica
     public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -240,6 +256,7 @@ public class JuegoFachada
         }
     }
 
+    // Ordena a una unidad atacar a otra unidad enemiga
     public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, int idUnidadObjetivo)
     {
         Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -254,6 +271,7 @@ public class JuegoFachada
         return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
     }
     
+    // Ordena a una unidad atacar un edificio enemigo
     public string AtacarEdificio(string nombreJugador, int idUnidadAtacante, int idEdificioObjetivo)
     {
         Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
@@ -268,6 +286,7 @@ public class JuegoFachada
         return "Ataque fallido: unidad atacante o edificio objetivo no válidos. No se pudo realizar el ataque.";
     }
 
+    // Devuelve todas las unidades del jugador
     public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
     {
         try
@@ -285,6 +304,7 @@ public class JuegoFachada
         }
     }
 
+    // Devuelve todos los edificios del jugador
     public List<IEdificio> ObtenerEdificiosJugador(string nombreJugador)
     {
         if(_partidaActual == null)

@@ -8,6 +8,7 @@ public class DepositoOro : IAlmacenamiento
     public int Vida { get; set; }
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
+    // Objeto que controla el tiempo de construccion
     private TiempoConstruccion tiempoconstruccion;
 
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
@@ -18,11 +19,12 @@ public class DepositoOro : IAlmacenamiento
     {
         Propietario = propietario;
         Vida = 5000;
-        tiempoconstruccion = new TiempoConstruccion(3);
+        tiempoconstruccion = new TiempoConstruccion(3); // 3 turnos para construir
     }
 
     public double Eficiencia(int distancia)
     {
+        // Devuelve la eficiencia de recoleccion segun la distancia al edificio
         if (distancia <= 1) return 1.0;
         if (distancia >= 10) return 0.1;
         return 1.0 - (distancia * 0.1);
