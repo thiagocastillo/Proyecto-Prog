@@ -1,54 +1,68 @@
 namespace Library;
+
+// Clase que representa la unidad Arquero, implementa la interfaz IUnidadMilitar
 public class Arquero : IUnidadMilitar
 {
+    // Propietario de la unidad
     public Jugador Propietario { get; private set; }
+    // Valor de ataque del arquero
     public int Ataque { get; set; } = 8; 
+    // Valor de defensa del arquero
     public int Defensa { get; set; } = 3;
-    
+    // Velocidad de movimiento
     public double Velocidad { get; private set; } = 1.2;
-
-    public int Salud { get; set; }  
+    // Salud actual de la unidad
+    public int Salud { get; set; }
+    // Posición actual en el mapa
     public Point Posicion { get; set; }
-    
+    // Tiempo necesario para crear la unidad
     public int TiempoDeCreacion { get; private set; } = 10;
-    
+
+    // Constructor: inicializa la unidad y ajusta el ataque si es "Arquero Compuesto" armenio
     public Arquero(Jugador propietario)
     {
         Propietario = propietario;
+        // Si la civilización es "Armenios" y la unidad especial es "Arquero Compuesto", aumenta el ataque
         if (propietario.Civilizacion.Nombre == "Armenios" && propietario.Civilizacion.UnidadEspecial == "Arquero Compuesto")
         {
             Ataque += 2;
         }
     }
 
+    // Calcula el daño que este arquero inflige a otra unidad
     public double CalcularDaño(IUnidad objetivo)
     {
         double dañoBase = this.Ataque - objetivo.Defensa;
+        // Hace más daño a unidades de infantería
         if (objetivo is Infanteria)
         {
             dañoBase += 2;
         }
-
+        // El daño no puede ser negativo
         if (dañoBase < 0)
         {
             dañoBase = 0;
         }
-
         return dañoBase;
     }
+
+    // Mueve la unidad a una nueva posición si es válida
     public bool Mover(Point destino, Mapa mapa)
     {
+        // Verifica que el destino esté dentro de los límites del mapa
         if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
         {
             return false; 
         }
+        // Asigna la nueva posición
         Posicion = destino;
         return true;
     }
 
-    
+    // Ataca unidades enemigas en una coordenada específica
     public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List<Jugador> jugadores)
     {
+        // Busca unidades enemigas del tipo indicado en la coordenada
         var unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
             .Where(u => u.Propietario != atacante && u.GetType().Name.ToLower() == tipoUnidad.ToLower())
             .Take(cantidad)
@@ -63,6 +77,7 @@ public class Arquero : IUnidadMilitar
             int daño = (int)CalcularDaño(unidad);
             unidad.Salud -= daño;
             resultado += $"{GetType().Name} atacó a {unidad.GetType().Name} causando {daño} de daño. Salud restante: {Math.Max(0, unidad.Salud)}.";
+            // Si la unidad muere, se elimina de la lista del propietario
             if (unidad.Salud <= 0)
             {
                 unidad.Propietario.Unidades.Remove(unidad);
@@ -72,11 +87,14 @@ public class Arquero : IUnidadMilitar
         }
         return resultado;
     }
+
+    // Ataca un edificio enemigo
     public string AtacarEdificio(IEdificio objetivo)
     {
         int daño = this.Ataque;
         objetivo.Vida -= daño;
         string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño. Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
+        // Si el edificio es destruido, se elimina de la lista del propietario
         if (objetivo.Vida <= 0)
         {
             objetivo.Propietario.Edificios.Remove(objetivo);

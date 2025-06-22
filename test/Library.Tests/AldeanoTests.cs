@@ -1,160 +1,122 @@
-using System;
+using NUnit.Framework;
 using System.Collections.Generic;
 using System.Drawing;
-using NUnit.Framework;
 
 namespace Library.Tests
 {
-    [TestFixture]
     public class AldeanoTests
     {
-        private class DummyCivilizacion
+        private Jugador jugador;
+        private Aldeano aldeano;
+        private Mapa mapa;
+
+        // Clase concreta para el recurso
+        public class Madera : RecursoNatural
         {
-            public string Nombre { get; set; }
+            public Madera(int cantidad, double tasa, Point ubicacion)
+                : base("Madera", cantidad, tasa, ubicacion) { }
         }
 
-        private class DummyJugador : Jugador
+        [SetUp]
+        public void Setup()
         {
-            public DummyJugador(string nombre, string civilizacion)
-            {
-                this.Civilizacion = new DummyCivilizacion { Nombre = civilizacion };
-                this.Edificios = new List<IEdificio>();
-            }
-            public new DummyCivilizacion Civilizacion { get; set; }
-            public new List<IEdificio> Edificios { get; set; }
-        }
-
-        private class DummyRecurso : RecursoNatural
-        {
-            public DummyRecurso(string nombre, int vida, double tasa, Point ubicacion)
-                : base(nombre, vida, tasa, ubicacion) { }
-        }
-
-        private class DummyAlmacen : IAlmacenamiento, IEdificio
-        {
-            public Point Posicion { get; set; }
-            public Dictionary<string, int> Recursos { get; set; } = new();
-        }
-
-        private class DummyMapa : Mapa
-        {
-            public DummyMapa(int ancho, int alto)
-            {
-                this.Ancho = ancho;
-                this.Alto = alto;
-                this.Recursos = new List<RecursoNatural>();
-            }
-            public new int Ancho { get; set; }
-            public new int Alto { get; set; }
-            public new List<RecursoNatural> Recursos { get; set; }
+            var civilizacion = new Civilizacion("Aztecas", new List<string>(), "");
+            jugador = new Jugador("Jugador1", civilizacion);
+            aldeano = new Aldeano(jugador) { Salud = 50, Posicion = new Point(0, 0) };
+            mapa = new Mapa(); // Usa el constructor adecuado para ancho/alto
         }
 
         [Test]
         public void Constructor_AsignaPropietario()
         {
-            var jugador = new DummyJugador("J1", "Aztecas");
-            var aldeano = new Aldeano(jugador);
             Assert.AreEqual(jugador, aldeano.Propietario);
         }
 
         [Test]
         public void PropiedadesPorDefecto()
         {
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
             Assert.AreEqual(0, aldeano.Ataque);
             Assert.AreEqual(0, aldeano.Defensa);
             Assert.AreEqual(1.0, aldeano.Velocidad);
         }
 
         [Test]
-        public void Mover_Exitoso()
+        public void Mover_PosicionValida_ActualizaPosicion()
         {
-            var mapa = new DummyMapa(10, 10);
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
             var destino = new Point(5, 5);
-            var resultado = aldeano.Mover(destino, mapa);
+            bool resultado = aldeano.Mover(destino, mapa);
             Assert.IsTrue(resultado);
             Assert.AreEqual(destino, aldeano.Posicion);
         }
 
         [Test]
-        public void Mover_FueraDeLimites()
+        public void Mover_PosicionInvalida_NoMueve()
         {
-            var mapa = new DummyMapa(5, 5);
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
-            var destino = new Point(10, 10);
-            var resultado = aldeano.Mover(destino, mapa);
+            var destino = new Point(-1, 100);
+            bool resultado = aldeano.Mover(destino, mapa);
             Assert.IsFalse(resultado);
         }
 
         [Test]
         public void Mover_DestinoNulo_LanzaExcepcion()
         {
-            var mapa = new DummyMapa(5, 5);
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
-            Assert.Throws<ArgumentNullException>(() => aldeano.Mover(null, mapa));
+            Assert.Throws<System.ArgumentNullException>(() => aldeano.Mover(null, mapa));
         }
 
         [Test]
         public void CalcularDaño_SiempreCero()
         {
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
             Assert.AreEqual(0, aldeano.CalcularDaño(null));
         }
 
         [Test]
-        public void AtacarEdificio_RetornaMensaje()
+        public void AtacarUnidad_SiempreDevuelveMensajeNoAtaca()
         {
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
-            Assert.AreEqual("Los aldeanos no atacan edificios.", aldeano.AtacarEdificio(null));
+            var dummy = new MockUnidad();
+            string res = aldeano.AtacarUnidad(dummy);
+            Assert.That(res, Is.EqualTo("Los aldeanos no atacan unidades."));
         }
 
         [Test]
-        public void AtacarUnidad_RetornaMensaje()
+        public void AtacarEdificio_SiempreDevuelveMensajeNoAtaca()
         {
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
-            Assert.AreEqual("Los aldeanos no atacan unidades.", aldeano.AtacarUnidad(null));
+            var dummy = new MockEdificio();
+            string res = aldeano.AtacarEdificio(dummy);
+            Assert.That(res, Is.EqualTo("Los aldeanos no atacan edificios."));
         }
 
         [Test]
         public void RecolectarEn_RecursoNoExiste_LanzaExcepcion()
         {
-            var mapa = new DummyMapa(10, 10);
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
-            Assert.Throws<InvalidOperationException>(() => aldeano.RecolectarEn(new Point(1, 1), mapa));
+            Assert.Throws<System.InvalidOperationException>(() =>
+                aldeano.RecolectarEn(new Point(1, 1), mapa));
         }
 
         [Test]
         public void RecolectarEn_RecursoAgotado_LanzaExcepcion()
         {
-            var mapa = new DummyMapa(10, 10);
-            var recurso = new DummyRecurso("Madera", 100, 0.75, new Point(2, 2)) { Cantidad = 0 };
+            var recurso = new Madera(0, 0.75, new Point(2, 2));
             mapa.Recursos.Add(recurso);
-            var aldeano = new Aldeano(new DummyJugador("J1", "Aztecas"));
-            Assert.Throws<InvalidOperationException>(() => aldeano.RecolectarEn(new Point(2, 2), mapa));
+            Assert.Throws<System.InvalidOperationException>(() =>
+                aldeano.RecolectarEn(new Point(2, 2), mapa));
         }
 
         [Test]
         public void RecolectarEn_SinAlmacenCompatible_LanzaExcepcion()
         {
-            var jugador = new DummyJugador("J1", "Aztecas");
-            var mapa = new DummyMapa(10, 10);
-            var recurso = new DummyRecurso("Madera", 100, 0.75, new Point(3, 3));
+            var recurso = new Madera(100, 0.75, new Point(3, 3));
             mapa.Recursos.Add(recurso);
-            var aldeano = new Aldeano(jugador);
-            Assert.Throws<InvalidOperationException>(() => aldeano.RecolectarEn(new Point(3, 3), mapa));
+            Assert.Throws<System.InvalidOperationException>(() =>
+                aldeano.RecolectarEn(new Point(3, 3), mapa));
         }
 
         [Test]
         public void RecolectarEn_AlmacenCompatible_ActualizaRecursos()
         {
-            var jugador = new DummyJugador("J1", "Aztecas");
-            var almacen = new DummyAlmacen { Posicion = new Point(0, 0) };
+            var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
             jugador.Edificios.Add(almacen);
-            var mapa = new DummyMapa(10, 10);
-            var recurso = new DummyRecurso("Madera", 100, 0.75, new Point(4, 4));
+            var recurso = new Madera(100, 0.75, new Point(4, 4));
             mapa.Recursos.Add(recurso);
-            var aldeano = new Aldeano(jugador);
 
             aldeano.RecolectarEn(new Point(4, 4), mapa);
 
@@ -165,35 +127,51 @@ namespace Library.Tests
         [Test]
         public void RecolectarEn_BonoAzteca()
         {
-            var jugador = new DummyJugador("J1", "Aztecas");
-            var almacen = new DummyAlmacen { Posicion = new Point(0, 0) };
+            var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
             jugador.Edificios.Add(almacen);
-            var mapa = new DummyMapa(10, 10);
-            var recurso = new DummyRecurso("Madera", 100, 0.75, new Point(5, 5));
+            var recurso = new Madera(100, 0.75, new Point(5, 5));
             mapa.Recursos.Add(recurso);
-            var aldeano = new Aldeano(jugador);
 
             aldeano.RecolectarEn(new Point(5, 5), mapa);
 
-            // El bono de +3 debe estar aplicado
             Assert.GreaterOrEqual(almacen.Recursos["Madera"], (int)(recurso.Cantidad * recurso.TasaRecoleccion));
         }
 
         [Test]
         public void RecolectarEn_AlmacenYaTieneRecurso_Suma()
         {
-            var jugador = new DummyJugador("J1", "Aztecas");
-            var almacen = new DummyAlmacen { Posicion = new Point(0, 0) };
+            var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
             almacen.Recursos["Madera"] = 10;
             jugador.Edificios.Add(almacen);
-            var mapa = new DummyMapa(10, 10);
-            var recurso = new DummyRecurso("Madera", 100, 0.75, new Point(6, 6));
+            var recurso = new Madera(100, 0.75, new Point(6, 6));
             mapa.Recursos.Add(recurso);
-            var aldeano = new Aldeano(jugador);
 
             aldeano.RecolectarEn(new Point(6, 6), mapa);
 
             Assert.Greater(almacen.Recursos["Madera"], 10);
         }
+    }
+
+    // Mocks simples para interfaces
+    public class MockUnidad : IUnidad
+    {
+        public Jugador Propietario => null;
+        public int Ataque => 0;
+        public int Defensa => 0;
+        public double Velocidad => 0;
+        public int Salud { get; set; }
+        public Point Posicion { get; set; }
+        public int TiempoDeCreacion => 0;
+        public bool Mover(Point destino, Mapa mapa) => true;
+        public double CalcularDaño(IUnidad objetivo) => 0;
+        public string AtacarEdificio(IEdificio objetivo) => "";
+        public string AtacarUnidad(IUnidad objetivo) => "";
+    }
+
+    public class MockEdificio : IEdificio
+    {
+        public Jugador Propietario => null;
+        public int Vida { get; set; }
+        public Point Posicion { get; set; }
     }
 }
