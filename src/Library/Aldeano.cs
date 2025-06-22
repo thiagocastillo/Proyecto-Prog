@@ -4,21 +4,26 @@ public class Aldeano : IUnidad, IRecolector
 {
     public Jugador Propietario { get; private set; }
 
+    // Propiedades de combate
     public int Ataque { get; private set; } = 0;
     public int Defensa { get; private set; } = 0;
 
+    // Velocidad de movimiento
     public double Velocidad { get; private set; } = 1.0;
 
+    // Vida actual
     public int Salud { get; set; }
+    // Posicion actual en el mapa
     public Point Posicion { get; set; }
-
+    // Tiempo necesario para crear aldeano
     public int TiempoDeCreacion { get; }
-
+    
     public Aldeano(Jugador propietario)
     {
         Propietario = propietario;
     }
 
+    // Mueve al aldeano a una nueva posicion si es valida en el mapa
     public bool Mover(Point destino, Mapa mapa)
     {
         if (destino == null)
@@ -35,11 +40,13 @@ public class Aldeano : IUnidad, IRecolector
         return true;
     }
 
+    // No causa daño ya que no combate
     public double CalcularDaño(IUnidad objetivo)
     {
         return 0;
     }
 
+    // Los aldeanos no pueden atacar
     public string AtacarEdificio(IEdificio objetivo)
     {
         return "Los aldeanos no atacan edificios.";
@@ -50,6 +57,7 @@ public class Aldeano : IUnidad, IRecolector
         return "Los aldeanos no atacan unidades.";
     }
 
+    // Recolecta recursos de un punto del mapa y los lleva al edificio compatible mas cercano
     public void RecolectarEn(Point coordenada, Mapa mapa)    {
         // Buscar el recurso natural en la coordenada
         var recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.X == coordenada.X && r.Ubicacion.Y == coordenada.Y);
@@ -100,6 +108,8 @@ public class Aldeano : IUnidad, IRecolector
             mapa.Recursos.Remove(recurso);
         }
     }
+    
+    // Verifica si un edificio de almacenamiento es compatible con el recurso
     private bool EsCompatible(IAlmacenamiento almacen, string nombre)
     {
         return (nombre == "Madera" && (almacen is DepositoMadera || almacen is CentroCivico)) ||
@@ -108,6 +118,7 @@ public class Aldeano : IUnidad, IRecolector
                (nombre == "Piedra" && (almacen is DepositoPiedra || almacen is CentroCivico));
     }
 
+    // Calcula la distancia entre dos puntos del mapa
     private double CalcularDistancia(Point a, Point b)
     {
         int dx = a.X - b.X;

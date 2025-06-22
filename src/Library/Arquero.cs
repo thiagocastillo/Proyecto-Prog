@@ -2,6 +2,7 @@ namespace Library;
 public class Arquero : IUnidadMilitar
 {
     public Jugador Propietario { get; private set; }
+    // Atributos de combate
     public int Ataque { get; set; } = 8; 
     public int Defensa { get; set; } = 3;
     
@@ -15,12 +16,14 @@ public class Arquero : IUnidadMilitar
     public Arquero(Jugador propietario)
     {
         Propietario = propietario;
+        // Bonificacion especial para la civilizacion armenia
         if (propietario.Civilizacion.Nombre == "Armenios" && propietario.Civilizacion.UnidadEspecial == "Arquero Compuesto")
         {
             Ataque += 2;
         }
     }
 
+    // Calcula daño contra una unidad
     public double CalcularDaño(IUnidad objetivo)
     {
         double dañoBase = this.Ataque - objetivo.Defensa;
@@ -36,6 +39,7 @@ public class Arquero : IUnidadMilitar
 
         return dañoBase;
     }
+    
     public bool Mover(Point destino, Mapa mapa)
     {
         if (destino.X < 0 || destino.X >= mapa.Ancho || destino.Y < 0 || destino.Y >= mapa.Alto)
@@ -46,6 +50,7 @@ public class Arquero : IUnidadMilitar
         return true;
     }
 
+    // Ataca otra unidad y genera feedback
     public string AtacarUnidad(IUnidad objetivo)
     {
         int daño = Ataque - objetivo.Defensa;
@@ -69,8 +74,11 @@ public class Arquero : IUnidadMilitar
         }
         return info;
     }
+    
+    // Ataca edificio y genera feedback
     public string AtacarEdificio(IEdificio objetivo)
     {
+        // Resta vida al edificio y lo destruye si queda en 0
         int daño = Ataque;
         objetivo.Vida -= daño;
         

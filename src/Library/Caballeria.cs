@@ -3,6 +3,7 @@ namespace Library;
     public class Caballeria : IUnidadMilitar
     {
         public Jugador Propietario { get; private set; }
+        // Caracteristicas ofensivas y defensivas mas altas
         public int Ataque { get; private set; } = 12;
         public int Defensa { get; private set; } = 7;
         public double Velocidad { get; private set; } = 1.5;
@@ -43,6 +44,7 @@ namespace Library;
             return true;
         }
 
+        // Ataca unidad con bonificacion contra arqueros
         public string AtacarUnidad(IUnidad objetivo)
         {
             int ataqueFinal = Ataque;
@@ -67,6 +69,8 @@ namespace Library;
             }
             return info;
         }
+        
+        // Ataca edificio normalmente
         public string AtacarEdificio(IEdificio objetivo)
         {
             int daño = Ataque;

@@ -7,6 +7,7 @@ public class Casa : IEdificio
     public const int AumentoPoblacion = 5;
     public int Vida { get; set; }
 
+    // Limites internos para la poblacion
     private int max_aldeanos = 20;
     private int max_unidadMilitar = 30;
     
@@ -23,10 +24,11 @@ public class Casa : IEdificio
     {
         Propietario = propietario;
         Vida = 10000;
-
+        // Aumenta el limite de poblacion del jugador
         propietario.AumentarPoblacionMaxima(AumentoPoblacion);
     }
 
+    // Comprueba si hay espacio para mas aldeanos o militares
     public bool CantidadAldeano()
     {
         return CantidadAldeanos <= max_aldeanos;

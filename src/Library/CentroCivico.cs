@@ -18,7 +18,7 @@ public class CentroCivico : IAlmacenamiento
         // Inicializa recursos con 100 de alimento y 100 de madera
         Recursos["alimento"] = 100;
         Recursos["madera"] = 100;
-
+        // Bonificacion especial para Bangalies (Comienzan con un aldeano adicional)
         if (propietario.Civilizacion.Nombre == "Bengalies")
         {
             propietario.Aldeanos.Add(new Aldeano(propietario) { Posicion = new Point { X = Posicion.X + 1, Y = Posicion.Y } });
@@ -26,6 +26,7 @@ public class CentroCivico : IAlmacenamiento
         }
     }
 
+    // Eficiencia de recoleccion segun la distancia del recurso
     public double Eficiencia(int distancia)
     {
         if (distancia <= 1) return 1.0;
