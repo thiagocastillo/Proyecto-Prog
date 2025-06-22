@@ -296,20 +296,36 @@ public void MoverUnidad(string nombreJugador, int idUnidad, Point destino)
         return "Ataque fallido: unidad atacante no válida. No se pudo realizar el ataque.";
     }
 
-    public string AtacarEdificio(string nombreJugador, int idUnidadAtacante, int idEdificioObjetivo)
+    public string AtacarEdificio(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idEdificioObjetivo)
     {
-        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugadorAtacante);
         var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
-        var edificioObjetivo = _partidaActual?.Jugadores.SelectMany(j => j.Edificios).ElementAtOrDefault(idEdificioObjetivo);
+
+        var jugadorObjetivo = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugadorObjetivo);
+        var edificioObjetivo = jugadorObjetivo?.Edificios.ElementAtOrDefault(idEdificioObjetivo);
 
         if (unidadAtacante != null && edificioObjetivo != null && unidadAtacante.Propietario != edificioObjetivo.Propietario)
         {
-            return unidadAtacante.AtacarEdificio(edificioObjetivo);
+            string resultado = unidadAtacante.AtacarEdificio(edificioObjetivo);
+
+            // Si el edificio destruido es un CentroCivico
+            if (edificioObjetivo is CentroCivico && edificioObjetivo.Vida <= 0)
+            {
+                var jugadoresConCC = _partidaActual.Jugadores
+                    .Where(j => j.Edificios.Any(e => e is CentroCivico && e.Vida > 0))
+                    .ToList();
+
+                if (jugadoresConCC.Count == 1)
+                {
+                    resultado += $"\n¡{jugadoresConCC[0].Nombre} ganó la partida! Muchas gracias por jugar.";
+                }
+            }
+
+            return resultado;
         }
 
         return "Ataque fallido: unidad atacante o edificio objetivo no válidos. No se pudo realizar el ataque.";
-    }
-    public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
+    }    public List<IUnidad> ObtenerUnidadesJugador(string nombreJugador)
     {
         try
         {

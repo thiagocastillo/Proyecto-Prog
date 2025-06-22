@@ -5,9 +5,14 @@ namespace Library;
 public class Motor
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();
+    private bool partidaFinalizada = false;
 
     public string ProcesarComando(string comando, List<string> argumentos)
     {
+        if (partidaFinalizada)
+        {
+            return "La partida ha finalizado. No se pueden procesar más comandos.";
+        }
         try
         {
             switch (comando.ToLower())
@@ -56,19 +61,16 @@ public class Motor
                 case "atacarunidad":
                     if (argumentos.Count < 6)
                         return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombreJugador> <idAtacante> <tipoUnidad> <cantidad> <x> <y>";
-                    return _fachada.AtacarUnidad(
-                        argumentos[0],
-                        int.Parse(argumentos[1]),
-                        argumentos[2],
-                        int.Parse(argumentos[3]),
-                        new Point(int.Parse(argumentos[4]), int.Parse(argumentos[5]))
-                    );
+                    return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), argumentos[2], int.Parse(argumentos[3]), new Point(int.Parse(argumentos[4]), int.Parse(argumentos[5])));
 
                 case "atacaredificio":
-                    if (argumentos.Count < 3)
-                        return "Faltan argumentos en comando, recordar sintaxis: atacaredificio <nombreJugador> <idAtacante> <idObjetivo>";
-                    return _fachada.AtacarEdificio(argumentos[0], int.Parse(argumentos[1]), int.Parse(argumentos[2]));
-
+                    if (argumentos.Count < 4)
+                        return "Faltan argumentos en comando, recordar sintaxis: atacaredificio <nombreJugadorAtacante> <idAtacante> <nombreJugadorObjetivo> <idObjetivo>";
+                    string resultado = _fachada.AtacarEdificio(
+                        argumentos[0], int.Parse(argumentos[1]), argumentos[2], int.Parse(argumentos[3]));
+                    if (resultado.Contains("ganó la partida"))
+                        partidaFinalizada = true;
+                    return resultado;
                 case "recursosjugador":
                     if (argumentos.Count < 1)
                         return "Faltan argumentos en comando, recordar sintaxis: recursosjugador <nombre>";

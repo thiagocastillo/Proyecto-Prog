@@ -24,7 +24,7 @@ class Program
             var resultado = motor.ProcesarComando(comando, argumentos);
             Console.WriteLine(resultado);
 
-            if (comando == "salir" || comando == "exit")
+            if (comando == "salir" || comando == "exit" || resultado.Contains("ganó la partida"))
                 break;
         }
     }
