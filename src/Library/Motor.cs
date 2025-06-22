@@ -23,7 +23,7 @@ public class Motor
                     
                     List<string> civs = _fachada.ObtenerCivilizacionesDisponibles();
                     return "Civilizaciones disponibles:\n" + string.Join("\n", civs);
-                
+                    
                 case "agregarjugador":
                     
                     if (argumentos.Count < 2)

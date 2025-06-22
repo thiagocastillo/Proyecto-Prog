@@ -5,15 +5,23 @@ using System.Linq;
 
 public class Jugador
 {
+    // Limites maximos permitidos para aldeanos y unidades militares
     public const int LimiteAldeanos = 20;
     public const int LimiteMilitares = 30;
     public static Random random = new Random();
+    // Posicion inicial aleatoria del jugador
     int x = random.Next(0, 100);
     int y = random.Next(0, 100);
+    
+    // Datos principales del jugador
     public string Nombre { get; set; }
     public Civilizacion Civilizacion { get; set; }
+    // Edificio principal del jugador
     public CentroCivico CentroCivico { get; set; }
+    // Lista de aldeanos del jugador
     public List<Aldeano> Aldeanos { get; set; } = new List<Aldeano>();
+    
+    // Recursos del jugador
     public Dictionary<string, int> Recursos { get; set; } = new Dictionary<string, int>()
     {
         { "Alimento", 0 },
@@ -22,18 +30,22 @@ public class Jugador
         { "Piedra", 0 }
     };
 
+    // Control de poblacion del jugador
     public int PoblacionActual { get; set; } = 3;
     public int PoblacionMaxima { get; set; } = 5;
     public List<IEdificio> Edificios { get; set; } = new List<IEdificio>();
+    // Todas las unidades del jugador
     public List<IUnidad> Unidades { get; set; } = new List<IUnidad>();
 
     public Jugador(string nombre, Civilizacion civilizacion)
     {
+        // Crea un centro civico al inicio y lo ubica
         Nombre = nombre;
         Civilizacion = civilizacion;
         CentroCivico = new CentroCivico(this) { Posicion = new Point { X = x, Y = y } };
         Edificios.Add(CentroCivico);
-
+        
+        // Crea 3 aldeanos iniciales junto al centro civico
         for (int i = 0; i < 3; i++)
         {
             Aldeano aldeano = new Aldeano(this) { Posicion = new Point { X = x + i + 1, Y = y } };
@@ -41,6 +53,7 @@ public class Jugador
             Unidades.Add(aldeano);
         }
     }
+    // Devuelve un resumen total de recursos
     public Dictionary<string, int> ObtenerResumenRecursosTotales()
     {
         Dictionary<string, int> total = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
@@ -70,6 +83,7 @@ public class Jugador
         return total;
     }
 
+    // Agrega una cantidad de recurso al jugador
     public void AgregarRecurso(ITipoRecurso tipo, int cantidad)
     {
         if (cantidad <= 0)
@@ -81,6 +95,7 @@ public class Jugador
         Recursos[tipo.Nombre] += cantidad;
     }
 
+    // Suma recursos desde un edificio
     public void DepositarRecursos(Dictionary<string, int> recursosEdificio)
     {
         foreach (KeyValuePair<string, int> par in recursosEdificio)
@@ -91,6 +106,7 @@ public class Jugador
         }
     }
 
+    // Incrementa el limite de poblacion
     public void AumentarPoblacionMaxima(int incremento)
     {
         if (incremento > 0)
@@ -103,11 +119,13 @@ public class Jugador
         }
     }
 
+    // Agrega un nuevo edificio al jugador
     public void AgregarEdificio(IEdificio edificio)
     {
         Edificios.Add(edificio);
     }
 
+    // Agrega una unidad al jugador
     public void AgregarUnidad(IUnidad unidad)
     {
         try
@@ -134,11 +152,13 @@ public class Jugador
         }
     }
 
+    // Devuelve texto con el estado actual de la poblacion
     public string ObtenerResumenPoblacion()
     {
         return $"Población: {PoblacionActual}/{PoblacionMaxima}";
     }
 
+    // Indica si se puede crear un nuevo aldeano
     public bool PuedeCrearAldeano()
     {
         int cantidadCentroCivico = Edificios.Count(e => e is CentroCivico);
