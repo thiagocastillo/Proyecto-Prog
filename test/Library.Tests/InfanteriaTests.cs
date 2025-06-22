@@ -1,10 +1,15 @@
-namespace Library.Tests;
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Drawing;
 
-public class InfanteriaTests
+namespace Library.Tests
 {
-    private Jugador jugadorAzteca;
-    private Jugador jugadorRival;
-    private Infanteria infanteria;
+    public class InfanteriaTests
+    {
+        private Jugador jugadorAzteca;
+        private Jugador jugadorRival;
+        private Infanteria infanteria;
+        private Mapa mapa;
 
         [SetUp]
         public void SetUp()
@@ -16,12 +21,12 @@ public class InfanteriaTests
             jugadorRival = new Jugador("Rival", civilizacionRival);
 
             infanteria = new Infanteria(jugadorAzteca) { Posicion = new Point(0, 0), Salud = 100 };
+            mapa = new Mapa();
         }
 
         [Test]
         public void Mover_DestinoValido_MueveCorrectamente()
         {
-            Mapa mapa = new Mapa();
             Point destino = new Point(10, 10);
 
             bool resultado = infanteria.Mover(destino, mapa);
@@ -34,18 +39,24 @@ public class InfanteriaTests
         [Test]
         public void Mover_DestinoFueraDeMapa_LanzaExcepcion()
         {
-            Mapa mapa = new Mapa();
             Point destino = new Point(-1, 200);
 
-            InvalidOperationException  ex = Assert.Throws<InvalidOperationException>(() => infanteria.Mover(destino, mapa));
+            InvalidOperationException ex = Assert.Throws<InvalidOperationException>(() => infanteria.Mover(destino, mapa));
             Assert.That(ex.Message, Does.Contain("No se pudo mover la unidad"));
         }
 
         [Test]
         public void AtacarU_ContraCaballeria_AplicaBonus()
         {
-            Caballeria caballeria = new Caballeria(jugadorRival) { Salud = 100 };
-            string resultado = infanteria.AtacarUnidad(caballeria);
+            Caballeria caballeria = new Caballeria(jugadorRival) { Salud = 100, Posicion = new Point(1, 1) };
+            string resultado = infanteria.AtacarUnidad(
+                jugadorAzteca,
+                "caballeria",
+                1,
+                caballeria.Posicion,
+                mapa,
+                new List<Jugador> { jugadorAzteca, jugadorRival }
+            );
 
             Assert.That(caballeria.Salud, Is.LessThan(100));
             Assert.IsTrue(resultado.Contains("Infanteria atacó a Caballeria"));
@@ -54,9 +65,16 @@ public class InfanteriaTests
         [Test]
         public void AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus()
         {
-            Infanteria infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100 };
+            Infanteria infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100, Posicion = new Point(2, 2) };
 
-            string resultado = infanteria.AtacarUnidad(infanteriaObjetivo);
+            string resultado = infanteria.AtacarUnidad(
+                jugadorAzteca,
+                "infanteria",
+                1,
+                infanteriaObjetivo.Posicion,
+                mapa,
+                new List<Jugador> { jugadorAzteca, jugadorRival }
+            );
 
             Assert.That(infanteriaObjetivo.Salud, Is.LessThan(100));
             Assert.IsTrue(resultado.Contains("Infanteria atacó"));
@@ -76,12 +94,20 @@ public class InfanteriaTests
         [Test]
         public void AtacarU_UnidadEliminada_SeEliminaDeLista()
         {
-            Arquero objetivo = new Arquero(jugadorRival) { Salud = 1 }; // Aseguramos su destrucción
+            Arquero objetivo = new Arquero(jugadorRival) { Salud = 1, Posicion = new Point(3, 3) };
             jugadorRival.Unidades.Add(objetivo);
 
-            string resultado = infanteria.AtacarUnidad(objetivo);
+            string resultado = infanteria.AtacarUnidad(
+                jugadorAzteca,
+                "arquero",
+                1,
+                objetivo.Posicion,
+                mapa,
+                new List<Jugador> { jugadorAzteca, jugadorRival }
+            );
 
             Assert.IsFalse(jugadorRival.Unidades.Contains(objetivo));
             Assert.IsTrue(resultado.Contains("fue destruido"));
         }
+    }
 }

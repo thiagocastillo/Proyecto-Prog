@@ -1,10 +1,14 @@
-namespace Library.Tests;
+using NUnit.Framework;
+using System.Collections.Generic;
 
-public class ArqueroTests
+namespace Library.Tests
 {
-    private Jugador jugadorArmenio;
-    private Jugador jugadorEnemigo;
-    private Arquero arquero;
+    public class ArqueroTests
+    {
+        private Jugador jugadorArmenio;
+        private Jugador jugadorEnemigo;
+        private Arquero arquero;
+        private Mapa mapa;
 
         [SetUp]
         public void Setup()
@@ -16,18 +20,12 @@ public class ArqueroTests
             jugadorEnemigo = new Jugador("Jugador2", civilizacionEnemiga);
 
             arquero = new Arquero(jugadorArmenio) { Salud = 100, Posicion = new Point(1, 1) };
+            mapa = new Mapa();
         }
-
-      /*  [Test]
-        public void Arquero_Constructor_AplicaBonusCivilizacion()
-        {
-            Assert.That(arquero.Ataque, Is.EqualTo(10)); // 8 base + 2 bonus por ser Armenios con Arquero Compuesto
-        }*/
 
         [Test]
         public void Arquero_Mover_PosicionValida_MueveCorrectamente()
         {
-            Mapa mapa = new Mapa();
             Point destino = new Point(5, 5);
 
             bool resultado = arquero.Mover(destino, mapa);
@@ -40,8 +38,15 @@ public class ArqueroTests
         [Test]
         public void Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus()
         {
-            Infanteria infanteria = new Infanteria(jugadorEnemigo) { Salud = 100 };
-            string resultado = arquero.AtacarUnidad(infanteria);
+            Infanteria infanteria = new Infanteria(jugadorEnemigo) { Salud = 100, Posicion = new Point(2, 2) };
+            string resultado = arquero.AtacarUnidad(
+                jugadorArmenio,           // jugadorAtacante
+                "infanteria",             // tipoUnidad
+                1,                        // cantidad
+                infanteria.Posicion,      // coordenada
+                mapa,                     // mapa
+                new List<Jugador> { jugadorArmenio, jugadorEnemigo } // jugadores
+            );
 
             Assert.IsTrue(resultado.Contains("hizo"));
             Assert.That(infanteria.Salud, Is.LessThan(100));
@@ -56,7 +61,14 @@ public class ArqueroTests
                 Posicion = new Point(2, 2)
             };
 
-            string resultado = arquero.AtacarUnidad(unidadDefensiva);
+            string resultado = arquero.AtacarUnidad(
+                jugadorArmenio,
+                "caballeria",
+                1,
+                unidadDefensiva.Posicion,
+                mapa,
+                new List<Jugador> { jugadorArmenio, jugadorEnemigo }
+            );
 
             Assert.That(unidadDefensiva.Salud, Is.LessThanOrEqualTo(100));
             Assert.IsTrue(resultado.Contains("daño"));
@@ -72,4 +84,5 @@ public class ArqueroTests
             Assert.IsTrue(resultado.Contains("causando"));
             Assert.That(edificio.Vida, Is.LessThan(1000));
         }
+    }
 }

@@ -12,16 +12,16 @@ public static class Ayuda
         - Ver civilizaciones disponibles:                  Civilizaciones                                                    
         - Agregar un jugador a la partida:                 AgregarJugador <nombreJugador> <civilización>                     
         - Construir un edificio:                           ConstruirEdificio <nombreJugador> <tipo> <x> <y>                  
-        - Entrenar una unidad:                             EntrenarUnidad <nombreJugador> <tipo>                             
+        - Entrenar una unidad:                             EntrenarUnidad <nombreJugador> <tipo> <x> <y>                             
         - Ordenar a un aldeano recolectar un recurso:      Recolectar <nombreJugador> <idAldeano> <x> <y>                    
-        - Mover una unidad:                                Moverunidad <nombreJugador> <idUnidad> <x> <y>                    
-        - Atacar con una unidad:                           Atacarunidad <nombreJugador> <idAtacante> <idObjetivo>            
-        - Atacar un edificio:                              AtacarEdificio <nombreJugador> <idAtacante> <idEdificio>         
-        - Ver recursos de un jugador:                      Recursosjugador <nombreJugador>                                   
-        - Ver unidades de un jugador:                      Unidadesjugador <nombreJugador>                                   
-        - Ver edificios de un jugador:                     Edificiosjugador <nombreJugador>                                  
-        - Listar todos los jugadores en la partida:        Listarjugadores                                                   
+        - Mover una unidad:                                MoverUnidad <nombreJugador> <idUnidad> <x> <y>                    
+        - Atacar con una unidad:                           AtacarUnidad <nombreJugador> <idAtacante> <tipoUnidad> <cantidad> <x> <y>
+        - Atacar un edificio:                              AtacarEdificio <nombreJugador> <idAtacante> <idEdificio>
+        - Ver recursos de un jugador:                      RecursosJugador <nombreJugador>                                   
+        - Ver unidades de un jugador:                      UnidadesJugador <nombreJugador>                                   
+        - Ver edificios de un jugador:                     EdificiosJugador <nombreJugador>                                  
+        - Listar todos los jugadores en la partida:        ListarJugadores                                                   
         - Muestra este menú de ayuda:                      Ayuda                                                 
-        - Salir del juego:                                 Salir or Exit";
+        - Salir del juego:                                 Salir o Exit";
     }
 }

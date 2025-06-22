@@ -1,6 +1,6 @@
 namespace Library;
 
-public class CentroCivico : IAlmacenamiento
+public class CentroCivico : IAlmacenamiento , IEdificio 
 {
     public Jugador Propietario { get; private set; }
     public Point Posicion { get; set; }
