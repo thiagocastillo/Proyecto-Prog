@@ -339,28 +339,42 @@ public class JuegoFachada
             unidad.Mover(destino, _partidaActual?.Mapa);
         }
     }
-
-    // Ordena a una unidad militar atacar unidades enemigas en una coordenada
-   /* public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, string tipoUnidad, int cantidad, Point coordenada)
+    
+    public List<string> MoverUnidades(string nombreJugador, List<int> idsUnidades, Point destino)
     {
-        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
-        var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
+        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
 
-        if (jugadorAtacante != null && unidadAtacante != null)
+        if (jugador == null)
+            throw new ArgumentException("Jugador no encontrado.");
+
+        List<string> resultados = new();
+        int xDestino = destino.X;
+        int yDestino = destino.Y;
+
+        for (int i = 0; i < idsUnidades.Count; i++)
         {
-            return unidadAtacante.AtacarUnidad(
-                jugadorAtacante,
-                tipoUnidad,
-                cantidad,
-                coordenada,
-                _partidaActual.Mapa,
-                _partidaActual.Jugadores
-            );
+            int id = idsUnidades[i];
+
+            if (id < 0 || id >= jugador.Unidades.Count)
+            {
+                resultados.Add($"Unidad con ID {id} no encontrada.");
+                continue;
+            }
+
+            var unidad = jugador.Unidades[id];
+            Point destinoUnitario = new Point(xDestino + i, yDestino);
+            bool exito = unidad.Mover(destinoUnitario, _partidaActual.Mapa);
+
+            resultados.Add(exito
+                ? $"Unidad {unidad.GetType().Name} (ID {id}) movida a ({destinoUnitario.X},{destinoUnitario.Y})."
+                : $"Unidad {unidad.GetType().Name} (ID {id}) no pudo moverse a ({destinoUnitario.X},{destinoUnitario.Y}).");
         }
 
-        return "Ataque fallido: unidad atacante no válida. No se pudo realizar el ataque.";
-    }*/
-   
+        return resultados;
+    }
+
+
+    
    public string AtacarUnidad(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idUnidadObjetivo)
    {
        // Obtener jugador atacante y su unidad

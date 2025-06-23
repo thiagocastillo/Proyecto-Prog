@@ -84,6 +84,19 @@ public class Motor
                     _fachada.MoverUnidad(argumentos[0], int.Parse(argumentos[1]), new Point(int.Parse(argumentos[2]), int.Parse(argumentos[3])));
                     return $"Unidad {argumentos[1]} del jugador '{argumentos[0]}' movida a ({argumentos[2]}, {argumentos[3]}).";
 
+                
+                case "moverunidades":
+                    if (argumentos.Count < 4)
+                        return "Faltan argumentos: moverunidades <nombreJugador> <x> <y> <id1> <id2> ...";
+
+                    string nombre = argumentos[0];
+                    int x = int.Parse(argumentos[1]);
+                    int y = int.Parse(argumentos[2]);
+                    List<int> ids = argumentos.Skip(3).Select(int.Parse).ToList();
+
+                    var resultados = _fachada.MoverUnidades(nombre, ids, new Point(x, y));
+                    return string.Join("\n", resultados);
+                
                 // Ordena a una unidad militar atacar unidades enemigas en una coordenada
                 case "atacarunidad":
                     
