@@ -36,6 +36,16 @@ public class JuegoFachada
         
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
+    public void MostrarMapaConColores()
+    {
+        if (_partidaActual == null || _partidaActual.Mapa == null)
+        {
+            Console.WriteLine("No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el Mapa.");
+            return;
+        }
+        _partidaActual.Mapa.MostrarMapaConColores(_partidaActual.Jugadores);
+    }
+    
 
     // Lista todos los recursos presentes en el mapa
     public string ListarRecursos()

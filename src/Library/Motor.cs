@@ -176,7 +176,10 @@ public class Motor
                 case "mostrarmapa":
                    
                     return _fachada.MostrarMapa();
-
+                // Muestra el mapa con colores en la consola
+                case "mostrarmapacolores":
+                    _fachada.MostrarMapaConColores();
+                    return "Mapa mostrado en consola con colores.";
                 // Sale del juego
                 case "salir":
                 case "exit":
