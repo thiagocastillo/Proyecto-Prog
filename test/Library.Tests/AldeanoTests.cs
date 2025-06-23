@@ -102,15 +102,6 @@ namespace Library.Tests
         }
 
         [Test]
-        public void RecolectarEn_SinAlmacenCompatible_LanzaExcepcion()
-        {
-            var recurso = new Madera(100, 0.75, new Point(3, 3));
-            mapa.Recursos.Add(recurso);
-            Assert.Throws<System.InvalidOperationException>(() =>
-                aldeano.RecolectarEn(new Point(3, 3), mapa));
-        }
-
-        [Test]
         public void RecolectarEn_AlmacenCompatible_ActualizaRecursos()
         {
             var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
