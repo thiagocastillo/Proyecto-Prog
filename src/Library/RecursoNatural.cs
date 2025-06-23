@@ -29,20 +29,19 @@ public abstract class RecursoNatural
     // Recolectar una cantidad de recurso
     public int Recolectar(double cantidad)
     {
-        // Si el recurso ya fue extraido por completo, devuelve excepcion
+        // Si el recurso ya fue extraído por completo, lanza excepción
         if (EstaAgotado)
             throw new InvalidOperationException("El recurso está agotado.");
 
         int extraido = Math.Min(Cantidad, Math.Max(1, (int)Math.Floor(cantidad)));
         Cantidad -= extraido;
-        Console.WriteLine($"Cantidad restante: {Cantidad}"); //.............................................................................
-       
+
         if (Cantidad <= 0)
         {
             Cantidad = 0;
             EstaAgotado = true;
         }
-        // Devuelve cuanto recurso se extrajo
+        // Devuelve cuánto recurso se extrajo
         return extraido;
     }
 }
