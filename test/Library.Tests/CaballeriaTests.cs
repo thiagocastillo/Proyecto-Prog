@@ -49,7 +49,8 @@ namespace Library.Tests
         [Test]
         public void AtacarU_ConEnemigo_DeberiaReducirSaludYRetornarInfo()
         {
-            Arquero arquero = new Arquero(jugadorRival) { Salud = 100 };
+            Arquero arquero = new Arquero(jugadorRival) { Salud = 100, Posicion = new Point(1, 1)};
+            jugadorRival.Unidades.Add(arquero);
             string resultado = caballeria.AtacarUnidad(
                 jugador,                // jugadorAtacante
                 "arquero",              // tipoUnidad
