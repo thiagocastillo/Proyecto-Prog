@@ -66,7 +66,7 @@ namespace Library.Tests
         [Test]
         public void AtacarU_EnemigoMuere_DeberiaEliminarUnidad()
         {
-            Arquero unidad = new Arquero(jugadorRival) { Salud = 5 };
+            Arquero unidad = new Arquero(jugadorRival) { Salud = 5, Posicion = new Point(1, 1)};
             jugadorRival.Unidades.Add(unidad);
             string resultado = caballeria.AtacarUnidad(
                 jugador,                // jugadorAtacante
@@ -77,7 +77,7 @@ namespace Library.Tests
                 new List<Jugador> { jugador, jugadorRival } // jugadores
             );
             Assert.That(jugadorRival.Unidades.Contains(unidad), Is.False, "La unidad debería ser eliminada si muere.");
-            Assert.IsTrue(resultado.ToLower().Contains("fue destruido"), "El mensaje debe indicar que la unidad fue destruida.");
+            Assert.IsTrue(resultado.ToLower().Contains("fue destruida"), "El mensaje debe indicar que la unidad fue destruida.");
         }
 
         [Test]
