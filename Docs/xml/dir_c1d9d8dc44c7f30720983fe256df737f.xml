@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_c1d9d8dc44c7f30720983fe256df737f" kind="dir">
+    <compoundname>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests</compoundname>
+    <innerdir refid="dir_c178598155a2bcb78731bb0fcaed29c8">C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/obj</innerdir>
+    <innerfile refid="_aldeano_tests_8cs">AldeanoTests.cs</innerfile>
+    <innerfile refid="_arquero_tests_8cs">ArqueroTests.cs</innerfile>
+    <innerfile refid="_caballeria_tests_8cs">CaballeriaTests.cs</innerfile>
+    <innerfile refid="_casa_tests_8cs">CasaTests.cs</innerfile>
+    <innerfile refid="_centro_civico_tests_8cs">CentroCivicoTests.cs</innerfile>
+    <innerfile refid="_civilizacion_tests_8cs">CivilizacionTests.cs</innerfile>
+    <innerfile refid="_cuartel_tests_8cs">CuartelTests.cs</innerfile>
+    <innerfile refid="_deposito_madera_tests_8cs">DepositoMaderaTests.cs</innerfile>
+    <innerfile refid="_deposito_oro_tests_8cs">DepositoOroTests.cs</innerfile>
+    <innerfile refid="_deposito_piedra_test_8cs">DepositoPiedraTest.cs</innerfile>
+    <innerfile refid="_granja_tests_8cs">GranjaTests.cs</innerfile>
+    <innerfile refid="_guerrero_jaguar_tests_8cs">GuerreroJaguarTests.cs</innerfile>
+    <innerfile refid="_infanteria_tests_8cs">InfanteriaTests.cs</innerfile>
+    <innerfile refid="_juego_fachada_tests_8cs">JuegoFachadaTests.cs</innerfile>
+    <innerfile refid="_jugador_tests_8cs">JugadorTests.cs</innerfile>
+    <innerfile refid="_mapa_tests_8cs">MapaTests.cs</innerfile>
+    <innerfile refid="_molino_tests_8cs">MolinoTests.cs</innerfile>
+    <innerfile refid="_motor_tests_8cs">MotorTests.cs</innerfile>
+    <innerfile refid="_oro_tests_8cs">OroTests.cs</innerfile>
+    <innerfile refid="_partida_tests_8cs">PartidaTests.cs</innerfile>
+    <innerfile refid="_piedra_tests_8cs">PiedraTests.cs</innerfile>
+    <innerfile refid="_point_tests_8cs">PointTests.cs</innerfile>
+    <innerfile refid="_ratha_tests_8cs">RathaTests.cs</innerfile>
+    <innerfile refid="_recurso_natural_tests_8cs">RecursoNaturalTests.cs</innerfile>
+    <innerfile refid="_tiempo_construccion_tests_8cs">TiempoConstruccionTests.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/"/>
+  </compounddef>
+</doxygen>

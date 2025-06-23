@@ -3,6 +3,7 @@
   <compounddef id="class_library_1_1_granja" kind="class" language="C#" prot="public">
     <compoundname>Library::Granja</compoundname>
     <basecompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</basecompoundref>
+    <basecompoundref refid="interface_library_1_1_i_edificio" prot="public" virt="non-virtual">Library.IEdificio</basecompoundref>
     <sectiondef kind="property">
       <memberdef kind="property" id="class_library_1_1_granja_1ad19f67f04deac47caf352c87b913ff5e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
         <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
@@ -131,6 +132,8 @@
         <link refid="class_library_1_1_granja"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="2">
         <label>Library.IAlmacenamiento</label>
@@ -148,6 +151,8 @@
         <label>Library.Granja</label>
         <link refid="class_library_1_1_granja"/>
         <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
       <node id="2">

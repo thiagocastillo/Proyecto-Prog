@@ -5,7 +5,12 @@
     <derivedcompoundref refid="class_library_1_1_casa" prot="public" virt="non-virtual">Library.Casa</derivedcompoundref>
     <derivedcompoundref refid="class_library_1_1_centro_civico" prot="public" virt="non-virtual">Library.CentroCivico</derivedcompoundref>
     <derivedcompoundref refid="class_library_1_1_cuartel" prot="public" virt="non-virtual">Library.Cuartel</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_deposito_madera" prot="public" virt="non-virtual">Library.DepositoMadera</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_deposito_oro" prot="public" virt="non-virtual">Library.DepositoOro</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_deposito_piedra" prot="public" virt="non-virtual">Library.DepositoPiedra</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_granja" prot="public" virt="non-virtual">Library.Granja</derivedcompoundref>
     <derivedcompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_molino" prot="public" virt="non-virtual">Library.Molino</derivedcompoundref>
     <derivedcompoundref refid="class_library_1_1_tests_1_1_mock_edificio" prot="public" virt="non-virtual">Library.Tests.MockEdificio</derivedcompoundref>
     <sectiondef kind="property">
       <memberdef kind="property" id="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
@@ -98,7 +103,7 @@
         <link refid="class_library_1_1_centro_civico"/>
         <childnode refid="1" relation="public-inheritance">
         </childnode>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
       <node id="4">
@@ -107,31 +112,39 @@
         <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6">
+      <node id="5">
         <label>Library.DepositoMadera</label>
         <link refid="class_library_1_1_deposito_madera"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Library.DepositoOro</label>
+        <link refid="class_library_1_1_deposito_oro"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7">
-        <label>Library.DepositoOro</label>
-        <link refid="class_library_1_1_deposito_oro"/>
-        <childnode refid="5" relation="public-inheritance">
+        <label>Library.DepositoPiedra</label>
+        <link refid="class_library_1_1_deposito_piedra"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
       <node id="8">
-        <label>Library.DepositoPiedra</label>
-        <link refid="class_library_1_1_deposito_piedra"/>
-        <childnode refid="5" relation="public-inheritance">
+        <label>Library.Granja</label>
+        <link refid="class_library_1_1_granja"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
       <node id="9">
-        <label>Library.Granja</label>
-        <link refid="class_library_1_1_granja"/>
-        <childnode refid="5" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
         <label>Library.IAlmacenamiento</label>
         <link refid="interface_library_1_1_i_almacenamiento"/>
         <childnode refid="1" relation="public-inheritance">
@@ -140,7 +153,9 @@
       <node id="10">
         <label>Library.Molino</label>
         <link refid="class_library_1_1_molino"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
       <node id="11">

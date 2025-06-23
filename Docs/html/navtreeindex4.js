@@ -1,10 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"interface_library_1_1_i_unidad.html":[0,0,0,21],
-"interface_library_1_1_i_unidad.html":[1,0,0,21],
-"interface_library_1_1_i_unidad.html#a030bc8f49c4673795d1eccbc9437a093":[0,0,0,21,4],
-"interface_library_1_1_i_unidad.html#a030bc8f49c4673795d1eccbc9437a093":[1,0,0,21,4],
-"interface_library_1_1_i_unidad.html#a10d5d60242194a85aec2d747d02f55c4":[0,0,0,21,2],
 "interface_library_1_1_i_unidad.html#a10d5d60242194a85aec2d747d02f55c4":[1,0,0,21,2],
 "interface_library_1_1_i_unidad.html#a35af05afa675fb9eb03a0858a3c3521d":[0,0,0,21,7],
 "interface_library_1_1_i_unidad.html#a35af05afa675fb9eb03a0858a3c3521d":[1,0,0,21,7],
@@ -32,7 +27,7 @@ var NAVTREEINDEX4 =
 "namespace_library_1_1_tests.html":[0,0,0,0],
 "namespaces.html":[0,0],
 "pages.html":[],
-"src_2_library_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html":[2,0,0,0,0,0,0,0,0,0,0,0,0],
-"src_2_program_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html":[2,0,0,0,0,0,0,0,1,0,0,0,0],
-"test_2_library_8_tests_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html":[2,0,0,0,0,0,0,1,0,0,0,0,0]
+"src_2_library_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html":[2,0,0,0,0,0,0,0],
+"src_2_program_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html":[2,0,0,1,0,0,0,0],
+"test_2_library_8_tests_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs.html":[2,0,1,0,0,0,0,0]
 };

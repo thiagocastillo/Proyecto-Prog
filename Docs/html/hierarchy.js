@@ -17,6 +17,10 @@ var hierarchy =
       [ "Library.Casa", "class_library_1_1_casa.html", null ],
       [ "Library.CentroCivico", "class_library_1_1_centro_civico.html", null ],
       [ "Library.Cuartel", "class_library_1_1_cuartel.html", null ],
+      [ "Library.DepositoMadera", "class_library_1_1_deposito_madera.html", null ],
+      [ "Library.DepositoOro", "class_library_1_1_deposito_oro.html", null ],
+      [ "Library.DepositoPiedra", "class_library_1_1_deposito_piedra.html", null ],
+      [ "Library.Granja", "class_library_1_1_granja.html", null ],
       [ "Library.IAlmacenamiento", "interface_library_1_1_i_almacenamiento.html", [
         [ "Library.CentroCivico", "class_library_1_1_centro_civico.html", null ],
         [ "Library.DepositoMadera", "class_library_1_1_deposito_madera.html", null ],
@@ -25,6 +29,7 @@ var hierarchy =
         [ "Library.Granja", "class_library_1_1_granja.html", null ],
         [ "Library.Molino", "class_library_1_1_molino.html", null ]
       ] ],
+      [ "Library.Molino", "class_library_1_1_molino.html", null ],
       [ "Library.Tests.MockEdificio", "class_library_1_1_tests_1_1_mock_edificio.html", null ]
     ] ],
     [ "Library.Tests.InfanteriaTests", "class_library_1_1_tests_1_1_infanteria_tests.html", null ],
