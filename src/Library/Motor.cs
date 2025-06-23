@@ -88,7 +88,7 @@ public class Motor
                 case "atacarunidad":
                     
                     if (argumentos.Count < 4)
-                        return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombreJugador> <idAtacante> <tipoUnidad> <cantidad> <x> <y>";
+                        return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombreJugadorAtacante> <idUnidadAtacante> <nombreJugadorObjetivo> <idUnidadObjetivo>";
                     
                     return _fachada.AtacarUnidad(
                         argumentos[0], int.Parse(argumentos[1]), argumentos[2], int.Parse(argumentos[3]));

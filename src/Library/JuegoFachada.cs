@@ -377,7 +377,7 @@ public class JuegoFachada
        // Validar que las unidades existan, sean de distintos jugadores, y que la atacante sea militar
        if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
        {
-           // Calcular daño según el sistema de ventajas (ya implementado en CalcularDaño)
+           // Calcular daño según el sistema de ventajas
            int daño = (int)unidadAtacante.CalcularDaño(unidadObjetivo);
            unidadObjetivo.Salud -= daño;
 
