@@ -16,8 +16,8 @@ public class MaderaTests
     [Test]
     public void CrearTasaRecoleccion()
     {
-        Assert.AreEqual("Oro", madera.Nombre);
-        Assert.AreEqual(0.50, madera.TasaRecoleccion, 2);
+        Assert.AreEqual("Madera", madera.Nombre);
+        Assert.AreEqual(0.40, madera.TasaRecoleccion, 2);
     }
 
     [Test]
@@ -33,7 +33,7 @@ public class MaderaTests
     public void MaderaSeExtraeTodo()
     {
         Point ubicacion = new Point();
-        Madera maderaAgotable = new Madera(vidaBase: 2, ubicacion: ubicacion); 
+        Madera maderaAgotable = new Madera(vidaBase: 3, ubicacion: ubicacion); 
 
         int extraido = maderaAgotable.Recolectar(1);
         Assert.AreEqual(1, extraido);
