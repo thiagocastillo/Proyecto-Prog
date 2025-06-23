@@ -10,7 +10,7 @@ public class PiedraTests
     public void Setup() 
     {
         ubicacion = new Point();
-        piedra = new Piedra(vidaBase: 100, ubicacion: ubicacion);
+        piedra = new Piedra(vidaBase: 2, ubicacion: ubicacion);
     }
 
     [Test]
