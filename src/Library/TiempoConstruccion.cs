@@ -1,25 +1,35 @@
-﻿namespace Library;
+﻿using System;
+
+namespace Library;
 
 public class TiempoConstruccion
 {
-    // Tiempo total de construccion desde que inicia hasta que termina
-    public int TiempoTotal { get; private set; }
-    // Tiempo que aun falta para terminar la construccion
-    public int TiempoRestante { get; private set; }
-    // Verdadero si el edificio ya esta completamente construido
-    public bool EstaCompleta => TiempoRestante <= 0;
+    // Tiempo total de construcción en segundos
+    public int TiempoTotalSegundos { get; private set; }
 
-    // Inicializa el tiempo de construccion con un valor determinado
-    public TiempoConstruccion(int tiempo)
+    // Momento en que comenzó la construcción
+    public DateTime Inicio { get; private set; }
+
+    // Momento en que termina la construcción
+    public DateTime Fin => Inicio.AddSeconds(TiempoTotalSegundos);
+
+    // Tiempo restante en segundos (puede ser 0 si ya terminó)
+    public int TiempoRestanteSegundos
     {
-        TiempoTotal = tiempo;
-        TiempoRestante = tiempo;
+        get
+        {
+            int restante = (int)(Fin - DateTime.Now).TotalSeconds;
+            return restante > 0 ? restante : 0;
+        }
     }
 
-    // Reduce en 1 el tiempo restante de construccion
-    public void Avanzar()
+    // Verdadero si la construcción está completa
+    public bool EstaCompleta => DateTime.Now >= Fin;
+
+    // Inicializa el tiempo de construcción con un valor en segundos
+    public TiempoConstruccion(int tiempoEnSegundos)
     {
-        if (TiempoRestante > 0)
-            TiempoRestante--;
+        TiempoTotalSegundos = tiempoEnSegundos;
+        Inicio = DateTime.Now;
     }
 }

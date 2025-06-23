@@ -1,30 +1,42 @@
+using System.Drawing;
+
 namespace Library;
 
+// Representa un depósito de oro con tiempo de construcción de 3 segundos
 public class DepositoOro : IAlmacenamiento
 {
+    // Jugador propietario del depósito
     public Jugador Propietario { get; private set; }
+    // Posición en el mapa
     public Point Posicion { get; set; }
+    // Capacidad máxima de almacenamiento
     public int CapacidadMaxima { get; private set; } = 500;
+    // Vida actual del depósito
     public int Vida { get; set; }
+    // Recursos almacenados
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
-    // Objeto que controla el tiempo de construccion
+    // Objeto que gestiona el tiempo de construcción
     private TiempoConstruccion tiempoconstruccion;
 
-    public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotal;
-    public int TiempoConstruccionRestante => tiempoconstruccion.TiempoRestante;
+    // Tiempo total de construcción en segundos
+    public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotalSegundos;
+    // Tiempo restante de construcción en segundos
+    public int TiempoConstruccionRestante => tiempoconstruccion.TiempoRestanteSegundos;
+    // Indica si el depósito ya está construido
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
 
+    // Constructor: inicializa el depósito y su tiempo de construcción (3 segundos)
     public DepositoOro(Jugador propietario)
     {
         Propietario = propietario;
         Vida = 5000;
-        tiempoconstruccion = new TiempoConstruccion(3); // 3 turnos para construir
+        tiempoconstruccion = new TiempoConstruccion(3); // 3 segundos para construir
     }
 
+    // Calcula la eficiencia según la distancia
     public double Eficiencia(int distancia)
     {
-        // Devuelve la eficiencia de recoleccion segun la distancia al edificio
         if (distancia <= 1) return 1.0;
         if (distancia >= 10) return 0.1;
         return 1.0 - (distancia * 0.1);
