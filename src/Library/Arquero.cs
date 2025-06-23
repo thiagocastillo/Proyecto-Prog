@@ -33,7 +33,7 @@ public class Arquero : IUnidadMilitar
     // Calcula el daño que este arquero inflige a otra unidad
     public double CalcularDaño(IUnidad objetivo)
     {
-        double dañoBase = this.Ataque - objetivo.Defensa;
+        double dañoBase = Math.Max(0, this.Ataque - objetivo.Defensa);
         
         // Hace más daño a unidades de infantería
         if (objetivo is Infanteria)

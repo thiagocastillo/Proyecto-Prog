@@ -48,7 +48,7 @@ namespace Library.Tests
                 new List<Jugador> { jugadorArmenio, jugadorEnemigo } // jugadores
             );
 
-            Assert.IsTrue(resultado.Contains("hizo"));
+            Assert.IsTrue(resultado.Contains("causando"));
             Assert.That(infanteria.Salud, Is.LessThan(100));
         }
 

@@ -107,7 +107,7 @@ namespace Library.Tests
             );
 
             Assert.IsFalse(jugadorRival.Unidades.Contains(objetivo));
-            Assert.IsTrue(resultado.Contains("fue destruido"));
+            Assert.IsTrue(resultado.Contains("fue destruida"));
         }
     }
 }
