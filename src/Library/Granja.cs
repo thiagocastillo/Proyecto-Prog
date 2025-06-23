@@ -1,6 +1,6 @@
 namespace Library;
 
-public class Granja : IAlmacenamiento
+public class Granja : IAlmacenamiento ,IEdificio
 {
     public Jugador Propietario { get; private set; }  //Granja del jugador
     public Point Posicion { get; set; }  //Ubicacion de la granja

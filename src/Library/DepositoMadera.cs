@@ -3,7 +3,7 @@ using System.Drawing;
 namespace Library;
 
 // Representa un depósito de madera con tiempo de construcción de 30 segundos
-public class DepositoMadera : IAlmacenamiento
+public class DepositoMadera : IAlmacenamiento ,IEdificio
 {
     // Jugador propietario del depósito
     public Jugador Propietario { get; private set; }

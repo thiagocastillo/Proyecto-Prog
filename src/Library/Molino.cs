@@ -3,7 +3,7 @@ using System.Drawing;
 namespace Library;
 
 // Representa un molino que almacena recursos y tiene tiempo de construcción
-public class Molino : IAlmacenamiento
+public class Molino : IAlmacenamiento ,IEdificio
 {
     // Jugador propietario del molino
     public Jugador Propietario { get; private set; }
