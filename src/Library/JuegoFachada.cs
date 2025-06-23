@@ -63,6 +63,9 @@ public class JuegoFachada
     {
         if (_partidaActual != null)
         {
+            if(_partidaActual.Jugadores.Any(j => j.Nombre.Equals(nombreJugador, StringComparison.OrdinalIgnoreCase)))
+                throw new InvalidOperationException($"Ya existe un jugador con el nombre '{nombreJugador}'.");
+            
             Civilizacion civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
             //var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);-> si no modifica nada sacarla
             
@@ -73,7 +76,7 @@ public class JuegoFachada
         }
         else
         {
-            throw new InvalidOperationException("No hay partida activa al momento.");
+            throw new InvalidOperationException("No hay partida activa al momento. Cree una con el comando 'CrearPartida'.");
         }
     }
     
