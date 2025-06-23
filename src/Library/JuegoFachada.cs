@@ -79,7 +79,7 @@ public class JuegoFachada
             throw new InvalidOperationException("No hay partida activa al momento. Cree una con el comando 'CrearPartida'.");
         }
     }
-    
+     
     // Devuelve el resumen de recursos de un jugador
     public Dictionary<string, int> ObtenerRecursosJugador(string nombreJugador)
     {
