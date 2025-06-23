@@ -66,6 +66,7 @@ namespace Library.Tests
         public void AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus()
         {
             Infanteria infanteriaObjetivo = new Infanteria(jugadorRival) { Salud = 100, Posicion = new Point(2, 2) };
+            jugadorRival.Unidades.Add(infanteriaObjetivo);
 
             string resultado = infanteria.AtacarUnidad(
                 jugadorAzteca,

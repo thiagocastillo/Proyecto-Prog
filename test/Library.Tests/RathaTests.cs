@@ -47,7 +47,8 @@ namespace Library.Tests
         {
             Ratha ratha = new Ratha(jugador);
             Arquero enemigo = new Arquero(jugadorEnemigo) { Salud = 50, Posicion = new Point(1, 1) };
-
+            jugadorEnemigo.Unidades.Add(enemigo);
+            
             string resultado = ratha.AtacarUnidad(
                 jugador,
                 "arquero",
