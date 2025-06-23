@@ -340,7 +340,7 @@ public class JuegoFachada
     }
 
     // Ordena a una unidad militar atacar unidades enemigas en una coordenada
-    public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, string tipoUnidad, int cantidad, Point coordenada)
+   /* public string AtacarUnidad(string nombreJugador, int idUnidadAtacante, string tipoUnidad, int cantidad, Point coordenada)
     {
         var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
@@ -358,7 +358,43 @@ public class JuegoFachada
         }
 
         return "Ataque fallido: unidad atacante no válida. No se pudo realizar el ataque.";
-    }
+    }*/
+   
+   public string AtacarUnidad(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idUnidadObjetivo)
+   {
+       // Obtener jugador atacante y su unidad
+       var jugadorAtacante = _partidaActual?.Jugadores
+           .FirstOrDefault(j => j.Nombre.Equals(nombreJugadorAtacante, StringComparison.OrdinalIgnoreCase));
+       var unidadAtacante = jugadorAtacante?.Unidades
+           .ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
+
+       // Obtener jugador objetivo y la unidad objetivo
+       var jugadorObjetivo = _partidaActual?.Jugadores
+           .FirstOrDefault(j => j.Nombre.Equals(nombreJugadorObjetivo, StringComparison.OrdinalIgnoreCase));
+       var unidadObjetivo = jugadorObjetivo?.Unidades
+           .ElementAtOrDefault(idUnidadObjetivo);
+
+       // Validar que las unidades existan, sean de distintos jugadores, y que la atacante sea militar
+       if (unidadAtacante != null && unidadObjetivo != null && unidadAtacante.Propietario != unidadObjetivo.Propietario)
+       {
+           // Calcular daño según el sistema de ventajas (ya implementado en CalcularDaño)
+           int daño = (int)unidadAtacante.CalcularDaño(unidadObjetivo);
+           unidadObjetivo.Salud -= daño;
+
+           string resultado = $"{unidadAtacante.GetType().Name} atacó a {unidadObjetivo.GetType().Name} causando {daño} de daño. " +
+                              $"Salud restante: {Math.Max(0, unidadObjetivo.Salud)}.";
+
+           // Si la unidad fue destruida, eliminarla
+           if (unidadObjetivo.Salud <= 0)
+           {
+               jugadorObjetivo.Unidades.Remove(unidadObjetivo);
+               resultado += " La unidad fue destruida.";
+           }
+           return resultado;
+       }
+       return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
+   }
+
 
     // Ordena a una unidad militar atacar un edificio enemigo
     public string AtacarEdificio(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idEdificioObjetivo)

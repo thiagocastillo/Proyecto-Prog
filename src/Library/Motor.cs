@@ -87,10 +87,11 @@ public class Motor
                 // Ordena a una unidad militar atacar unidades enemigas en una coordenada
                 case "atacarunidad":
                     
-                    if (argumentos.Count < 6)
+                    if (argumentos.Count < 4)
                         return "Faltan argumentos en comando, recordar sintaxis: atacarunidad <nombreJugador> <idAtacante> <tipoUnidad> <cantidad> <x> <y>";
                     
-                    return _fachada.AtacarUnidad(argumentos[0], int.Parse(argumentos[1]), argumentos[2], int.Parse(argumentos[3]), new Point(int.Parse(argumentos[4]), int.Parse(argumentos[5])));
+                    return _fachada.AtacarUnidad(
+                        argumentos[0], int.Parse(argumentos[1]), argumentos[2], int.Parse(argumentos[3]));
 
                 // Ordena a una unidad militar atacar un edificio enemigo
                 case "atacaredificio":
