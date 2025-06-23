@@ -74,7 +74,9 @@ public class Arquero : IUnidadMilitar
             .ToList();
 
         if (!unidadesEnCoordenada.Any())
+        {
             return $"No se encontraron unidades de tipo {tipoUnidad} en la coordenada ({coordenada.X},{coordenada.Y}).";
+        }
 
         string resultado = "";
         

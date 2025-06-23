@@ -49,6 +49,7 @@ namespace Library.Tests
         public void AtacarU_ContraCaballeria_AplicaBonus()
         {
             Caballeria caballeria = new Caballeria(jugadorRival) { Salud = 100, Posicion = new Point(1, 1) };
+            jugadorRival.Unidades.Add(caballeria);
             string resultado = infanteria.AtacarUnidad(
                 jugadorAzteca,
                 "caballeria",

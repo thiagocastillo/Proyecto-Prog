@@ -39,6 +39,7 @@ namespace Library.Tests
         public void Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus()
         {
             Infanteria infanteria = new Infanteria(jugadorEnemigo) { Salud = 100, Posicion = new Point(2, 2) };
+            jugadorEnemigo.Unidades.Add(infanteria);
             string resultado = arquero.AtacarUnidad(
                 jugadorArmenio,           // jugadorAtacante
                 "infanteria",             // tipoUnidad
@@ -60,7 +61,7 @@ namespace Library.Tests
                 Salud = 100,
                 Posicion = new Point(2, 2)
             };
-
+            jugadorEnemigo.Unidades.Add(unidadDefensiva);
             string resultado = arquero.AtacarUnidad(
                 jugadorArmenio,
                 "caballeria",
