@@ -80,6 +80,10 @@ public class JuegoFachada
             
             if (civilizacion != null)
             {
+                if (_partidaActual.Jugadores.Count >= 2)
+                {
+                    throw new InvalidOperationException("Solo se permiten dos jugadores en la partida.");
+                }
                 _partidaActual.AgregarJugador(new Jugador(nombreJugador, civilizacion));
             }
         }
