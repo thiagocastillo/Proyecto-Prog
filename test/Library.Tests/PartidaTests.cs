@@ -53,7 +53,6 @@ public class PartidaTests
 
         partida.AgregarJugador(jugador1);
         partida.AgregarJugador(jugador2);
-
         Jugador ganador = partida.VerificarGanador();
 
         Assert.AreEqual(jugador1, ganador);
