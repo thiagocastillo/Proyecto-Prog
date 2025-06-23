@@ -342,35 +342,46 @@ public class JuegoFachada
     
     public List<string> MoverUnidades(string nombreJugador, List<int> idsUnidades, Point destino)
     {
-        var jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
+        // Verifica que la partida actual y el jugador existan
+        Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
 
+        // Si no se encuentra el jugador, lanza una excepción
         if (jugador == null)
             throw new ArgumentException("Jugador no encontrado.");
 
-        List<string> resultados = new();
+        // Si no hay unidades, devuelve un mensaje
+        List<string> mensaje = new();
         int xDestino = destino.X;
         int yDestino = destino.Y;
 
+        //Itera sobre los IDs de unidades y mueve cada una a la posición indicada
         for (int i = 0; i < idsUnidades.Count; i++)
         {
             int id = idsUnidades[i];
 
+            // Verifica que el ID de unidad sea válido
             if (id < 0 || id >= jugador.Unidades.Count)
             {
-                resultados.Add($"Unidad con ID {id} no encontrada.");
+                // Si el ID no es válido, agrega un mensaje de error y continúa con la siguiente unidad
+                mensaje.Add($"Unidad con ID {id} no encontrada.");
                 continue;
             }
 
             var unidad = jugador.Unidades[id];
+            
+            //Calcula la nueva posición destino sumando el índice al destino original evitando superposiciones
             Point destinoUnitario = new Point(xDestino + i, yDestino);
+            
+            //Intenta mover la unidad a la nueva posición
             bool exito = unidad.Mover(destinoUnitario, _partidaActual.Mapa);
-
-            resultados.Add(exito
+            
+            // Agrega un mensaje de éxito o error según el resultado del movimiento
+            mensaje.Add(exito
                 ? $"Unidad {unidad.GetType().Name} (ID {id}) movida a ({destinoUnitario.X},{destinoUnitario.Y})."
                 : $"Unidad {unidad.GetType().Name} (ID {id}) no pudo moverse a ({destinoUnitario.X},{destinoUnitario.Y}).");
         }
-
-        return resultados;
+        // Devuelve la lista de mensajes generados durante el movimiento
+        return mensaje;
     }
 
 
