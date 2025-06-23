@@ -24,6 +24,7 @@ public class Mapa
     public List<IUnidad> ObtenerUnidadesEn(Point coordenada, List<Jugador> jugadores)
     {
         var unidades = new List<IUnidad>();
+        
         foreach (var jugador in jugadores)
         {
             if (jugador?.Unidades == null) continue;
@@ -200,6 +201,6 @@ public class Mapa
         File.WriteAllText(ruta, sb.ToString());
         Process.Start(new ProcessStartInfo("notepad.exe", ruta) { UseShellExecute = true });
 
-        return "Abriendo mapa en el bloc de notas...";
+        return "Abriendo Mapa en el Bloc de notas...";
     }
 }

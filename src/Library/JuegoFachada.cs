@@ -32,7 +32,7 @@ public class JuegoFachada
     public string MostrarMapa()
     {
         if (_partidaActual == null || _partidaActual.Mapa == null)
-            return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el mapa.";
+            return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el Mapa.";
         
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
@@ -327,6 +327,12 @@ public class JuegoFachada
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         IUnidad unidad = jugador?.Unidades.ElementAtOrDefault(idUnidad);
 
+        if(jugador == null)
+            throw new ArgumentException($"El jugador '{nombreJugador}' no existe en la partida actual.");
+        
+        if (unidad == null)
+            throw new ArgumentException($"La unidad con ID {idUnidad} no existe para el jugador '{nombreJugador}'.");
+        
         if (unidad != null)
         {
             unidad.Mover(destino, _partidaActual?.Mapa);
