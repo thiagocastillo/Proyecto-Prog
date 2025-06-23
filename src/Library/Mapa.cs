@@ -55,11 +55,13 @@ public class Mapa
         for (int i = 0; i < 5; i++)
         {
             int x, y;
+            
             do
             {
                 x = random.Next(0, Ancho);
                 y = random.Next(0, Alto);
-            } while (!posicionesOcupadas.Add((x, y)));
+            } 
+            while (!posicionesOcupadas.Add((x, y)));
 
             int vidaBase = random.Next(80, 151);
             Recursos.Add(new Arbol(vidaBase, new Point(x, y)));
@@ -73,12 +75,14 @@ public class Mapa
             {
                 x = random.Next(0, Ancho);
                 y = random.Next(0, Alto);
-            } while (!posicionesOcupadas.Add((x, y)));
+            } 
+            while (!posicionesOcupadas.Add((x, y)));
 
             int vidaBase = random.Next(80, 151);
             Point ubicacion = new Point(x, y);
 
             int tipo = random.Next(0, 3);
+            
             RecursoNatural recurso = tipo switch
             {
                 0 => new Arbol(vidaBase, ubicacion),
@@ -106,6 +110,7 @@ public class Mapa
             if (recurso?.Ubicacion == null) continue;
             int x = recurso.Ubicacion.X;
             int y = recurso.Ubicacion.Y;
+            
             if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
             {
                 char simbolo = recurso switch
@@ -132,6 +137,7 @@ public class Mapa
                     if (edificio?.Posicion == null) continue;
                     int x = edificio.Posicion.X;
                     int y = edificio.Posicion.Y;
+                    
                     if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
                     {
                         grid[y, x] = edificio switch
@@ -152,6 +158,7 @@ public class Mapa
                     if (unidad?.Posicion == null) continue;
                     int x = unidad.Posicion.X;
                     int y = unidad.Posicion.Y;
+                    
                     if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
                     {
                         grid[y, x] = unidad switch
@@ -174,6 +181,7 @@ public class Mapa
 
         // Encabezado de columnas
         sb.Append("    ");
+        
         for (int x = 0; x < Ancho; x++)
             sb.Append(x.ToString("D2") + " ");
         sb.AppendLine();

@@ -13,6 +13,7 @@ public class Partida
     public string AgregarJugador(Jugador jugador)  // Método que permite agregar un jugador a la partida.
     {
         Jugadores.Add(jugador);
+        
         if (Jugadores.Count != 2)
         {
            return "Solo se permiten dos jugadores";  // el maximo son dos jugadores.
@@ -24,6 +25,7 @@ public class Partida
         foreach (var jugador in Jugadores)  // Recorre todos los jugadores para verificar si perdieron su centro cívico
         {
             bool tieneCentroCivico = jugador.Edificios.Any(e => e is CentroCivico);  // Comprueba si el jugador tiene al menos un edificio que sea un Centro Cívico
+         
             if (!tieneCentroCivico)  // Si no tiene centro cívico, el otro jugador es el ganador
             {
                 return Jugadores.FirstOrDefault(j => j != jugador);

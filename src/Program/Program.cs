@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args)
     {
         var motor = new Motor();
-        Console.WriteLine("Bienvenido. Escriba 'ayuda' para ver los comandos disponibles.");
+        Console.WriteLine("Bienvenido. Escriba 'Ayuda' para ver los comandos disponibles.");
 
         while (true)
         {

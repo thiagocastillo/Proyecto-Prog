@@ -1,5 +1,4 @@
 namespace Library;
-
 using System.Collections.Generic;
 using System.Linq;
 
@@ -34,6 +33,7 @@ public class JuegoFachada
     {
         if (_partidaActual == null || _partidaActual.Mapa == null)
             return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el mapa.";
+        
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
 
@@ -44,6 +44,7 @@ public class JuegoFachada
             return "No hay recursos en el mapa.";
 
         var sb = new System.Text.StringBuilder();
+        
         foreach (var recurso in _partidaActual.Mapa.Recursos)
         {
             sb.AppendLine($"{recurso.Nombre} en ({recurso.Ubicacion.X}, {recurso.Ubicacion.Y})");
@@ -62,7 +63,8 @@ public class JuegoFachada
     {
         if (_partidaActual != null)
         {
-            var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
+            Civilizacion civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
+            //var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);-> si no modifica nada sacarla
             
             if (civilizacion != null)
             {
@@ -120,47 +122,65 @@ public class JuegoFachada
         switch (tipoEdificio.ToLower())
         {
             case "casa":
+                
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 50)
                     throw new InvalidOperationException("No hay suficiente madera para construir una casa.");
                 nuevoEdificio = new Casa(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 50;
                 break;
+            
             case "cuartel":
+                
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 100)
                     throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
                 nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 100;
                 break;
+            
             case "molino":
+                
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 75)
                     throw new InvalidOperationException("No hay suficiente madera para construir un molino.");
                 nuevoEdificio = new Molino(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 75;
                 break;
+            
             case "depositomadera":
+                
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
                     throw new InvalidOperationException("No hay suficiente madera para construir un depósito de madera.");
+                
                 nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
                 break;
+            
             case "depositooro":
+                
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
                     throw new InvalidOperationException("No hay suficiente madera para construir un depósito de oro.");
+                
                 nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
                 break;
+            
             case "depositopiedra":
+                
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
                     throw new InvalidOperationException("No hay suficiente madera para construir un depósito de piedra.");
+                
                 nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
                 break;
+            
             case "centrocivico":
+               
                 if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 200)
                     throw new InvalidOperationException("No hay suficiente madera para construir un centro cívico.");
+                
                 nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 200;
                 break;
+            
             default:
                 throw new ArgumentException("Tipo de edificio no válido.");
         }
@@ -187,36 +207,45 @@ public class JuegoFachada
             throw new InvalidOperationException("Ya hay una unidad en esa posición.");
 
         var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+        
         IUnidad? nuevaUnidad = null;
 
         // Selecciona el tipo de unidad y descuenta recursos
         switch (tipoUnidad.ToLower())
         {
             case "aldeano":
+                
                 if (jugador.PuedeCrearAldeano() && recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 50)
                 {
-                    var nuevoAldeano = new Aldeano(jugador) { Posicion = posicion };
+                    //var nuevoAldeano = new Aldeano(jugador) { Posicion = posicion };
+                    Aldeano nuevoAldeano = new Aldeano(jugador) { Posicion = posicion };
                     jugador.Aldeanos.Add(nuevoAldeano);
                     jugador.Unidades.Add(nuevoAldeano);
                     jugador.Recursos["Alimento"] -= 50;
                     jugador.PoblacionActual++;
                 }
                 break;
+            
             case "guerrerojaguar":
+               
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
                 {
                     nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = posicion };
                     jugador.Recursos["Alimento"] -= 60;
                 }
                 break;
+            
             case "arquerocompuesto":
+                
                 if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
                 {
                     nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = posicion };
                     jugador.Recursos["Madera"] -= 70;
                 }
                 break;
+            
             case "ratha":
+                
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
                     recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
                 {
@@ -225,21 +254,27 @@ public class JuegoFachada
                     jugador.Recursos["Madera"] -= 60;
                 }
                 break;
+            
             case "infanteria":
+               
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
                 {
                     nuevaUnidad = new Infanteria(jugador) { Posicion = posicion };
                     jugador.Recursos["Alimento"] -= 60;
                 }
                 break;
+            
             case "arquero":
+                
                 if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
                 {
                     nuevaUnidad = new Arquero(jugador) { Posicion = posicion };
                     jugador.Recursos["Madera"] -= 70;
                 }
                 break;
+            
             case "caballeria":
+               
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
                     recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
                 {
@@ -333,10 +368,8 @@ public class JuegoFachada
                     resultado += $"\n¡{jugadoresConCC[0].Nombre} ganó la partida! Muchas gracias por jugar.";
                 }
             }
-
             return resultado;
         }
-
         return "Ataque fallido: unidad atacante o edificio objetivo no válidos. No se pudo realizar el ataque.";
     }
 

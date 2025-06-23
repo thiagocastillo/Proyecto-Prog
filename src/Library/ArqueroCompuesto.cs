@@ -17,6 +17,5 @@ public class ArqueroCompuesto : Arquero, IUnidadMilitar
             this.Ataque += 2; // Bonificación adicional de ataque
         }
     }
-
     // El resto de métodos (CalcularDaño, Mover, AtacarUnidad, AtacarEdificio) se heredan de Arquero
 }

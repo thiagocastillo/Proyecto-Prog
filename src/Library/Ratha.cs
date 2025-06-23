@@ -29,6 +29,7 @@ public class Ratha : IUnidadMilitar
     public double CalcularDaño(IUnidad objetivo)
     {
         double dañoBase = this.Ataque - objetivo.Defensa;
+        
         // El daño no puede ser negativo
         if (dañoBase < 0)
         {
@@ -63,11 +64,13 @@ public class Ratha : IUnidadMilitar
             return $"No se encontraron unidades de tipo {tipoUnidad} en la coordenada ({coordenada.X},{coordenada.Y}).";
 
         string resultado = "";
+        
         foreach (var unidad in unidadesEnCoordenada)
         {
             int daño = (int)CalcularDaño(unidad);
             unidad.Salud -= daño;
             resultado += $"{GetType().Name} atacó a {unidad.GetType().Name} causando {daño} de daño. Salud restante: {Math.Max(0, unidad.Salud)}.";
+            
             // Si la unidad muere, se elimina de la lista del propietario
             if (unidad.Salud <= 0)
             {
@@ -85,6 +88,7 @@ public class Ratha : IUnidadMilitar
         int daño = this.Ataque;
         objetivo.Vida -= daño;
         string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño. Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
+        
         // Si el edificio es destruido, se elimina de la lista del propietario
         if (objetivo.Vida <= 0)
         {

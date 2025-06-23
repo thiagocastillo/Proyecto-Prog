@@ -7,5 +7,4 @@ public interface IUnidadMilitar : IUnidad
 
     public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa,
         List<Jugador> jugadores);
-
 }

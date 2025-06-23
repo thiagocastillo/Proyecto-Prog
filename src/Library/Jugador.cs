@@ -69,6 +69,7 @@ public class Jugador
 
         // Sumar recursos de los edificios de almacenamiento
         IEnumerable<IAlmacenamiento> almacenamientos = Edificios.OfType<IAlmacenamiento>();
+        
         foreach (IAlmacenamiento almacen in almacenamientos)
         {
             foreach (KeyValuePair<string, int> par in almacen.Recursos)
@@ -112,6 +113,7 @@ public class Jugador
         if (incremento > 0)
         {
             int maxTotal = LimiteAldeanos + LimiteMilitares;
+            
             if (PoblacionMaxima + incremento > maxTotal)
                 PoblacionMaxima = maxTotal;
             else
@@ -139,6 +141,7 @@ public class Jugador
             else
             {
                 int militares = Unidades.Count(u => !(u is Aldeano));
+                
                 if (militares >= LimiteMilitares)
                     throw new InvalidOperationException("No se pueden tener más de 30 unidades militares.");
             }
