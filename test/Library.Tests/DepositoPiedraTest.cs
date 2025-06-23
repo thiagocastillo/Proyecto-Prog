@@ -5,7 +5,6 @@ public class DepositoPiedraTest
     private Jugador jugador;
 
     [SetUp]
-
     public void SetUp()
     {
         Civilizacion civilizacion = new Civilizacion("Chinos", new List<string>(), "Caballeria");

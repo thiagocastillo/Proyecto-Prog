@@ -35,5 +35,4 @@ public class CivilizacionTests
         CollectionAssert.Contains(civilizacion.Bonificaciones, "Empieza con más aldeanos");
         Assert.AreEqual(3, civilizacion.Bonificaciones.Count);
     }
-
 }

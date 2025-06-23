@@ -5,7 +5,6 @@ public class DepositoMaderaTests
     private Jugador jugador;
 
     [SetUp]
-
     public void setUp()
     {
         var civilizacion = new Civilizacion("Chinos", new List<string>(), "Caballeria");
