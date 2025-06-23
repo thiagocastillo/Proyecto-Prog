@@ -27,6 +27,11 @@ public class Motor
                     
                     return Ayuda.ObtenerComandos();
 
+                case "ayudaedificios":
+                    return Ayuda.AyudaEdificios();
+
+                case "ayudaunidades":
+                    return Ayuda.AyudaUnidades();
                 // Crea una nueva partida
                 case "crearpartida":
                     
