@@ -1,7 +1,7 @@
 namespace Library;
 
 public class Aldeano : IUnidad, IRecolector
-{
+{ 
     public Jugador Propietario { get; private set; }
 
     // Propiedades de combate
