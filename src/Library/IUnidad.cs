@@ -9,8 +9,7 @@ public interface IUnidad
     int Salud { get; set; }
     Point Posicion { get; set; }
     bool Mover(Point destino, Mapa mapa);
-    string AtacarUnidad(IUnidad objetivo); 
-    string AtacarEdificio(IEdificio objetivo); 
+ 
     int TiempoDeCreacion { get; }
     double CalcularDaño(IUnidad objetivo);
 }

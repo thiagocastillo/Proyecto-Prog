@@ -7,7 +7,7 @@ class Program
     static void Main(string[] args)
     {
         var motor = new Motor();
-        Console.WriteLine("Bienvenido. Escriba 'ayuda' para ver los comandos disponibles.");
+        Console.WriteLine("Bienvenido. Escriba 'Ayuda' para ver los comandos disponibles.");
 
         while (true)
         {
@@ -24,7 +24,7 @@ class Program
             var resultado = motor.ProcesarComando(comando, argumentos);
             Console.WriteLine(resultado);
 
-            if (comando == "salir" || comando == "exit")
+            if (comando == "salir" || comando == "exit" || resultado.Contains("ganó la partida"))
                 break;
         }
     }

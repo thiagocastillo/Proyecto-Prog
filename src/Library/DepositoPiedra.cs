@@ -17,7 +17,7 @@ public class DepositoPiedra : IAlmacenamiento
     public DepositoPiedra(Jugador propietario)
     {
         Propietario = propietario;
-        Vida = 5000;
+        Vida = 5000; // Vida inicial
     }
     
     public double Eficiencia(int distancia)

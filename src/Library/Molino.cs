@@ -21,10 +21,12 @@ public class Molino : IAlmacenamiento
         tiempoconstruccion = new TiempoConstruccion(3);
     }
     
+    // Calcula la eficiencia del molino segun la distancia del recurso 
+    // Cuanto mas lejos, menor la eficiencia
     public double Eficiencia(int distancia)
     {
-        if (distancia <= 1) return 1.0;
-        if (distancia >= 10) return 0.1;
-        return 1.0 - (distancia * 0.1);
+        if (distancia <= 1) return 1.0; // 100% de eficiencia si esta al lado
+        if (distancia >= 10) return 0.1; // 10% de eficiencia si esta muy lejos
+        return 1.0 - (distancia * 0.1); // En el resto de los casos, decrece linealmente
     }
 }

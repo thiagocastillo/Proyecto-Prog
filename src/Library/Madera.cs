@@ -1,9 +1,11 @@
-namespace Library;
+﻿namespace Library;
 
-public class Arbol : RecursoNatural, ITipoRecurso
+public class Madera : RecursoNatural
 {
-    public Arbol(int vidaBase, Point ubicacion)
-        : base("Madera", vidaBase, 0.75, ubicacion)
+
+    public Madera(int vidaBase, Point ubicacion)
+        : base("Madera", vidaBase, 0.40, ubicacion)
     {
+        
     }
 }
