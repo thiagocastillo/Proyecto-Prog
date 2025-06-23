@@ -47,12 +47,12 @@ public class PartidaTests
         Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Guerrero Berserker");
         
         Jugador jugador1 = new Jugador("Nicolas", civilizacion1);
-        jugador1.Edificios.Add(new CentroCivico(propietario:jugador1));
 
         Jugador jugador2 = new Jugador("Tiago", civilizacion2); // no tiene centro cívico
 
         partida.AgregarJugador(jugador1);
         partida.AgregarJugador(jugador2);
+        jugador2.Edificios.Clear(); 
         Jugador ganador = partida.VerificarGanador();
 
         Assert.AreEqual(jugador1, ganador);
