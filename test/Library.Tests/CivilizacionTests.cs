@@ -9,7 +9,7 @@ public class CivilizacionTests
     public void Setup()
     {
         bonificaciones = new List<string> { "Recolectar mas rapido", "Infanteria mas fuerte" };
-        civilizacion = new Civilizacion("Vikingos", bonificaciones, "Guerrero Berserker");
+        civilizacion = new Civilizacion("Armenios", bonificaciones, "Guerrero Berserker");
     }
 
     [Test]
@@ -17,14 +17,14 @@ public class CivilizacionTests
     {
         Assert.AreEqual("Armenios", civilizacion.Nombre);
         Assert.AreEqual("Guerrero Berserker", civilizacion.UnidadEspecial);
-        CollectionAssert.Contains(civilizacion.Bonificaciones, "Recloectar mas rapido");
+        CollectionAssert.Contains(civilizacion.Bonificaciones, "Recolectar mas rapido");
         CollectionAssert.Contains(civilizacion.Bonificaciones, "Infanteria mas fuerte");
     }
 
     [Test]
     public void ModificarUnidadEspecial()
     {
-        civilizacion.Nombre = "Aztecas";
+        civilizacion.Nombre = "Armenios";
         Assert.AreEqual("Armenios", civilizacion.Nombre);
     }
 
