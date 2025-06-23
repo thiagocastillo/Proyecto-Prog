@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_cuartel" kind="class" language="C#" prot="public">
+    <compoundname>Library::Cuartel</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_edificio" prot="public" virt="non-virtual">Library.IEdificio</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_cuartel_1a76f80922def80ab1490bca07795b08d8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Cuartel.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Cuartel.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="9" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_cuartel_1aa9e32e7aec0df79d9baf594e419f65fc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Cuartel.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Cuartel.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="11" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_cuartel_1aa954ba8fe31b791d72349f185ff6a215" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Cuartel.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.Cuartel.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="13" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_cuartel_1ac7b92469cdc414b622fffc0252f9124e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Cuartel.TiempoConstruccionTotal</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionTotal</name>
+        <qualifiedname>Library.Cuartel.TiempoConstruccionTotal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="19" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_cuartel_1a074dd4623465e7938950fcaf33596fdb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Cuartel.TiempoConstruccionRestante</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionRestante</name>
+        <qualifiedname>Library.Cuartel.TiempoConstruccionRestante</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="21" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_cuartel_1a8a3207ed3ff67c5425c9cb0f763b2871" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Library.Cuartel.EstaConstruido</definition>
+        <argsstring></argsstring>
+        <name>EstaConstruido</name>
+        <qualifiedname>Library.Cuartel.EstaConstruido</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="23" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_cuartel_1aa96bcdb8fd43668787d3d6709daff86f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref></type>
+        <definition>TiempoConstruccion Library.Cuartel.tiempoconstruccion</definition>
+        <argsstring></argsstring>
+        <name>tiempoconstruccion</name>
+        <qualifiedname>Library.Cuartel.tiempoconstruccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="16" column="32" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_cuartel_1ace7d738837999302c900f5bacbdd1342" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Cuartel.Cuartel</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Cuartel</name>
+        <qualifiedname>Library.Cuartel.Cuartel</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="26" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="26" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Cuartel</label>
+        <link refid="class_library_1_1_cuartel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Cuartel</label>
+        <link refid="class_library_1_1_cuartel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs" bodystart="7" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_cuartel_1ace7d738837999302c900f5bacbdd1342" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>Cuartel</name></member>
+      <member refid="class_library_1_1_cuartel_1a8a3207ed3ff67c5425c9cb0f763b2871" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>EstaConstruido</name></member>
+      <member refid="class_library_1_1_cuartel_1aa9e32e7aec0df79d9baf594e419f65fc" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_cuartel_1a76f80922def80ab1490bca07795b08d8" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_cuartel_1aa96bcdb8fd43668787d3d6709daff86f" prot="private" virt="non-virtual"><scope>Library::Cuartel</scope><name>tiempoconstruccion</name></member>
+      <member refid="class_library_1_1_cuartel_1a074dd4623465e7938950fcaf33596fdb" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>TiempoConstruccionRestante</name></member>
+      <member refid="class_library_1_1_cuartel_1ac7b92469cdc414b622fffc0252f9124e" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>TiempoConstruccionTotal</name></member>
+      <member refid="class_library_1_1_cuartel_1aa954ba8fe31b791d72349f185ff6a215" prot="public" virt="non-virtual"><scope>Library::Cuartel</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

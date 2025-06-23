@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_casa" kind="class" language="C#" prot="public">
+    <compoundname>Library::Casa</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_edificio" prot="public" virt="non-virtual">Library.IEdificio</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_casa_1ad8a5c4eb6ee976c1d8548796c943d531" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Casa.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Casa.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="9" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1a566eec86581a17f048653cf55fe82daf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Casa.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Casa.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="11" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1a817c44075760305ede3f0b3623daf6f2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Casa.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.Casa.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="15" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1aa515f8551182e3f614e31ca185b6d3cf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Casa.CantidadAldeanos</definition>
+        <argsstring></argsstring>
+        <name>CantidadAldeanos</name>
+        <qualifiedname>Library.Casa.CantidadAldeanos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="23" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1a1efcbdbcb4b07080b78a143c265a5ee0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Casa.CantidadUnidadesMilitar</definition>
+        <argsstring></argsstring>
+        <name>CantidadUnidadesMilitar</name>
+        <qualifiedname>Library.Casa.CantidadUnidadesMilitar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="25" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1ab19584044107d5671c50494de294aefa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Casa.TiempoConstruccionTotal</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionTotal</name>
+        <qualifiedname>Library.Casa.TiempoConstruccionTotal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="31" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1a8632906dcd33dbf1c48c41b05f6da353" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Casa.TiempoConstruccionRestante</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionRestante</name>
+        <qualifiedname>Library.Casa.TiempoConstruccionRestante</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="33" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_casa_1a1ac1d85a8de854da5627f3cbcf14ed12" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Library.Casa.EstaConstruido</definition>
+        <argsstring></argsstring>
+        <name>EstaConstruido</name>
+        <qualifiedname>Library.Casa.EstaConstruido</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="35" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_library_1_1_casa_1aae437d27a94ba4e29498f4f48f0cc380" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Library.Casa.AumentoPoblacion</definition>
+        <argsstring></argsstring>
+        <name>AumentoPoblacion</name>
+        <qualifiedname>Library.Casa.AumentoPoblacion</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="13" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_casa_1a9c5b4c17c3b1d061fd4a3e4f7d3c485c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Library.Casa.max_aldeanos</definition>
+        <argsstring></argsstring>
+        <name>max_aldeanos</name>
+        <qualifiedname>Library.Casa.max_aldeanos</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="18" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_casa_1a4e86c63a82d91b936dcbe2bf662a374c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Library.Casa.max_unidadMilitar</definition>
+        <argsstring></argsstring>
+        <name>max_unidadMilitar</name>
+        <qualifiedname>Library.Casa.max_unidadMilitar</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="20" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_casa_1a4a81bdd75b2d05fd9afcf7f1bfd04986" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref></type>
+        <definition>TiempoConstruccion Library.Casa.tiempoconstruccion</definition>
+        <argsstring></argsstring>
+        <name>tiempoconstruccion</name>
+        <qualifiedname>Library.Casa.tiempoconstruccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="28" column="32" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_casa_1a6c17c01a2747736daa34d1b892c20c03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Casa.Casa</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Casa</name>
+        <qualifiedname>Library.Casa.Casa</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="38" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_casa_1a6dea806a42261f3029d66ac27d77827c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Casa.CantidadAldeano</definition>
+        <argsstring>()</argsstring>
+        <name>CantidadAldeano</name>
+        <qualifiedname>Library.Casa.CantidadAldeano</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="47" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_casa_1a1761b6d8a10bb7461ff48ea718ce6eed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Casa.CantidadUnidadMilitar</definition>
+        <argsstring>()</argsstring>
+        <name>CantidadUnidadMilitar</name>
+        <qualifiedname>Library.Casa.CantidadUnidadMilitar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="53" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="53" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Casa</label>
+        <link refid="class_library_1_1_casa"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Casa</label>
+        <link refid="class_library_1_1_casa"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Casa.cs" bodystart="7" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_casa_1aae437d27a94ba4e29498f4f48f0cc380" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>AumentoPoblacion</name></member>
+      <member refid="class_library_1_1_casa_1a6dea806a42261f3029d66ac27d77827c" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>CantidadAldeano</name></member>
+      <member refid="class_library_1_1_casa_1aa515f8551182e3f614e31ca185b6d3cf" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>CantidadAldeanos</name></member>
+      <member refid="class_library_1_1_casa_1a1efcbdbcb4b07080b78a143c265a5ee0" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>CantidadUnidadesMilitar</name></member>
+      <member refid="class_library_1_1_casa_1a1761b6d8a10bb7461ff48ea718ce6eed" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>CantidadUnidadMilitar</name></member>
+      <member refid="class_library_1_1_casa_1a6c17c01a2747736daa34d1b892c20c03" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>Casa</name></member>
+      <member refid="class_library_1_1_casa_1a1ac1d85a8de854da5627f3cbcf14ed12" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>EstaConstruido</name></member>
+      <member refid="class_library_1_1_casa_1a9c5b4c17c3b1d061fd4a3e4f7d3c485c" prot="private" virt="non-virtual"><scope>Library::Casa</scope><name>max_aldeanos</name></member>
+      <member refid="class_library_1_1_casa_1a4e86c63a82d91b936dcbe2bf662a374c" prot="private" virt="non-virtual"><scope>Library::Casa</scope><name>max_unidadMilitar</name></member>
+      <member refid="class_library_1_1_casa_1a566eec86581a17f048653cf55fe82daf" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_casa_1ad8a5c4eb6ee976c1d8548796c943d531" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_casa_1a4a81bdd75b2d05fd9afcf7f1bfd04986" prot="private" virt="non-virtual"><scope>Library::Casa</scope><name>tiempoconstruccion</name></member>
+      <member refid="class_library_1_1_casa_1a8632906dcd33dbf1c48c41b05f6da353" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>TiempoConstruccionRestante</name></member>
+      <member refid="class_library_1_1_casa_1ab19584044107d5671c50494de294aefa" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>TiempoConstruccionTotal</name></member>
+      <member refid="class_library_1_1_casa_1a817c44075760305ede3f0b3623daf6f2" prot="public" virt="non-virtual"><scope>Library::Casa</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

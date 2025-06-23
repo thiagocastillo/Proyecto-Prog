@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_library_1_1_i_tipo_recurso" kind="interface" language="C#" prot="public">
+    <compoundname>Library::ITipoRecurso</compoundname>
+    <derivedcompoundref refid="class_library_1_1_arbol" prot="public" virt="non-virtual">Library.Arbol</derivedcompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="interface_library_1_1_i_tipo_recurso_1af16ae10f951c8258820b4f67fb74c8c5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Library.ITipoRecurso.Nombre</definition>
+        <argsstring></argsstring>
+        <name>Nombre</name>
+        <qualifiedname>Library.ITipoRecurso.Nombre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/ITipoRecurso.cs" line="5" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/ITipoRecurso.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.ITipoRecurso</label>
+        <link refid="interface_library_1_1_i_tipo_recurso"/>
+      </node>
+      <node id="2">
+        <label>Library.Arbol</label>
+        <link refid="class_library_1_1_arbol"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/ITipoRecurso.cs" line="3" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/ITipoRecurso.cs" bodystart="4" bodyend="6"/>
+    <listofallmembers>
+      <member refid="interface_library_1_1_i_tipo_recurso_1af16ae10f951c8258820b4f67fb74c8c5" prot="public" virt="non-virtual"><scope>Library::ITipoRecurso</scope><name>Nombre</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

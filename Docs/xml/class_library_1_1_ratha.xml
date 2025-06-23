@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_ratha" kind="class" language="C#" prot="public">
+    <compoundname>Library::Ratha</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_unidad_militar" prot="public" virt="non-virtual">Library.IUnidadMilitar</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_ratha_1a602b61a9b3a8fb117bb2b40ecf8c07ad" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Ratha.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Ratha.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="7" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_ratha_1a83505a158f1cf7e6d9af1a7eaf2598ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Ratha.Ataque</definition>
+        <argsstring></argsstring>
+        <name>Ataque</name>
+        <qualifiedname>Library.Ratha.Ataque</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4">Ataque</reimplements>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="9" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_ratha_1ae4e216e1fe1380ebe3ae86ad9f596411" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Ratha.Defensa</definition>
+        <argsstring></argsstring>
+        <name>Defensa</name>
+        <qualifiedname>Library.Ratha.Defensa</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0">Defensa</reimplements>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="11" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_ratha_1adb3754ff69b23b1af84bff3e66f4f1cd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>double</type>
+        <definition>double Library.Ratha.Velocidad</definition>
+        <argsstring></argsstring>
+        <name>Velocidad</name>
+        <qualifiedname>Library.Ratha.Velocidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c">Velocidad</reimplements>
+        <initializer>= 1.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="13" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_ratha_1ab9743113694d02527b91c627f0b9f309" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Ratha.Salud</definition>
+        <argsstring></argsstring>
+        <name>Salud</name>
+        <qualifiedname>Library.Ratha.Salud</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df">Salud</reimplements>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="16" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_ratha_1ab84c8384cf61ac7e2a5cf2a04e840032" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Ratha.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Ratha.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="18" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_ratha_1acbf7b61a0ad3a5418126b6c184f40c1c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Ratha.TiempoDeCreacion</definition>
+        <argsstring></argsstring>
+        <name>TiempoDeCreacion</name>
+        <qualifiedname>Library.Ratha.TiempoDeCreacion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1acc872bea12425b9e375165327879fdbe">TiempoDeCreacion</reimplements>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="20" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_ratha_1a665094f82866743e20e097dcf6a64d7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Ratha.Ratha</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Ratha</name>
+        <qualifiedname>Library.Ratha.Ratha</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="23" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_ratha_1a23e39eea9d04f5599e79c6257e94d07c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Ratha.CalcularDaño</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>CalcularDaño</name>
+        <qualifiedname>Library.Ratha.CalcularDaño</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151">CalcularDaño</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="29" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="29" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_ratha_1ad474ac984a92a672c08be9984951e1c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Ratha.Mover</definition>
+        <argsstring>(Point destino, Mapa mapa)</argsstring>
+        <name>Mover</name>
+        <qualifiedname>Library.Ratha.Mover</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a">Mover</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="45" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="45" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_ratha_1a71a9fd889b347a9a4b3535920ae93a0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Ratha.AtacarUnidad</definition>
+        <argsstring>(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>AtacarUnidad</name>
+        <qualifiedname>Library.Ratha.AtacarUnidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1a7e5aae6437562afc57f21c664fea2216">AtacarUnidad</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>atacante</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tipoUnidad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cantidad</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="58" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="58" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_ratha_1a2f835346e9252e9ad61749be9bcc8cea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Ratha.AtacarEdificio</definition>
+        <argsstring>(IEdificio objetivo)</argsstring>
+        <name>AtacarEdificio</name>
+        <qualifiedname>Library.Ratha.AtacarEdificio</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1af4b40a85d7a01c9e152a72bccfd16aa0">AtacarEdificio</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="89" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="89" bodyend="102"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Ratha</label>
+        <link refid="class_library_1_1_ratha"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="2">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Ratha</label>
+        <link refid="class_library_1_1_ratha"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="2">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" line="4" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ratha.cs" bodystart="5" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_ratha_1a2f835346e9252e9ad61749be9bcc8cea" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>AtacarEdificio</name></member>
+      <member refid="class_library_1_1_ratha_1a71a9fd889b347a9a4b3535920ae93a0e" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>AtacarUnidad</name></member>
+      <member refid="class_library_1_1_ratha_1a83505a158f1cf7e6d9af1a7eaf2598ae" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Ataque</name></member>
+      <member refid="class_library_1_1_ratha_1a23e39eea9d04f5599e79c6257e94d07c" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>CalcularDaño</name></member>
+      <member refid="class_library_1_1_ratha_1ae4e216e1fe1380ebe3ae86ad9f596411" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Defensa</name></member>
+      <member refid="class_library_1_1_ratha_1ad474ac984a92a672c08be9984951e1c8" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Mover</name></member>
+      <member refid="class_library_1_1_ratha_1ab84c8384cf61ac7e2a5cf2a04e840032" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_ratha_1a602b61a9b3a8fb117bb2b40ecf8c07ad" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_ratha_1a665094f82866743e20e097dcf6a64d7c" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Ratha</name></member>
+      <member refid="class_library_1_1_ratha_1ab9743113694d02527b91c627f0b9f309" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Salud</name></member>
+      <member refid="class_library_1_1_ratha_1acbf7b61a0ad3a5418126b6c184f40c1c" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>TiempoDeCreacion</name></member>
+      <member refid="class_library_1_1_ratha_1adb3754ff69b23b1af84bff3e66f4f1cd" prot="public" virt="non-virtual"><scope>Library::Ratha</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

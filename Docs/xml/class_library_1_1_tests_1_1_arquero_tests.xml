@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_arquero_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::ArqueroTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_arquero_tests_1af556bf7bec12fa4b281fd79a900ae323" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.ArqueroTests.jugadorArmenio</definition>
+        <argsstring></argsstring>
+        <name>jugadorArmenio</name>
+        <qualifiedname>Library.Tests.ArqueroTests.jugadorArmenio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="8" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_arquero_tests_1ad69a5b32142fdf9206592130112cebc0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.ArqueroTests.jugadorEnemigo</definition>
+        <argsstring></argsstring>
+        <name>jugadorEnemigo</name>
+        <qualifiedname>Library.Tests.ArqueroTests.jugadorEnemigo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="9" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_arquero_tests_1afeb888b197c0efbe4262acdce012f3c4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_arquero" kindref="compound">Arquero</ref></type>
+        <definition>Arquero Library.Tests.ArqueroTests.arquero</definition>
+        <argsstring></argsstring>
+        <name>arquero</name>
+        <qualifiedname>Library.Tests.ArqueroTests.arquero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="10" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_arquero_tests_1a95a49598b9c5c8489abaca43a8f08026" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+        <definition>Mapa Library.Tests.ArqueroTests.mapa</definition>
+        <argsstring></argsstring>
+        <name>mapa</name>
+        <qualifiedname>Library.Tests.ArqueroTests.mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="11" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_arquero_tests_1a6589a5601c8f89e5d4834210ae196e4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.ArqueroTests.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <qualifiedname>Library.Tests.ArqueroTests.Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="14" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="14" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_arquero_tests_1a20307996dfe1b6d27b4a94732a6ae88c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.ArqueroTests.Arquero_Mover_PosicionValida_MueveCorrectamente</definition>
+        <argsstring>()</argsstring>
+        <name>Arquero_Mover_PosicionValida_MueveCorrectamente</name>
+        <qualifiedname>Library.Tests.ArqueroTests.Arquero_Mover_PosicionValida_MueveCorrectamente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="27" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_arquero_tests_1aee4664019ac192c595680e7ed1133318" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.ArqueroTests.Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus</definition>
+        <argsstring>()</argsstring>
+        <name>Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus</name>
+        <qualifiedname>Library.Tests.ArqueroTests.Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="39" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="39" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_arquero_tests_1ae39a1898ad72d356963c3ced2e2df936" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.ArqueroTests.Arquero_AtacarU_ContraUnidadConDefensaAlta_NoDañoNegativo</definition>
+        <argsstring>()</argsstring>
+        <name>Arquero_AtacarU_ContraUnidadConDefensaAlta_NoDañoNegativo</name>
+        <qualifiedname>Library.Tests.ArqueroTests.Arquero_AtacarU_ContraUnidadConDefensaAlta_NoDañoNegativo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="57" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="57" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_arquero_tests_1add0c246414e04bd2c6607adce79f05d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.ArqueroTests.Arquero_AtacarE_EdificioRecibeDaño</definition>
+        <argsstring>()</argsstring>
+        <name>Arquero_AtacarE_EdificioRecibeDaño</name>
+        <qualifiedname>Library.Tests.ArqueroTests.Arquero_AtacarE_EdificioRecibeDaño</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="79" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="79" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" line="6" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/ArqueroTests.cs" bodystart="7" bodyend="88"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1afeb888b197c0efbe4262acdce012f3c4" prot="private" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>arquero</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1add0c246414e04bd2c6607adce79f05d4" prot="public" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>Arquero_AtacarE_EdificioRecibeDaño</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1aee4664019ac192c595680e7ed1133318" prot="public" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1ae39a1898ad72d356963c3ced2e2df936" prot="public" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>Arquero_AtacarU_ContraUnidadConDefensaAlta_NoDañoNegativo</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1a20307996dfe1b6d27b4a94732a6ae88c" prot="public" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>Arquero_Mover_PosicionValida_MueveCorrectamente</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1af556bf7bec12fa4b281fd79a900ae323" prot="private" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>jugadorArmenio</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1ad69a5b32142fdf9206592130112cebc0" prot="private" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>jugadorEnemigo</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1a95a49598b9c5c8489abaca43a8f08026" prot="private" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>mapa</name></member>
+      <member refid="class_library_1_1_tests_1_1_arquero_tests_1a6589a5601c8f89e5d4834210ae196e4a" prot="public" virt="non-virtual"><scope>Library::Tests::ArqueroTests</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

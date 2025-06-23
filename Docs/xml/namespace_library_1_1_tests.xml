@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_library_1_1_tests" kind="namespace" language="C#">
+    <compoundname>Library::Tests</compoundname>
+    <innerclass refid="class_library_1_1_tests_1_1_aldeano_tests" prot="public">Library::Tests::AldeanoTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_arquero_tests" prot="public">Library::Tests::ArqueroTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_caballeria_tests" prot="public">Library::Tests::CaballeriaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_casa_tests" prot="public">Library::Tests::CasaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_centro_civico_tests" prot="public">Library::Tests::CentroCivicoTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_civilizacion_tests" prot="public">Library::Tests::CivilizacionTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_cuartel_tests" prot="public">Library::Tests::CuartelTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_deposito_madera_tests" prot="public">Library::Tests::DepositoMaderaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_deposito_oro_tests" prot="public">Library::Tests::DepositoOroTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_deposito_piedra_test" prot="public">Library::Tests::DepositoPiedraTest</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_granja_tests" prot="public">Library::Tests::GranjaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests" prot="public">Library::Tests::GuerreroJaguarTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_infanteria_tests" prot="public">Library::Tests::InfanteriaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_juego_fachada_tests" prot="public">Library::Tests::JuegoFachadaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_jugador_tests" prot="public">Library::Tests::JugadorTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_mapa_tests" prot="public">Library::Tests::MapaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_mock_edificio" prot="public">Library::Tests::MockEdificio</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_mock_unidad" prot="public">Library::Tests::MockUnidad</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_molino_tests" prot="public">Library::Tests::MolinoTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_motor_tests" prot="public">Library::Tests::MotorTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_oro_tests" prot="public">Library::Tests::OroTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_partida_tests" prot="public">Library::Tests::PartidaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_piedra_tests" prot="public">Library::Tests::PiedraTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_point_tests" prot="public">Library::Tests::PointTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_ratha_tests" prot="public">Library::Tests::RathaTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_recurso_natural_dummy" prot="public">Library::Tests::RecursoNaturalDummy</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_recurso_natural_tests" prot="public">Library::Tests::RecursoNaturalTests</innerclass>
+    <innerclass refid="class_library_1_1_tests_1_1_tiempo_construccion_tests" prot="public">Library::Tests::TiempoConstruccionTests</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

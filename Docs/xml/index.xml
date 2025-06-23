@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="class_library_1_1_aldeano" kind="class"><name>Library::Aldeano</name>
+    <member refid="class_library_1_1_aldeano_1ab3e32ee8e696a44d5bf4962923b67e73" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_aldeano_1acbc3c0e9f1b96ad57e96dea9edaaa8c9" kind="property"><name>Ataque</name></member>
+    <member refid="class_library_1_1_aldeano_1ac6e9791cf5504ce02fb80c3a37fc8d69" kind="property"><name>Defensa</name></member>
+    <member refid="class_library_1_1_aldeano_1ae229146ae1c4b28d59ae2988360746dc" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_aldeano_1a142e0ce5f10041d50dff29f2bd3cd087" kind="property"><name>Salud</name></member>
+    <member refid="class_library_1_1_aldeano_1ab8ad629efd37b4f5c578f552feb6ddaf" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_aldeano_1a42195acfd1ede0e04123d33d70c44da1" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="class_library_1_1_aldeano_1a30c9acac64c6119eec6015ecc656bb2a" kind="function"><name>Aldeano</name></member>
+    <member refid="class_library_1_1_aldeano_1aa59ef730c5640c07c911775a47fe17e0" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_aldeano_1a4081a387763cc1eb47b84c1b94519100" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_aldeano_1aa9018ff7e7391cae55ce74b0ac6d4582" kind="function"><name>AtacarEdificio</name></member>
+    <member refid="class_library_1_1_aldeano_1a99c892fe24172b39120d5b8940541f7c" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_aldeano_1ae9eace7bd0bccab7b24f65f125918841" kind="function"><name>RecolectarEn</name></member>
+    <member refid="class_library_1_1_aldeano_1aa1829c294e796445a2de85d193329f3e" kind="function"><name>EsCompatible</name></member>
+    <member refid="class_library_1_1_aldeano_1ae20f6a4f7f96de85d130f383a4dcc734" kind="function"><name>CalcularDistancia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_aldeano_tests" kind="class"><name>Library::Tests::AldeanoTests</name>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1ae471ebcf321aa3786a34472e7dc8133a" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a70b338d3d9eb4011f432741947a2742a" kind="variable"><name>aldeano</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1abc2a230f3237ea0b88df1a2c44598e76" kind="variable"><name>mapa</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a0de36f6c8827141ce1265939ca0878e1" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1af002a65b8623d9ff203fc728ffdc637f" kind="function"><name>Constructor_AsignaPropietario</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a2fe42c4e02a6749e51ca2ce243513294" kind="function"><name>PropiedadesPorDefecto</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1ad3df7baf113a9d9cfdfae0bc74bfb6a5" kind="function"><name>Mover_PosicionValida_ActualizaPosicion</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a7e45d08b12c3418e5a091b4e303fb36d" kind="function"><name>Mover_PosicionInvalida_NoMueve</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a8035964d482770da5d35c3ea4583fb1d" kind="function"><name>Mover_DestinoNulo_LanzaExcepcion</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a6cd6a3b1f6839f34ca4ab3f7ce163105" kind="function"><name>CalcularDaño_SiempreCero</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1acb8864db81366d06c29058a5a49e9094" kind="function"><name>AtacarUnidad_SiempreDevuelveMensajeNoAtaca</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1ab3d666982cb51ddf05a38cd97bda7f38" kind="function"><name>AtacarEdificio_SiempreDevuelveMensajeNoAtaca</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1abbce3f0902340c3f2c801141d8a3a403" kind="function"><name>RecolectarEn_RecursoNoExiste_LanzaExcepcion</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a1062b3da694e127f142b2fe02f81cff8" kind="function"><name>RecolectarEn_RecursoAgotado_LanzaExcepcion</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1abe06649f0143ca3dbdeb8d2eb10d5c6a" kind="function"><name>RecolectarEn_AlmacenCompatible_ActualizaRecursos</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a29939fbd4155a11fea23937039b4ede4" kind="function"><name>RecolectarEn_BonoAzteca</name></member>
+    <member refid="class_library_1_1_tests_1_1_aldeano_tests_1aa6e55221a8f311b7ffd71f78a0332934" kind="function"><name>RecolectarEn_AlmacenYaTieneRecurso_Suma</name></member>
+  </compound>
+  <compound refid="class_library_1_1_alimento" kind="class"><name>Library::Alimento</name>
+    <member refid="class_library_1_1_alimento_1a5fc216c63f52c122defd2def9c2267cb" kind="function"><name>Alimento</name></member>
+  </compound>
+  <compound refid="class_library_1_1_arbol" kind="class"><name>Library::Arbol</name>
+    <member refid="class_library_1_1_arbol_1a7961260d418bc1e6bf6af2785a023bde" kind="function"><name>Arbol</name></member>
+  </compound>
+  <compound refid="class_library_1_1_arquero" kind="class"><name>Library::Arquero</name>
+    <member refid="class_library_1_1_arquero_1a5254a589c629faf65e120c7c93b2cedf" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_arquero_1afa7b51d2465726444ae19aed3abd5daf" kind="property"><name>Ataque</name></member>
+    <member refid="class_library_1_1_arquero_1ab2d74f99420b0b3b8f44ff4822a2a77d" kind="property"><name>Defensa</name></member>
+    <member refid="class_library_1_1_arquero_1abb4ff4db2d25c2e729a9fbe5b082ea94" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_arquero_1a1cdeaf6ac7c8c9c75b1696cc8c890300" kind="property"><name>Salud</name></member>
+    <member refid="class_library_1_1_arquero_1acc2756bf3196b334f6c17ab457e87cea" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_arquero_1a2e3be0ecd7ed1e70f2f8c2a173ce4395" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="class_library_1_1_arquero_1a5614423199ee6b9845f962fdb5e0ab97" kind="function"><name>Arquero</name></member>
+    <member refid="class_library_1_1_arquero_1a35a322f8b72ecca4547d9343af8be7f5" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_arquero_1a2ce5d2b0a7cd1ae9910c01319cd1b91f" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_arquero_1ae4aa4e9497a3a5f579359c09d3f17403" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_arquero_1ad9bddbc33ffc883233b42d288de4fce1" kind="function"><name>AtacarEdificio</name></member>
+  </compound>
+  <compound refid="class_library_1_1_arquero_compuesto" kind="class"><name>Library::ArqueroCompuesto</name>
+    <member refid="class_library_1_1_arquero_compuesto_1a6a20cc7eb5a069bec6243eb40bc4723c" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_arquero_compuesto_1a98b49168c27dea50f057bb25d736c80e" kind="function"><name>ArqueroCompuesto</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_arquero_tests" kind="class"><name>Library::Tests::ArqueroTests</name>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1af556bf7bec12fa4b281fd79a900ae323" kind="variable"><name>jugadorArmenio</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1ad69a5b32142fdf9206592130112cebc0" kind="variable"><name>jugadorEnemigo</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1afeb888b197c0efbe4262acdce012f3c4" kind="variable"><name>arquero</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1a95a49598b9c5c8489abaca43a8f08026" kind="variable"><name>mapa</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1a6589a5601c8f89e5d4834210ae196e4a" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1a20307996dfe1b6d27b4a94732a6ae88c" kind="function"><name>Arquero_Mover_PosicionValida_MueveCorrectamente</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1aee4664019ac192c595680e7ed1133318" kind="function"><name>Arquero_AtacarU_ContraInfanteria_InfligeDañoConBonus</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1ae39a1898ad72d356963c3ced2e2df936" kind="function"><name>Arquero_AtacarU_ContraUnidadConDefensaAlta_NoDañoNegativo</name></member>
+    <member refid="class_library_1_1_tests_1_1_arquero_tests_1add0c246414e04bd2c6607adce79f05d4" kind="function"><name>Arquero_AtacarE_EdificioRecibeDaño</name></member>
+  </compound>
+  <compound refid="class_library_1_1_ayuda" kind="class"><name>Library::Ayuda</name>
+    <member refid="class_library_1_1_ayuda_1ad9358ea3da67328dd067e9c94a80f1b3" kind="function"><name>ObtenerComandos</name></member>
+    <member refid="class_library_1_1_ayuda_1a66a063cee877995c4535fbff660f023b" kind="function"><name>AyudaEdificios</name></member>
+    <member refid="class_library_1_1_ayuda_1a00349e44cb414b56b1665f8ba58d4e9d" kind="function"><name>AyudaUnidades</name></member>
+  </compound>
+  <compound refid="class_library_1_1_caballeria" kind="class"><name>Library::Caballeria</name>
+    <member refid="class_library_1_1_caballeria_1a86034d8c8f215e1cbffd86a85a8dd9da" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_caballeria_1a177bdd9b26851c3e01bdb051f6388132" kind="property"><name>Ataque</name></member>
+    <member refid="class_library_1_1_caballeria_1ad4d2a437d6b271d0981d07cac063e729" kind="property"><name>Defensa</name></member>
+    <member refid="class_library_1_1_caballeria_1a9a2d2f83fb6b9863b82bb57930da7e67" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_caballeria_1a4c8210860547bcb33624700180c43af5" kind="property"><name>Salud</name></member>
+    <member refid="class_library_1_1_caballeria_1acfe19b7c1191a1b002b648801a980200" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_caballeria_1a2ee05023d8881ff2863a42ba63c74201" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="class_library_1_1_caballeria_1ac653e401dc4303dcbaceb690458bcba8" kind="function"><name>Caballeria</name></member>
+    <member refid="class_library_1_1_caballeria_1a426ed8414b1ae4108509302d9d60dd43" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_caballeria_1ac552cbb49e975bb0699ebdca6fd2cb15" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_caballeria_1ac851255f535224bb10096cbe47a7d8da" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_caballeria_1a038a018500ae0981f17e21858e5c74ae" kind="function"><name>AtacarEdificio</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_caballeria_tests" kind="class"><name>Library::Tests::CaballeriaTests</name>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1a39413dfc803a9b4c9662d1e642c14156" kind="variable"><name>caballeria</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1a8df00e2b23e6e614aa5f2b6d18c3237c" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1a5ff7cf26033d35a4dca852ff1ba05020" kind="variable"><name>jugadorRival</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1ae4a64c9fb017a4e028b3dcb981db6d98" kind="variable"><name>mapa</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1acf230606f05bd7ade582cd98558a3647" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1acda4cb8e9c783a18f71a61ea52886d66" kind="function"><name>Mover_EnRango_DeberiaActualizarPosicion</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1a39a45d89dccec8357796def2f49ba523" kind="function"><name>Mover_FueraDeRango_DeberiaFallar</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1a4a62fb1bacb876eba5ec2f0eb57c2a7a" kind="function"><name>CalcularDaño_ContraUnidadArquero_DeberiaAplicarBonus</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1afc1d0894427afbf38affb4546516984e" kind="function"><name>AtacarU_ConEnemigo_DeberiaReducirSaludYRetornarInfo</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1a1f423f01ba777b212d1ed22bec147539" kind="function"><name>AtacarU_EnemigoMuere_DeberiaEliminarUnidad</name></member>
+    <member refid="class_library_1_1_tests_1_1_caballeria_tests_1adafc7e2856655c564d41beb0850f1d4d" kind="function"><name>AtacarE_EdificioRecibeDañoYPosibleDestruccion</name></member>
+  </compound>
+  <compound refid="class_library_1_1_casa" kind="class"><name>Library::Casa</name>
+    <member refid="class_library_1_1_casa_1ad8a5c4eb6ee976c1d8548796c943d531" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_casa_1a566eec86581a17f048653cf55fe82daf" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_casa_1a817c44075760305ede3f0b3623daf6f2" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_casa_1aa515f8551182e3f614e31ca185b6d3cf" kind="property"><name>CantidadAldeanos</name></member>
+    <member refid="class_library_1_1_casa_1a1efcbdbcb4b07080b78a143c265a5ee0" kind="property"><name>CantidadUnidadesMilitar</name></member>
+    <member refid="class_library_1_1_casa_1ab19584044107d5671c50494de294aefa" kind="property"><name>TiempoConstruccionTotal</name></member>
+    <member refid="class_library_1_1_casa_1a8632906dcd33dbf1c48c41b05f6da353" kind="property"><name>TiempoConstruccionRestante</name></member>
+    <member refid="class_library_1_1_casa_1a1ac1d85a8de854da5627f3cbcf14ed12" kind="property"><name>EstaConstruido</name></member>
+    <member refid="class_library_1_1_casa_1aae437d27a94ba4e29498f4f48f0cc380" kind="variable"><name>AumentoPoblacion</name></member>
+    <member refid="class_library_1_1_casa_1a9c5b4c17c3b1d061fd4a3e4f7d3c485c" kind="variable"><name>max_aldeanos</name></member>
+    <member refid="class_library_1_1_casa_1a4e86c63a82d91b936dcbe2bf662a374c" kind="variable"><name>max_unidadMilitar</name></member>
+    <member refid="class_library_1_1_casa_1a4a81bdd75b2d05fd9afcf7f1bfd04986" kind="variable"><name>tiempoconstruccion</name></member>
+    <member refid="class_library_1_1_casa_1a6c17c01a2747736daa34d1b892c20c03" kind="function"><name>Casa</name></member>
+    <member refid="class_library_1_1_casa_1a6dea806a42261f3029d66ac27d77827c" kind="function"><name>CantidadAldeano</name></member>
+    <member refid="class_library_1_1_casa_1a1761b6d8a10bb7461ff48ea718ce6eed" kind="function"><name>CantidadUnidadMilitar</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_casa_tests" kind="class"><name>Library::Tests::CasaTests</name>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1ac5902861c9b4600fb275bca471f013a4" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1a1e202d41e83d61ee740011e4a34545f2" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1a72714338f0f0296e4eae83db52ab2392" kind="function"><name>Constructor_AumentaPoblacionMaxima</name></member>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1adb650438e4e76ed8694aa580ed0cf254" kind="function"><name>CantidadAldeano_MenosQueMaximo_True</name></member>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1a5bc377c014d9a3f2076cce49e7286142" kind="function"><name>CantidadAldeano_MayorQueMaximo_False</name></member>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1a98bd1830a2e8f348528efb1e95a9ffd6" kind="function"><name>CantidadUnidadMilitar_MenosQueMaximo_True</name></member>
+    <member refid="class_library_1_1_tests_1_1_casa_tests_1a0cb5d7896cdb8f5b266b3a7677ae7b39" kind="function"><name>CantidadUnidadMilitar_MayorQueMaximo_False</name></member>
+  </compound>
+  <compound refid="class_library_1_1_centro_civico" kind="class"><name>Library::CentroCivico</name>
+    <member refid="class_library_1_1_centro_civico_1a8b01763faaf38e9c6b186735568bdd9e" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_centro_civico_1a323b3168433754197455ff25a2bbd188" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_centro_civico_1ad3d3a7a58801cb147534143ac5e64eea" kind="property"><name>MaxAldeanos</name></member>
+    <member refid="class_library_1_1_centro_civico_1a9b23c43d7e69e70549f4f335ddc1823f" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_centro_civico_1a64b67047b780e80599cb9aebc79c6bd6" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="class_library_1_1_centro_civico_1ab32c589358eec6c5bbd312ecdf770b12" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_centro_civico_1a128c3e24436528aeed8c0a6b21daaa98" kind="function"><name>CentroCivico</name></member>
+    <member refid="class_library_1_1_centro_civico_1a15e484018cff9779b3f7c8c198b71206" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_centro_civico_tests" kind="class"><name>Library::Tests::CentroCivicoTests</name>
+    <member refid="class_library_1_1_tests_1_1_centro_civico_tests_1a5a91ab83df5be4c80c49be41908f851d" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_centro_civico_tests_1a965d55c1a1f561d8cb0df33b0cb36eec" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_centro_civico_tests_1a6d766bf0768ebad49a8c036238b00443" kind="function"><name>Constructor_AsignacionCorrecta</name></member>
+    <member refid="class_library_1_1_tests_1_1_centro_civico_tests_1a929a1ec145943fa683ab85763de51e4f" kind="function"><name>Constructor_Bengalies_AgregaAldeanoInicial</name></member>
+  </compound>
+  <compound refid="class_library_1_1_civilizacion" kind="class"><name>Library::Civilizacion</name>
+    <member refid="class_library_1_1_civilizacion_1aa7b61162e90fdec944dae79cb8115b6a" kind="property"><name>Nombre</name></member>
+    <member refid="class_library_1_1_civilizacion_1a72d65d7c8b935b430014ad2d32f8b572" kind="property"><name>Bonificaciones</name></member>
+    <member refid="class_library_1_1_civilizacion_1a19d54629ab8745bc1d3fc12a93f8257f" kind="property"><name>UnidadEspecial</name></member>
+    <member refid="class_library_1_1_civilizacion_1ae1c633c39baa7e6158625ef0ff32f664" kind="function"><name>Civilizacion</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_civilizacion_tests" kind="class"><name>Library::Tests::CivilizacionTests</name>
+    <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1abdaa741434c9969e03910ea682af50c4" kind="variable"><name>civilizacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1a46f827d02ca135a4e48264e2f11570ff" kind="variable"><name>bonificaciones</name></member>
+    <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1ad241c29fc6f5761a0274e791594edebb" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1aaeee9a6839a6a194107ab72e3565bd0a" kind="function"><name>CrearCivilizacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1a83d1c0e3da852d2454764090161f6168" kind="function"><name>ModificarUnidadEspecial</name></member>
+    <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1a0096b06918bc3ba146a5ecd96cde3e3e" kind="function"><name>ModificarListaBonificaciones</name></member>
+  </compound>
+  <compound refid="class_library_1_1_cuartel" kind="class"><name>Library::Cuartel</name>
+    <member refid="class_library_1_1_cuartel_1a76f80922def80ab1490bca07795b08d8" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_cuartel_1aa9e32e7aec0df79d9baf594e419f65fc" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_cuartel_1aa954ba8fe31b791d72349f185ff6a215" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_cuartel_1ac7b92469cdc414b622fffc0252f9124e" kind="property"><name>TiempoConstruccionTotal</name></member>
+    <member refid="class_library_1_1_cuartel_1a074dd4623465e7938950fcaf33596fdb" kind="property"><name>TiempoConstruccionRestante</name></member>
+    <member refid="class_library_1_1_cuartel_1a8a3207ed3ff67c5425c9cb0f763b2871" kind="property"><name>EstaConstruido</name></member>
+    <member refid="class_library_1_1_cuartel_1aa96bcdb8fd43668787d3d6709daff86f" kind="variable"><name>tiempoconstruccion</name></member>
+    <member refid="class_library_1_1_cuartel_1ace7d738837999302c900f5bacbdd1342" kind="function"><name>Cuartel</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_cuartel_tests" kind="class"><name>Library::Tests::CuartelTests</name>
+    <member refid="class_library_1_1_tests_1_1_cuartel_tests_1a0db7bf4694910ba52f070db61c1ffade" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_cuartel_tests_1a96c0ab856fc26db5fdd0f65749f42630" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_cuartel_tests_1a707a89a6c5f0f9b88cab3f604cc947ac" kind="function"><name>Constructor_AsignacionCorrecta</name></member>
+    <member refid="class_library_1_1_tests_1_1_cuartel_tests_1a27c5a1bf8b0e9539a800fc57cfe45e17" kind="function"><name>TiempoConstruccion_Default_NoConstruido</name></member>
+    <member refid="class_library_1_1_tests_1_1_cuartel_tests_1a9089138a05c96a6d05cd8f7dfc6093f1" kind="function"><name>TiempoConstruccion_TotalYRestante</name></member>
+  </compound>
+  <compound refid="class_library_1_1_deposito_madera" kind="class"><name>Library::DepositoMadera</name>
+    <member refid="class_library_1_1_deposito_madera_1a5010fe2bb16606984a74bec4450332ee" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_deposito_madera_1a74cb405bd2e1f068cee7fbfd25cf9807" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_deposito_madera_1aa5219219615d5611b4300d3d12a6a297" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="class_library_1_1_deposito_madera_1a812478f9fd56501d8b051c6b88b4b907" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_deposito_madera_1a3997aa0a5a2a63b1c826f50f15759c3c" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_deposito_madera_1a4f5f2f24ccd1901ee5dd4c4181f172ef" kind="property"><name>TiempoConstruccionTotal</name></member>
+    <member refid="class_library_1_1_deposito_madera_1ae2b8922361b05327f7cb94e2d79c9033" kind="property"><name>TiempoConstruccionRestante</name></member>
+    <member refid="class_library_1_1_deposito_madera_1a50454118bca9e83bcde8931ff0371d7f" kind="property"><name>EstaConstruido</name></member>
+    <member refid="class_library_1_1_deposito_madera_1ad336a9ccdab51ee0fbe774eb954c6b5c" kind="variable"><name>tiempoconstruccion</name></member>
+    <member refid="class_library_1_1_deposito_madera_1ab41f11e314c2df4f01e9a981c481a7c3" kind="function"><name>DepositoMadera</name></member>
+    <member refid="class_library_1_1_deposito_madera_1a3de79a8a9ab35edbb6b361f64d2f68a1" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_deposito_madera_tests" kind="class"><name>Library::Tests::DepositoMaderaTests</name>
+    <member refid="class_library_1_1_tests_1_1_deposito_madera_tests_1aa7e65658f4d48b6f5faf54ee94d16160" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_madera_tests_1a8b01b9ce97437ded39dd608c8a91bf3f" kind="function"><name>setUp</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_madera_tests_1aad740aea59b2640e395f72cb4b110ddb" kind="function"><name>Constructores_ValoresIniciales</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_madera_tests_1a17bdc4e798cc37e39fd713934bc5b14b" kind="function"><name>Eficiciencia_CortaDistancia</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_madera_tests_1a7c3f91e700ed47a12d3f3e2798b586be" kind="function"><name>Eficiencia_LargaDistancia</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_madera_tests_1ad550714626217d98162c601eaab2e2da" kind="function"><name>Eficiencia_DistanciaIntermedia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_deposito_oro" kind="class"><name>Library::DepositoOro</name>
+    <member refid="class_library_1_1_deposito_oro_1a7282c3582977c96e70881230c9f20e48" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_deposito_oro_1ad532ccab596ba4ec1dab86f8e51183c9" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_deposito_oro_1aa7752fc5c7d1379b45d1625a47c4924c" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="class_library_1_1_deposito_oro_1acf9e90d2e4e1127a08b4111b686f926e" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_deposito_oro_1afdda88e4013066ad42c5fbbad3567e09" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_deposito_oro_1a67c3b8ff50a8cce31adb197e17e4b711" kind="property"><name>TiempoConstruccionTotal</name></member>
+    <member refid="class_library_1_1_deposito_oro_1a6470dce9c08bb07ff5cadca8a4005968" kind="property"><name>TiempoConstruccionRestante</name></member>
+    <member refid="class_library_1_1_deposito_oro_1a75d74da179a689fa22b9ef5917c6af1c" kind="property"><name>EstaConstruido</name></member>
+    <member refid="class_library_1_1_deposito_oro_1ae9ac71b893aa390bb013d976da8afc94" kind="variable"><name>tiempoconstruccion</name></member>
+    <member refid="class_library_1_1_deposito_oro_1a381668d7899f3bd9ec9ed5ff1a34fead" kind="function"><name>DepositoOro</name></member>
+    <member refid="class_library_1_1_deposito_oro_1a2890fa16cd8cd017794ab0d479e344c1" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_deposito_oro_tests" kind="class"><name>Library::Tests::DepositoOroTests</name>
+    <member refid="class_library_1_1_tests_1_1_deposito_oro_tests_1abfb5358b60d6c290e89baa27f4fb92a3" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_oro_tests_1ac829ad589c037a8075308ed0a2bced94" kind="function"><name>SetUp</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_oro_tests_1ada3fc0b3042072556ffc98c3ab886f34" kind="function"><name>Constructor_ValoresInicialesCorrectos</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_oro_tests_1a5a94d3892cd81566eeb93a666589f188" kind="function"><name>Eficiencia_CortaDistancia_100Porciento</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_oro_tests_1a6e6e8173dfbb73e0da2f65019bcda60a" kind="function"><name>Eficiencia_LargaDistancia_10Porciento</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_oro_tests_1a732c6320d1c866d286e63ab0be39917d" kind="function"><name>Eficiencia_DistanciaIntermedia_CalculoCorrecto</name></member>
+  </compound>
+  <compound refid="class_library_1_1_deposito_piedra" kind="class"><name>Library::DepositoPiedra</name>
+    <member refid="class_library_1_1_deposito_piedra_1a73006ed66e8d567c8bb17eaef7162088" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1ae4e795b618d1c4a4dd26dcfb11e49cd7" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a4362d09a1c540ee06f4c0365d1c605d2" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a935ef0ffa7f27b5127ff7c08696f3548" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1aa1d5387808b5aba0d2485430b9a74615" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1ab532304fc266ab6b0e0622f532e1ad13" kind="property"><name>TiempoConstruccionTotal</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a4b41e7ccd60fcebfaf0cb8dc35a51253" kind="property"><name>TiempoConstruccionRestante</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a12b530c5a405e94017823c1b923f73d1" kind="property"><name>EstaConstruido</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a249ea9cc1c236551e43808ebe8e65b6d" kind="variable"><name>tiempoconstruccion</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a5941dabcc2b008d09ef360046b079d08" kind="function"><name>DepositoPiedra</name></member>
+    <member refid="class_library_1_1_deposito_piedra_1a09f5eb21c31a95b4ec001ed97021f894" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_deposito_piedra_test" kind="class"><name>Library::Tests::DepositoPiedraTest</name>
+    <member refid="class_library_1_1_tests_1_1_deposito_piedra_test_1aa7a652b4f2e1e080f9f3253a74bad8fa" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_piedra_test_1ac7a23ffd3ff577f3c10760c9eaddc375" kind="function"><name>SetUp</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_piedra_test_1aeccbd69d73e9d82b461f8725aa4de71d" kind="function"><name>Constructor_ValoresInicialesCorrectos</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_piedra_test_1abb2916e6d323e31e1cf019f217450dee" kind="function"><name>Eficiencia_CortaDistancia_100Porciento</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_piedra_test_1a0576cb3297f52230d8cf72dacec4cc27" kind="function"><name>Eficiencia_LargaDistancia_10Porciento</name></member>
+    <member refid="class_library_1_1_tests_1_1_deposito_piedra_test_1a797b1f7edfc0fd5786be9fcd25287630" kind="function"><name>Eficiencia_DistanciaIntermedia_CalculoCorrecto</name></member>
+  </compound>
+  <compound refid="class_library_1_1_granja" kind="class"><name>Library::Granja</name>
+    <member refid="class_library_1_1_granja_1ad19f67f04deac47caf352c87b913ff5e" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_granja_1a81c01f70f64443c8c370784c873ee271" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_granja_1abf5b6b7493a63d4f7239b85f1e666319" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="class_library_1_1_granja_1a56532099f2a0aea15d5c898d0a3c0296" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_granja_1a627f94197a5f796007819c5ee7c98e54" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_granja_1a9da2267c36f5d14b9e2ec6f00dea855a" kind="function"><name>Granja</name></member>
+    <member refid="class_library_1_1_granja_1a9ba5ee5da7ceab28e9279989b14001b0" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_granja_tests" kind="class"><name>Library::Tests::GranjaTests</name>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1a744e0964ba63852c249a3113ccd6f036" kind="variable"><name>granja</name></member>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1a29b0b82133237fc9a0a40fd98afb7082" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1ac0e2c61d8c5a99aa855c28dd135ccbf7" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1a70afd14a166b0c87d6ad11bcb14bb603" kind="function"><name>Propiedades</name></member>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1ae839f1d60d53254a10743305d6eeb378" kind="function"><name>Ubicacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1a7930a529ebe42b306e62c718abe9d715" kind="function"><name>Eficiencia_Distancia_MenorOIgualAUno</name></member>
+    <member refid="class_library_1_1_tests_1_1_granja_tests_1af79b70d601f66b771cc72bb9d44bd6bd" kind="function"><name>Eficiencia_Distancia_MayorIgualADiez</name></member>
+  </compound>
+  <compound refid="class_library_1_1_guerrero_jaguar" kind="class"><name>Library::GuerreroJaguar</name>
+    <member refid="class_library_1_1_guerrero_jaguar_1a8a9e565ac2a6d5540c0f18d532eb7ab5" kind="function"><name>GuerreroJaguar</name></member>
+    <member refid="class_library_1_1_guerrero_jaguar_1a068a36cca34f59ffe623fdcb98a1d840" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_guerrero_jaguar_1a3b04c949816ecdf4f4a5e3736b7d96f6" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_guerrero_jaguar_1a9591883c274acff3fc73a4e85da54421" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_guerrero_jaguar_1afab6df46dadd15b6a00af00896cfeb13" kind="function"><name>AtacarEdificio</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests" kind="class"><name>Library::Tests::GuerreroJaguarTests</name>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a26ef8eef5aa2c25ae380fe8e3a5a0cd6" kind="variable"><name>jugadorAzteca</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a037a8a77e111558bf44bc9ee392869e6" kind="variable"><name>jugadorRival</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1aa3ca03e42787518ef9a6bf4e03c8de2a" kind="variable"><name>guerreroJaguar</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1ac8927684d0302d91f3d7f8be419b1415" kind="variable"><name>mapa</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a620a492e46be7057c714d236b1a6f857" kind="function"><name>SetUp</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a969cbebdaa190b23d180cd4af534894d" kind="function"><name>Mover_DestinoValido_MueveCorrectamente</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1aff0f45f64efad3ed0a9ac5e1b5586e1b" kind="function"><name>AtacarUnidad_ContraCaballeria_AplicaBonus</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1ae22a63d1416af1239888a10a7f0ebb9f" kind="function"><name>AtacarUnidad_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a82f71c550cf21b0797ae1803626f0104" kind="function"><name>AtacarEdificio_ContraEdificio_CausaDaño</name></member>
+    <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a77101cbaca5135cbfa69874a698f3d19" kind="function"><name>AtacarUnidad_UnidadEliminada_SeEliminaDeLista</name></member>
+  </compound>
+  <compound refid="interface_library_1_1_i_almacenamiento" kind="interface"><name>Library::IAlmacenamiento</name>
+    <member refid="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325" kind="property"><name>Recursos</name></member>
+    <member refid="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="interface_library_1_1_i_edificio" kind="interface"><name>Library::IEdificio</name>
+    <member refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6" kind="property"><name>Propietario</name></member>
+    <member refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca" kind="property"><name>Posicion</name></member>
+    <member refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b" kind="property"><name>Vida</name></member>
+  </compound>
+  <compound refid="class_library_1_1_infanteria" kind="class"><name>Library::Infanteria</name>
+    <member refid="class_library_1_1_infanteria_1ac8e783c818c72d6b4c197aae8f0b604d" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_infanteria_1ae1dbed6ff8e06ec318521d67331f2a17" kind="property"><name>Ataque</name></member>
+    <member refid="class_library_1_1_infanteria_1ae099a58e816a3877c5d5d76b5964de43" kind="property"><name>Defensa</name></member>
+    <member refid="class_library_1_1_infanteria_1a6c2472826edc81362cc38ce319cbf707" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_infanteria_1ab4fd366993080cb1b8bfc1dc62f59645" kind="property"><name>Salud</name></member>
+    <member refid="class_library_1_1_infanteria_1ac0a04cf2960f9e881cc00e04b5affcde" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_infanteria_1adfc0ba2e0b717411fbdbc054398d77e2" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="class_library_1_1_infanteria_1a823c475b77a395679b4846a0853c72a5" kind="function"><name>Infanteria</name></member>
+    <member refid="class_library_1_1_infanteria_1a3f634ea4650d8aa286dfc394296c85c6" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_infanteria_1a7b637d67be932f49adeff2d416abb04b" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_infanteria_1ac2341d0b939c97a4c59654a3506e70de" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_infanteria_1af075541975c4b0a22979345765838957" kind="function"><name>AtacarEdificio</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_infanteria_tests" kind="class"><name>Library::Tests::InfanteriaTests</name>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1ab6dec7adacde584ce04cefccb2127f34" kind="variable"><name>jugadorAzteca</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1aa0d5170425e337ccbe71a4e11b083315" kind="variable"><name>jugadorRival</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1aab46b6da2a042ad9892a31b46fa51056" kind="variable"><name>infanteria</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a0838d8c9961227f492e1a6dab6910cd2" kind="variable"><name>mapa</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a7d3c3795f858c71f41dd9112c77497fe" kind="function"><name>SetUp</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a5983507deaa9364dc630b79ee29fff35" kind="function"><name>Mover_DestinoValido_MueveCorrectamente</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a03decaedcf892914a10505d5d75b76ef" kind="function"><name>Mover_DestinoFueraDeMapa_LanzaExcepcion</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1ae7c579d2b31a081f055b9d9d5b82f4b4" kind="function"><name>AtacarU_ContraCaballeria_AplicaBonus</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a83730f0cfce49c6489c229955d988995" kind="function"><name>AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a1929915ac6fa81e1af470cce0ca6c115" kind="function"><name>AtacarE_ContraEdificio_CausaDaño</name></member>
+    <member refid="class_library_1_1_tests_1_1_infanteria_tests_1aecefd14f34876714dc6025642fd84f0e" kind="function"><name>AtacarU_UnidadEliminada_SeEliminaDeLista</name></member>
+  </compound>
+  <compound refid="interface_library_1_1_i_recolector" kind="interface"><name>Library::IRecolector</name>
+    <member refid="interface_library_1_1_i_recolector_1a9074e4b242b7323733869f07d03eea14" kind="function"><name>RecolectarEn</name></member>
+  </compound>
+  <compound refid="interface_library_1_1_i_tipo_recurso" kind="interface"><name>Library::ITipoRecurso</name>
+    <member refid="interface_library_1_1_i_tipo_recurso_1af16ae10f951c8258820b4f67fb74c8c5" kind="property"><name>Nombre</name></member>
+  </compound>
+  <compound refid="interface_library_1_1_i_unidad" kind="interface"><name>Library::IUnidad</name>
+    <member refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876" kind="property"><name>Propietario</name></member>
+    <member refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4" kind="property"><name>Ataque</name></member>
+    <member refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0" kind="property"><name>Defensa</name></member>
+    <member refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c" kind="property"><name>Velocidad</name></member>
+    <member refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df" kind="property"><name>Salud</name></member>
+    <member refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093" kind="property"><name>Posicion</name></member>
+    <member refid="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a" kind="function"><name>Mover</name></member>
+    <member refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151" kind="function"><name>CalcularDaño</name></member>
+  </compound>
+  <compound refid="interface_library_1_1_i_unidad_militar" kind="interface"><name>Library::IUnidadMilitar</name>
+    <member refid="interface_library_1_1_i_unidad_militar_1acc872bea12425b9e375165327879fdbe" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="interface_library_1_1_i_unidad_militar_1af4b40a85d7a01c9e152a72bccfd16aa0" kind="function"><name>AtacarEdificio</name></member>
+    <member refid="interface_library_1_1_i_unidad_militar_1a7e5aae6437562afc57f21c664fea2216" kind="function"><name>AtacarUnidad</name></member>
+  </compound>
+  <compound refid="class_library_1_1_juego_fachada" kind="class"><name>Library::JuegoFachada</name>
+    <member refid="class_library_1_1_juego_fachada_1a84770adea8081fb815fd0671ad058bd8" kind="variable"><name>_partidaActual</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a3b4d02a748988a2014a7acff598b1da9" kind="variable"><name>_civilizacionesDisponibles</name></member>
+    <member refid="class_library_1_1_juego_fachada_1acf03c0c5c84b3db53cc0dff452580c57" kind="function"><name>CrearNuevaPartida</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a09f4aa78ffaf109a099c39f231228f44" kind="function"><name>ObtenerCivilizacionesDisponibles</name></member>
+    <member refid="class_library_1_1_juego_fachada_1aa1776d6c234d6fe84ef88f2d0fb2d9ef" kind="function"><name>MostrarMapa</name></member>
+    <member refid="class_library_1_1_juego_fachada_1ad5ee3107d8de7a7e33a3203e1a176b0d" kind="function"><name>ListarRecursos</name></member>
+    <member refid="class_library_1_1_juego_fachada_1aa36baad9e11b92faf1dac6f4333d1b31" kind="function"><name>ObtenerJugadores</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a6c92a98019a5b4844c8e1426d7c9f3d2" kind="function"><name>AgregarJugadorAPartida</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a93c56aa7cb9094af2824772873974a83" kind="function"><name>ObtenerRecursosJugador</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a04621620e3082e1d8c014a892e38c6d1" kind="function"><name>OrdenarRecolectar</name></member>
+    <member refid="class_library_1_1_juego_fachada_1acd0a689317a3ce2691afd791384798f4" kind="function"><name>ConstruirEdificio</name></member>
+    <member refid="class_library_1_1_juego_fachada_1aee996c60ab10ac3dc27b7c696752e924" kind="function"><name>EntrenarUnidad</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a5cbf1a43736b17117574159721a46700" kind="function"><name>MoverUnidad</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a8039a7adf1c43b28afe0f6b1d51d4ab4" kind="function"><name>MoverUnidades</name></member>
+    <member refid="class_library_1_1_juego_fachada_1aa781d0534f7264914d9c9bdab2d59d05" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_juego_fachada_1a208eba655b81ea315fcad4305fc37a2e" kind="function"><name>AtacarEdificio</name></member>
+    <member refid="class_library_1_1_juego_fachada_1af5b94f00ce547f04c9c9f8ca96de1744" kind="function"><name>ObtenerUnidadesJugador</name></member>
+    <member refid="class_library_1_1_juego_fachada_1aca35bbbc50c426c9e06773b08e8699a7" kind="function"><name>ObtenerEdificiosJugador</name></member>
+    <member refid="class_library_1_1_juego_fachada_1acd185057c48bcafe3584040867ba5d55" kind="function"><name>BuscarPosicionLibreCercana</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_juego_fachada_tests" kind="class"><name>Library::Tests::JuegoFachadaTests</name>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1a8dc39c8866d4ff39bb22449ed84c4d57" kind="variable"><name>fachada</name></member>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1ad89e4bdd2ac7c067b407b68d3f7857f5" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1a1e932bf18d654f14764696ef2779ad78" kind="function"><name>CrearNuevaPartida_InicializaPartida</name></member>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1a887d6984b79775fd6bed186d713a8db6" kind="function"><name>AgregarJugadorAPartida_AgregaJugadorCorrectamente</name></member>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1a852db6011d15e5e663e6735a5f9a50cf" kind="function"><name>AgregarJugadorAPartida_NombreRepetido_LanzaExcepcion</name></member>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1a3a6e3fcaa6ebe30c7255533c8958f6ad" kind="function"><name>ConstruirEdificio_Correcto_DescuentaRecursos</name></member>
+    <member refid="class_library_1_1_tests_1_1_juego_fachada_tests_1a2f77e54d04afab94e31ab6611597c98e" kind="function"><name>EntrenarUnidad_Aldeano_DescuentaRecursos</name></member>
+  </compound>
+  <compound refid="class_library_1_1_jugador" kind="class"><name>Library::Jugador</name>
+    <member refid="class_library_1_1_jugador_1a28e5a9b86a098209ba85f4d1dbc46547" kind="variable"><name>LimiteAldeanos</name></member>
+    <member refid="class_library_1_1_jugador_1ae1a9ee627309fcb9d8eacfaeb56490cd" kind="variable"><name>LimiteMilitares</name></member>
+    <member refid="class_library_1_1_jugador_1af711de88b6ccb61873ff3acc4c5a2b0c" kind="variable"><name>random</name></member>
+    <member refid="class_library_1_1_jugador_1ab0a1ca95dc22ff38e824fa21bf530d5c" kind="variable"><name>x</name></member>
+    <member refid="class_library_1_1_jugador_1a35e2a6a32ee76037ae734612f40ad0e1" kind="variable"><name>y</name></member>
+    <member refid="class_library_1_1_jugador_1a3aee044e8a7934efaf75a34d389fe828" kind="property"><name>Nombre</name></member>
+    <member refid="class_library_1_1_jugador_1a4be88d86a0aafd3ba2fb04e46108d955" kind="property"><name>Civilizacion</name></member>
+    <member refid="class_library_1_1_jugador_1acbcf0e243cf8667210d8ecc8e4f0aa6d" kind="property"><name>CentroCivico</name></member>
+    <member refid="class_library_1_1_jugador_1a230df08b9303470bf21b65dbe38e32ab" kind="property"><name>Aldeanos</name></member>
+    <member refid="class_library_1_1_jugador_1a57047a44a1ad81a82f8226a110e50ab1" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_jugador_1ae677d6ae6d4d02b76fbc87f9d931ea5e" kind="property"><name>PoblacionActual</name></member>
+    <member refid="class_library_1_1_jugador_1ae792647e786b974fa0b35890616c5b80" kind="property"><name>PoblacionMaxima</name></member>
+    <member refid="class_library_1_1_jugador_1afb6fe1505a96e2c94402d53811864265" kind="property"><name>Edificios</name></member>
+    <member refid="class_library_1_1_jugador_1ac859de5b15cb725429b27dac832fd5af" kind="property"><name>Unidades</name></member>
+    <member refid="class_library_1_1_jugador_1a20f85f6a704b084c4b78cf9705ce5b49" kind="function"><name>Jugador</name></member>
+    <member refid="class_library_1_1_jugador_1a31f77eb262de57a68162646601cc21a6" kind="function"><name>ObtenerResumenRecursosTotales</name></member>
+    <member refid="class_library_1_1_jugador_1a8e550be05b00dc95d76b610d5f4b94e8" kind="function"><name>AgregarRecurso</name></member>
+    <member refid="class_library_1_1_jugador_1a2415d514a4771ddfe160f7b2cff027c8" kind="function"><name>DepositarRecursos</name></member>
+    <member refid="class_library_1_1_jugador_1a455b2a73cce1a040b195ae46a8562325" kind="function"><name>AumentarPoblacionMaxima</name></member>
+    <member refid="class_library_1_1_jugador_1ac7c60a0f769bcc632d07e695822aab29" kind="function"><name>AgregarEdificio</name></member>
+    <member refid="class_library_1_1_jugador_1ad9c6ef976c7f3d3276d1c336fdc5ed8c" kind="function"><name>AgregarUnidad</name></member>
+    <member refid="class_library_1_1_jugador_1a1e00da344f7d5adbf8fed619b861f070" kind="function"><name>ObtenerResumenPoblacion</name></member>
+    <member refid="class_library_1_1_jugador_1adde10481dda42322e3cfef5d4a1e087c" kind="function"><name>PuedeCrearAldeano</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_jugador_tests" kind="class"><name>Library::Tests::JugadorTests</name>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1a7c671013e68ef2da7d32ea17a012f110" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1aa8f87c0719ae2f87d63e33fe8196056e" kind="variable"><name>civilizacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1abd1827ba40141b3c908a23674b5d4d3b" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1a9d656bd579f2667428152d508827c29a" kind="function"><name>Jugador_InicializaConCentroCivicoY3Aldeanos</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1aaec1f0f21c89fa2c841cb9ecb5602cb7" kind="function"><name>AumentarPoblacionMaxima_ValidaIncremento</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1af8f720f5b9122eea9abf678a838b60c6" kind="function"><name>AumentarPoblacionMaxima_ConValorNegativo_NoDebeModificar</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1a95d91110e57b20a498bc1742cd7a2718" kind="function"><name>AgregarRecurso_CantidadInvalida_LanzaExcepcion</name></member>
+    <member refid="class_library_1_1_tests_1_1_jugador_tests_1a683063d18b042eff0d1abec3a5ef11c3" kind="function"><name>PuedeCrearAldeano_DevuelveTrueSiTieneCentroCivicoYMenosDeLimite</name></member>
+  </compound>
+  <compound refid="class_library_1_1_mapa" kind="class"><name>Library::Mapa</name>
+    <member refid="class_library_1_1_mapa_1a9b937b1318c4352df3c2c27bc8c60cbe" kind="property"><name>Ancho</name></member>
+    <member refid="class_library_1_1_mapa_1a9d7996d0b7e1ec8464a536cb906eb296" kind="property"><name>Alto</name></member>
+    <member refid="class_library_1_1_mapa_1a5def4a00be5cd72316bbbecc0a92da37" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_mapa_1a208515de822912428a225fe04241e8d8" kind="variable"><name>random</name></member>
+    <member refid="class_library_1_1_mapa_1ac68f95081768b8b3c9b7d3675d268362" kind="function"><name>Mapa</name></member>
+    <member refid="class_library_1_1_mapa_1a97a88850bd3ac9da38910fdd9f9e9dcb" kind="function"><name>ObtenerUnidadesEn</name></member>
+    <member refid="class_library_1_1_mapa_1a04295c1e65ae4c1bef520179e43b748e" kind="function"><name>ObtenerEdificiosEn</name></member>
+    <member refid="class_library_1_1_mapa_1a93044283864a4179ac18794523517c67" kind="function"><name>GenerarRecursosAleatorios</name></member>
+    <member refid="class_library_1_1_mapa_1a6df7a03781b2f63628644fc3d1ffdbb5" kind="function"><name>MostrarMapa</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_mapa_tests" kind="class"><name>Library::Tests::MapaTests</name>
+    <member refid="class_library_1_1_tests_1_1_mapa_tests_1ad29d54dde439be98d8fc6377322add7c" kind="function"><name>Constructor_GeneraRecursosAleatorios</name></member>
+    <member refid="class_library_1_1_tests_1_1_mapa_tests_1ac406bf1824a30a653949830943661836" kind="function"><name>GenerarRecursosAleatorios_CantidadEnRango</name></member>
+    <member refid="class_library_1_1_tests_1_1_mapa_tests_1ab6dab59a858b4e9bba0d104c141122a6" kind="function"><name>ObtenerUnidadesEn_DevuelveUnidadesCorrectas</name></member>
+    <member refid="class_library_1_1_tests_1_1_mapa_tests_1a0b95cf8e53f3be92a591d8e9b082a9af" kind="function"><name>ObtenerEdificiosEn_DevuelveEdificiosCorrectos</name></member>
+    <member refid="class_library_1_1_tests_1_1_mapa_tests_1a8ea1bdb9c65c261c71c0db8b8f065424" kind="function"><name>MostrarMapa_DevuelveMensajeCorrecto</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_mock_edificio" kind="class"><name>Library::Tests::MockEdificio</name>
+    <member refid="class_library_1_1_tests_1_1_mock_edificio_1a0cb7f71c367c74e5b35f7a2906f7124d" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_edificio_1a06944b789956005e54f246dabd0dcecb" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_edificio_1a3e3690f35289f9fdaf8c5592681d463d" kind="property"><name>Posicion</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_mock_unidad" kind="class"><name>Library::Tests::MockUnidad</name>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1aa649d07cd0b24fc4b5d59c33cf29b095" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1a4935fb7185118fdaa7e1a7dde50a2b8a" kind="property"><name>Ataque</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1a9775d793cb478ffed3b0631282a2c7a7" kind="property"><name>Defensa</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1aabc6b7df89c5e60853b9e14935a0301f" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1ab2968524d38fac9ec926b928e353b474" kind="property"><name>Salud</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1a284dcdc192b23a0d1a8e6c67713135c9" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1aa34260c22157c8bcdacda5d0f58334f0" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1a2f30ee80d2196f7cddd676663c05f3b5" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1ade5c2d889603827f2778da04eaf19588" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1a398d78fe4ddba5d39531b1d5fbd3e882" kind="function"><name>AtacarEdificio</name></member>
+    <member refid="class_library_1_1_tests_1_1_mock_unidad_1af41cc02713992041c16591f81c610156" kind="function"><name>AtacarUnidad</name></member>
+  </compound>
+  <compound refid="class_library_1_1_molino" kind="class"><name>Library::Molino</name>
+    <member refid="class_library_1_1_molino_1ad8c07aca91d6ec868aa56a7e2a8da175" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_molino_1aeac0677fbdfffb5c470338ed38ca8720" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_molino_1acd0a0606033fd221afd3939d1a54a757" kind="property"><name>CapacidadMaxima</name></member>
+    <member refid="class_library_1_1_molino_1a20dba5ea002bc17aea11fd6a01547d12" kind="property"><name>Vida</name></member>
+    <member refid="class_library_1_1_molino_1a28b7b0fc00a15b7c644b35b12754ae01" kind="property"><name>Recursos</name></member>
+    <member refid="class_library_1_1_molino_1abd40ebe1e9c4254ac5592ecbfd30deda" kind="property"><name>TiempoConstruccionTotal</name></member>
+    <member refid="class_library_1_1_molino_1a9bf1988c29bf4eeaa16f6b44a10ac618" kind="property"><name>TiempoConstruccionRestante</name></member>
+    <member refid="class_library_1_1_molino_1a097e0034e93f5a35c5f248b412e9b8d5" kind="property"><name>EstaConstruido</name></member>
+    <member refid="class_library_1_1_molino_1ac455a104af4c9793bfa75c9cd4dae2fb" kind="variable"><name>tiempoconstruccion</name></member>
+    <member refid="class_library_1_1_molino_1a1120d1f2728407c9e85051d0c65d890a" kind="function"><name>Molino</name></member>
+    <member refid="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245" kind="function"><name>Eficiencia</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_molino_tests" kind="class"><name>Library::Tests::MolinoTests</name>
+    <member refid="class_library_1_1_tests_1_1_molino_tests_1a0e1cc5a2ae238358a15a1a0ea2d4b167" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_molino_tests_1a24241e9dd019a38c22144d2a27847b8c" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_molino_tests_1a0a3f394fc36ab616de57704619891e0f" kind="function"><name>Constructor_ValoresInicialesCorrectos</name></member>
+    <member refid="class_library_1_1_tests_1_1_molino_tests_1a9bd0b0558fe5953f15617cc8d8db5e0b" kind="function"><name>Eficiencia_CortaDistancia_100Porciento</name></member>
+    <member refid="class_library_1_1_tests_1_1_molino_tests_1aaf85bc4c6055479f779c420aa5868208" kind="function"><name>Eficiencia_LargaDistancia_10Porciento</name></member>
+    <member refid="class_library_1_1_tests_1_1_molino_tests_1afcb4691a93b097708428c634958d07ab" kind="function"><name>Eficiencia_DistanciaIntermedia_CalculoCorrecto</name></member>
+  </compound>
+  <compound refid="class_library_1_1_motor" kind="class"><name>Library::Motor</name>
+    <member refid="class_library_1_1_motor_1a372881cf18d2ff50d01b308660065531" kind="variable"><name>_fachada</name></member>
+    <member refid="class_library_1_1_motor_1a7da83111c94d3a3d245bae931f3b5928" kind="variable"><name>partidaFinalizada</name></member>
+    <member refid="class_library_1_1_motor_1a2c33579a9633cd1ecd4998d6937004b9" kind="function"><name>ProcesarComando</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_motor_tests" kind="class"><name>Library::Tests::MotorTests</name>
+    <member refid="class_library_1_1_tests_1_1_motor_tests_1af00bf2a4ca88eb76de198f741802c83e" kind="function"><name>ProcesarComando_CrearPartida_DevuelveMensajeCorrecto</name></member>
+    <member refid="class_library_1_1_tests_1_1_motor_tests_1a26d57eb8924b600efeb42c4228ee532a" kind="function"><name>ProcesarComando_ComandoNoReconocido_DevuelveMensaje</name></member>
+    <member refid="class_library_1_1_tests_1_1_motor_tests_1a2317d6a2e09c5708b7021c4c98ddade0" kind="function"><name>ProcesarComando_Ayuda_DevuelveComandos</name></member>
+    <member refid="class_library_1_1_tests_1_1_motor_tests_1abad33bb78ded9137d740977f4385dfbd" kind="function"><name>ProcesarComando_AgregarJugador_FaltanArgumentos</name></member>
+    <member refid="class_library_1_1_tests_1_1_motor_tests_1a8e8b52160078ed9b352fc194f37df2dc" kind="function"><name>ProcesarComando_Salir_DevuelveMensaje</name></member>
+  </compound>
+  <compound refid="class_library_1_1_oro" kind="class"><name>Library::Oro</name>
+    <member refid="class_library_1_1_oro_1a535febcc3f8ea3a210697de0ccdf2cab" kind="function"><name>Oro</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_oro_tests" kind="class"><name>Library::Tests::OroTests</name>
+    <member refid="class_library_1_1_tests_1_1_oro_tests_1a538b197922d0cfcd2ad8d9bf10072e91" kind="variable"><name>oro</name></member>
+    <member refid="class_library_1_1_tests_1_1_oro_tests_1adea5f44a330d24208bf2363826b3504b" kind="variable"><name>ubicacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_oro_tests_1a5c5d586b0e1eb63e2118dc7c25cb413c" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_oro_tests_1a485ba231d6f5a980a4cef20672cd9dd3" kind="function"><name>CrearTasaRecoleccion</name></member>
+    <member refid="class_library_1_1_tests_1_1_oro_tests_1ab2dc3c7a90aebad103e125ab0ec7040b" kind="function"><name>SePuedeRecolectarOro</name></member>
+    <member refid="class_library_1_1_tests_1_1_oro_tests_1a01147e1d280c7dd581396a99dbd5a173" kind="function"><name>OroSeExtraeTodo</name></member>
+  </compound>
+  <compound refid="class_library_1_1_partida" kind="class"><name>Library::Partida</name>
+    <member refid="class_library_1_1_partida_1a96d6b2932ecae91e45b9b35e5cca13a5" kind="property"><name>Mapa</name></member>
+    <member refid="class_library_1_1_partida_1a91dc6ba3acdfed6397ad34915c6076ba" kind="property"><name>Jugadores</name></member>
+    <member refid="class_library_1_1_partida_1a4bca7cf5e8312d5d2c105283b1297de9" kind="function"><name>Partida</name></member>
+    <member refid="class_library_1_1_partida_1aa4d86856aa026149577cd33c4f73d56e" kind="function"><name>AgregarJugador</name></member>
+    <member refid="class_library_1_1_partida_1a4a3b13ba7a69f76744c93702c5feeb91" kind="function"><name>VerificarGanador</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_partida_tests" kind="class"><name>Library::Tests::PartidaTests</name>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1a390a8e26b10b43ffa923b0a205ff866a" kind="variable"><name>partida</name></member>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1a13de2820959aef9a35e5c4b2d91424a9" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1a2384776e4f978ef1d9e17e73be8126e3" kind="function"><name>AgregarJugador_MenosDeDos</name></member>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1a5f2f78a04c3833956e266da298d33fba" kind="function"><name>AgregarJugador_TercerJugador_NoSePermitenMasDeDos</name></member>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1ace481b7e98bf0cb5004bbf25391d1484" kind="function"><name>VerificarGanador_JugadorPierdeCentroCivico</name></member>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1a7b4d66179f9e39438641ff5451ecba21" kind="function"><name>VerificarGanador_AmbosTienenCentroCivico</name></member>
+    <member refid="class_library_1_1_tests_1_1_partida_tests_1ac300cce31a0537c867fe1f32b305050f" kind="function"><name>VerificarGanador_NoHayGanador</name></member>
+  </compound>
+  <compound refid="class_library_1_1_piedra" kind="class"><name>Library::Piedra</name>
+    <member refid="class_library_1_1_piedra_1a6ea3a6789a5db51a09cd8b5321bd7c91" kind="function"><name>Piedra</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_piedra_tests" kind="class"><name>Library::Tests::PiedraTests</name>
+    <member refid="class_library_1_1_tests_1_1_piedra_tests_1ac5ab9dfbfbb1af26b6d3f80df2b65dde" kind="variable"><name>piedra</name></member>
+    <member refid="class_library_1_1_tests_1_1_piedra_tests_1a01d022b8d712d3ac4f207d87bc0d80b8" kind="variable"><name>ubicacion</name></member>
+    <member refid="class_library_1_1_tests_1_1_piedra_tests_1a31a30af34e96034c3eccde93e2cf31b1" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_piedra_tests_1a07e1adfc7438862d619c0c9cdedaaa1a" kind="function"><name>CrearTasaRecoleccion</name></member>
+    <member refid="class_library_1_1_tests_1_1_piedra_tests_1a319953c78138107d1e14df00534132ad" kind="function"><name>SePuedeRecolectarPiedra</name></member>
+    <member refid="class_library_1_1_tests_1_1_piedra_tests_1a08a197ad4f36a23c0f2946165dd7cad3" kind="function"><name>PiedraSeExtraeTodo</name></member>
+  </compound>
+  <compound refid="class_library_1_1_point" kind="class"><name>Library::Point</name>
+    <member refid="class_library_1_1_point_1a0cecd707df9a597c6c5ee460e6aba7cd" kind="property"><name>X</name></member>
+    <member refid="class_library_1_1_point_1ae4d3552510d0084b37f64b43aa32add5" kind="property"><name>Y</name></member>
+    <member refid="class_library_1_1_point_1a46243f9b833e827148d3335b0a826c00" kind="function"><name>Point</name></member>
+    <member refid="class_library_1_1_point_1a5a9e987ad2a9b045be31eba843f9e486" kind="function"><name>Point</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_point_tests" kind="class"><name>Library::Tests::PointTests</name>
+    <member refid="class_library_1_1_tests_1_1_point_tests_1a054ad191df3d1211cdc8b06a36952f99" kind="function"><name>LeerCoordenadas</name></member>
+    <member refid="class_library_1_1_tests_1_1_point_tests_1a42ce4e72854b528875e788667d615324" kind="function"><name>InicializarEnCeroCero</name></member>
+    <member refid="class_library_1_1_tests_1_1_point_tests_1a2baeb27af7236c654a6f1af3a1393aae" kind="function"><name>ConParametros</name></member>
+  </compound>
+  <compound refid="class_program" kind="class"><name>Program</name>
+    <member refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class_library_1_1_ratha" kind="class"><name>Library::Ratha</name>
+    <member refid="class_library_1_1_ratha_1a602b61a9b3a8fb117bb2b40ecf8c07ad" kind="property"><name>Propietario</name></member>
+    <member refid="class_library_1_1_ratha_1a83505a158f1cf7e6d9af1a7eaf2598ae" kind="property"><name>Ataque</name></member>
+    <member refid="class_library_1_1_ratha_1ae4e216e1fe1380ebe3ae86ad9f596411" kind="property"><name>Defensa</name></member>
+    <member refid="class_library_1_1_ratha_1adb3754ff69b23b1af84bff3e66f4f1cd" kind="property"><name>Velocidad</name></member>
+    <member refid="class_library_1_1_ratha_1ab9743113694d02527b91c627f0b9f309" kind="property"><name>Salud</name></member>
+    <member refid="class_library_1_1_ratha_1ab84c8384cf61ac7e2a5cf2a04e840032" kind="property"><name>Posicion</name></member>
+    <member refid="class_library_1_1_ratha_1acbf7b61a0ad3a5418126b6c184f40c1c" kind="property"><name>TiempoDeCreacion</name></member>
+    <member refid="class_library_1_1_ratha_1a665094f82866743e20e097dcf6a64d7c" kind="function"><name>Ratha</name></member>
+    <member refid="class_library_1_1_ratha_1a23e39eea9d04f5599e79c6257e94d07c" kind="function"><name>CalcularDaño</name></member>
+    <member refid="class_library_1_1_ratha_1ad474ac984a92a672c08be9984951e1c8" kind="function"><name>Mover</name></member>
+    <member refid="class_library_1_1_ratha_1a71a9fd889b347a9a4b3535920ae93a0e" kind="function"><name>AtacarUnidad</name></member>
+    <member refid="class_library_1_1_ratha_1a2f835346e9252e9ad61749be9bcc8cea" kind="function"><name>AtacarEdificio</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_ratha_tests" kind="class"><name>Library::Tests::RathaTests</name>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1a3c12bbdf5fdd32eb473e9386f48c55be" kind="variable"><name>jugador</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1a7529a333f3ab77202da49b23c4a36134" kind="variable"><name>jugadorEnemigo</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1a631d2f07e6fe0196de5aae57668c5d10" kind="variable"><name>mapa</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1a7aca90e93f6aa99391aa74cdd2d41616" kind="function"><name>Setup</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1ab7963a490b225998d79794661d041c44" kind="function"><name>Mover_PosicionValida_MueveCorrectamente</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1a36845091cf03f857771dcdc41723219c" kind="function"><name>Mover_PosicionInvalida_DevuelveFalse</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1acc5f731f63b0f31707d41f1821234240" kind="function"><name>AtacarUnidad_ContraArquero_BonusAplicado</name></member>
+    <member refid="class_library_1_1_tests_1_1_ratha_tests_1a5a52e2bd26bf14e2e98f2df0b965a5a3" kind="function"><name>AtacarEdificio_DisminuyeVida</name></member>
+  </compound>
+  <compound refid="class_library_1_1_recurso_natural" kind="class"><name>Library::RecursoNatural</name>
+    <member refid="class_library_1_1_recurso_natural_1a71602c98f22dea3b7cba6dc518061383" kind="property"><name>Nombre</name></member>
+    <member refid="class_library_1_1_recurso_natural_1a4cef9adac97aa485d960567ab152f57e" kind="property"><name>VidaBase</name></member>
+    <member refid="class_library_1_1_recurso_natural_1a273ecdc0e3cd95bc010b6c1181655c98" kind="property"><name>TasaRecoleccion</name></member>
+    <member refid="class_library_1_1_recurso_natural_1afd01434ccbf075bbee0f5e86d7132107" kind="property"><name>Cantidad</name></member>
+    <member refid="class_library_1_1_recurso_natural_1a713ceb9f3ef30d683501153cc49cdda5" kind="property"><name>Ubicacion</name></member>
+    <member refid="class_library_1_1_recurso_natural_1aa00891604ef11d3aeb058920a595abf1" kind="variable"><name>EstaAgotado</name></member>
+    <member refid="class_library_1_1_recurso_natural_1ab7064255670032bbe121cb68cd10658d" kind="function"><name>RecursoNatural</name></member>
+    <member refid="class_library_1_1_recurso_natural_1abfb4964895e1b995ee331fcf97ed9ea6" kind="function"><name>Recolectar</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_recurso_natural_dummy" kind="class"><name>Library::Tests::RecursoNaturalDummy</name>
+    <member refid="class_library_1_1_tests_1_1_recurso_natural_dummy_1a32fd5a33fa920cb78a43f76636eea1f4" kind="function"><name>RecursoNaturalDummy</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_recurso_natural_tests" kind="class"><name>Library::Tests::RecursoNaturalTests</name>
+    <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1afc3bba6ba70e1209bb9736b49e4f46bb" kind="function"><name>Constructor_ValoresInicialesCorrectos</name></member>
+    <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1ac23db68232b293f8338f779e61621c64" kind="function"><name>Recolectar_ExtraeCantidadCorrecta</name></member>
+    <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1ac170a599f29ca14c98384e5bffae0e0e" kind="function"><name>Recolectar_AgoteRecurso_EstaAgotadoTrue</name></member>
+    <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1a2cda1c79ec5bef66be17b295e2dbbcfb" kind="function"><name>Recolectar_RecursoAgotado_LanzaExcepcion</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tiempo_construccion" kind="class"><name>Library::TiempoConstruccion</name>
+    <member refid="class_library_1_1_tiempo_construccion_1ac34f754093a60e7e8bc421f0e4786518" kind="property"><name>TiempoTotalSegundos</name></member>
+    <member refid="class_library_1_1_tiempo_construccion_1acf5b24dd9056a29ce4222ea7292bd92b" kind="property"><name>Inicio</name></member>
+    <member refid="class_library_1_1_tiempo_construccion_1ad0b332eb288eca7c5d6a86aa67e472ee" kind="property"><name>Fin</name></member>
+    <member refid="class_library_1_1_tiempo_construccion_1a1fc35d788d7a885d0a2362e53de934ce" kind="property"><name>TiempoRestanteSegundos</name></member>
+    <member refid="class_library_1_1_tiempo_construccion_1a4dbffdc559ea49e312f815d6fc039c2a" kind="property"><name>EstaCompleta</name></member>
+    <member refid="class_library_1_1_tiempo_construccion_1afe0d8c59dec74c9bf7db0143a57f1974" kind="function"><name>TiempoConstruccion</name></member>
+  </compound>
+  <compound refid="class_library_1_1_tests_1_1_tiempo_construccion_tests" kind="class"><name>Library::Tests::TiempoConstruccionTests</name>
+    <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1af108bac0996b0f18330487b6be1828a3" kind="function"><name>Constructor_AlInicializar_TiempoTotalEsCorrecto</name></member>
+    <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a0770fcb2a7e3c5f23dc7ed7ed65b55c0" kind="function"><name>Fin_CalculadoCorrectamente</name></member>
+    <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1adb59d3b6af9ce1a4e8f6287e35d56428" kind="function"><name>TiempoRestante_DisminuyeConElTiempo</name></member>
+    <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a35e819051a661ee37a5364b317bc7ee5" kind="function"><name>EstaCompleta_DevuelveTrue_DespuesDeTiempo</name></member>
+    <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a890ff167645816cceed53401a96a5e36" kind="function"><name>EstaCompleta_DevuelveFalse_SiAunNoPasoElTiempo</name></member>
+    <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1ab0093bf64f017d8db48a937a26348c21" kind="function"><name>TiempoRestante_CuandoCompletado_EsCero</name></member>
+  </compound>
+  <compound refid="namespaceglobal_1_1_n_unit_1_1_framework" kind="namespace"><name>global::NUnit::Framework</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system" kind="namespace"><name>global::System</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_collections_1_1_generic" kind="namespace"><name>global::System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_i_o" kind="namespace"><name>global::System::IO</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_linq" kind="namespace"><name>global::System::Linq</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_net_1_1_http" kind="namespace"><name>global::System::Net::Http</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_threading" kind="namespace"><name>global::System::Threading</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_1_1_threading_1_1_tasks" kind="namespace"><name>global::System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_library" kind="namespace"><name>Library</name>
+  </compound>
+  <compound refid="namespace_library_1_1_tests" kind="namespace"><name>Library::Tests</name>
+  </compound>
+  <compound refid="namespace_n_unit_1_1_framework" kind="namespace"><name>NUnit::Framework</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_drawing" kind="namespace"><name>System::Drawing</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_aldeano_8cs" kind="file"><name>Aldeano.cs</name>
+  </compound>
+  <compound refid="_alimento_8cs" kind="file"><name>Alimento.cs</name>
+  </compound>
+  <compound refid="_arbol_8cs" kind="file"><name>Arbol.cs</name>
+  </compound>
+  <compound refid="_arquero_8cs" kind="file"><name>Arquero.cs</name>
+  </compound>
+  <compound refid="_arquero_compuesto_8cs" kind="file"><name>ArqueroCompuesto.cs</name>
+  </compound>
+  <compound refid="_ayuda_8cs" kind="file"><name>Ayuda.cs</name>
+  </compound>
+  <compound refid="_caballeria_8cs" kind="file"><name>Caballeria.cs</name>
+  </compound>
+  <compound refid="_casa_8cs" kind="file"><name>Casa.cs</name>
+  </compound>
+  <compound refid="_centro_civico_8cs" kind="file"><name>CentroCivico.cs</name>
+  </compound>
+  <compound refid="_civilizacion_8cs" kind="file"><name>Civilizacion.cs</name>
+  </compound>
+  <compound refid="_cuartel_8cs" kind="file"><name>Cuartel.cs</name>
+  </compound>
+  <compound refid="_deposito_madera_8cs" kind="file"><name>DepositoMadera.cs</name>
+  </compound>
+  <compound refid="_deposito_oro_8cs" kind="file"><name>DepositoOro.cs</name>
+  </compound>
+  <compound refid="_deposito_piedra_8cs" kind="file"><name>DepositoPiedra.cs</name>
+  </compound>
+  <compound refid="_granja_8cs" kind="file"><name>Granja.cs</name>
+  </compound>
+  <compound refid="_guerrero_jaguar_8cs" kind="file"><name>GuerreroJaguar.cs</name>
+  </compound>
+  <compound refid="_i_almacenamiento_8cs" kind="file"><name>IAlmacenamiento.cs</name>
+  </compound>
+  <compound refid="_i_edificio_8cs" kind="file"><name>IEdificio.cs</name>
+  </compound>
+  <compound refid="_infanteria_8cs" kind="file"><name>Infanteria.cs</name>
+  </compound>
+  <compound refid="_i_recolector_8cs" kind="file"><name>IRecolector.cs</name>
+  </compound>
+  <compound refid="_i_tipo_recurso_8cs" kind="file"><name>ITipoRecurso.cs</name>
+  </compound>
+  <compound refid="_i_unidad_8cs" kind="file"><name>IUnidad.cs</name>
+  </compound>
+  <compound refid="_i_unidad_militar_8cs" kind="file"><name>IUnidadMilitar.cs</name>
+  </compound>
+  <compound refid="_juego_fachada_8cs" kind="file"><name>JuegoFachada.cs</name>
+  </compound>
+  <compound refid="_jugador_8cs" kind="file"><name>Jugador.cs</name>
+  </compound>
+  <compound refid="_mapa_8cs" kind="file"><name>Mapa.cs</name>
+  </compound>
+  <compound refid="_molino_8cs" kind="file"><name>Molino.cs</name>
+  </compound>
+  <compound refid="_motor_8cs" kind="file"><name>Motor.cs</name>
+  </compound>
+  <compound refid="src_2_library_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="src_2_program_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="test_2_library_8_tests_2obj_2_debug_2net8_80_2_8_n_e_t_core_app_00_version_0av8_80_8_assembly_attributes_8cs" kind="file"><name>.NETCoreApp,Version=v8.0.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_library_8_assembly_info_8cs" kind="file"><name>Library.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_library_8_global_usings_8g_8cs" kind="file"><name>Library.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_oro_8cs" kind="file"><name>Oro.cs</name>
+  </compound>
+  <compound refid="_partida_8cs" kind="file"><name>Partida.cs</name>
+  </compound>
+  <compound refid="_piedra_8cs" kind="file"><name>Piedra.cs</name>
+  </compound>
+  <compound refid="_point_8cs" kind="file"><name>Point.cs</name>
+  </compound>
+  <compound refid="_ratha_8cs" kind="file"><name>Ratha.cs</name>
+  </compound>
+  <compound refid="_recurso_natural_8cs" kind="file"><name>RecursoNatural.cs</name>
+  </compound>
+  <compound refid="_tiempo_construccion_8cs" kind="file"><name>TiempoConstruccion.cs</name>
+  </compound>
+  <compound refid="_program_8_assembly_info_8cs" kind="file"><name>Program.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_program_8_global_usings_8g_8cs" kind="file"><name>Program.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_aldeano_tests_8cs" kind="file"><name>AldeanoTests.cs</name>
+  </compound>
+  <compound refid="_arquero_tests_8cs" kind="file"><name>ArqueroTests.cs</name>
+  </compound>
+  <compound refid="_caballeria_tests_8cs" kind="file"><name>CaballeriaTests.cs</name>
+  </compound>
+  <compound refid="_casa_tests_8cs" kind="file"><name>CasaTests.cs</name>
+  </compound>
+  <compound refid="_centro_civico_tests_8cs" kind="file"><name>CentroCivicoTests.cs</name>
+  </compound>
+  <compound refid="_civilizacion_tests_8cs" kind="file"><name>CivilizacionTests.cs</name>
+  </compound>
+  <compound refid="_cuartel_tests_8cs" kind="file"><name>CuartelTests.cs</name>
+  </compound>
+  <compound refid="_deposito_madera_tests_8cs" kind="file"><name>DepositoMaderaTests.cs</name>
+  </compound>
+  <compound refid="_deposito_oro_tests_8cs" kind="file"><name>DepositoOroTests.cs</name>
+  </compound>
+  <compound refid="_deposito_piedra_test_8cs" kind="file"><name>DepositoPiedraTest.cs</name>
+  </compound>
+  <compound refid="_granja_tests_8cs" kind="file"><name>GranjaTests.cs</name>
+  </compound>
+  <compound refid="_guerrero_jaguar_tests_8cs" kind="file"><name>GuerreroJaguarTests.cs</name>
+  </compound>
+  <compound refid="_infanteria_tests_8cs" kind="file"><name>InfanteriaTests.cs</name>
+  </compound>
+  <compound refid="_juego_fachada_tests_8cs" kind="file"><name>JuegoFachadaTests.cs</name>
+  </compound>
+  <compound refid="_jugador_tests_8cs" kind="file"><name>JugadorTests.cs</name>
+  </compound>
+  <compound refid="_mapa_tests_8cs" kind="file"><name>MapaTests.cs</name>
+  </compound>
+  <compound refid="_molino_tests_8cs" kind="file"><name>MolinoTests.cs</name>
+  </compound>
+  <compound refid="_motor_tests_8cs" kind="file"><name>MotorTests.cs</name>
+  </compound>
+  <compound refid="_library_8_tests_8_assembly_info_8cs" kind="file"><name>Library.Tests.AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_library_8_tests_8_global_usings_8g_8cs" kind="file"><name>Library.Tests.GlobalUsings.g.cs</name>
+  </compound>
+  <compound refid="_oro_tests_8cs" kind="file"><name>OroTests.cs</name>
+  </compound>
+  <compound refid="_partida_tests_8cs" kind="file"><name>PartidaTests.cs</name>
+  </compound>
+  <compound refid="_piedra_tests_8cs" kind="file"><name>PiedraTests.cs</name>
+  </compound>
+  <compound refid="_point_tests_8cs" kind="file"><name>PointTests.cs</name>
+  </compound>
+  <compound refid="_ratha_tests_8cs" kind="file"><name>RathaTests.cs</name>
+  </compound>
+  <compound refid="_recurso_natural_tests_8cs" kind="file"><name>RecursoNaturalTests.cs</name>
+  </compound>
+  <compound refid="_tiempo_construccion_tests_8cs" kind="file"><name>TiempoConstruccionTests.cs</name>
+  </compound>
+  <compound refid="dir_1fc2f01ba2201c12a82c0261d5960219" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/obj/Debug</name>
+  </compound>
+  <compound refid="dir_d966f021321336433dfc415991106a62" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Program/obj/Debug</name>
+  </compound>
+  <compound refid="dir_5f61deaffb68ebdab4fca223ca51463e" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/obj/Debug</name>
+  </compound>
+  <compound refid="dir_188bc40fb31f4c304935df97cdc1b708" kind="dir"><name>C:/Users/Usuario/Desktop</name>
+  </compound>
+  <compound refid="dir_8496100b12bb694e1ba06bb07bf4a607" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library</name>
+  </compound>
+  <compound refid="dir_ee7b72f955222dfbb1e6a266020079f4" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests</name>
+  </compound>
+  <compound refid="dir_24173a438477471e524519e1c4a97691" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/obj/Debug/net8.0</name>
+  </compound>
+  <compound refid="dir_2a1e816dcda101b4f765fa00f3777869" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Program/obj/Debug/net8.0</name>
+  </compound>
+  <compound refid="dir_5cd795f51e787bb30f6d9554d243951b" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/obj/Debug/net8.0</name>
+  </compound>
+  <compound refid="dir_d0986975c63ea438beff292130745382" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/obj</name>
+  </compound>
+  <compound refid="dir_d980842d73123b2f0707ee41a839c9d6" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Program/obj</name>
+  </compound>
+  <compound refid="dir_a7191a42b971fc5ab4794e4b0e4b6ec8" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/obj</name>
+  </compound>
+  <compound refid="dir_e2ace9cae04e506e348d1809afd6740d" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2</name>
+  </compound>
+  <compound refid="dir_4e41c1708eacfee9ba98966d4cdd9b46" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Program</name>
+  </compound>
+  <compound refid="dir_b4ea5982ce6709cc6cade09eb1e1a0b4" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog</name>
+  </compound>
+  <compound refid="dir_5ca0752453bd93e5443ea5bbb86af361" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src</name>
+  </compound>
+  <compound refid="dir_a1ee6514e424363680c868d425c25b8d" kind="dir"><name>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+  <compound refid="dir_3cefdc8ad8f7a49b15a4fe08f2bd0b81" kind="dir"><name>C:/Users/Usuario</name>
+  </compound>
+</doxygenindex>

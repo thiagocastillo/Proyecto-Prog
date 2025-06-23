@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_partida" kind="class" language="C#" prot="public">
+    <compoundname>Library::Partida</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_partida_1a96d6b2932ecae91e45b9b35e5cca13a5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+        <definition>Mapa Library.Partida.Mapa</definition>
+        <argsstring></argsstring>
+        <name>Mapa</name>
+        <qualifiedname>Library.Partida.Mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" line="5" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_partida_1a91dc6ba3acdfed6397ad34915c6076ba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+        <definition>List&lt;Jugador&gt; Library.Partida.Jugadores</definition>
+        <argsstring></argsstring>
+        <name>Jugadores</name>
+        <qualifiedname>Library.Partida.Jugadores</qualifiedname>
+        <initializer>= new List&lt;<ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" line="6" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_partida_1a4bca7cf5e8312d5d2c105283b1297de9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Partida.Partida</definition>
+        <argsstring>()</argsstring>
+        <name>Partida</name>
+        <qualifiedname>Library.Partida.Partida</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" line="8" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_partida_1aa4d86856aa026149577cd33c4f73d56e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Partida.AgregarJugador</definition>
+        <argsstring>(Jugador jugador)</argsstring>
+        <name>AgregarJugador</name>
+        <qualifiedname>Library.Partida.AgregarJugador</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>jugador</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" line="13" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" bodystart="13" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_partida_1a4a3b13ba7a69f76744c93702c5feeb91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Partida.VerificarGanador</definition>
+        <argsstring>()</argsstring>
+        <name>VerificarGanador</name>
+        <qualifiedname>Library.Partida.VerificarGanador</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" line="23" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" bodystart="23" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Partida.cs" bodystart="4" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_partida_1aa4d86856aa026149577cd33c4f73d56e" prot="public" virt="non-virtual"><scope>Library::Partida</scope><name>AgregarJugador</name></member>
+      <member refid="class_library_1_1_partida_1a91dc6ba3acdfed6397ad34915c6076ba" prot="public" virt="non-virtual"><scope>Library::Partida</scope><name>Jugadores</name></member>
+      <member refid="class_library_1_1_partida_1a96d6b2932ecae91e45b9b35e5cca13a5" prot="public" virt="non-virtual"><scope>Library::Partida</scope><name>Mapa</name></member>
+      <member refid="class_library_1_1_partida_1a4bca7cf5e8312d5d2c105283b1297de9" prot="public" virt="non-virtual"><scope>Library::Partida</scope><name>Partida</name></member>
+      <member refid="class_library_1_1_partida_1a4a3b13ba7a69f76744c93702c5feeb91" prot="public" virt="non-virtual"><scope>Library::Partida</scope><name>VerificarGanador</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

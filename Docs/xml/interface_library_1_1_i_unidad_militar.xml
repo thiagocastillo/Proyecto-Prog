@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_library_1_1_i_unidad_militar" kind="interface" language="C#" prot="public">
+    <compoundname>Library::IUnidadMilitar</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_unidad" prot="public" virt="non-virtual">Library.IUnidad</basecompoundref>
+    <derivedcompoundref refid="class_library_1_1_arquero" prot="public" virt="non-virtual">Library.Arquero</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_arquero_compuesto" prot="public" virt="non-virtual">Library.ArqueroCompuesto</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_caballeria" prot="public" virt="non-virtual">Library.Caballeria</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_guerrero_jaguar" prot="public" virt="non-virtual">Library.GuerreroJaguar</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_infanteria" prot="public" virt="non-virtual">Library.Infanteria</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_ratha" prot="public" virt="non-virtual">Library.Ratha</derivedcompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_militar_1acc872bea12425b9e375165327879fdbe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IUnidadMilitar.TiempoDeCreacion</definition>
+        <argsstring></argsstring>
+        <name>TiempoDeCreacion</name>
+        <qualifiedname>Library.IUnidadMilitar.TiempoDeCreacion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d">TiempoDeCreacion</reimplements>
+        <reimplementedby refid="class_library_1_1_arquero_1a2e3be0ecd7ed1e70f2f8c2a173ce4395">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a2ee05023d8881ff2863a42ba63c74201">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1adfc0ba2e0b717411fbdbc054398d77e2">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1acbf7b61a0ad3a5418126b6c184f40c1c">TiempoDeCreacion</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidadMilitar.cs" line="5" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidadMilitar.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_library_1_1_i_unidad_militar_1af4b40a85d7a01c9e152a72bccfd16aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.IUnidadMilitar.AtacarEdificio</definition>
+        <argsstring>(IEdificio objetivo)</argsstring>
+        <name>AtacarEdificio</name>
+        <qualifiedname>Library.IUnidadMilitar.AtacarEdificio</qualifiedname>
+        <reimplementedby refid="class_library_1_1_arquero_1ad9bddbc33ffc883233b42d288de4fce1">AtacarEdificio</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a038a018500ae0981f17e21858e5c74ae">AtacarEdificio</reimplementedby>
+        <reimplementedby refid="class_library_1_1_guerrero_jaguar_1afab6df46dadd15b6a00af00896cfeb13">AtacarEdificio</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1af075541975c4b0a22979345765838957">AtacarEdificio</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1a2f835346e9252e9ad61749be9bcc8cea">AtacarEdificio</reimplementedby>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidadMilitar.cs" line="6" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_library_1_1_i_unidad_militar_1a7e5aae6437562afc57f21c664fea2216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.IUnidadMilitar.AtacarUnidad</definition>
+        <argsstring>(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>AtacarUnidad</name>
+        <qualifiedname>Library.IUnidadMilitar.AtacarUnidad</qualifiedname>
+        <reimplementedby refid="class_library_1_1_arquero_1ae4aa4e9497a3a5f579359c09d3f17403">AtacarUnidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1ac851255f535224bb10096cbe47a7d8da">AtacarUnidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_guerrero_jaguar_1a9591883c274acff3fc73a4e85da54421">AtacarUnidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1ac2341d0b939c97a4c59654a3506e70de">AtacarUnidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1a71a9fd889b347a9a4b3535920ae93a0e">AtacarUnidad</reimplementedby>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>atacante</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tipoUnidad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cantidad</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidadMilitar.cs" line="8" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.Arquero</label>
+        <link refid="class_library_1_1_arquero"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Library.ArqueroCompuesto</label>
+        <link refid="class_library_1_1_arquero_compuesto"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Library.Caballeria</label>
+        <link refid="class_library_1_1_caballeria"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Library.GuerreroJaguar</label>
+        <link refid="class_library_1_1_guerrero_jaguar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="7">
+        <label>Library.Infanteria</label>
+        <link refid="class_library_1_1_infanteria"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Library.Ratha</label>
+        <link refid="class_library_1_1_ratha"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidadMilitar.cs" line="3" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidadMilitar.cs" bodystart="4" bodyend="10"/>
+    <listofallmembers>
+      <member refid="interface_library_1_1_i_unidad_militar_1af4b40a85d7a01c9e152a72bccfd16aa0" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>AtacarEdificio</name></member>
+      <member refid="interface_library_1_1_i_unidad_militar_1a7e5aae6437562afc57f21c664fea2216" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>AtacarUnidad</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Ataque</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>CalcularDaño</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Defensa</name></member>
+      <member refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Mover</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Posicion</name></member>
+      <member refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Propietario</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Salud</name></member>
+      <member refid="interface_library_1_1_i_unidad_militar_1acc872bea12425b9e375165327879fdbe" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>TiempoDeCreacion</name></member>
+      <member refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c" prot="public" virt="non-virtual"><scope>Library::IUnidadMilitar</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

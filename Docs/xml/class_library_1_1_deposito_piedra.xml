@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_deposito_piedra" kind="class" language="C#" prot="public">
+    <compoundname>Library::DepositoPiedra</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1a73006ed66e8d567c8bb17eaef7162088" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.DepositoPiedra.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.DepositoPiedra.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="9" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1ae4e795b618d1c4a4dd26dcfb11e49cd7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.DepositoPiedra.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.DepositoPiedra.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="11" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1a4362d09a1c540ee06f4c0365d1c605d2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoPiedra.CapacidadMaxima</definition>
+        <argsstring></argsstring>
+        <name>CapacidadMaxima</name>
+        <qualifiedname>Library.DepositoPiedra.CapacidadMaxima</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a">CapacidadMaxima</reimplements>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="13" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1a935ef0ffa7f27b5127ff7c08696f3548" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoPiedra.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.DepositoPiedra.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="15" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1aa1d5387808b5aba0d2485430b9a74615" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; Library.DepositoPiedra.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.DepositoPiedra.Recursos</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325">Recursos</reimplements>
+        <initializer>= new Dictionary&lt;string, int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="17" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1ab532304fc266ab6b0e0622f532e1ad13" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoPiedra.TiempoConstruccionTotal</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionTotal</name>
+        <qualifiedname>Library.DepositoPiedra.TiempoConstruccionTotal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="23" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1a4b41e7ccd60fcebfaf0cb8dc35a51253" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoPiedra.TiempoConstruccionRestante</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionRestante</name>
+        <qualifiedname>Library.DepositoPiedra.TiempoConstruccionRestante</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="25" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_piedra_1a12b530c5a405e94017823c1b923f73d1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Library.DepositoPiedra.EstaConstruido</definition>
+        <argsstring></argsstring>
+        <name>EstaConstruido</name>
+        <qualifiedname>Library.DepositoPiedra.EstaConstruido</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="27" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_deposito_piedra_1a249ea9cc1c236551e43808ebe8e65b6d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref></type>
+        <definition>TiempoConstruccion Library.DepositoPiedra.tiempoconstruccion</definition>
+        <argsstring></argsstring>
+        <name>tiempoconstruccion</name>
+        <qualifiedname>Library.DepositoPiedra.tiempoconstruccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="20" column="32" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_deposito_piedra_1a5941dabcc2b008d09ef360046b079d08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.DepositoPiedra.DepositoPiedra</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>DepositoPiedra</name>
+        <qualifiedname>Library.DepositoPiedra.DepositoPiedra</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="30" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_deposito_piedra_1a09f5eb21c31a95b4ec001ed97021f894" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.DepositoPiedra.Eficiencia</definition>
+        <argsstring>(int distancia)</argsstring>
+        <name>Eficiencia</name>
+        <qualifiedname>Library.DepositoPiedra.Eficiencia</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba">Eficiencia</reimplements>
+        <param>
+          <type>int</type>
+          <declname>distancia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="38" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="38" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.DepositoPiedra</label>
+        <link refid="class_library_1_1_deposito_piedra"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.DepositoPiedra</label>
+        <link refid="class_library_1_1_deposito_piedra"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoPiedra.cs" bodystart="7" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_deposito_piedra_1a4362d09a1c540ee06f4c0365d1c605d2" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>CapacidadMaxima</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a5941dabcc2b008d09ef360046b079d08" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>DepositoPiedra</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a09f5eb21c31a95b4ec001ed97021f894" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>Eficiencia</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a12b530c5a405e94017823c1b923f73d1" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>EstaConstruido</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1ae4e795b618d1c4a4dd26dcfb11e49cd7" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a73006ed66e8d567c8bb17eaef7162088" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1aa1d5387808b5aba0d2485430b9a74615" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>Recursos</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a249ea9cc1c236551e43808ebe8e65b6d" prot="private" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>tiempoconstruccion</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a4b41e7ccd60fcebfaf0cb8dc35a51253" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>TiempoConstruccionRestante</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1ab532304fc266ab6b0e0622f532e1ad13" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>TiempoConstruccionTotal</name></member>
+      <member refid="class_library_1_1_deposito_piedra_1a935ef0ffa7f27b5127ff7c08696f3548" prot="public" virt="non-virtual"><scope>Library::DepositoPiedra</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

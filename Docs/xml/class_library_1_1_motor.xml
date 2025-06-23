@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_motor" kind="class" language="C#" prot="public">
+    <compoundname>Library::Motor</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_motor_1a372881cf18d2ff50d01b308660065531" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_library_1_1_juego_fachada" kindref="compound">JuegoFachada</ref></type>
+        <definition>readonly JuegoFachada Library.Motor._fachada</definition>
+        <argsstring></argsstring>
+        <name>_fachada</name>
+        <qualifiedname>Library.Motor._fachada</qualifiedname>
+        <initializer>= new <ref refid="class_library_1_1_juego_fachada" kindref="compound">JuegoFachada</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" line="9" column="35" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_motor_1a7da83111c94d3a3d245bae931f3b5928" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Library.Motor.partidaFinalizada</definition>
+        <argsstring></argsstring>
+        <name>partidaFinalizada</name>
+        <qualifiedname>Library.Motor.partidaFinalizada</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" line="11" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_motor_1a2c33579a9633cd1ecd4998d6937004b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Motor.ProcesarComando</definition>
+        <argsstring>(string comando, List&lt; string &gt; argumentos)</argsstring>
+        <name>ProcesarComando</name>
+        <qualifiedname>Library.Motor.ProcesarComando</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>comando</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>argumentos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" line="14" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" bodystart="14" bodyend="211"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Motor.cs" bodystart="7" bodyend="212"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_motor_1a372881cf18d2ff50d01b308660065531" prot="private" virt="non-virtual"><scope>Library::Motor</scope><name>_fachada</name></member>
+      <member refid="class_library_1_1_motor_1a7da83111c94d3a3d245bae931f3b5928" prot="private" virt="non-virtual"><scope>Library::Motor</scope><name>partidaFinalizada</name></member>
+      <member refid="class_library_1_1_motor_1a2c33579a9633cd1ecd4998d6937004b9" prot="public" virt="non-virtual"><scope>Library::Motor</scope><name>ProcesarComando</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_b4ea5982ce6709cc6cade09eb1e1a0b4" kind="dir">
+    <compoundname>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog</compoundname>
+    <innerdir refid="dir_5ca0752453bd93e5443ea5bbb86af361">C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src</innerdir>
+    <innerdir refid="dir_a1ee6514e424363680c868d425c25b8d">C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg" alt="UCU" inline="yes"></image>
+</para>
+<sect1 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md0">
+<title>Universidad Católica del Uruguay</title><sect2 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md1">
+<title>Facultad de Ingeniería y Tecnologías</title><sect3 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md2">
+<title>Programación II</title></sect3>
+</sect2>
+</sect1>
+<sect1 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md3">
+<title>Consigna proyecto 2025 - Primer semestre</title><para><linebreak/>
+</para>
+<para>Este semestre, desarrollaremos... ¡chatbots! 🤖</para>
+<para><image type="html" name="https://media.giphy.com/media/mIZ9rPeMKefm0/giphy.gif" alt="Bender" inline="yes"></image>
+</para>
+<sect2 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md4">
+<title>Contexto</title><para>Un chatbot o <ulink url="https://es.wikipedia.org/wiki/Bot_conversacional">bot conversacional</ulink> es un programa que simula mantener una conversación con una persona al proveer respuestas automáticas a entradas hechas por el usuario.</para>
+<para>Existen gran variedad de chatbots actualmente y varios <emphasis>sabores</emphasis>. Hay chatbots que simplemente responden a comandos pre-establecidos, y otros que integran algoritmos de <ulink url="https://es.wikipedia.org/wiki/Inteligencia_artificial">inteligencia artificial</ulink> para procesar los mensajes de los usuarios e <ulink url="https://es.wikipedia.org/wiki/Procesamiento_de_lenguajes_naturales">interpretar lo que se está diciendo</ulink>.</para>
+<para>Algunas de las aplicaciones más conocidas que abren sus puertas al desarrollo de chatbots —tienen API— son:</para>
+<para><itemizedlist>
+<listitem><para>Telegram</para>
+</listitem><listitem><para>Messenger</para>
+</listitem><listitem><para>Whatsapp</para>
+</listitem><listitem><para>Slack</para>
+</listitem><listitem><para>Discord</para>
+</listitem></itemizedlist>
+</para>
+<para>entre otras; y nos integraremos al menos a una de ellas.</para>
+</sect2>
+<sect2 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md5">
+<title>Roadmap</title><para>El proyecto se divide en varias entregas a lo largo del semestre, que se detallan más abajo.</para>
+<para>Cada entrega es una parte del proyecto que construye sobre la anterior. Al final del semestre tendremos un conjunto de chatbots funcionales con los que podremos conversar.</para>
+<para>El chatbot a desarrollar será propuesto por los estudiantes, según se indica en la sección Propuestas.</para>
+<para>La estructura del trabajo en el proyecto será la siguiente:</para>
+<para><itemizedlist>
+<listitem><para>[x] Kick-off</para>
+</listitem><listitem><para>[ ] Presentación de propuestas</para>
+</listitem><listitem><para>[ ] Evaluación docente de propuestas</para>
+</listitem><listitem><para>[ ] Votación de propuestas</para>
+</listitem><listitem><para>[ ] Lanzamiento de la propuesta elegida</para>
+</listitem><listitem><para>[ ] Primera entrega</para>
+</listitem><listitem><para>[ ] Segunda entrega</para>
+</listitem><listitem><para>[ ] Entrega final</para>
+</listitem><listitem><para>[ ] Defensa</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md6">
+<title>Propuestas</title><para>Los equipos o sus integrantes podrán a presentar propuestas de chatbots para desarrollar. El chatbot debe permitir un juego interactivo multijugador —por turnos— de al menos dos jugadores, que no requiera de una interfaz gráfica, es decir, las jugadas se describen mediante un mensaje como en el ajedrez o la batalla naval.</para>
+<para>Utiliza <ulink url="https://forms.office.com/r/yG6UeqJWRx">este formulario</ulink> para enviar tus propustas. ¡Pueden enviar todas las propuestas que quieran!</para>
+<para>Puedes ver la fecha límite para entrega de propuestas en la sección Entregas.</para>
+</sect2>
+<sect2 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md7">
+<title>Historias de Usuario - Age of Empires Simplificado</title><para><bold>Configuración y Creación</bold><orderedlist>
+<listitem><para>Como jugador, quiero poder crear una nueva partida especificando el tamaño del mapa y la cantidad de jugadores, para personalizar mi experiencia de juego.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Configurar mapa aleatorio de 100x100.</para>
+</listitem><listitem><para>Configurar partida entre 2 jugadores.</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero elegir una civilización con características únicas, para aprovechar sus ventajas estratégicas.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Disponer de al menos 3 civilizaciones diferentes</para>
+</listitem><listitem><para>Cada civilización debe tener al menos 2 bonificaciones únicas</para>
+</listitem><listitem><para>Cada civilización debe tener una unidad especial</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero comenzar con un centro cívico y algunos aldeanos, para iniciar inmediatamente la recolección de recursos.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Iniciar con 1 centro cívico (admite hasta 10 aldeanos)</para>
+</listitem><listitem><para>Iniciar con 3 aldeanos</para>
+</listitem><listitem><para>Recibir una cantidad inicial de recursos (100 de alimento, 100 de madera)</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Gestión de Recursos</bold></para>
+<para><orderedlist>
+<listitem><para>Como jugador, quiero ordenar a mis aldeanos recolectar diferentes tipos de recursos, para expandir mi economía.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Poder recolectar 4 tipos de recursos: madera, alimento, oro y piedra</para>
+</listitem><listitem><para>Cada recurso debe tener una tasa de recolección diferente</para>
+</listitem><listitem><para>Los aldeanos deben trasladar los recursos al edificio de almacenamiento más cercano</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero construir edificios específicos para almacenar recursos, para optimizar la recolección.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Poder construir almacenes de recursos (molino, granja, depósitos de oro, piedra, madera)</para>
+</listitem><listitem><para>La proximidad del almacén debe afectar la eficiencia de recolección</para>
+</listitem><listitem><para>Los almacenes deben tener un límite de capacidad</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero visualizar la cantidad de recursos disponibles, para planificar mis estrategias.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Ver la cantidad actual de cada recurso</para>
+</listitem><listitem><para>Recibir alertas cuando un recurso esté por agotarse</para>
+</listitem><listitem><para>Visualizar la tasa de recolección por tipo de recurso</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Construcción y Desarrollo</bold></para>
+<para><orderedlist>
+<listitem><para>Como jugador, quiero construir edificios en ubicaciones específicas del mapa, para expandir mi base.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Poder seleccionar una ubicación en el mapa para construir</para>
+</listitem><listitem><para>La construcción debe requerir ciertos recursos</para>
+</listitem><listitem><para>Mostrar el tiempo de construcción restante</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero crear diferentes tipos de edificios con funciones específicas, para desarrollar mi civilización.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Construir casas para aumentar la población máxima</para>
+</listitem><listitem><para>Construir cuarteles para entrenar unidades militares</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Unidades y Combate</bold></para>
+<para><orderedlist>
+<listitem><para>Como jugador, quiero entrenar diferentes tipos de unidades militares, para defender mi base y atacar a mis oponentes.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Poder crear al menos 3 tipos de unidades (infantería, arqueros, caballería)</para>
+</listitem><listitem><para>Cada unidad debe tener estadísticas únicas (ataque, defensa, velocidad)</para>
+</listitem><listitem><para>Las unidades deben tener diferentes costos y tiempos de creación</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero mover mis unidades por el mapa usando comandos simples, para explorar y posicionarme estratégicamente.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Mover unidades a coordenadas específicas</para>
+</listitem><listitem><para>Poder seleccionar múltiples unidades para moverlas juntas</para>
+</listitem><listitem><para>Recibir retroalimentación si el destino es inaccesible</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero ordenar a mis unidades atacar a unidades o edificios enemigos, para debilitar a mis oponentes.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Poder seleccionar un objetivo para atacar</para>
+</listitem><listitem><para>Mostrar información del combate (daño causado/recibido)</para>
+</listitem><listitem><para>Implementar un sistema de ventaja por tipo de unidad (ej: arqueros efectivos contra infantería)</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Economía y Población</bold></para>
+<para><orderedlist>
+<listitem><para>Como jugador, quiero entrenar más aldeanos para mejorar mi economía, pero necesito suficientes casas para mantener mi población.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Cada casa aumenta el límite de población en 5 unidades (puede tener hasta 20 aldeanos y hasta 30 unidades militares)</para>
+</listitem><listitem><para>No poder crear nuevas unidades si se ha alcanzado el límite de población</para>
+</listitem><listitem><para>Mostrar claramente la población actual/máxima</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Victoria y Objetivos</bold></para>
+<para><orderedlist>
+<listitem><para>Como jugador, quiero destruir los centros cívicos enemigos para ganar la partida por dominación militar.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Cada jugador pierde si su último centro cívico es destruido</para>
+</listitem><listitem><para>Recibir notificación cuando un enemigo está cerca de ser derrotado</para>
+</listitem><listitem><para>Mostrar un resumen al finalizar la partida</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Interfaz y Comandos</bold></para>
+<para><orderedlist>
+<listitem><para>Como jugador, quiero usar comandos intuitivos en la línea de comandos para interactuar con el juego.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Los comandos deben seguir una estructura consistente (verbo + objeto + parámetros)</para>
+</listitem><listitem><para>Proporcionar ayuda y ejemplos de comandos</para>
+</listitem></itemizedlist>
+<orderedlist>
+<listitem><para>Como jugador, quiero ver un mapa simplificado del juego en ASCII, para visualizar la disposición del terreno y unidades.</para>
+</listitem></orderedlist>
+</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Mostrar un mapa con símbolos que representen unidades, edificios y recursos</para>
+</listitem><listitem><para>Poder desplazarse por el mapa</para>
+</listitem><listitem><para>Distinguir elementos por jugador usando colores o símbolos</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>BONUS</bold></para>
+<para>Como jugador, quiero guardar la partida y continuarla más tarde, para jugar en múltiples sesiones.</para>
+<para>Criterios de aceptación:<itemizedlist>
+<listitem><para>Guardar el estado completo del juego</para>
+</listitem><listitem><para>Cargar una partida guardada</para>
+</listitem><listitem><para>Ver la lista de partidas guardadas</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md_1autotoc_md8">
+<title>Entregas</title><para><simplesect kind="warning"><para><bold>Importante:</bold> Las entregas serán hasta las 23:59 del día indicado.</para>
+</simplesect>
+<table rows="9" cols="3"><row>
+<entry thead="yes"><para>Instancia  </para>
+</entry><entry thead="yes"><para>Fecha  </para>
+</entry><entry thead="yes"><para>Entregables  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Kick-off  </para>
+</entry><entry thead="no"><para>21 abril, primera clase de la semana 5  </para>
+</entry><entry thead="no"><para></para>
+</entry></row>
+<row>
+<entry thead="no"><para>Presentación de propuestas  </para>
+</entry><entry thead="no"><para>Hasta el 30 de abril  </para>
+</entry><entry thead="no"><para>Completar <ulink url="https://forms.office.com/r/yG6UeqJWRx">este formulario</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Evaluación docente de propuestas  </para>
+</entry><entry thead="no"><para>30 de abril al 5 de mayo  </para>
+</entry><entry thead="no"><para></para>
+</entry></row>
+<row>
+<entry thead="no"><para>Votación de propuestas  </para>
+</entry><entry thead="no"><para>5 de mayo  </para>
+</entry><entry thead="no"><para></para>
+</entry></row>
+<row>
+<entry thead="no"><para>Lanzamiento de proyectos  </para>
+</entry><entry thead="no"><para>7 de mayo  </para>
+</entry><entry thead="no"><para></para>
+</entry></row>
+<row>
+<entry thead="no"><para>Primera entrega  </para>
+</entry><entry thead="no"><para>2 de junio  </para>
+</entry><entry thead="no"><para>Tarjetas CRC, diagrama de clases, código de clases de dominio + <ulink url="https://refactoring.guru/design-patterns/facade">fachada</ulink>  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Segunda entrega  </para>
+</entry><entry thead="no"><para>23 de junio  </para>
+</entry><entry thead="no"><para>Entrega de <ulink url="https://es.wikipedia.org/wiki/Historias_de_usuario">user stories</ulink> implementadas. Las historias de usuario deberán ser implementadas mediante <ulink url="https://en.wikipedia.org/wiki/Test_case">casos de prueba</ulink> usando la fachada.  </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Entrega final  </para>
+</entry><entry thead="no"><para>7 de julio  </para>
+</entry><entry thead="no"><para>Bot funcionando y entregables según se indica en la consigna de la entrega  </para>
+</entry></row>
+</table>
+| Defensa | 7 al 9 de julio | </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/"/>
+  </compounddef>
+</doxygen>

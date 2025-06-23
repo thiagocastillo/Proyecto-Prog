@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_mapa_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::MapaTests</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mapa_tests_1ad29d54dde439be98d8fc6377322add7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MapaTests.Constructor_GeneraRecursosAleatorios</definition>
+        <argsstring>()</argsstring>
+        <name>Constructor_GeneraRecursosAleatorios</name>
+        <qualifiedname>Library.Tests.MapaTests.Constructor_GeneraRecursosAleatorios</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" line="12" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mapa_tests_1ac406bf1824a30a653949830943661836" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MapaTests.GenerarRecursosAleatorios_CantidadEnRango</definition>
+        <argsstring>()</argsstring>
+        <name>GenerarRecursosAleatorios_CantidadEnRango</name>
+        <qualifiedname>Library.Tests.MapaTests.GenerarRecursosAleatorios_CantidadEnRango</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" line="19" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mapa_tests_1ab6dab59a858b4e9bba0d104c141122a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MapaTests.ObtenerUnidadesEn_DevuelveUnidadesCorrectas</definition>
+        <argsstring>()</argsstring>
+        <name>ObtenerUnidadesEn_DevuelveUnidadesCorrectas</name>
+        <qualifiedname>Library.Tests.MapaTests.ObtenerUnidadesEn_DevuelveUnidadesCorrectas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" line="27" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" bodystart="27" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mapa_tests_1a0b95cf8e53f3be92a591d8e9b082a9af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MapaTests.ObtenerEdificiosEn_DevuelveEdificiosCorrectos</definition>
+        <argsstring>()</argsstring>
+        <name>ObtenerEdificiosEn_DevuelveEdificiosCorrectos</name>
+        <qualifiedname>Library.Tests.MapaTests.ObtenerEdificiosEn_DevuelveEdificiosCorrectos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" line="38" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" bodystart="38" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mapa_tests_1a8ea1bdb9c65c261c71c0db8b8f065424" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MapaTests.MostrarMapa_DevuelveMensajeCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>MostrarMapa_DevuelveMensajeCorrecto</name>
+        <qualifiedname>Library.Tests.MapaTests.MostrarMapa_DevuelveMensajeCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" line="50" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" bodystart="50" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" line="9" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MapaTests.cs" bodystart="10" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_mapa_tests_1ad29d54dde439be98d8fc6377322add7c" prot="public" virt="non-virtual"><scope>Library::Tests::MapaTests</scope><name>Constructor_GeneraRecursosAleatorios</name></member>
+      <member refid="class_library_1_1_tests_1_1_mapa_tests_1ac406bf1824a30a653949830943661836" prot="public" virt="non-virtual"><scope>Library::Tests::MapaTests</scope><name>GenerarRecursosAleatorios_CantidadEnRango</name></member>
+      <member refid="class_library_1_1_tests_1_1_mapa_tests_1a8ea1bdb9c65c261c71c0db8b8f065424" prot="public" virt="non-virtual"><scope>Library::Tests::MapaTests</scope><name>MostrarMapa_DevuelveMensajeCorrecto</name></member>
+      <member refid="class_library_1_1_tests_1_1_mapa_tests_1a0b95cf8e53f3be92a591d8e9b082a9af" prot="public" virt="non-virtual"><scope>Library::Tests::MapaTests</scope><name>ObtenerEdificiosEn_DevuelveEdificiosCorrectos</name></member>
+      <member refid="class_library_1_1_tests_1_1_mapa_tests_1ab6dab59a858b4e9bba0d104c141122a6" prot="public" virt="non-virtual"><scope>Library::Tests::MapaTests</scope><name>ObtenerUnidadesEn_DevuelveUnidadesCorrectas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

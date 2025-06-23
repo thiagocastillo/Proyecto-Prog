@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['random_0',['random',['../class_library_1_1_jugador.html#af711de88b6ccb61873ff3acc4c5a2b0c',1,'Library::Jugador']]],
+  ['ratha_1',['Ratha',['../class_library_1_1_ratha.html',1,'Library.Ratha'],['../class_library_1_1_ratha.html#a665094f82866743e20e097dcf6a64d7c',1,'Library.Ratha.Ratha()']]],
+  ['ratha_2ecs_2',['Ratha.cs',['../_ratha_8cs.html',1,'']]],
+  ['rathatests_3',['RathaTests',['../class_library_1_1_tests_1_1_ratha_tests.html',1,'Library::Tests']]],
+  ['rathatests_2ecs_4',['RathaTests.cs',['../_ratha_tests_8cs.html',1,'']]],
+  ['readme_2emd_5',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['recolectar_6',['Recolectar',['../class_library_1_1_recurso_natural.html#abfb4964895e1b995ee331fcf97ed9ea6',1,'Library::RecursoNatural']]],
+  ['recolectar_5fagoterecurso_5festaagotadotrue_7',['Recolectar_AgoteRecurso_EstaAgotadoTrue',['../class_library_1_1_tests_1_1_recurso_natural_tests.html#ac170a599f29ca14c98384e5bffae0e0e',1,'Library::Tests::RecursoNaturalTests']]],
+  ['recolectar_5fextraecantidadcorrecta_8',['Recolectar_ExtraeCantidadCorrecta',['../class_library_1_1_tests_1_1_recurso_natural_tests.html#ac23db68232b293f8338f779e61621c64',1,'Library::Tests::RecursoNaturalTests']]],
+  ['recolectar_5frecursoagotado_5flanzaexcepcion_9',['Recolectar_RecursoAgotado_LanzaExcepcion',['../class_library_1_1_tests_1_1_recurso_natural_tests.html#a2cda1c79ec5bef66be17b295e2dbbcfb',1,'Library::Tests::RecursoNaturalTests']]],
+  ['recolectaren_10',['RecolectarEn',['../class_library_1_1_aldeano.html#ae9eace7bd0bccab7b24f65f125918841',1,'Library.Aldeano.RecolectarEn()'],['../interface_library_1_1_i_recolector.html#a9074e4b242b7323733869f07d03eea14',1,'Library.IRecolector.RecolectarEn()']]],
+  ['recolectaren_5falmacencompatible_5factualizarecursos_11',['RecolectarEn_AlmacenCompatible_ActualizaRecursos',['../class_library_1_1_tests_1_1_aldeano_tests.html#abe06649f0143ca3dbdeb8d2eb10d5c6a',1,'Library::Tests::AldeanoTests']]],
+  ['recolectaren_5falmacenyatienerecurso_5fsuma_12',['RecolectarEn_AlmacenYaTieneRecurso_Suma',['../class_library_1_1_tests_1_1_aldeano_tests.html#aa6e55221a8f311b7ffd71f78a0332934',1,'Library::Tests::AldeanoTests']]],
+  ['recolectaren_5fbonoazteca_13',['RecolectarEn_BonoAzteca',['../class_library_1_1_tests_1_1_aldeano_tests.html#a29939fbd4155a11fea23937039b4ede4',1,'Library::Tests::AldeanoTests']]],
+  ['recolectaren_5frecursoagotado_5flanzaexcepcion_14',['RecolectarEn_RecursoAgotado_LanzaExcepcion',['../class_library_1_1_tests_1_1_aldeano_tests.html#a1062b3da694e127f142b2fe02f81cff8',1,'Library::Tests::AldeanoTests']]],
+  ['recolectaren_5frecursonoexiste_5flanzaexcepcion_15',['RecolectarEn_RecursoNoExiste_LanzaExcepcion',['../class_library_1_1_tests_1_1_aldeano_tests.html#abbce3f0902340c3f2c801141d8a3a403',1,'Library::Tests::AldeanoTests']]],
+  ['recursonatural_16',['RecursoNatural',['../class_library_1_1_recurso_natural.html',1,'Library.RecursoNatural'],['../class_library_1_1_recurso_natural.html#ab7064255670032bbe121cb68cd10658d',1,'Library.RecursoNatural.RecursoNatural()']]],
+  ['recursonatural_2ecs_17',['RecursoNatural.cs',['../_recurso_natural_8cs.html',1,'']]],
+  ['recursonaturaldummy_18',['RecursoNaturalDummy',['../class_library_1_1_tests_1_1_recurso_natural_dummy.html',1,'Library.Tests.RecursoNaturalDummy'],['../class_library_1_1_tests_1_1_recurso_natural_dummy.html#a32fd5a33fa920cb78a43f76636eea1f4',1,'Library.Tests.RecursoNaturalDummy.RecursoNaturalDummy()']]],
+  ['recursonaturaltests_19',['RecursoNaturalTests',['../class_library_1_1_tests_1_1_recurso_natural_tests.html',1,'Library::Tests']]],
+  ['recursonaturaltests_2ecs_20',['RecursoNaturalTests.cs',['../_recurso_natural_tests_8cs.html',1,'']]],
+  ['recursos_21',['Recursos',['../class_library_1_1_centro_civico.html#ab32c589358eec6c5bbd312ecdf770b12',1,'Library.CentroCivico.Recursos'],['../class_library_1_1_deposito_madera.html#a3997aa0a5a2a63b1c826f50f15759c3c',1,'Library.DepositoMadera.Recursos'],['../class_library_1_1_deposito_oro.html#afdda88e4013066ad42c5fbbad3567e09',1,'Library.DepositoOro.Recursos'],['../class_library_1_1_deposito_piedra.html#aa1d5387808b5aba0d2485430b9a74615',1,'Library.DepositoPiedra.Recursos'],['../class_library_1_1_granja.html#a627f94197a5f796007819c5ee7c98e54',1,'Library.Granja.Recursos'],['../interface_library_1_1_i_almacenamiento.html#a1825cb5304bb2864ec6bcc2b5e1bf325',1,'Library.IAlmacenamiento.Recursos'],['../class_library_1_1_jugador.html#a57047a44a1ad81a82f8226a110e50ab1',1,'Library.Jugador.Recursos'],['../class_library_1_1_mapa.html#a5def4a00be5cd72316bbbecc0a92da37',1,'Library.Mapa.Recursos'],['../class_library_1_1_molino.html#a28b7b0fc00a15b7c644b35b12754ae01',1,'Library.Molino.Recursos']]],
+  ['roadmap_22',['Roadmap',['../C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md#autotoc_md5',1,'']]]
+];

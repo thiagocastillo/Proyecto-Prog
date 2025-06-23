@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_granja" kind="class" language="C#" prot="public">
+    <compoundname>Library::Granja</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_granja_1ad19f67f04deac47caf352c87b913ff5e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Granja.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Granja.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="5" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_granja_1a81c01f70f64443c8c370784c873ee271" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Granja.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Granja.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="6" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_granja_1abf5b6b7493a63d4f7239b85f1e666319" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Granja.CapacidadMaxima</definition>
+        <argsstring></argsstring>
+        <name>CapacidadMaxima</name>
+        <qualifiedname>Library.Granja.CapacidadMaxima</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a">CapacidadMaxima</reimplements>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="7" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_granja_1a56532099f2a0aea15d5c898d0a3c0296" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Granja.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.Granja.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="8" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_granja_1a627f94197a5f796007819c5ee7c98e54" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; Library.Granja.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.Granja.Recursos</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325">Recursos</reimplements>
+        <initializer>= new Dictionary&lt;string, int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="9" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_granja_1a9da2267c36f5d14b9e2ec6f00dea855a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Granja.Granja</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Granja</name>
+        <qualifiedname>Library.Granja.Granja</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="11" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_granja_1a9ba5ee5da7ceab28e9279989b14001b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Granja.Eficiencia</definition>
+        <argsstring>(int distancia)</argsstring>
+        <name>Eficiencia</name>
+        <qualifiedname>Library.Granja.Eficiencia</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba">Eficiencia</reimplements>
+        <param>
+          <type>int</type>
+          <declname>distancia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="17" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="17" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Granja</label>
+        <link refid="class_library_1_1_granja"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Granja</label>
+        <link refid="class_library_1_1_granja"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Granja.cs" bodystart="4" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_granja_1abf5b6b7493a63d4f7239b85f1e666319" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>CapacidadMaxima</name></member>
+      <member refid="class_library_1_1_granja_1a9ba5ee5da7ceab28e9279989b14001b0" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>Eficiencia</name></member>
+      <member refid="class_library_1_1_granja_1a9da2267c36f5d14b9e2ec6f00dea855a" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>Granja</name></member>
+      <member refid="class_library_1_1_granja_1a81c01f70f64443c8c370784c873ee271" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_granja_1ad19f67f04deac47caf352c87b913ff5e" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_granja_1a627f94197a5f796007819c5ee7c98e54" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>Recursos</name></member>
+      <member refid="class_library_1_1_granja_1a56532099f2a0aea15d5c898d0a3c0296" prot="public" virt="non-virtual"><scope>Library::Granja</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

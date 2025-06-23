@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_cuartel_8cs" kind="file" language="C#">
+    <compoundname>Cuartel.cs</compoundname>
+    <innerclass refid="class_library_1_1_cuartel" prot="public">Library::Cuartel</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Drawing;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Representa<sp/>un<sp/>cuartel<sp/>que<sp/>tarda<sp/>60<sp/>segundos<sp/>en<sp/>construirse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_library_1_1_cuartel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_cuartel_1ace7d738837999302c900f5bacbdd1342" kindref="member">Cuartel</ref><sp/>:<sp/><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Jugador<sp/>dueño<sp/>del<sp/>cuartel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref><sp/><ref refid="class_library_1_1_cuartel_1a76f80922def80ab1490bca07795b08d8" kindref="member">Propietario</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ubicación<sp/>del<sp/>cuartel<sp/>en<sp/>el<sp/>mapa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_point" kindref="compound">Point</ref><sp/><ref refid="class_library_1_1_cuartel_1aa9e32e7aec0df79d9baf594e419f65fc" kindref="member">Posicion</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vida<sp/>actual<sp/>del<sp/>cuartel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_cuartel_1aa954ba8fe31b791d72349f185ff6a215" kindref="member">Vida</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Objeto<sp/>que<sp/>gestiona<sp/>el<sp/>tiempo<sp/>de<sp/>construcción</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref><sp/>tiempoconstruccion;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tiempo<sp/>total<sp/>de<sp/>construcción<sp/>en<sp/>segundos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_cuartel_1ac7b92469cdc414b622fffc0252f9124e" kindref="member">TiempoConstruccionTotal</ref><sp/>=&gt;<sp/>tiempoconstruccion.TiempoTotalSegundos;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tiempo<sp/>restante<sp/>de<sp/>construcción<sp/>en<sp/>segundos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_cuartel_1a074dd4623465e7938950fcaf33596fdb" kindref="member">TiempoConstruccionRestante</ref><sp/>=&gt;<sp/>tiempoconstruccion.TiempoRestanteSegundos;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Indica<sp/>si<sp/>el<sp/>cuartel<sp/>ya<sp/>está<sp/>construido</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_cuartel_1a8a3207ed3ff67c5425c9cb0f763b2871" kindref="member">EstaConstruido</ref><sp/>=&gt;<sp/>tiempoconstruccion.EstaCompleta;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor:<sp/>inicializa<sp/>el<sp/>cuartel<sp/>y<sp/>su<sp/>tiempo<sp/>de<sp/>construcción<sp/>(60<sp/>segundos)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_cuartel_1ace7d738837999302c900f5bacbdd1342" kindref="member">Cuartel</ref>(<ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref><sp/>propietario)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_cuartel_1a76f80922def80ab1490bca07795b08d8" kindref="member">Propietario</ref><sp/>=<sp/>propietario;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_cuartel_1aa954ba8fe31b791d72349f185ff6a215" kindref="member">Vida</ref><sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tiempoconstruccion<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref>(60);<sp/></highlight><highlight class="comment">//<sp/>60<sp/>segundos<sp/>para<sp/>construir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Cuartel.cs"/>
+  </compounddef>
+</doxygen>

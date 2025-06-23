@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tiempo_construccion" kind="class" language="C#" prot="public">
+    <compoundname>Library::TiempoConstruccion</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_tiempo_construccion_1ac34f754093a60e7e8bc421f0e4786518" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.TiempoConstruccion.TiempoTotalSegundos</definition>
+        <argsstring></argsstring>
+        <name>TiempoTotalSegundos</name>
+        <qualifiedname>Library.TiempoConstruccion.TiempoTotalSegundos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="8" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tiempo_construccion_1acf5b24dd9056a29ce4222ea7292bd92b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Library.TiempoConstruccion.Inicio</definition>
+        <argsstring></argsstring>
+        <name>Inicio</name>
+        <qualifiedname>Library.TiempoConstruccion.Inicio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="11" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tiempo_construccion_1ad0b332eb288eca7c5d6a86aa67e472ee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Library.TiempoConstruccion.Fin</definition>
+        <argsstring></argsstring>
+        <name>Fin</name>
+        <qualifiedname>Library.TiempoConstruccion.Fin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="14" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tiempo_construccion_1a1fc35d788d7a885d0a2362e53de934ce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.TiempoConstruccion.TiempoRestanteSegundos</definition>
+        <argsstring></argsstring>
+        <name>TiempoRestanteSegundos</name>
+        <qualifiedname>Library.TiempoConstruccion.TiempoRestanteSegundos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="17" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tiempo_construccion_1a4dbffdc559ea49e312f815d6fc039c2a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Library.TiempoConstruccion.EstaCompleta</definition>
+        <argsstring></argsstring>
+        <name>EstaCompleta</name>
+        <qualifiedname>Library.TiempoConstruccion.EstaCompleta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="27" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tiempo_construccion_1afe0d8c59dec74c9bf7db0143a57f1974" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.TiempoConstruccion.TiempoConstruccion</definition>
+        <argsstring>(int tiempoEnSegundos)</argsstring>
+        <name>TiempoConstruccion</name>
+        <qualifiedname>Library.TiempoConstruccion.TiempoConstruccion</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tiempoEnSegundos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="30" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="30" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" line="5" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/TiempoConstruccion.cs" bodystart="6" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tiempo_construccion_1a4dbffdc559ea49e312f815d6fc039c2a" prot="public" virt="non-virtual"><scope>Library::TiempoConstruccion</scope><name>EstaCompleta</name></member>
+      <member refid="class_library_1_1_tiempo_construccion_1ad0b332eb288eca7c5d6a86aa67e472ee" prot="public" virt="non-virtual"><scope>Library::TiempoConstruccion</scope><name>Fin</name></member>
+      <member refid="class_library_1_1_tiempo_construccion_1acf5b24dd9056a29ce4222ea7292bd92b" prot="public" virt="non-virtual"><scope>Library::TiempoConstruccion</scope><name>Inicio</name></member>
+      <member refid="class_library_1_1_tiempo_construccion_1afe0d8c59dec74c9bf7db0143a57f1974" prot="public" virt="non-virtual"><scope>Library::TiempoConstruccion</scope><name>TiempoConstruccion</name></member>
+      <member refid="class_library_1_1_tiempo_construccion_1a1fc35d788d7a885d0a2362e53de934ce" prot="public" virt="non-virtual"><scope>Library::TiempoConstruccion</scope><name>TiempoRestanteSegundos</name></member>
+      <member refid="class_library_1_1_tiempo_construccion_1ac34f754093a60e7e8bc421f0e4786518" prot="public" virt="non-virtual"><scope>Library::TiempoConstruccion</scope><name>TiempoTotalSegundos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

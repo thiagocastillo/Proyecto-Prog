@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_civilizacion_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::CivilizacionTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_civilizacion_tests_1abdaa741434c9969e03910ea682af50c4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref></type>
+        <definition>Civilizacion Library.Tests.CivilizacionTests.civilizacion</definition>
+        <argsstring></argsstring>
+        <name>civilizacion</name>
+        <qualifiedname>Library.Tests.CivilizacionTests.civilizacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="5" column="26" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_civilizacion_tests_1a46f827d02ca135a4e48264e2f11570ff" prot="private" static="no" mutable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Library.Tests.CivilizacionTests.bonificaciones</definition>
+        <argsstring></argsstring>
+        <name>bonificaciones</name>
+        <qualifiedname>Library.Tests.CivilizacionTests.bonificaciones</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="6" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_civilizacion_tests_1ad241c29fc6f5761a0274e791594edebb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.CivilizacionTests.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <qualifiedname>Library.Tests.CivilizacionTests.Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="9" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_civilizacion_tests_1aaeee9a6839a6a194107ab72e3565bd0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.CivilizacionTests.CrearCivilizacion</definition>
+        <argsstring>()</argsstring>
+        <name>CrearCivilizacion</name>
+        <qualifiedname>Library.Tests.CivilizacionTests.CrearCivilizacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="16" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_civilizacion_tests_1a83d1c0e3da852d2454764090161f6168" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.CivilizacionTests.ModificarUnidadEspecial</definition>
+        <argsstring>()</argsstring>
+        <name>ModificarUnidadEspecial</name>
+        <qualifiedname>Library.Tests.CivilizacionTests.ModificarUnidadEspecial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="25" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_civilizacion_tests_1a0096b06918bc3ba146a5ecd96cde3e3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.CivilizacionTests.ModificarListaBonificaciones</definition>
+        <argsstring>()</argsstring>
+        <name>ModificarListaBonificaciones</name>
+        <qualifiedname>Library.Tests.CivilizacionTests.ModificarListaBonificaciones</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="32" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="32" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs" bodystart="4" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1a46f827d02ca135a4e48264e2f11570ff" prot="private" virt="non-virtual"><scope>Library::Tests::CivilizacionTests</scope><name>bonificaciones</name></member>
+      <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1abdaa741434c9969e03910ea682af50c4" prot="private" virt="non-virtual"><scope>Library::Tests::CivilizacionTests</scope><name>civilizacion</name></member>
+      <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1aaeee9a6839a6a194107ab72e3565bd0a" prot="public" virt="non-virtual"><scope>Library::Tests::CivilizacionTests</scope><name>CrearCivilizacion</name></member>
+      <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1a0096b06918bc3ba146a5ecd96cde3e3e" prot="public" virt="non-virtual"><scope>Library::Tests::CivilizacionTests</scope><name>ModificarListaBonificaciones</name></member>
+      <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1a83d1c0e3da852d2454764090161f6168" prot="public" virt="non-virtual"><scope>Library::Tests::CivilizacionTests</scope><name>ModificarUnidadEspecial</name></member>
+      <member refid="class_library_1_1_tests_1_1_civilizacion_tests_1ad241c29fc6f5761a0274e791594edebb" prot="public" virt="non-virtual"><scope>Library::Tests::CivilizacionTests</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

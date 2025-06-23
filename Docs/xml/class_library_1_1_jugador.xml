@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_jugador" kind="class" language="C#" prot="public">
+    <compoundname>Library::Jugador</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_library_1_1_jugador_1a28e5a9b86a098209ba85f4d1dbc46547" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Library.Jugador.LimiteAldeanos</definition>
+        <argsstring></argsstring>
+        <name>LimiteAldeanos</name>
+        <qualifiedname>Library.Jugador.LimiteAldeanos</qualifiedname>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="9" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_jugador_1ae1a9ee627309fcb9d8eacfaeb56490cd" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Library.Jugador.LimiteMilitares</definition>
+        <argsstring></argsstring>
+        <name>LimiteMilitares</name>
+        <qualifiedname>Library.Jugador.LimiteMilitares</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="10" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_jugador_1af711de88b6ccb61873ff3acc4c5a2b0c" prot="public" static="yes" mutable="no">
+        <type>Random</type>
+        <definition>Random Library.Jugador.random</definition>
+        <argsstring></argsstring>
+        <name>random</name>
+        <qualifiedname>Library.Jugador.random</qualifiedname>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="11" column="26" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_jugador_1ab0a1ca95dc22ff38e824fa21bf530d5c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Library.Jugador.x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Library.Jugador.x</qualifiedname>
+        <initializer>= random.Next(0, 100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="13" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_jugador_1a35e2a6a32ee76037ae734612f40ad0e1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Library.Jugador.y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Library.Jugador.y</qualifiedname>
+        <initializer>= random.Next(0, 100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="14" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_jugador_1a3aee044e8a7934efaf75a34d389fe828" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Library.Jugador.Nombre</definition>
+        <argsstring></argsstring>
+        <name>Nombre</name>
+        <qualifiedname>Library.Jugador.Nombre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="17" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1a4be88d86a0aafd3ba2fb04e46108d955" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref></type>
+        <definition>Civilizacion Library.Jugador.Civilizacion</definition>
+        <argsstring></argsstring>
+        <name>Civilizacion</name>
+        <qualifiedname>Library.Jugador.Civilizacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="18" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1acbcf0e243cf8667210d8ecc8e4f0aa6d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_centro_civico" kindref="compound">CentroCivico</ref></type>
+        <definition>CentroCivico Library.Jugador.CentroCivico</definition>
+        <argsstring></argsstring>
+        <name>CentroCivico</name>
+        <qualifiedname>Library.Jugador.CentroCivico</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="20" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1a230df08b9303470bf21b65dbe38e32ab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_library_1_1_aldeano" kindref="compound">Aldeano</ref> &gt;</type>
+        <definition>List&lt;Aldeano&gt; Library.Jugador.Aldeanos</definition>
+        <argsstring></argsstring>
+        <name>Aldeanos</name>
+        <qualifiedname>Library.Jugador.Aldeanos</qualifiedname>
+        <initializer>= new List&lt;<ref refid="class_library_1_1_aldeano" kindref="compound">Aldeano</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="22" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1a57047a44a1ad81a82f8226a110e50ab1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; Library.Jugador.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.Jugador.Recursos</qualifiedname>
+        <initializer>= new Dictionary&lt;string, int&gt;()
+    {
+        { &quot;Alimento&quot;, 0 },
+        { &quot;Madera&quot;, 0 },
+        { &quot;Oro&quot;, 0 },
+        { &quot;Piedra&quot;, 0 }
+    }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="25" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1ae677d6ae6d4d02b76fbc87f9d931ea5e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Jugador.PoblacionActual</definition>
+        <argsstring></argsstring>
+        <name>PoblacionActual</name>
+        <qualifiedname>Library.Jugador.PoblacionActual</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="34" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1ae792647e786b974fa0b35890616c5b80" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Jugador.PoblacionMaxima</definition>
+        <argsstring></argsstring>
+        <name>PoblacionMaxima</name>
+        <qualifiedname>Library.Jugador.PoblacionMaxima</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="35" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1afb6fe1505a96e2c94402d53811864265" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref> &gt;</type>
+        <definition>List&lt;IEdificio&gt; Library.Jugador.Edificios</definition>
+        <argsstring></argsstring>
+        <name>Edificios</name>
+        <qualifiedname>Library.Jugador.Edificios</qualifiedname>
+        <initializer>= new List&lt;<ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="36" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_jugador_1ac859de5b15cb725429b27dac832fd5af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref> &gt;</type>
+        <definition>List&lt;IUnidad&gt; Library.Jugador.Unidades</definition>
+        <argsstring></argsstring>
+        <name>Unidades</name>
+        <qualifiedname>Library.Jugador.Unidades</qualifiedname>
+        <initializer>= new List&lt;<ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="38" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_jugador_1a20f85f6a704b084c4b78cf9705ce5b49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Jugador.Jugador</definition>
+        <argsstring>(string nombre, Civilizacion civilizacion)</argsstring>
+        <name>Jugador</name>
+        <qualifiedname>Library.Jugador.Jugador</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref></type>
+          <declname>civilizacion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="40" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="40" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1a31f77eb262de57a68162646601cc21a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt; string, int &gt; Library.Jugador.ObtenerResumenRecursosTotales</definition>
+        <argsstring>()</argsstring>
+        <name>ObtenerResumenRecursosTotales</name>
+        <qualifiedname>Library.Jugador.ObtenerResumenRecursosTotales</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="57" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="57" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1a8e550be05b00dc95d76b610d5f4b94e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Jugador.AgregarRecurso</definition>
+        <argsstring>(ITipoRecurso tipo, int cantidad)</argsstring>
+        <name>AgregarRecurso</name>
+        <qualifiedname>Library.Jugador.AgregarRecurso</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_tipo_recurso" kindref="compound">ITipoRecurso</ref></type>
+          <declname>tipo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cantidad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="88" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="88" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1a2415d514a4771ddfe160f7b2cff027c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Jugador.DepositarRecursos</definition>
+        <argsstring>(Dictionary&lt; string, int &gt; recursosEdificio)</argsstring>
+        <name>DepositarRecursos</name>
+        <qualifiedname>Library.Jugador.DepositarRecursos</qualifiedname>
+        <param>
+          <type>Dictionary&lt; string, int &gt;</type>
+          <declname>recursosEdificio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="100" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="100" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1a455b2a73cce1a040b195ae46a8562325" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Jugador.AumentarPoblacionMaxima</definition>
+        <argsstring>(int incremento)</argsstring>
+        <name>AumentarPoblacionMaxima</name>
+        <qualifiedname>Library.Jugador.AumentarPoblacionMaxima</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>incremento</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="111" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="111" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1ac7c60a0f769bcc632d07e695822aab29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Jugador.AgregarEdificio</definition>
+        <argsstring>(IEdificio edificio)</argsstring>
+        <name>AgregarEdificio</name>
+        <qualifiedname>Library.Jugador.AgregarEdificio</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>edificio</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="125" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1ad9c6ef976c7f3d3276d1c336fdc5ed8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Jugador.AgregarUnidad</definition>
+        <argsstring>(IUnidad unidad)</argsstring>
+        <name>AgregarUnidad</name>
+        <qualifiedname>Library.Jugador.AgregarUnidad</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>unidad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="131" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="131" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1a1e00da344f7d5adbf8fed619b861f070" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Jugador.ObtenerResumenPoblacion</definition>
+        <argsstring>()</argsstring>
+        <name>ObtenerResumenPoblacion</name>
+        <qualifiedname>Library.Jugador.ObtenerResumenPoblacion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="159" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_jugador_1adde10481dda42322e3cfef5d4a1e087c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Jugador.PuedeCrearAldeano</definition>
+        <argsstring>()</argsstring>
+        <name>PuedeCrearAldeano</name>
+        <qualifiedname>Library.Jugador.PuedeCrearAldeano</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="165" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="165" bodyend="170"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Jugador.cs" bodystart="7" bodyend="171"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_jugador_1ac7c60a0f769bcc632d07e695822aab29" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>AgregarEdificio</name></member>
+      <member refid="class_library_1_1_jugador_1a8e550be05b00dc95d76b610d5f4b94e8" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>AgregarRecurso</name></member>
+      <member refid="class_library_1_1_jugador_1ad9c6ef976c7f3d3276d1c336fdc5ed8c" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>AgregarUnidad</name></member>
+      <member refid="class_library_1_1_jugador_1a230df08b9303470bf21b65dbe38e32ab" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Aldeanos</name></member>
+      <member refid="class_library_1_1_jugador_1a455b2a73cce1a040b195ae46a8562325" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>AumentarPoblacionMaxima</name></member>
+      <member refid="class_library_1_1_jugador_1acbcf0e243cf8667210d8ecc8e4f0aa6d" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>CentroCivico</name></member>
+      <member refid="class_library_1_1_jugador_1a4be88d86a0aafd3ba2fb04e46108d955" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Civilizacion</name></member>
+      <member refid="class_library_1_1_jugador_1a2415d514a4771ddfe160f7b2cff027c8" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>DepositarRecursos</name></member>
+      <member refid="class_library_1_1_jugador_1afb6fe1505a96e2c94402d53811864265" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Edificios</name></member>
+      <member refid="class_library_1_1_jugador_1a20f85f6a704b084c4b78cf9705ce5b49" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Jugador</name></member>
+      <member refid="class_library_1_1_jugador_1a28e5a9b86a098209ba85f4d1dbc46547" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>LimiteAldeanos</name></member>
+      <member refid="class_library_1_1_jugador_1ae1a9ee627309fcb9d8eacfaeb56490cd" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>LimiteMilitares</name></member>
+      <member refid="class_library_1_1_jugador_1a3aee044e8a7934efaf75a34d389fe828" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Nombre</name></member>
+      <member refid="class_library_1_1_jugador_1a1e00da344f7d5adbf8fed619b861f070" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>ObtenerResumenPoblacion</name></member>
+      <member refid="class_library_1_1_jugador_1a31f77eb262de57a68162646601cc21a6" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>ObtenerResumenRecursosTotales</name></member>
+      <member refid="class_library_1_1_jugador_1ae677d6ae6d4d02b76fbc87f9d931ea5e" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>PoblacionActual</name></member>
+      <member refid="class_library_1_1_jugador_1ae792647e786b974fa0b35890616c5b80" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>PoblacionMaxima</name></member>
+      <member refid="class_library_1_1_jugador_1adde10481dda42322e3cfef5d4a1e087c" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>PuedeCrearAldeano</name></member>
+      <member refid="class_library_1_1_jugador_1af711de88b6ccb61873ff3acc4c5a2b0c" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>random</name></member>
+      <member refid="class_library_1_1_jugador_1a57047a44a1ad81a82f8226a110e50ab1" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Recursos</name></member>
+      <member refid="class_library_1_1_jugador_1ac859de5b15cb725429b27dac832fd5af" prot="public" virt="non-virtual"><scope>Library::Jugador</scope><name>Unidades</name></member>
+      <member refid="class_library_1_1_jugador_1ab0a1ca95dc22ff38e824fa21bf530d5c" prot="private" virt="non-virtual"><scope>Library::Jugador</scope><name>x</name></member>
+      <member refid="class_library_1_1_jugador_1a35e2a6a32ee76037ae734612f40ad0e1" prot="private" virt="non-virtual"><scope>Library::Jugador</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_recurso_natural_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::RecursoNaturalTests</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_recurso_natural_tests_1afc3bba6ba70e1209bb9736b49e4f46bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RecursoNaturalTests.Constructor_ValoresInicialesCorrectos</definition>
+        <argsstring>()</argsstring>
+        <name>Constructor_ValoresInicialesCorrectos</name>
+        <qualifiedname>Library.Tests.RecursoNaturalTests.Constructor_ValoresInicialesCorrectos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" line="18" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" bodystart="18" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_recurso_natural_tests_1ac23db68232b293f8338f779e61621c64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RecursoNaturalTests.Recolectar_ExtraeCantidadCorrecta</definition>
+        <argsstring>()</argsstring>
+        <name>Recolectar_ExtraeCantidadCorrecta</name>
+        <qualifiedname>Library.Tests.RecursoNaturalTests.Recolectar_ExtraeCantidadCorrecta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" line="31" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" bodystart="31" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_recurso_natural_tests_1ac170a599f29ca14c98384e5bffae0e0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RecursoNaturalTests.Recolectar_AgoteRecurso_EstaAgotadoTrue</definition>
+        <argsstring>()</argsstring>
+        <name>Recolectar_AgoteRecurso_EstaAgotadoTrue</name>
+        <qualifiedname>Library.Tests.RecursoNaturalTests.Recolectar_AgoteRecurso_EstaAgotadoTrue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" line="41" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" bodystart="41" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_recurso_natural_tests_1a2cda1c79ec5bef66be17b295e2dbbcfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RecursoNaturalTests.Recolectar_RecursoAgotado_LanzaExcepcion</definition>
+        <argsstring>()</argsstring>
+        <name>Recolectar_RecursoAgotado_LanzaExcepcion</name>
+        <qualifiedname>Library.Tests.RecursoNaturalTests.Recolectar_RecursoAgotado_LanzaExcepcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" line="51" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" bodystart="51" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" line="14" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RecursoNaturalTests.cs" bodystart="15" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1afc3bba6ba70e1209bb9736b49e4f46bb" prot="public" virt="non-virtual"><scope>Library::Tests::RecursoNaturalTests</scope><name>Constructor_ValoresInicialesCorrectos</name></member>
+      <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1ac170a599f29ca14c98384e5bffae0e0e" prot="public" virt="non-virtual"><scope>Library::Tests::RecursoNaturalTests</scope><name>Recolectar_AgoteRecurso_EstaAgotadoTrue</name></member>
+      <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1ac23db68232b293f8338f779e61621c64" prot="public" virt="non-virtual"><scope>Library::Tests::RecursoNaturalTests</scope><name>Recolectar_ExtraeCantidadCorrecta</name></member>
+      <member refid="class_library_1_1_tests_1_1_recurso_natural_tests_1a2cda1c79ec5bef66be17b295e2dbbcfb" prot="public" virt="non-virtual"><scope>Library::Tests::RecursoNaturalTests</scope><name>Recolectar_RecursoAgotado_LanzaExcepcion</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_caballeria" kind="class" language="C#" prot="public">
+    <compoundname>Library::Caballeria</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_unidad_militar" prot="public" virt="non-virtual">Library.IUnidadMilitar</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_caballeria_1a86034d8c8f215e1cbffd86a85a8dd9da" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Caballeria.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Caballeria.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="7" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_caballeria_1a177bdd9b26851c3e01bdb051f6388132" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Caballeria.Ataque</definition>
+        <argsstring></argsstring>
+        <name>Ataque</name>
+        <qualifiedname>Library.Caballeria.Ataque</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4">Ataque</reimplements>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="9" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_caballeria_1ad4d2a437d6b271d0981d07cac063e729" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Caballeria.Defensa</definition>
+        <argsstring></argsstring>
+        <name>Defensa</name>
+        <qualifiedname>Library.Caballeria.Defensa</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0">Defensa</reimplements>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="11" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_caballeria_1a9a2d2f83fb6b9863b82bb57930da7e67" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>double</type>
+        <definition>double Library.Caballeria.Velocidad</definition>
+        <argsstring></argsstring>
+        <name>Velocidad</name>
+        <qualifiedname>Library.Caballeria.Velocidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c">Velocidad</reimplements>
+        <initializer>= 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="13" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_caballeria_1a4c8210860547bcb33624700180c43af5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Caballeria.Salud</definition>
+        <argsstring></argsstring>
+        <name>Salud</name>
+        <qualifiedname>Library.Caballeria.Salud</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df">Salud</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="16" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_caballeria_1acfe19b7c1191a1b002b648801a980200" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Caballeria.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Caballeria.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="18" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_caballeria_1a2ee05023d8881ff2863a42ba63c74201" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Caballeria.TiempoDeCreacion</definition>
+        <argsstring></argsstring>
+        <name>TiempoDeCreacion</name>
+        <qualifiedname>Library.Caballeria.TiempoDeCreacion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1acc872bea12425b9e375165327879fdbe">TiempoDeCreacion</reimplements>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="20" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_caballeria_1ac653e401dc4303dcbaceb690458bcba8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Caballeria.Caballeria</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Caballeria</name>
+        <qualifiedname>Library.Caballeria.Caballeria</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="23" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_caballeria_1a426ed8414b1ae4108509302d9d60dd43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Caballeria.CalcularDaño</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>CalcularDaño</name>
+        <qualifiedname>Library.Caballeria.CalcularDaño</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151">CalcularDaño</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="29" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="29" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_caballeria_1ac552cbb49e975bb0699ebdca6fd2cb15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Caballeria.Mover</definition>
+        <argsstring>(Point destino, Mapa mapa)</argsstring>
+        <name>Mover</name>
+        <qualifiedname>Library.Caballeria.Mover</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a">Mover</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="48" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="48" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_caballeria_1ac851255f535224bb10096cbe47a7d8da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Caballeria.AtacarUnidad</definition>
+        <argsstring>(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>AtacarUnidad</name>
+        <qualifiedname>Library.Caballeria.AtacarUnidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1a7e5aae6437562afc57f21c664fea2216">AtacarUnidad</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>atacante</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tipoUnidad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cantidad</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="62" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="62" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_caballeria_1a038a018500ae0981f17e21858e5c74ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Caballeria.AtacarEdificio</definition>
+        <argsstring>(IEdificio objetivo)</argsstring>
+        <name>AtacarEdificio</name>
+        <qualifiedname>Library.Caballeria.AtacarEdificio</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1af4b40a85d7a01c9e152a72bccfd16aa0">AtacarEdificio</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="93" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="93" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Caballeria</label>
+        <link refid="class_library_1_1_caballeria"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="2">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Caballeria</label>
+        <link refid="class_library_1_1_caballeria"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="2">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" line="4" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Caballeria.cs" bodystart="5" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_caballeria_1a038a018500ae0981f17e21858e5c74ae" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>AtacarEdificio</name></member>
+      <member refid="class_library_1_1_caballeria_1ac851255f535224bb10096cbe47a7d8da" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>AtacarUnidad</name></member>
+      <member refid="class_library_1_1_caballeria_1a177bdd9b26851c3e01bdb051f6388132" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Ataque</name></member>
+      <member refid="class_library_1_1_caballeria_1ac653e401dc4303dcbaceb690458bcba8" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Caballeria</name></member>
+      <member refid="class_library_1_1_caballeria_1a426ed8414b1ae4108509302d9d60dd43" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>CalcularDaño</name></member>
+      <member refid="class_library_1_1_caballeria_1ad4d2a437d6b271d0981d07cac063e729" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Defensa</name></member>
+      <member refid="class_library_1_1_caballeria_1ac552cbb49e975bb0699ebdca6fd2cb15" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Mover</name></member>
+      <member refid="class_library_1_1_caballeria_1acfe19b7c1191a1b002b648801a980200" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_caballeria_1a86034d8c8f215e1cbffd86a85a8dd9da" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_caballeria_1a4c8210860547bcb33624700180c43af5" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Salud</name></member>
+      <member refid="class_library_1_1_caballeria_1a2ee05023d8881ff2863a42ba63c74201" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>TiempoDeCreacion</name></member>
+      <member refid="class_library_1_1_caballeria_1a9a2d2f83fb6b9863b82bb57930da7e67" prot="public" virt="non-virtual"><scope>Library::Caballeria</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

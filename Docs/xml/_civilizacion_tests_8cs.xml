@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_civilizacion_tests_8cs" kind="file" language="C#">
+    <compoundname>CivilizacionTests.cs</compoundname>
+    <innerclass refid="class_library_1_1_tests_1_1_civilizacion_tests" prot="public">Library::Tests::CivilizacionTests</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <innernamespace refid="namespace_library_1_1_tests">Library::Tests</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library_1_1_tests" kindref="compound">Library.Tests</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_library_1_1_tests_1_1_civilizacion_tests" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_tests_1_1_civilizacion_tests" kindref="compound">CivilizacionTests</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref><sp/>civilizacion;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>List&lt;string&gt;<sp/>bonificaciones;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>[SetUp]</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_civilizacion_tests_1ad241c29fc6f5761a0274e791594edebb" kindref="member">Setup</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bonificaciones<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>List&lt;string&gt;<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;Recolectar<sp/>mas<sp/>rapido&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Infanteria<sp/>mas<sp/>fuerte&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>civilizacion<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref>(</highlight><highlight class="stringliteral">&quot;Armenios&quot;</highlight><highlight class="normal">,<sp/>bonificaciones,<sp/></highlight><highlight class="stringliteral">&quot;Guerrero<sp/>Berserker&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_civilizacion_tests_1aaeee9a6839a6a194107ab72e3565bd0a" kindref="member">CrearCivilizacion</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(</highlight><highlight class="stringliteral">&quot;Armenios&quot;</highlight><highlight class="normal">,<sp/>civilizacion.Nombre);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(</highlight><highlight class="stringliteral">&quot;Guerrero<sp/>Berserker&quot;</highlight><highlight class="normal">,<sp/>civilizacion.UnidadEspecial);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CollectionAssert.Contains(civilizacion.Bonificaciones,<sp/></highlight><highlight class="stringliteral">&quot;Recolectar<sp/>mas<sp/>rapido&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CollectionAssert.Contains(civilizacion.Bonificaciones,<sp/></highlight><highlight class="stringliteral">&quot;Infanteria<sp/>mas<sp/>fuerte&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_civilizacion_tests_1a83d1c0e3da852d2454764090161f6168" kindref="member">ModificarUnidadEspecial</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>civilizacion.Nombre<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Armenios&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(</highlight><highlight class="stringliteral">&quot;Armenios&quot;</highlight><highlight class="normal">,<sp/>civilizacion.Nombre);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_civilizacion_tests_1a0096b06918bc3ba146a5ecd96cde3e3e" kindref="member">ModificarListaBonificaciones</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>civilizacion.Bonificaciones.Add(</highlight><highlight class="stringliteral">&quot;Empieza<sp/>con<sp/>más<sp/>aldeanos&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CollectionAssert.Contains(civilizacion.Bonificaciones,<sp/></highlight><highlight class="stringliteral">&quot;Empieza<sp/>con<sp/>más<sp/>aldeanos&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(3,<sp/>civilizacion.Bonificaciones.Count);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/CivilizacionTests.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_point_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::PointTests</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_point_tests_1a054ad191df3d1211cdc8b06a36952f99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PointTests.LeerCoordenadas</definition>
+        <argsstring>()</argsstring>
+        <name>LeerCoordenadas</name>
+        <qualifiedname>Library.Tests.PointTests.LeerCoordenadas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" line="7" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" bodystart="7" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_point_tests_1a42ce4e72854b528875e788667d615324" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PointTests.InicializarEnCeroCero</definition>
+        <argsstring>()</argsstring>
+        <name>InicializarEnCeroCero</name>
+        <qualifiedname>Library.Tests.PointTests.InicializarEnCeroCero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" line="18" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_point_tests_1a2baeb27af7236c654a6f1af3a1393aae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PointTests.ConParametros</definition>
+        <argsstring>()</argsstring>
+        <name>ConParametros</name>
+        <qualifiedname>Library.Tests.PointTests.ConParametros</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" line="27" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" bodystart="27" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PointTests.cs" bodystart="4" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_point_tests_1a2baeb27af7236c654a6f1af3a1393aae" prot="public" virt="non-virtual"><scope>Library::Tests::PointTests</scope><name>ConParametros</name></member>
+      <member refid="class_library_1_1_tests_1_1_point_tests_1a42ce4e72854b528875e788667d615324" prot="public" virt="non-virtual"><scope>Library::Tests::PointTests</scope><name>InicializarEnCeroCero</name></member>
+      <member refid="class_library_1_1_tests_1_1_point_tests_1a054ad191df3d1211cdc8b06a36952f99" prot="public" virt="non-virtual"><scope>Library::Tests::PointTests</scope><name>LeerCoordenadas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

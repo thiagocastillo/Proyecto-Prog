@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_mock_edificio" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::MockEdificio</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_edificio" prot="public" virt="non-virtual">Library.IEdificio</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_edificio_1a0cb7f71c367c74e5b35f7a2906f7124d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.MockEdificio.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Tests.MockEdificio.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="157" column="24" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_edificio_1a06944b789956005e54f246dabd0dcecb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Tests.MockEdificio.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.Tests.MockEdificio.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="158" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_edificio_1a3e3690f35289f9fdaf8c5592681d463d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Tests.MockEdificio.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Tests.MockEdificio.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="159" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="159" bodyend="159"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Tests.MockEdificio</label>
+        <link refid="class_library_1_1_tests_1_1_mock_edificio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Tests.MockEdificio</label>
+        <link refid="class_library_1_1_tests_1_1_mock_edificio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="155" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="156" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_mock_edificio_1a3e3690f35289f9fdaf8c5592681d463d" prot="public" virt="non-virtual"><scope>Library::Tests::MockEdificio</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_edificio_1a0cb7f71c367c74e5b35f7a2906f7124d" prot="public" virt="non-virtual"><scope>Library::Tests::MockEdificio</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_edificio_1a06944b789956005e54f246dabd0dcecb" prot="public" virt="non-virtual"><scope>Library::Tests::MockEdificio</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

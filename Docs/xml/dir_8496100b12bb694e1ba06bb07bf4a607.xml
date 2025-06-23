@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_8496100b12bb694e1ba06bb07bf4a607" kind="dir">
+    <compoundname>C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library</compoundname>
+    <innerdir refid="dir_d0986975c63ea438beff292130745382">C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/obj</innerdir>
+    <innerfile refid="_aldeano_8cs">Aldeano.cs</innerfile>
+    <innerfile refid="_alimento_8cs">Alimento.cs</innerfile>
+    <innerfile refid="_arbol_8cs">Arbol.cs</innerfile>
+    <innerfile refid="_arquero_8cs">Arquero.cs</innerfile>
+    <innerfile refid="_arquero_compuesto_8cs">ArqueroCompuesto.cs</innerfile>
+    <innerfile refid="_ayuda_8cs">Ayuda.cs</innerfile>
+    <innerfile refid="_caballeria_8cs">Caballeria.cs</innerfile>
+    <innerfile refid="_casa_8cs">Casa.cs</innerfile>
+    <innerfile refid="_centro_civico_8cs">CentroCivico.cs</innerfile>
+    <innerfile refid="_civilizacion_8cs">Civilizacion.cs</innerfile>
+    <innerfile refid="_cuartel_8cs">Cuartel.cs</innerfile>
+    <innerfile refid="_deposito_madera_8cs">DepositoMadera.cs</innerfile>
+    <innerfile refid="_deposito_oro_8cs">DepositoOro.cs</innerfile>
+    <innerfile refid="_deposito_piedra_8cs">DepositoPiedra.cs</innerfile>
+    <innerfile refid="_granja_8cs">Granja.cs</innerfile>
+    <innerfile refid="_guerrero_jaguar_8cs">GuerreroJaguar.cs</innerfile>
+    <innerfile refid="_i_almacenamiento_8cs">IAlmacenamiento.cs</innerfile>
+    <innerfile refid="_i_edificio_8cs">IEdificio.cs</innerfile>
+    <innerfile refid="_infanteria_8cs">Infanteria.cs</innerfile>
+    <innerfile refid="_i_recolector_8cs">IRecolector.cs</innerfile>
+    <innerfile refid="_i_tipo_recurso_8cs">ITipoRecurso.cs</innerfile>
+    <innerfile refid="_i_unidad_8cs">IUnidad.cs</innerfile>
+    <innerfile refid="_i_unidad_militar_8cs">IUnidadMilitar.cs</innerfile>
+    <innerfile refid="_juego_fachada_8cs">JuegoFachada.cs</innerfile>
+    <innerfile refid="_jugador_8cs">Jugador.cs</innerfile>
+    <innerfile refid="_mapa_8cs">Mapa.cs</innerfile>
+    <innerfile refid="_molino_8cs">Molino.cs</innerfile>
+    <innerfile refid="_motor_8cs">Motor.cs</innerfile>
+    <innerfile refid="_oro_8cs">Oro.cs</innerfile>
+    <innerfile refid="_partida_8cs">Partida.cs</innerfile>
+    <innerfile refid="_piedra_8cs">Piedra.cs</innerfile>
+    <innerfile refid="_point_8cs">Point.cs</innerfile>
+    <innerfile refid="_ratha_8cs">Ratha.cs</innerfile>
+    <innerfile refid="_recurso_natural_8cs">RecursoNatural.cs</innerfile>
+    <innerfile refid="_tiempo_construccion_8cs">TiempoConstruccion.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_point" kind="class" language="C#" prot="public">
+    <compoundname>Library::Point</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_point_1a0cecd707df9a597c6c5ee460e6aba7cd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Point.X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <qualifiedname>Library.Point.X</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" line="5" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_point_1ae4d3552510d0084b37f64b43aa32add5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Point.Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <qualifiedname>Library.Point.Y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" line="6" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_point_1a46243f9b833e827148d3335b0a826c00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Point.Point</definition>
+        <argsstring>()</argsstring>
+        <name>Point</name>
+        <qualifiedname>Library.Point.Point</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" line="8" column="15" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_point_1a5a9e987ad2a9b045be31eba843f9e486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Point.Point</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>Point</name>
+        <qualifiedname>Library.Point.Point</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" line="10" column="15" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" bodystart="10" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" line="3" column="10" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Point.cs" bodystart="4" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_point_1a46243f9b833e827148d3335b0a826c00" prot="public" virt="non-virtual"><scope>Library::Point</scope><name>Point</name></member>
+      <member refid="class_library_1_1_point_1a5a9e987ad2a9b045be31eba843f9e486" prot="public" virt="non-virtual"><scope>Library::Point</scope><name>Point</name></member>
+      <member refid="class_library_1_1_point_1a0cecd707df9a597c6c5ee460e6aba7cd" prot="public" virt="non-virtual"><scope>Library::Point</scope><name>X</name></member>
+      <member refid="class_library_1_1_point_1ae4d3552510d0084b37f64b43aa32add5" prot="public" virt="non-virtual"><scope>Library::Point</scope><name>Y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

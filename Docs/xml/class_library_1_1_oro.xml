@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_oro" kind="class" language="C#" prot="public">
+    <compoundname>Library::Oro</compoundname>
+    <basecompoundref refid="class_library_1_1_recurso_natural" prot="public" virt="non-virtual">Library.RecursoNatural</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_oro_1a535febcc3f8ea3a210697de0ccdf2cab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Oro.Oro</definition>
+        <argsstring>(int vidaBase, Point ubicacion)</argsstring>
+        <name>Oro</name>
+        <qualifiedname>Library.Oro.Oro</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>vidaBase</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>ubicacion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Oro.cs" line="5" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Oro.cs" bodystart="5" bodyend="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Oro</label>
+        <link refid="class_library_1_1_oro"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.RecursoNatural</label>
+        <link refid="class_library_1_1_recurso_natural"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Oro</label>
+        <link refid="class_library_1_1_oro"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.RecursoNatural</label>
+        <link refid="class_library_1_1_recurso_natural"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Oro.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Oro.cs" bodystart="4" bodyend="10"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_recurso_natural_1afd01434ccbf075bbee0f5e86d7132107" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>Cantidad</name></member>
+      <member refid="class_library_1_1_recurso_natural_1aa00891604ef11d3aeb058920a595abf1" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>EstaAgotado</name></member>
+      <member refid="class_library_1_1_recurso_natural_1a71602c98f22dea3b7cba6dc518061383" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>Nombre</name></member>
+      <member refid="class_library_1_1_oro_1a535febcc3f8ea3a210697de0ccdf2cab" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>Oro</name></member>
+      <member refid="class_library_1_1_recurso_natural_1abfb4964895e1b995ee331fcf97ed9ea6" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>Recolectar</name></member>
+      <member refid="class_library_1_1_recurso_natural_1ab7064255670032bbe121cb68cd10658d" prot="protected" virt="non-virtual"><scope>Library::Oro</scope><name>RecursoNatural</name></member>
+      <member refid="class_library_1_1_recurso_natural_1a273ecdc0e3cd95bc010b6c1181655c98" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>TasaRecoleccion</name></member>
+      <member refid="class_library_1_1_recurso_natural_1a713ceb9f3ef30d683501153cc49cdda5" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>Ubicacion</name></member>
+      <member refid="class_library_1_1_recurso_natural_1a4cef9adac97aa485d960567ab152f57e" prot="public" virt="non-virtual"><scope>Library::Oro</scope><name>VidaBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

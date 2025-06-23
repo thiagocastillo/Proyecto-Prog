@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_motor_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::MotorTests</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_motor_tests_1af00bf2a4ca88eb76de198f741802c83e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MotorTests.ProcesarComando_CrearPartida_DevuelveMensajeCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>ProcesarComando_CrearPartida_DevuelveMensajeCorrecto</name>
+        <qualifiedname>Library.Tests.MotorTests.ProcesarComando_CrearPartida_DevuelveMensajeCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" line="10" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_motor_tests_1a26d57eb8924b600efeb42c4228ee532a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MotorTests.ProcesarComando_ComandoNoReconocido_DevuelveMensaje</definition>
+        <argsstring>()</argsstring>
+        <name>ProcesarComando_ComandoNoReconocido_DevuelveMensaje</name>
+        <qualifiedname>Library.Tests.MotorTests.ProcesarComando_ComandoNoReconocido_DevuelveMensaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" line="18" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_motor_tests_1a2317d6a2e09c5708b7021c4c98ddade0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MotorTests.ProcesarComando_Ayuda_DevuelveComandos</definition>
+        <argsstring>()</argsstring>
+        <name>ProcesarComando_Ayuda_DevuelveComandos</name>
+        <qualifiedname>Library.Tests.MotorTests.ProcesarComando_Ayuda_DevuelveComandos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" line="26" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_motor_tests_1abad33bb78ded9137d740977f4385dfbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MotorTests.ProcesarComando_AgregarJugador_FaltanArgumentos</definition>
+        <argsstring>()</argsstring>
+        <name>ProcesarComando_AgregarJugador_FaltanArgumentos</name>
+        <qualifiedname>Library.Tests.MotorTests.ProcesarComando_AgregarJugador_FaltanArgumentos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" line="35" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" bodystart="35" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_motor_tests_1a8e8b52160078ed9b352fc194f37df2dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.MotorTests.ProcesarComando_Salir_DevuelveMensaje</definition>
+        <argsstring>()</argsstring>
+        <name>ProcesarComando_Salir_DevuelveMensaje</name>
+        <qualifiedname>Library.Tests.MotorTests.ProcesarComando_Salir_DevuelveMensaje</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" line="43" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" bodystart="43" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" line="7" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MotorTests.cs" bodystart="8" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_motor_tests_1abad33bb78ded9137d740977f4385dfbd" prot="public" virt="non-virtual"><scope>Library::Tests::MotorTests</scope><name>ProcesarComando_AgregarJugador_FaltanArgumentos</name></member>
+      <member refid="class_library_1_1_tests_1_1_motor_tests_1a2317d6a2e09c5708b7021c4c98ddade0" prot="public" virt="non-virtual"><scope>Library::Tests::MotorTests</scope><name>ProcesarComando_Ayuda_DevuelveComandos</name></member>
+      <member refid="class_library_1_1_tests_1_1_motor_tests_1a26d57eb8924b600efeb42c4228ee532a" prot="public" virt="non-virtual"><scope>Library::Tests::MotorTests</scope><name>ProcesarComando_ComandoNoReconocido_DevuelveMensaje</name></member>
+      <member refid="class_library_1_1_tests_1_1_motor_tests_1af00bf2a4ca88eb76de198f741802c83e" prot="public" virt="non-virtual"><scope>Library::Tests::MotorTests</scope><name>ProcesarComando_CrearPartida_DevuelveMensajeCorrecto</name></member>
+      <member refid="class_library_1_1_tests_1_1_motor_tests_1a8e8b52160078ed9b352fc194f37df2dc" prot="public" virt="non-virtual"><scope>Library::Tests::MotorTests</scope><name>ProcesarComando_Salir_DevuelveMensaje</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

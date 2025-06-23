@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_ayuda" kind="class" language="C#" prot="public">
+    <compoundname>Library::Ayuda</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_library_1_1_ayuda_1ad9358ea3da67328dd067e9c94a80f1b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Library.Ayuda.ObtenerComandos</definition>
+        <argsstring>()</argsstring>
+        <name>ObtenerComandos</name>
+        <qualifiedname>Library.Ayuda.ObtenerComandos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" line="5" column="26" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" bodystart="5" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_ayuda_1a66a063cee877995c4535fbff660f023b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Library.Ayuda.AyudaEdificios</definition>
+        <argsstring>()</argsstring>
+        <name>AyudaEdificios</name>
+        <qualifiedname>Library.Ayuda.AyudaEdificios</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" line="32" column="26" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" bodystart="32" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_ayuda_1a00349e44cb414b56b1665f8ba58d4e9d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string Library.Ayuda.AyudaUnidades</definition>
+        <argsstring>()</argsstring>
+        <name>AyudaUnidades</name>
+        <qualifiedname>Library.Ayuda.AyudaUnidades</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" line="45" column="26" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" bodystart="45" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" line="3" column="15" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Ayuda.cs" bodystart="4" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_ayuda_1a66a063cee877995c4535fbff660f023b" prot="public" virt="non-virtual"><scope>Library::Ayuda</scope><name>AyudaEdificios</name></member>
+      <member refid="class_library_1_1_ayuda_1a00349e44cb414b56b1665f8ba58d4e9d" prot="public" virt="non-virtual"><scope>Library::Ayuda</scope><name>AyudaUnidades</name></member>
+      <member refid="class_library_1_1_ayuda_1ad9358ea3da67328dd067e9c94a80f1b3" prot="public" virt="non-virtual"><scope>Library::Ayuda</scope><name>ObtenerComandos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

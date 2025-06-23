@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_mock_unidad" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::MockUnidad</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_unidad" prot="public" virt="non-virtual">Library.IUnidad</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1aa649d07cd0b24fc4b5d59c33cf29b095" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.MockUnidad.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Tests.MockUnidad.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="142" column="24" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1a4935fb7185118fdaa7e1a7dde50a2b8a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Tests.MockUnidad.Ataque</definition>
+        <argsstring></argsstring>
+        <name>Ataque</name>
+        <qualifiedname>Library.Tests.MockUnidad.Ataque</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4">Ataque</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="143" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1a9775d793cb478ffed3b0631282a2c7a7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Tests.MockUnidad.Defensa</definition>
+        <argsstring></argsstring>
+        <name>Defensa</name>
+        <qualifiedname>Library.Tests.MockUnidad.Defensa</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0">Defensa</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="144" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1aabc6b7df89c5e60853b9e14935a0301f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Library.Tests.MockUnidad.Velocidad</definition>
+        <argsstring></argsstring>
+        <name>Velocidad</name>
+        <qualifiedname>Library.Tests.MockUnidad.Velocidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c">Velocidad</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="145" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1ab2968524d38fac9ec926b928e353b474" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Tests.MockUnidad.Salud</definition>
+        <argsstring></argsstring>
+        <name>Salud</name>
+        <qualifiedname>Library.Tests.MockUnidad.Salud</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df">Salud</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="146" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1a284dcdc192b23a0d1a8e6c67713135c9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Tests.MockUnidad.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Tests.MockUnidad.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="147" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_tests_1_1_mock_unidad_1aa34260c22157c8bcdacda5d0f58334f0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Tests.MockUnidad.TiempoDeCreacion</definition>
+        <argsstring></argsstring>
+        <name>TiempoDeCreacion</name>
+        <qualifiedname>Library.Tests.MockUnidad.TiempoDeCreacion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d">TiempoDeCreacion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="148" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="148" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mock_unidad_1a2f30ee80d2196f7cddd676663c05f3b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Tests.MockUnidad.Mover</definition>
+        <argsstring>(Point destino, Mapa mapa)</argsstring>
+        <name>Mover</name>
+        <qualifiedname>Library.Tests.MockUnidad.Mover</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a">Mover</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="149" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mock_unidad_1ade5c2d889603827f2778da04eaf19588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Tests.MockUnidad.CalcularDaño</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>CalcularDaño</name>
+        <qualifiedname>Library.Tests.MockUnidad.CalcularDaño</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151">CalcularDaño</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="150" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mock_unidad_1a398d78fe4ddba5d39531b1d5fbd3e882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Tests.MockUnidad.AtacarEdificio</definition>
+        <argsstring>(IEdificio objetivo)</argsstring>
+        <name>AtacarEdificio</name>
+        <qualifiedname>Library.Tests.MockUnidad.AtacarEdificio</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="151" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_mock_unidad_1af41cc02713992041c16591f81c610156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Tests.MockUnidad.AtacarUnidad</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>AtacarUnidad</name>
+        <qualifiedname>Library.Tests.MockUnidad.AtacarUnidad</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="152" column="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Tests.MockUnidad</label>
+        <link refid="class_library_1_1_tests_1_1_mock_unidad"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Tests.MockUnidad</label>
+        <link refid="class_library_1_1_tests_1_1_mock_unidad"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="140" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="141" bodyend="153"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1a398d78fe4ddba5d39531b1d5fbd3e882" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>AtacarEdificio</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1af41cc02713992041c16591f81c610156" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>AtacarUnidad</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1a4935fb7185118fdaa7e1a7dde50a2b8a" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Ataque</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1ade5c2d889603827f2778da04eaf19588" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>CalcularDaño</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1a9775d793cb478ffed3b0631282a2c7a7" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Defensa</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1a2f30ee80d2196f7cddd676663c05f3b5" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Mover</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1a284dcdc192b23a0d1a8e6c67713135c9" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1aa649d07cd0b24fc4b5d59c33cf29b095" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1ab2968524d38fac9ec926b928e353b474" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Salud</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1aa34260c22157c8bcdacda5d0f58334f0" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>TiempoDeCreacion</name></member>
+      <member refid="class_library_1_1_tests_1_1_mock_unidad_1aabc6b7df89c5e60853b9e14935a0301f" prot="public" virt="non-virtual"><scope>Library::Tests::MockUnidad</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

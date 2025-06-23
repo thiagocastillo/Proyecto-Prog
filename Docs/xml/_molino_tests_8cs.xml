@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_molino_tests_8cs" kind="file" language="C#">
+    <compoundname>MolinoTests.cs</compoundname>
+    <innerclass refid="class_library_1_1_tests_1_1_molino_tests" prot="public">Library::Tests::MolinoTests</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <innernamespace refid="namespace_library_1_1_tests">Library::Tests</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library_1_1_tests" kindref="compound">Library.Tests</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_library_1_1_tests_1_1_molino_tests" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_tests_1_1_molino_tests" kindref="compound">MolinoTests</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref><sp/>jugador;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>[SetUp]</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_molino_tests_1a24241e9dd019a38c22144d2a27847b8c" kindref="member">Setup</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref><sp/>civilizacion<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_civilizacion" kindref="compound">Civilizacion</ref>(</highlight><highlight class="stringliteral">&quot;Chinos&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>List&lt;string&gt;(),<sp/></highlight><highlight class="stringliteral">&quot;Caballeria&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jugador<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref>(</highlight><highlight class="stringliteral">&quot;Gaston&quot;</highlight><highlight class="normal">,<sp/>civilizacion);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_molino_tests_1a0a3f394fc36ab616de57704619891e0f" kindref="member">Constructor_ValoresInicialesCorrectos</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref><sp/>molino<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref>(jugador);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(jugador,<sp/>molino.<ref refid="class_library_1_1_molino_1ad8c07aca91d6ec868aa56a7e2a8da175" kindref="member">Propietario</ref>);<sp/></highlight><highlight class="comment">//<sp/>Verifica<sp/>que<sp/>el<sp/>propietario<sp/>sea<sp/>el<sp/>correcto</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(10000,<sp/>molino.<ref refid="class_library_1_1_molino_1a20dba5ea002bc17aea11fd6a01547d12" kindref="member">Vida</ref>);<sp/></highlight><highlight class="comment">//<sp/>Verifica<sp/>que<sp/>la<sp/>vida<sp/>inicial<sp/>sea<sp/>10000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(500,<sp/>molino.<ref refid="class_library_1_1_molino_1acd0a0606033fd221afd3939d1a54a757" kindref="member">CapacidadMaxima</ref>);<sp/></highlight><highlight class="comment">//<sp/>Verifica<sp/>que<sp/>la<sp/>capacidad<sp/>maxima<sp/>sea<sp/>500</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_molino_tests_1a9bd0b0558fe5953f15617cc8d8db5e0b" kindref="member">Eficiencia_CortaDistancia_100Porciento</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref><sp/>molino<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref>(jugador);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eficiencia<sp/>=<sp/>molino.<ref refid="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245" kindref="member">Eficiencia</ref>(1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(1.0,<sp/>eficiencia);<sp/></highlight><highlight class="comment">//<sp/>Debe<sp/>devolver<sp/>1.0<sp/>de<sp/>eficiencia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_molino_tests_1aaf85bc4c6055479f779c420aa5868208" kindref="member">Eficiencia_LargaDistancia_10Porciento</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref><sp/>molino<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref>(jugador);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eficiencia<sp/>=<sp/>molino.<ref refid="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245" kindref="member">Eficiencia</ref>(10);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(0.1,<sp/>eficiencia);<sp/></highlight><highlight class="comment">//<sp/>Debe<sp/>devolver<sp/>0.1<sp/>de<sp/>eficiencia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>[Test]</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_tests_1_1_molino_tests_1afcb4691a93b097708428c634958d07ab" kindref="member">Eficiencia_DistanciaIntermedia_CalculoCorrecto</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref><sp/>molino<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_molino" kindref="compound">Molino</ref>(jugador);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>eficiencia<sp/>=<sp/>molino.<ref refid="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245" kindref="member">Eficiencia</ref>(5);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Assert.AreEqual(0.5,<sp/>eficiencia);<sp/></highlight><highlight class="comment">//<sp/>Se<sp/>espera<sp/>que<sp/>sea<sp/>0.5<sp/>(50%)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/MolinoTests.cs"/>
+  </compounddef>
+</doxygen>

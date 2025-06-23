@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_i_recolector_8cs" kind="file" language="C#">
+    <compoundname>IRecolector.cs</compoundname>
+    <innerclass refid="interface_library_1_1_i_recolector" prot="public">Library::IRecolector</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="interface_library_1_1_i_recolector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_library_1_1_i_recolector" kindref="compound">IRecolector</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>Recolectar(Recurso.TipoRecurso<sp/>tipoRecurso,<sp/>IAlmacenamiento?<sp/>almacenCercano);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_recolector_1a9074e4b242b7323733869f07d03eea14" kindref="member">RecolectarEn</ref>(<ref refid="class_library_1_1_point" kindref="compound">Point</ref><sp/>coordenada,<sp/><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref><sp/>mapa);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IRecolector.cs"/>
+  </compounddef>
+</doxygen>

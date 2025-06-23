@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_guerrero_jaguar_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::GuerreroJaguarTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a26ef8eef5aa2c25ae380fe8e3a5a0cd6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.GuerreroJaguarTests.jugadorAzteca</definition>
+        <argsstring></argsstring>
+        <name>jugadorAzteca</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.jugadorAzteca</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="5" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a037a8a77e111558bf44bc9ee392869e6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.GuerreroJaguarTests.jugadorRival</definition>
+        <argsstring></argsstring>
+        <name>jugadorRival</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.jugadorRival</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="6" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1aa3ca03e42787518ef9a6bf4e03c8de2a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_guerrero_jaguar" kindref="compound">GuerreroJaguar</ref></type>
+        <definition>GuerreroJaguar Library.Tests.GuerreroJaguarTests.guerreroJaguar</definition>
+        <argsstring></argsstring>
+        <name>guerreroJaguar</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.guerreroJaguar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="7" column="28" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1ac8927684d0302d91f3d7f8be419b1415" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+        <definition>Mapa Library.Tests.GuerreroJaguarTests.mapa</definition>
+        <argsstring></argsstring>
+        <name>mapa</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="8" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a620a492e46be7057c714d236b1a6f857" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.GuerreroJaguarTests.SetUp</definition>
+        <argsstring>()</argsstring>
+        <name>SetUp</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.SetUp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="11" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="11" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a969cbebdaa190b23d180cd4af534894d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.GuerreroJaguarTests.Mover_DestinoValido_MueveCorrectamente</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_DestinoValido_MueveCorrectamente</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.Mover_DestinoValido_MueveCorrectamente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="24" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="24" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1aff0f45f64efad3ed0a9ac5e1b5586e1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.GuerreroJaguarTests.AtacarUnidad_ContraCaballeria_AplicaBonus</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarUnidad_ContraCaballeria_AplicaBonus</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.AtacarUnidad_ContraCaballeria_AplicaBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="36" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="36" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1ae22a63d1416af1239888a10a7f0ebb9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.GuerreroJaguarTests.AtacarUnidad_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarUnidad_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.AtacarUnidad_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="54" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="54" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a82f71c550cf21b0797ae1803626f0104" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.GuerreroJaguarTests.AtacarEdificio_ContraEdificio_CausaDaño</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarEdificio_ContraEdificio_CausaDaño</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.AtacarEdificio_ContraEdificio_CausaDaño</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="73" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="73" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a77101cbaca5135cbfa69874a698f3d19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.GuerreroJaguarTests.AtacarUnidad_UnidadEliminada_SeEliminaDeLista</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarUnidad_UnidadEliminada_SeEliminaDeLista</name>
+        <qualifiedname>Library.Tests.GuerreroJaguarTests.AtacarUnidad_UnidadEliminada_SeEliminaDeLista</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="84" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="84" bodyend="100"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/GuerreroJaguarTests.cs" bodystart="4" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a82f71c550cf21b0797ae1803626f0104" prot="public" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>AtacarEdificio_ContraEdificio_CausaDaño</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1aff0f45f64efad3ed0a9ac5e1b5586e1b" prot="public" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>AtacarUnidad_ContraCaballeria_AplicaBonus</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1ae22a63d1416af1239888a10a7f0ebb9f" prot="public" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>AtacarUnidad_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a77101cbaca5135cbfa69874a698f3d19" prot="public" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>AtacarUnidad_UnidadEliminada_SeEliminaDeLista</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1aa3ca03e42787518ef9a6bf4e03c8de2a" prot="private" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>guerreroJaguar</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a26ef8eef5aa2c25ae380fe8e3a5a0cd6" prot="private" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>jugadorAzteca</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a037a8a77e111558bf44bc9ee392869e6" prot="private" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>jugadorRival</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1ac8927684d0302d91f3d7f8be419b1415" prot="private" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>mapa</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a969cbebdaa190b23d180cd4af534894d" prot="public" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>Mover_DestinoValido_MueveCorrectamente</name></member>
+      <member refid="class_library_1_1_tests_1_1_guerrero_jaguar_tests_1a620a492e46be7057c714d236b1a6f857" prot="public" virt="non-virtual"><scope>Library::Tests::GuerreroJaguarTests</scope><name>SetUp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="namespace_library" kind="namespace" language="C#">
+    <compoundname>Library</compoundname>
+    <innerclass refid="class_library_1_1_aldeano" prot="public">Library::Aldeano</innerclass>
+    <innerclass refid="class_library_1_1_alimento" prot="public">Library::Alimento</innerclass>
+    <innerclass refid="class_library_1_1_arbol" prot="public">Library::Arbol</innerclass>
+    <innerclass refid="class_library_1_1_arquero" prot="public">Library::Arquero</innerclass>
+    <innerclass refid="class_library_1_1_arquero_compuesto" prot="public">Library::ArqueroCompuesto</innerclass>
+    <innerclass refid="class_library_1_1_ayuda" prot="public">Library::Ayuda</innerclass>
+    <innerclass refid="class_library_1_1_caballeria" prot="public">Library::Caballeria</innerclass>
+    <innerclass refid="class_library_1_1_casa" prot="public">Library::Casa</innerclass>
+    <innerclass refid="class_library_1_1_centro_civico" prot="public">Library::CentroCivico</innerclass>
+    <innerclass refid="class_library_1_1_civilizacion" prot="public">Library::Civilizacion</innerclass>
+    <innerclass refid="class_library_1_1_cuartel" prot="public">Library::Cuartel</innerclass>
+    <innerclass refid="class_library_1_1_deposito_madera" prot="public">Library::DepositoMadera</innerclass>
+    <innerclass refid="class_library_1_1_deposito_oro" prot="public">Library::DepositoOro</innerclass>
+    <innerclass refid="class_library_1_1_deposito_piedra" prot="public">Library::DepositoPiedra</innerclass>
+    <innerclass refid="class_library_1_1_granja" prot="public">Library::Granja</innerclass>
+    <innerclass refid="class_library_1_1_guerrero_jaguar" prot="public">Library::GuerreroJaguar</innerclass>
+    <innerclass refid="interface_library_1_1_i_almacenamiento" prot="public">Library::IAlmacenamiento</innerclass>
+    <innerclass refid="interface_library_1_1_i_edificio" prot="public">Library::IEdificio</innerclass>
+    <innerclass refid="class_library_1_1_infanteria" prot="public">Library::Infanteria</innerclass>
+    <innerclass refid="interface_library_1_1_i_recolector" prot="public">Library::IRecolector</innerclass>
+    <innerclass refid="interface_library_1_1_i_tipo_recurso" prot="public">Library::ITipoRecurso</innerclass>
+    <innerclass refid="interface_library_1_1_i_unidad" prot="public">Library::IUnidad</innerclass>
+    <innerclass refid="interface_library_1_1_i_unidad_militar" prot="public">Library::IUnidadMilitar</innerclass>
+    <innerclass refid="class_library_1_1_juego_fachada" prot="public">Library::JuegoFachada</innerclass>
+    <innerclass refid="class_library_1_1_jugador" prot="public">Library::Jugador</innerclass>
+    <innerclass refid="class_library_1_1_mapa" prot="public">Library::Mapa</innerclass>
+    <innerclass refid="class_library_1_1_molino" prot="public">Library::Molino</innerclass>
+    <innerclass refid="class_library_1_1_motor" prot="public">Library::Motor</innerclass>
+    <innerclass refid="class_library_1_1_oro" prot="public">Library::Oro</innerclass>
+    <innerclass refid="class_library_1_1_partida" prot="public">Library::Partida</innerclass>
+    <innerclass refid="class_library_1_1_piedra" prot="public">Library::Piedra</innerclass>
+    <innerclass refid="class_library_1_1_point" prot="public">Library::Point</innerclass>
+    <innerclass refid="class_library_1_1_ratha" prot="public">Library::Ratha</innerclass>
+    <innerclass refid="class_library_1_1_recurso_natural" prot="public">Library::RecursoNatural</innerclass>
+    <innerclass refid="class_library_1_1_tiempo_construccion" prot="public">Library::TiempoConstruccion</innerclass>
+    <innernamespace refid="namespace_library_1_1_tests">Library::Tests</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

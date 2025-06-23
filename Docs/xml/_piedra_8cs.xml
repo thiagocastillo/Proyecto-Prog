@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_piedra_8cs" kind="file" language="C#">
+    <compoundname>Piedra.cs</compoundname>
+    <innerclass refid="class_library_1_1_piedra" prot="public">Library::Piedra</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_library_1_1_piedra" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_piedra_1a6ea3a6789a5db51a09cd8b5321bd7c91" kindref="member">Piedra</ref><sp/>:<sp/><ref refid="class_library_1_1_recurso_natural_1ab7064255670032bbe121cb68cd10658d" kindref="member">RecursoNatural</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_piedra_1a6ea3a6789a5db51a09cd8b5321bd7c91" kindref="member">Piedra</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vidaBase,<sp/><ref refid="class_library_1_1_point" kindref="compound">Point</ref><sp/>ubicacion)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>base(</highlight><highlight class="stringliteral">&quot;Piedra&quot;</highlight><highlight class="normal">,<sp/>vidaBase,<sp/>0.50,<sp/>ubicacion)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Piedra.cs"/>
+  </compounddef>
+</doxygen>

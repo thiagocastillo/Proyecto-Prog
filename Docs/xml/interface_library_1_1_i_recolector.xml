@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_library_1_1_i_recolector" kind="interface" language="C#" prot="public">
+    <compoundname>Library::IRecolector</compoundname>
+    <derivedcompoundref refid="class_library_1_1_aldeano" prot="public" virt="non-virtual">Library.Aldeano</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_library_1_1_i_recolector_1a9074e4b242b7323733869f07d03eea14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.IRecolector.RecolectarEn</definition>
+        <argsstring>(Point coordenada, Mapa mapa)</argsstring>
+        <name>RecolectarEn</name>
+        <qualifiedname>Library.IRecolector.RecolectarEn</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1ae9eace7bd0bccab7b24f65f125918841">RecolectarEn</reimplementedby>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IRecolector.cs" line="6" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.IRecolector</label>
+        <link refid="interface_library_1_1_i_recolector"/>
+      </node>
+      <node id="2">
+        <label>Library.Aldeano</label>
+        <link refid="class_library_1_1_aldeano"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IRecolector.cs" line="3" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IRecolector.cs" bodystart="4" bodyend="7"/>
+    <listofallmembers>
+      <member refid="interface_library_1_1_i_recolector_1a9074e4b242b7323733869f07d03eea14" prot="public" virt="non-virtual"><scope>Library::IRecolector</scope><name>RecolectarEn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_library_1_1_i_edificio" kind="interface" language="C#" prot="public">
+    <compoundname>Library::IEdificio</compoundname>
+    <derivedcompoundref refid="class_library_1_1_casa" prot="public" virt="non-virtual">Library.Casa</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_centro_civico" prot="public" virt="non-virtual">Library.CentroCivico</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_cuartel" prot="public" virt="non-virtual">Library.Cuartel</derivedcompoundref>
+    <derivedcompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_tests_1_1_mock_edificio" prot="public" virt="non-virtual">Library.Tests.MockEdificio</derivedcompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.IEdificio.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.IEdificio.Propietario</qualifiedname>
+        <reimplementedby refid="class_library_1_1_casa_1ad8a5c4eb6ee976c1d8548796c943d531">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_centro_civico_1a8b01763faaf38e9c6b186735568bdd9e">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_cuartel_1a76f80922def80ab1490bca07795b08d8">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_madera_1a5010fe2bb16606984a74bec4450332ee">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_oro_1a7282c3582977c96e70881230c9f20e48">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_piedra_1a73006ed66e8d567c8bb17eaef7162088">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_granja_1ad19f67f04deac47caf352c87b913ff5e">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_molino_1ad8c07aca91d6ec868aa56a7e2a8da175">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_edificio_1a0cb7f71c367c74e5b35f7a2906f7124d">Propietario</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" line="5" column="13" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.IEdificio.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.IEdificio.Posicion</qualifiedname>
+        <reimplementedby refid="class_library_1_1_casa_1a566eec86581a17f048653cf55fe82daf">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_centro_civico_1a323b3168433754197455ff25a2bbd188">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_cuartel_1aa9e32e7aec0df79d9baf594e419f65fc">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_madera_1a74cb405bd2e1f068cee7fbfd25cf9807">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_oro_1ad532ccab596ba4ec1dab86f8e51183c9">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_piedra_1ae4e795b618d1c4a4dd26dcfb11e49cd7">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_granja_1a81c01f70f64443c8c370784c873ee271">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_molino_1aeac0677fbdfffb5c470338ed38ca8720">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_edificio_1a3e3690f35289f9fdaf8c5592681d463d">Posicion</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" line="6" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IEdificio.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.IEdificio.Vida</qualifiedname>
+        <reimplementedby refid="class_library_1_1_casa_1a817c44075760305ede3f0b3623daf6f2">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_centro_civico_1a9b23c43d7e69e70549f4f335ddc1823f">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_cuartel_1aa954ba8fe31b791d72349f185ff6a215">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_madera_1a812478f9fd56501d8b051c6b88b4b907">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_oro_1acf9e90d2e4e1127a08b4111b686f926e">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_piedra_1a935ef0ffa7f27b5127ff7c08696f3548">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_granja_1a56532099f2a0aea15d5c898d0a3c0296">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_molino_1a20dba5ea002bc17aea11fd6a01547d12">Vida</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_edificio_1a06944b789956005e54f246dabd0dcecb">Vida</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" line="7" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+      <node id="2">
+        <label>Library.Casa</label>
+        <link refid="class_library_1_1_casa"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.CentroCivico</label>
+        <link refid="class_library_1_1_centro_civico"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Library.Cuartel</label>
+        <link refid="class_library_1_1_cuartel"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Library.DepositoMadera</label>
+        <link refid="class_library_1_1_deposito_madera"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Library.DepositoOro</label>
+        <link refid="class_library_1_1_deposito_oro"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Library.DepositoPiedra</label>
+        <link refid="class_library_1_1_deposito_piedra"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Library.Granja</label>
+        <link refid="class_library_1_1_granja"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Library.Molino</label>
+        <link refid="class_library_1_1_molino"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Library.Tests.MockEdificio</label>
+        <link refid="class_library_1_1_tests_1_1_mock_edificio"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" line="3" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IEdificio.cs" bodystart="4" bodyend="8"/>
+    <listofallmembers>
+      <member refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca" prot="public" virt="non-virtual"><scope>Library::IEdificio</scope><name>Posicion</name></member>
+      <member refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6" prot="public" virt="non-virtual"><scope>Library::IEdificio</scope><name>Propietario</name></member>
+      <member refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b" prot="public" virt="non-virtual"><scope>Library::IEdificio</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

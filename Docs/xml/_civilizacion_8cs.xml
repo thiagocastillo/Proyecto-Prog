@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_civilizacion_8cs" kind="file" language="C#">
+    <compoundname>Civilizacion.cs</compoundname>
+    <innerclass refid="class_library_1_1_civilizacion" prot="public">Library::Civilizacion</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_library_1_1_civilizacion" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_civilizacion_1ae1c633c39baa7e6158625ef0ff32f664" kindref="member">Civilizacion</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nombre<sp/>de<sp/>la<sp/>civilizacion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_civilizacion_1aa7b61162e90fdec944dae79cb8115b6a" kindref="member">Nombre</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lista<sp/>de<sp/>bonificaciones<sp/>unicas<sp/>que<sp/>tiene<sp/>esta<sp/>civilizacion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;string&gt;<sp/><ref refid="class_library_1_1_civilizacion_1a72d65d7c8b935b430014ad2d32f8b572" kindref="member">Bonificaciones</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Unidad<sp/>especial<sp/>que<sp/>reemplaza<sp/>a<sp/>otra<sp/>unidad<sp/>por<sp/>defecto</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_civilizacion_1a19d54629ab8745bc1d3fc12a93f8257f" kindref="member">UnidadEspecial</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>que<sp/>define<sp/>los<sp/>datos<sp/>de<sp/>una<sp/>civilizacion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_civilizacion_1ae1c633c39baa7e6158625ef0ff32f664" kindref="member">Civilizacion</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>nombre,<sp/>List&lt;string&gt;<sp/>bonificaciones,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>unidadEspecial)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_civilizacion_1aa7b61162e90fdec944dae79cb8115b6a" kindref="member">Nombre</ref><sp/>=<sp/>nombre;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_civilizacion_1a72d65d7c8b935b430014ad2d32f8b572" kindref="member">Bonificaciones</ref><sp/>=<sp/>bonificaciones;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_civilizacion_1a19d54629ab8745bc1d3fc12a93f8257f" kindref="member">UnidadEspecial</ref><sp/>=<sp/>unidadEspecial;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs"/>
+  </compounddef>
+</doxygen>

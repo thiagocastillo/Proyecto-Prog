@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_tiempo_construccion_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::TiempoConstruccionTests</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_tiempo_construccion_tests_1af108bac0996b0f18330487b6be1828a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.TiempoConstruccionTests.Constructor_AlInicializar_TiempoTotalEsCorrecto</definition>
+        <argsstring>()</argsstring>
+        <name>Constructor_AlInicializar_TiempoTotalEsCorrecto</name>
+        <qualifiedname>Library.Tests.TiempoConstruccionTests.Constructor_AlInicializar_TiempoTotalEsCorrecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="11" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a0770fcb2a7e3c5f23dc7ed7ed65b55c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.TiempoConstruccionTests.Fin_CalculadoCorrectamente</definition>
+        <argsstring>()</argsstring>
+        <name>Fin_CalculadoCorrectamente</name>
+        <qualifiedname>Library.Tests.TiempoConstruccionTests.Fin_CalculadoCorrectamente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="20" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="20" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_tiempo_construccion_tests_1adb59d3b6af9ce1a4e8f6287e35d56428" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.TiempoConstruccionTests.TiempoRestante_DisminuyeConElTiempo</definition>
+        <argsstring>()</argsstring>
+        <name>TiempoRestante_DisminuyeConElTiempo</name>
+        <qualifiedname>Library.Tests.TiempoConstruccionTests.TiempoRestante_DisminuyeConElTiempo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="31" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="31" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a35e819051a661ee37a5364b317bc7ee5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.TiempoConstruccionTests.EstaCompleta_DevuelveTrue_DespuesDeTiempo</definition>
+        <argsstring>()</argsstring>
+        <name>EstaCompleta_DevuelveTrue_DespuesDeTiempo</name>
+        <qualifiedname>Library.Tests.TiempoConstruccionTests.EstaCompleta_DevuelveTrue_DespuesDeTiempo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="45" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a890ff167645816cceed53401a96a5e36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.TiempoConstruccionTests.EstaCompleta_DevuelveFalse_SiAunNoPasoElTiempo</definition>
+        <argsstring>()</argsstring>
+        <name>EstaCompleta_DevuelveFalse_SiAunNoPasoElTiempo</name>
+        <qualifiedname>Library.Tests.TiempoConstruccionTests.EstaCompleta_DevuelveFalse_SiAunNoPasoElTiempo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="55" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="55" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_tiempo_construccion_tests_1ab0093bf64f017d8db48a937a26348c21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.TiempoConstruccionTests.TiempoRestante_CuandoCompletado_EsCero</definition>
+        <argsstring>()</argsstring>
+        <name>TiempoRestante_CuandoCompletado_EsCero</name>
+        <qualifiedname>Library.Tests.TiempoConstruccionTests.TiempoRestante_CuandoCompletado_EsCero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="65" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="65" bodyend="72"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" line="8" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/TiempoConstruccionTests.cs" bodystart="9" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1af108bac0996b0f18330487b6be1828a3" prot="public" virt="non-virtual"><scope>Library::Tests::TiempoConstruccionTests</scope><name>Constructor_AlInicializar_TiempoTotalEsCorrecto</name></member>
+      <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a890ff167645816cceed53401a96a5e36" prot="public" virt="non-virtual"><scope>Library::Tests::TiempoConstruccionTests</scope><name>EstaCompleta_DevuelveFalse_SiAunNoPasoElTiempo</name></member>
+      <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a35e819051a661ee37a5364b317bc7ee5" prot="public" virt="non-virtual"><scope>Library::Tests::TiempoConstruccionTests</scope><name>EstaCompleta_DevuelveTrue_DespuesDeTiempo</name></member>
+      <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1a0770fcb2a7e3c5f23dc7ed7ed65b55c0" prot="public" virt="non-virtual"><scope>Library::Tests::TiempoConstruccionTests</scope><name>Fin_CalculadoCorrectamente</name></member>
+      <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1ab0093bf64f017d8db48a937a26348c21" prot="public" virt="non-virtual"><scope>Library::Tests::TiempoConstruccionTests</scope><name>TiempoRestante_CuandoCompletado_EsCero</name></member>
+      <member refid="class_library_1_1_tests_1_1_tiempo_construccion_tests_1adb59d3b6af9ce1a4e8f6287e35d56428" prot="public" virt="non-virtual"><scope>Library::Tests::TiempoConstruccionTests</scope><name>TiempoRestante_DisminuyeConElTiempo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

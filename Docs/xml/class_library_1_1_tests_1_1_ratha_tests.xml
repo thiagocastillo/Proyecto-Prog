@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_ratha_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::RathaTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_ratha_tests_1a3c12bbdf5fdd32eb473e9386f48c55be" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.RathaTests.jugador</definition>
+        <argsstring></argsstring>
+        <name>jugador</name>
+        <qualifiedname>Library.Tests.RathaTests.jugador</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="9" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_ratha_tests_1a7529a333f3ab77202da49b23c4a36134" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.RathaTests.jugadorEnemigo</definition>
+        <argsstring></argsstring>
+        <name>jugadorEnemigo</name>
+        <qualifiedname>Library.Tests.RathaTests.jugadorEnemigo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="10" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_ratha_tests_1a631d2f07e6fe0196de5aae57668c5d10" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+        <definition>Mapa Library.Tests.RathaTests.mapa</definition>
+        <argsstring></argsstring>
+        <name>mapa</name>
+        <qualifiedname>Library.Tests.RathaTests.mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="11" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_ratha_tests_1a7aca90e93f6aa99391aa74cdd2d41616" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RathaTests.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <qualifiedname>Library.Tests.RathaTests.Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="14" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_ratha_tests_1ab7963a490b225998d79794661d041c44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RathaTests.Mover_PosicionValida_MueveCorrectamente</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_PosicionValida_MueveCorrectamente</name>
+        <qualifiedname>Library.Tests.RathaTests.Mover_PosicionValida_MueveCorrectamente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="23" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="23" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_ratha_tests_1a36845091cf03f857771dcdc41723219c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RathaTests.Mover_PosicionInvalida_DevuelveFalse</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_PosicionInvalida_DevuelveFalse</name>
+        <qualifiedname>Library.Tests.RathaTests.Mover_PosicionInvalida_DevuelveFalse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="35" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_ratha_tests_1acc5f731f63b0f31707d41f1821234240" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RathaTests.AtacarUnidad_ContraArquero_BonusAplicado</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarUnidad_ContraArquero_BonusAplicado</name>
+        <qualifiedname>Library.Tests.RathaTests.AtacarUnidad_ContraArquero_BonusAplicado</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="46" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="46" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_ratha_tests_1a5a52e2bd26bf14e2e98f2df0b965a5a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.RathaTests.AtacarEdificio_DisminuyeVida</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarEdificio_DisminuyeVida</name>
+        <qualifiedname>Library.Tests.RathaTests.AtacarEdificio_DisminuyeVida</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="66" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="66" bodyend="76"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" line="7" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/RathaTests.cs" bodystart="8" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1a5a52e2bd26bf14e2e98f2df0b965a5a3" prot="public" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>AtacarEdificio_DisminuyeVida</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1acc5f731f63b0f31707d41f1821234240" prot="public" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>AtacarUnidad_ContraArquero_BonusAplicado</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1a3c12bbdf5fdd32eb473e9386f48c55be" prot="private" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>jugador</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1a7529a333f3ab77202da49b23c4a36134" prot="private" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>jugadorEnemigo</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1a631d2f07e6fe0196de5aae57668c5d10" prot="private" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>mapa</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1a36845091cf03f857771dcdc41723219c" prot="public" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>Mover_PosicionInvalida_DevuelveFalse</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1ab7963a490b225998d79794661d041c44" prot="public" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>Mover_PosicionValida_MueveCorrectamente</name></member>
+      <member refid="class_library_1_1_tests_1_1_ratha_tests_1a7aca90e93f6aa99391aa74cdd2d41616" prot="public" virt="non-virtual"><scope>Library::Tests::RathaTests</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

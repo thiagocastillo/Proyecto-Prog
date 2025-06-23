@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;img<sp/>alt=&quot;UCU&quot;<sp/>src=&quot;https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg&quot;</highlight></codeline>
+<codeline><highlight class="normal">width=&quot;150&quot;/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Universidad<sp/>Católica<sp/>del<sp/>Uruguay</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Facultad<sp/>de<sp/>Ingeniería<sp/>y<sp/>Tecnologías</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Programación<sp/>II</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Consigna<sp/>proyecto<sp/>2025<sp/>-<sp/>Primer<sp/>semestre</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;br&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Este<sp/>semestre,<sp/>desarrollaremos...<sp/>¡chatbots!<sp/>🤖</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Bender](https://media.giphy.com/media/mIZ9rPeMKefm0/giphy.gif)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contexto</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Un<sp/>chatbot<sp/>o<sp/>[bot<sp/>conversacional](https://es.wikipedia.org/wiki/Bot_conversacional)</highlight></codeline>
+<codeline><highlight class="normal">es<sp/>un<sp/>programa<sp/>que<sp/>simula<sp/>mantener<sp/>una<sp/>conversación<sp/>con<sp/>una<sp/>persona<sp/>al<sp/>proveer</highlight></codeline>
+<codeline><highlight class="normal">respuestas<sp/>automáticas<sp/>a<sp/>entradas<sp/>hechas<sp/>por<sp/>el<sp/>usuario.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Existen<sp/>gran<sp/>variedad<sp/>de<sp/>chatbots<sp/>actualmente<sp/>y<sp/>varios<sp/>*sabores*.<sp/>Hay<sp/>chatbots</highlight></codeline>
+<codeline><highlight class="normal">que<sp/>simplemente<sp/>responden<sp/>a<sp/>comandos<sp/>pre-establecidos,<sp/>y<sp/>otros<sp/>que<sp/>integran</highlight></codeline>
+<codeline><highlight class="normal">algoritmos<sp/>de<sp/>[inteligencia<sp/>artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial)</highlight></codeline>
+<codeline><highlight class="normal">para<sp/>procesar<sp/>los<sp/>mensajes<sp/>de<sp/>los<sp/>usuarios<sp/>e<sp/>[interpretar<sp/>lo<sp/>que<sp/>se<sp/>está<sp/>diciendo](https://es.wikipedia.org/wiki/Procesamiento_de_lenguajes_naturales).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Algunas<sp/>de<sp/>las<sp/>aplicaciones<sp/>más<sp/>conocidas<sp/>que<sp/>abren<sp/>sus<sp/>puertas<sp/>al<sp/>desarrollo<sp/>de</highlight></codeline>
+<codeline><highlight class="normal">chatbots<sp/>—tienen<sp/>API—<sp/>son:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Telegram</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Messenger</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Whatsapp</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Slack</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Discord</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">entre<sp/>otras;<sp/>y<sp/>nos<sp/>integraremos<sp/>al<sp/>menos<sp/>a<sp/>una<sp/>de<sp/>ellas.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Roadmap</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">El<sp/>proyecto<sp/>se<sp/>divide<sp/>en<sp/>varias<sp/>entregas<sp/>a<sp/>lo<sp/>largo<sp/>del<sp/>semestre,<sp/>que<sp/>se</highlight></codeline>
+<codeline><highlight class="normal">detallan<sp/>[más<sp/>abajo](#entregas).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Cada<sp/>entrega<sp/>es<sp/>una<sp/>parte<sp/>del<sp/>proyecto<sp/>que<sp/>construye<sp/>sobre<sp/>la<sp/>anterior.<sp/>Al<sp/>final</highlight></codeline>
+<codeline><highlight class="normal">del<sp/>semestre<sp/>tendremos<sp/>un<sp/>conjunto<sp/>de<sp/>chatbots<sp/>funcionales<sp/>con<sp/>los<sp/>que<sp/>podremos</highlight></codeline>
+<codeline><highlight class="normal">conversar.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">El<sp/>chatbot<sp/>a<sp/>desarrollar<sp/>será<sp/>propuesto<sp/>por<sp/>los<sp/>estudiantes,<sp/>según<sp/>se<sp/>indica<sp/>en</highlight></codeline>
+<codeline><highlight class="normal">la<sp/>sección<sp/>[Propuestas](#propuestas).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">La<sp/>estructura<sp/>del<sp/>trabajo<sp/>en<sp/>el<sp/>proyecto<sp/>será<sp/>la<sp/>siguiente:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[x]<sp/>Kick-off</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Presentación<sp/>de<sp/>propuestas</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Evaluación<sp/>docente<sp/>de<sp/>propuestas</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Votación<sp/>de<sp/>propuestas</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Lanzamiento<sp/>de<sp/>la<sp/>propuesta<sp/>elegida</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Primera<sp/>entrega</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Segunda<sp/>entrega</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Entrega<sp/>final</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[<sp/>]<sp/>Defensa</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Propuestas</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Los<sp/>equipos<sp/>o<sp/>sus<sp/>integrantes<sp/>podrán<sp/>a<sp/>presentar<sp/>propuestas<sp/>de<sp/>chatbots<sp/>para</highlight></codeline>
+<codeline><highlight class="normal">desarrollar.<sp/>El<sp/>chatbot<sp/>debe<sp/>permitir<sp/>un<sp/>juego<sp/>interactivo<sp/>multijugador<sp/>—por</highlight></codeline>
+<codeline><highlight class="normal">turnos—<sp/>de<sp/>al<sp/>menos<sp/>dos<sp/>jugadores,<sp/>que<sp/>no<sp/>requiera<sp/>de<sp/>una<sp/>interfaz<sp/>gráfica,<sp/>es</highlight></codeline>
+<codeline><highlight class="normal">decir,<sp/>las<sp/>jugadas<sp/>se<sp/>describen<sp/>mediante<sp/>un<sp/>mensaje<sp/>como<sp/>en<sp/>el<sp/>ajedrez<sp/>o<sp/>la</highlight></codeline>
+<codeline><highlight class="normal">batalla<sp/>naval.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Utiliza<sp/>[este<sp/>formulario](https://forms.office.com/r/yG6UeqJWRx)<sp/>para<sp/>enviar<sp/>tus</highlight></codeline>
+<codeline><highlight class="normal">propustas.<sp/>¡Pueden<sp/>enviar<sp/>todas<sp/>las<sp/>propuestas<sp/>que<sp/>quieran!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Puedes<sp/>ver<sp/>la<sp/>fecha<sp/>límite<sp/>para<sp/>entrega<sp/>de<sp/>propuestas<sp/>en<sp/>la<sp/>sección</highlight></codeline>
+<codeline><highlight class="normal">[Entregas](#entregas).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Historias<sp/>de<sp/>Usuario<sp/>-<sp/>Age<sp/>of<sp/>Empires<sp/>Simplificado</highlight></codeline>
+<codeline><highlight class="normal">**Configuración<sp/>y<sp/>Creación**</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>poder<sp/>crear<sp/>una<sp/>nueva<sp/>partida<sp/>especificando<sp/>el<sp/>tamaño<sp/>del<sp/>mapa<sp/>y<sp/>la<sp/>cantidad<sp/>de<sp/>jugadores,<sp/>para<sp/>personalizar<sp/>mi<sp/>experiencia<sp/>de<sp/>juego.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configurar<sp/>mapa<sp/>aleatorio<sp/>de<sp/>100x100.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Configurar<sp/>partida<sp/>entre<sp/>2<sp/>jugadores.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>elegir<sp/>una<sp/>civilización<sp/>con<sp/>características<sp/>únicas,<sp/>para<sp/>aprovechar<sp/>sus<sp/>ventajas<sp/>estratégicas.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Disponer<sp/>de<sp/>al<sp/>menos<sp/>3<sp/>civilizaciones<sp/>diferentes</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cada<sp/>civilización<sp/>debe<sp/>tener<sp/>al<sp/>menos<sp/>2<sp/>bonificaciones<sp/>únicas</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cada<sp/>civilización<sp/>debe<sp/>tener<sp/>una<sp/>unidad<sp/>especial</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">3.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>comenzar<sp/>con<sp/>un<sp/>centro<sp/>cívico<sp/>y<sp/>algunos<sp/>aldeanos,<sp/>para<sp/>iniciar<sp/>inmediatamente<sp/>la<sp/>recolección<sp/>de<sp/>recursos.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Iniciar<sp/>con<sp/>1<sp/>centro<sp/>cívico<sp/>(admite<sp/>hasta<sp/>10<sp/>aldeanos)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Iniciar<sp/>con<sp/>3<sp/>aldeanos</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Recibir<sp/>una<sp/>cantidad<sp/>inicial<sp/>de<sp/>recursos<sp/>(100<sp/>de<sp/>alimento,<sp/>100<sp/>de<sp/>madera)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Gestión<sp/>de<sp/>Recursos**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>ordenar<sp/>a<sp/>mis<sp/>aldeanos<sp/>recolectar<sp/>diferentes<sp/>tipos<sp/>de<sp/>recursos,<sp/>para<sp/>expandir<sp/>mi<sp/>economía.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>recolectar<sp/>4<sp/>tipos<sp/>de<sp/>recursos:<sp/>madera,<sp/>alimento,<sp/>oro<sp/>y<sp/>piedra</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cada<sp/>recurso<sp/>debe<sp/>tener<sp/>una<sp/>tasa<sp/>de<sp/>recolección<sp/>diferente</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Los<sp/>aldeanos<sp/>deben<sp/>trasladar<sp/>los<sp/>recursos<sp/>al<sp/>edificio<sp/>de<sp/>almacenamiento<sp/>más<sp/>cercano</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>construir<sp/>edificios<sp/>específicos<sp/>para<sp/>almacenar<sp/>recursos,<sp/>para<sp/>optimizar<sp/>la<sp/>recolección.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>construir<sp/>almacenes<sp/>de<sp/>recursos<sp/>(molino,<sp/>granja,<sp/>depósitos<sp/>de<sp/>oro,<sp/>piedra,<sp/>madera)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>La<sp/>proximidad<sp/>del<sp/>almacén<sp/>debe<sp/>afectar<sp/>la<sp/>eficiencia<sp/>de<sp/>recolección</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Los<sp/>almacenes<sp/>deben<sp/>tener<sp/>un<sp/>límite<sp/>de<sp/>capacidad</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">6.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>visualizar<sp/>la<sp/>cantidad<sp/>de<sp/>recursos<sp/>disponibles,<sp/>para<sp/>planificar<sp/>mis<sp/>estrategias.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Ver<sp/>la<sp/>cantidad<sp/>actual<sp/>de<sp/>cada<sp/>recurso</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Recibir<sp/>alertas<sp/>cuando<sp/>un<sp/>recurso<sp/>esté<sp/>por<sp/>agotarse</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Visualizar<sp/>la<sp/>tasa<sp/>de<sp/>recolección<sp/>por<sp/>tipo<sp/>de<sp/>recurso</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Construcción<sp/>y<sp/>Desarrollo**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">7.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>construir<sp/>edificios<sp/>en<sp/>ubicaciones<sp/>específicas<sp/>del<sp/>mapa,<sp/>para<sp/>expandir<sp/>mi<sp/>base.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>seleccionar<sp/>una<sp/>ubicación<sp/>en<sp/>el<sp/>mapa<sp/>para<sp/>construir</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>La<sp/>construcción<sp/>debe<sp/>requerir<sp/>ciertos<sp/>recursos</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mostrar<sp/>el<sp/>tiempo<sp/>de<sp/>construcción<sp/>restante</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">8.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>crear<sp/>diferentes<sp/>tipos<sp/>de<sp/>edificios<sp/>con<sp/>funciones<sp/>específicas,<sp/>para<sp/>desarrollar<sp/>mi<sp/>civilización.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Construir<sp/>casas<sp/>para<sp/>aumentar<sp/>la<sp/>población<sp/>máxima</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Construir<sp/>cuarteles<sp/>para<sp/>entrenar<sp/>unidades<sp/>militares</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Unidades<sp/>y<sp/>Combate**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">9.<sp/><sp/>Como<sp/>jugador,<sp/>quiero<sp/>entrenar<sp/>diferentes<sp/>tipos<sp/>de<sp/>unidades<sp/>militares,<sp/>para<sp/>defender<sp/>mi<sp/>base<sp/>y<sp/>atacar<sp/>a<sp/>mis<sp/>oponentes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>crear<sp/>al<sp/>menos<sp/>3<sp/>tipos<sp/>de<sp/>unidades<sp/>(infantería,<sp/>arqueros,<sp/>caballería)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cada<sp/>unidad<sp/>debe<sp/>tener<sp/>estadísticas<sp/>únicas<sp/>(ataque,<sp/>defensa,<sp/>velocidad)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Las<sp/>unidades<sp/>deben<sp/>tener<sp/>diferentes<sp/>costos<sp/>y<sp/>tiempos<sp/>de<sp/>creación</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">10.<sp/>Como<sp/>jugador,<sp/>quiero<sp/>mover<sp/>mis<sp/>unidades<sp/>por<sp/>el<sp/>mapa<sp/>usando<sp/>comandos<sp/>simples,<sp/>para<sp/>explorar<sp/>y<sp/>posicionarme<sp/>estratégicamente.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mover<sp/>unidades<sp/>a<sp/>coordenadas<sp/>específicas</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>seleccionar<sp/>múltiples<sp/>unidades<sp/>para<sp/>moverlas<sp/>juntas</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Recibir<sp/>retroalimentación<sp/>si<sp/>el<sp/>destino<sp/>es<sp/>inaccesible</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">11.<sp/>Como<sp/>jugador,<sp/>quiero<sp/>ordenar<sp/>a<sp/>mis<sp/>unidades<sp/>atacar<sp/>a<sp/>unidades<sp/>o<sp/>edificios<sp/>enemigos,<sp/>para<sp/>debilitar<sp/>a<sp/>mis<sp/>oponentes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>seleccionar<sp/>un<sp/>objetivo<sp/>para<sp/>atacar</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mostrar<sp/>información<sp/>del<sp/>combate<sp/>(daño<sp/>causado/recibido)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Implementar<sp/>un<sp/>sistema<sp/>de<sp/>ventaja<sp/>por<sp/>tipo<sp/>de<sp/>unidad<sp/>(ej:<sp/>arqueros<sp/>efectivos<sp/>contra<sp/>infantería)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Economía<sp/>y<sp/>Población**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">12.<sp/>Como<sp/>jugador,<sp/>quiero<sp/>entrenar<sp/>más<sp/>aldeanos<sp/>para<sp/>mejorar<sp/>mi<sp/>economía,<sp/>pero<sp/>necesito<sp/>suficientes<sp/>casas<sp/>para<sp/>mantener<sp/>mi<sp/>población.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cada<sp/>casa<sp/>aumenta<sp/>el<sp/>límite<sp/>de<sp/>población<sp/>en<sp/>5<sp/>unidades<sp/>(puede<sp/>tener<sp/>hasta<sp/>20<sp/>aldeanos<sp/>y<sp/>hasta<sp/>30<sp/>unidades<sp/>militares)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>No<sp/>poder<sp/>crear<sp/>nuevas<sp/>unidades<sp/>si<sp/>se<sp/>ha<sp/>alcanzado<sp/>el<sp/>límite<sp/>de<sp/>población</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mostrar<sp/>claramente<sp/>la<sp/>población<sp/>actual/máxima</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Victoria<sp/>y<sp/>Objetivos**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">13.<sp/>Como<sp/>jugador,<sp/>quiero<sp/>destruir<sp/>los<sp/>centros<sp/>cívicos<sp/>enemigos<sp/>para<sp/>ganar<sp/>la<sp/>partida<sp/>por<sp/>dominación<sp/>militar.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cada<sp/>jugador<sp/>pierde<sp/>si<sp/>su<sp/>último<sp/>centro<sp/>cívico<sp/>es<sp/>destruido</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Recibir<sp/>notificación<sp/>cuando<sp/>un<sp/>enemigo<sp/>está<sp/>cerca<sp/>de<sp/>ser<sp/>derrotado</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mostrar<sp/>un<sp/>resumen<sp/>al<sp/>finalizar<sp/>la<sp/>partida</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Interfaz<sp/>y<sp/>Comandos**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">14.<sp/>Como<sp/>jugador,<sp/>quiero<sp/>usar<sp/>comandos<sp/>intuitivos<sp/>en<sp/>la<sp/>línea<sp/>de<sp/>comandos<sp/>para<sp/>interactuar<sp/>con<sp/>el<sp/>juego.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Los<sp/>comandos<sp/>deben<sp/>seguir<sp/>una<sp/>estructura<sp/>consistente<sp/>(verbo<sp/>+<sp/>objeto<sp/>+<sp/>parámetros)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Proporcionar<sp/>ayuda<sp/>y<sp/>ejemplos<sp/>de<sp/>comandos</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">15.<sp/>Como<sp/>jugador,<sp/>quiero<sp/>ver<sp/>un<sp/>mapa<sp/>simplificado<sp/>del<sp/>juego<sp/>en<sp/>ASCII,<sp/>para<sp/>visualizar<sp/>la<sp/>disposición<sp/>del<sp/>terreno<sp/>y<sp/>unidades.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Mostrar<sp/>un<sp/>mapa<sp/>con<sp/>símbolos<sp/>que<sp/>representen<sp/>unidades,<sp/>edificios<sp/>y<sp/>recursos</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Poder<sp/>desplazarse<sp/>por<sp/>el<sp/>mapa</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Distinguir<sp/>elementos<sp/>por<sp/>jugador<sp/>usando<sp/>colores<sp/>o<sp/>símbolos</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**BONUS**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>jugador,<sp/>quiero<sp/>guardar<sp/>la<sp/>partida<sp/>y<sp/>continuarla<sp/>más<sp/>tarde,<sp/>para<sp/>jugar<sp/>en<sp/>múltiples<sp/>sesiones.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Criterios<sp/>de<sp/>aceptación:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Guardar<sp/>el<sp/>estado<sp/>completo<sp/>del<sp/>juego</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Cargar<sp/>una<sp/>partida<sp/>guardada</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Ver<sp/>la<sp/>lista<sp/>de<sp/>partidas<sp/>guardadas</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Entregas</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>[!WARNING]</highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>**Importante:**<sp/>Las<sp/>entregas<sp/>serán<sp/>hasta<sp/>las<sp/>23:59<sp/>del<sp/>día<sp/>indicado.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Instancia<sp/>|<sp/>Fecha<sp/>|<sp/>Entregables<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---<sp/>|<sp/>---<sp/>|<sp/>---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Kick-off<sp/>|<sp/>21<sp/>abril,<sp/>primera<sp/>clase<sp/>de<sp/>la<sp/>semana<sp/>5<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Presentación<sp/>de<sp/>propuestas<sp/>|<sp/>Hasta<sp/>el<sp/>30<sp/>de<sp/>abril<sp/>|<sp/>Completar<sp/>[este<sp/>formulario](https://forms.office.com/r/yG6UeqJWRx)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Evaluación<sp/>docente<sp/>de<sp/>propuestas<sp/>|<sp/>30<sp/>de<sp/>abril<sp/>al<sp/>5<sp/>de<sp/>mayo<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Votación<sp/>de<sp/>propuestas<sp/>|<sp/>5<sp/>de<sp/>mayo<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Lanzamiento<sp/>de<sp/>proyectos<sp/>|<sp/>7<sp/>de<sp/>mayo<sp/>|<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>[Primera<sp/>entrega](Entregas/Entrega1.md)<sp/>|<sp/>2<sp/>de<sp/>junio<sp/>|<sp/>Tarjetas<sp/>CRC,<sp/>diagrama<sp/>de<sp/>clases,<sp/>código<sp/>de<sp/>clases<sp/>de<sp/>dominio<sp/>+<sp/>[fachada](https://refactoring.guru/design-patterns/facade)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>[Segunda<sp/>entrega](Entregas/Entrega2.md)<sp/>|<sp/>23<sp/>de<sp/>junio<sp/>|<sp/>Entrega<sp/>de<sp/>[user<sp/>stories](https://es.wikipedia.org/wiki/Historias_de_usuario)<sp/>implementadas.<sp/>Las<sp/>historias<sp/>de<sp/>usuario<sp/>deberán<sp/>ser<sp/>implementadas<sp/>mediante<sp/>[casos<sp/>de<sp/>prueba](https://en.wikipedia.org/wiki/Test_case)<sp/>usando<sp/>la<sp/>fachada.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>[Entrega<sp/>final](Entregas/Entrega3.md)<sp/>|<sp/>7<sp/>de<sp/>julio<sp/>|<sp/>Bot<sp/>funcionando<sp/>y<sp/>entregables<sp/>según<sp/>se<sp/>indica<sp/>en<sp/>la<sp/>[consigna<sp/>de<sp/>la<sp/>entrega](./Entregas/Entrega3.md)<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Defensa<sp/>|<sp/>7<sp/>al<sp/>9<sp/>de<sp/>julio<sp/>|</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/README.md"/>
+  </compounddef>
+</doxygen>

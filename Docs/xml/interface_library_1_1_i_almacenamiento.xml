@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_library_1_1_i_almacenamiento" kind="interface" language="C#" prot="public">
+    <compoundname>Library::IAlmacenamiento</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_edificio" prot="public" virt="non-virtual">Library.IEdificio</basecompoundref>
+    <derivedcompoundref refid="class_library_1_1_centro_civico" prot="public" virt="non-virtual">Library.CentroCivico</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_deposito_madera" prot="public" virt="non-virtual">Library.DepositoMadera</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_deposito_oro" prot="public" virt="non-virtual">Library.DepositoOro</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_deposito_piedra" prot="public" virt="non-virtual">Library.DepositoPiedra</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_granja" prot="public" virt="non-virtual">Library.Granja</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_molino" prot="public" virt="non-virtual">Library.Molino</derivedcompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IAlmacenamiento.CapacidadMaxima</definition>
+        <argsstring></argsstring>
+        <name>CapacidadMaxima</name>
+        <qualifiedname>Library.IAlmacenamiento.CapacidadMaxima</qualifiedname>
+        <reimplementedby refid="class_library_1_1_centro_civico_1a64b67047b780e80599cb9aebc79c6bd6">CapacidadMaxima</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_madera_1aa5219219615d5611b4300d3d12a6a297">CapacidadMaxima</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_oro_1aa7752fc5c7d1379b45d1625a47c4924c">CapacidadMaxima</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_piedra_1a4362d09a1c540ee06f4c0365d1c605d2">CapacidadMaxima</reimplementedby>
+        <reimplementedby refid="class_library_1_1_granja_1abf5b6b7493a63d4f7239b85f1e666319">CapacidadMaxima</reimplementedby>
+        <reimplementedby refid="class_library_1_1_molino_1acd0a0606033fd221afd3939d1a54a757">CapacidadMaxima</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" line="4" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" bodystart="4" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; Library.IAlmacenamiento.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.IAlmacenamiento.Recursos</qualifiedname>
+        <reimplementedby refid="class_library_1_1_centro_civico_1ab32c589358eec6c5bbd312ecdf770b12">Recursos</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_madera_1a3997aa0a5a2a63b1c826f50f15759c3c">Recursos</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_oro_1afdda88e4013066ad42c5fbbad3567e09">Recursos</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_piedra_1aa1d5387808b5aba0d2485430b9a74615">Recursos</reimplementedby>
+        <reimplementedby refid="class_library_1_1_granja_1a627f94197a5f796007819c5ee7c98e54">Recursos</reimplementedby>
+        <reimplementedby refid="class_library_1_1_molino_1a28b7b0fc00a15b7c644b35b12754ae01">Recursos</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" line="6" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.IAlmacenamiento.Eficiencia</definition>
+        <argsstring>(int distancia)</argsstring>
+        <name>Eficiencia</name>
+        <qualifiedname>Library.IAlmacenamiento.Eficiencia</qualifiedname>
+        <reimplementedby refid="class_library_1_1_centro_civico_1a15e484018cff9779b3f7c8c198b71206">Eficiencia</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_madera_1a3de79a8a9ab35edbb6b361f64d2f68a1">Eficiencia</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_oro_1a2890fa16cd8cd017794ab0d479e344c1">Eficiencia</reimplementedby>
+        <reimplementedby refid="class_library_1_1_deposito_piedra_1a09f5eb21c31a95b4ec001ed97021f894">Eficiencia</reimplementedby>
+        <reimplementedby refid="class_library_1_1_granja_1a9ba5ee5da7ceab28e9279989b14001b0">Eficiencia</reimplementedby>
+        <reimplementedby refid="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245">Eficiencia</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>distancia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" line="5" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.CentroCivico</label>
+        <link refid="class_library_1_1_centro_civico"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Library.DepositoMadera</label>
+        <link refid="class_library_1_1_deposito_madera"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Library.DepositoOro</label>
+        <link refid="class_library_1_1_deposito_oro"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Library.DepositoPiedra</label>
+        <link refid="class_library_1_1_deposito_piedra"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Library.Granja</label>
+        <link refid="class_library_1_1_granja"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+      <node id="8">
+        <label>Library.Molino</label>
+        <link refid="class_library_1_1_molino"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" line="2" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IAlmacenamiento.cs" bodystart="3" bodyend="7"/>
+    <listofallmembers>
+      <member refid="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a" prot="public" virt="non-virtual"><scope>Library::IAlmacenamiento</scope><name>CapacidadMaxima</name></member>
+      <member refid="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba" prot="public" virt="non-virtual"><scope>Library::IAlmacenamiento</scope><name>Eficiencia</name></member>
+      <member refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca" prot="public" virt="non-virtual"><scope>Library::IAlmacenamiento</scope><name>Posicion</name></member>
+      <member refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6" prot="public" virt="non-virtual"><scope>Library::IAlmacenamiento</scope><name>Propietario</name></member>
+      <member refid="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325" prot="public" virt="non-virtual"><scope>Library::IAlmacenamiento</scope><name>Recursos</name></member>
+      <member refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b" prot="public" virt="non-virtual"><scope>Library::IAlmacenamiento</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

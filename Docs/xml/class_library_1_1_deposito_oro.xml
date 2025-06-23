@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_deposito_oro" kind="class" language="C#" prot="public">
+    <compoundname>Library::DepositoOro</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1a7282c3582977c96e70881230c9f20e48" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.DepositoOro.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.DepositoOro.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="9" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1ad532ccab596ba4ec1dab86f8e51183c9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.DepositoOro.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.DepositoOro.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="11" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1aa7752fc5c7d1379b45d1625a47c4924c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoOro.CapacidadMaxima</definition>
+        <argsstring></argsstring>
+        <name>CapacidadMaxima</name>
+        <qualifiedname>Library.DepositoOro.CapacidadMaxima</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a">CapacidadMaxima</reimplements>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="13" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1acf9e90d2e4e1127a08b4111b686f926e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoOro.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.DepositoOro.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="15" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1afdda88e4013066ad42c5fbbad3567e09" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; Library.DepositoOro.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.DepositoOro.Recursos</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325">Recursos</reimplements>
+        <initializer>= new Dictionary&lt;string, int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="17" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1a67c3b8ff50a8cce31adb197e17e4b711" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoOro.TiempoConstruccionTotal</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionTotal</name>
+        <qualifiedname>Library.DepositoOro.TiempoConstruccionTotal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="23" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1a6470dce9c08bb07ff5cadca8a4005968" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.DepositoOro.TiempoConstruccionRestante</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionRestante</name>
+        <qualifiedname>Library.DepositoOro.TiempoConstruccionRestante</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="25" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_deposito_oro_1a75d74da179a689fa22b9ef5917c6af1c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Library.DepositoOro.EstaConstruido</definition>
+        <argsstring></argsstring>
+        <name>EstaConstruido</name>
+        <qualifiedname>Library.DepositoOro.EstaConstruido</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="27" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_deposito_oro_1ae9ac71b893aa390bb013d976da8afc94" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref></type>
+        <definition>TiempoConstruccion Library.DepositoOro.tiempoconstruccion</definition>
+        <argsstring></argsstring>
+        <name>tiempoconstruccion</name>
+        <qualifiedname>Library.DepositoOro.tiempoconstruccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="20" column="32" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_deposito_oro_1a381668d7899f3bd9ec9ed5ff1a34fead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.DepositoOro.DepositoOro</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>DepositoOro</name>
+        <qualifiedname>Library.DepositoOro.DepositoOro</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="30" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_deposito_oro_1a2890fa16cd8cd017794ab0d479e344c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.DepositoOro.Eficiencia</definition>
+        <argsstring>(int distancia)</argsstring>
+        <name>Eficiencia</name>
+        <qualifiedname>Library.DepositoOro.Eficiencia</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba">Eficiencia</reimplements>
+        <param>
+          <type>int</type>
+          <declname>distancia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="38" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="38" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.DepositoOro</label>
+        <link refid="class_library_1_1_deposito_oro"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.DepositoOro</label>
+        <link refid="class_library_1_1_deposito_oro"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/DepositoOro.cs" bodystart="7" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_deposito_oro_1aa7752fc5c7d1379b45d1625a47c4924c" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>CapacidadMaxima</name></member>
+      <member refid="class_library_1_1_deposito_oro_1a381668d7899f3bd9ec9ed5ff1a34fead" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>DepositoOro</name></member>
+      <member refid="class_library_1_1_deposito_oro_1a2890fa16cd8cd017794ab0d479e344c1" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>Eficiencia</name></member>
+      <member refid="class_library_1_1_deposito_oro_1a75d74da179a689fa22b9ef5917c6af1c" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>EstaConstruido</name></member>
+      <member refid="class_library_1_1_deposito_oro_1ad532ccab596ba4ec1dab86f8e51183c9" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_deposito_oro_1a7282c3582977c96e70881230c9f20e48" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_deposito_oro_1afdda88e4013066ad42c5fbbad3567e09" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>Recursos</name></member>
+      <member refid="class_library_1_1_deposito_oro_1ae9ac71b893aa390bb013d976da8afc94" prot="private" virt="non-virtual"><scope>Library::DepositoOro</scope><name>tiempoconstruccion</name></member>
+      <member refid="class_library_1_1_deposito_oro_1a6470dce9c08bb07ff5cadca8a4005968" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>TiempoConstruccionRestante</name></member>
+      <member refid="class_library_1_1_deposito_oro_1a67c3b8ff50a8cce31adb197e17e4b711" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>TiempoConstruccionTotal</name></member>
+      <member refid="class_library_1_1_deposito_oro_1acf9e90d2e4e1127a08b4111b686f926e" prot="public" virt="non-virtual"><scope>Library::DepositoOro</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

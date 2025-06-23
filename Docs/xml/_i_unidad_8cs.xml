@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_i_unidad_8cs" kind="file" language="C#">
+    <compoundname>IUnidad.cs</compoundname>
+    <innerclass refid="interface_library_1_1_i_unidad" prot="public">Library::IUnidad</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="interface_library_1_1_i_unidad" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref><sp/><ref refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876" kindref="member">Propietario</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4" kindref="member">Ataque</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0" kindref="member">Defensa</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c" kindref="member">Velocidad</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df" kindref="member">Salud</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_library_1_1_point" kindref="compound">Point</ref><sp/><ref refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093" kindref="member">Posicion</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a" kindref="member">Mover</ref>(<ref refid="class_library_1_1_point" kindref="compound">Point</ref><sp/>destino,<sp/><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref><sp/>mapa);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d" kindref="member">TiempoDeCreacion</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151" kindref="member">CalcularDaño</ref>(<ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref><sp/>objetivo);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs"/>
+  </compounddef>
+</doxygen>

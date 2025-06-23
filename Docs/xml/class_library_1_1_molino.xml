@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_molino" kind="class" language="C#" prot="public">
+    <compoundname>Library::Molino</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_almacenamiento" prot="public" virt="non-virtual">Library.IAlmacenamiento</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_molino_1ad8c07aca91d6ec868aa56a7e2a8da175" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Molino.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Molino.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a98f38195e6367a805637ad09e9cf0bb6">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="9" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1aeac0677fbdfffb5c470338ed38ca8720" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Molino.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Molino.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a1616c0a1e4d6abba8ac991454678a2ca">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="11" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1acd0a0606033fd221afd3939d1a54a757" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Molino.CapacidadMaxima</definition>
+        <argsstring></argsstring>
+        <name>CapacidadMaxima</name>
+        <qualifiedname>Library.Molino.CapacidadMaxima</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a53175bda37766c0a9aa871a02c81585a">CapacidadMaxima</reimplements>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="13" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1a20dba5ea002bc17aea11fd6a01547d12" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Molino.Vida</definition>
+        <argsstring></argsstring>
+        <name>Vida</name>
+        <qualifiedname>Library.Molino.Vida</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_edificio_1a050dc054bb1b9c3cceab2bd588255e1b">Vida</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="15" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1a28b7b0fc00a15b7c644b35b12754ae01" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; Library.Molino.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.Molino.Recursos</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a1825cb5304bb2864ec6bcc2b5e1bf325">Recursos</reimplements>
+        <initializer>= new Dictionary&lt;string, int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="17" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1abd40ebe1e9c4254ac5592ecbfd30deda" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Molino.TiempoConstruccionTotal</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionTotal</name>
+        <qualifiedname>Library.Molino.TiempoConstruccionTotal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="23" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1a9bf1988c29bf4eeaa16f6b44a10ac618" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Molino.TiempoConstruccionRestante</definition>
+        <argsstring></argsstring>
+        <name>TiempoConstruccionRestante</name>
+        <qualifiedname>Library.Molino.TiempoConstruccionRestante</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="25" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_molino_1a097e0034e93f5a35c5f248b412e9b8d5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Library.Molino.EstaConstruido</definition>
+        <argsstring></argsstring>
+        <name>EstaConstruido</name>
+        <qualifiedname>Library.Molino.EstaConstruido</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="27" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_molino_1ac455a104af4c9793bfa75c9cd4dae2fb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_tiempo_construccion" kindref="compound">TiempoConstruccion</ref></type>
+        <definition>TiempoConstruccion Library.Molino.tiempoconstruccion</definition>
+        <argsstring></argsstring>
+        <name>tiempoconstruccion</name>
+        <qualifiedname>Library.Molino.tiempoconstruccion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="20" column="32" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_molino_1a1120d1f2728407c9e85051d0c65d890a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Molino.Molino</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Molino</name>
+        <qualifiedname>Library.Molino.Molino</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="30" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Molino.Eficiencia</definition>
+        <argsstring>(int distancia)</argsstring>
+        <name>Eficiencia</name>
+        <qualifiedname>Library.Molino.Eficiencia</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_almacenamiento_1a4754ebd243144074b6e6675c1075d8ba">Eficiencia</reimplements>
+        <param>
+          <type>int</type>
+          <declname>distancia</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="39" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="39" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Molino</label>
+        <link refid="class_library_1_1_molino"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Molino</label>
+        <link refid="class_library_1_1_molino"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.IAlmacenamiento</label>
+        <link refid="interface_library_1_1_i_almacenamiento"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IEdificio</label>
+        <link refid="interface_library_1_1_i_edificio"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Molino.cs" bodystart="7" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_molino_1acd0a0606033fd221afd3939d1a54a757" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>CapacidadMaxima</name></member>
+      <member refid="class_library_1_1_molino_1a2b0415edf6e9967263f8f6fa65d81245" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>Eficiencia</name></member>
+      <member refid="class_library_1_1_molino_1a097e0034e93f5a35c5f248b412e9b8d5" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>EstaConstruido</name></member>
+      <member refid="class_library_1_1_molino_1a1120d1f2728407c9e85051d0c65d890a" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>Molino</name></member>
+      <member refid="class_library_1_1_molino_1aeac0677fbdfffb5c470338ed38ca8720" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_molino_1ad8c07aca91d6ec868aa56a7e2a8da175" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_molino_1a28b7b0fc00a15b7c644b35b12754ae01" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>Recursos</name></member>
+      <member refid="class_library_1_1_molino_1ac455a104af4c9793bfa75c9cd4dae2fb" prot="private" virt="non-virtual"><scope>Library::Molino</scope><name>tiempoconstruccion</name></member>
+      <member refid="class_library_1_1_molino_1a9bf1988c29bf4eeaa16f6b44a10ac618" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>TiempoConstruccionRestante</name></member>
+      <member refid="class_library_1_1_molino_1abd40ebe1e9c4254ac5592ecbfd30deda" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>TiempoConstruccionTotal</name></member>
+      <member refid="class_library_1_1_molino_1a20dba5ea002bc17aea11fd6a01547d12" prot="public" virt="non-virtual"><scope>Library::Molino</scope><name>Vida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

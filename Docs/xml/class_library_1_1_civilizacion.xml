@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_civilizacion" kind="class" language="C#" prot="public">
+    <compoundname>Library::Civilizacion</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_civilizacion_1aa7b61162e90fdec944dae79cb8115b6a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Library.Civilizacion.Nombre</definition>
+        <argsstring></argsstring>
+        <name>Nombre</name>
+        <qualifiedname>Library.Civilizacion.Nombre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" line="6" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_civilizacion_1a72d65d7c8b935b430014ad2d32f8b572" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; Library.Civilizacion.Bonificaciones</definition>
+        <argsstring></argsstring>
+        <name>Bonificaciones</name>
+        <qualifiedname>Library.Civilizacion.Bonificaciones</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" line="8" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_civilizacion_1a19d54629ab8745bc1d3fc12a93f8257f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Library.Civilizacion.UnidadEspecial</definition>
+        <argsstring></argsstring>
+        <name>UnidadEspecial</name>
+        <qualifiedname>Library.Civilizacion.UnidadEspecial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" line="10" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_civilizacion_1ae1c633c39baa7e6158625ef0ff32f664" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Civilizacion.Civilizacion</definition>
+        <argsstring>(string nombre, List&lt; string &gt; bonificaciones, string unidadEspecial)</argsstring>
+        <name>Civilizacion</name>
+        <qualifiedname>Library.Civilizacion.Civilizacion</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>bonificaciones</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>unidadEspecial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" line="13" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" bodystart="13" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Civilizacion.cs" bodystart="4" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_civilizacion_1a72d65d7c8b935b430014ad2d32f8b572" prot="public" virt="non-virtual"><scope>Library::Civilizacion</scope><name>Bonificaciones</name></member>
+      <member refid="class_library_1_1_civilizacion_1ae1c633c39baa7e6158625ef0ff32f664" prot="public" virt="non-virtual"><scope>Library::Civilizacion</scope><name>Civilizacion</name></member>
+      <member refid="class_library_1_1_civilizacion_1aa7b61162e90fdec944dae79cb8115b6a" prot="public" virt="non-virtual"><scope>Library::Civilizacion</scope><name>Nombre</name></member>
+      <member refid="class_library_1_1_civilizacion_1a19d54629ab8745bc1d3fc12a93f8257f" prot="public" virt="non-virtual"><scope>Library::Civilizacion</scope><name>UnidadEspecial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

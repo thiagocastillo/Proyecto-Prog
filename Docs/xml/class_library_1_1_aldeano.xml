@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_aldeano" kind="class" language="C#" prot="public">
+    <compoundname>Library::Aldeano</compoundname>
+    <basecompoundref refid="interface_library_1_1_i_unidad" prot="public" virt="non-virtual">Library.IUnidad</basecompoundref>
+    <basecompoundref refid="interface_library_1_1_i_recolector" prot="public" virt="non-virtual">Library.IRecolector</basecompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_aldeano_1ab3e32ee8e696a44d5bf4962923b67e73" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Aldeano.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.Aldeano.Propietario</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876">Propietario</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="5" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_aldeano_1acbc3c0e9f1b96ad57e96dea9edaaa8c9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Aldeano.Ataque</definition>
+        <argsstring></argsstring>
+        <name>Ataque</name>
+        <qualifiedname>Library.Aldeano.Ataque</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4">Ataque</reimplements>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="8" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_aldeano_1ac6e9791cf5504ce02fb80c3a37fc8d69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Aldeano.Defensa</definition>
+        <argsstring></argsstring>
+        <name>Defensa</name>
+        <qualifiedname>Library.Aldeano.Defensa</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0">Defensa</reimplements>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="9" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_aldeano_1ae229146ae1c4b28d59ae2988360746dc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>double</type>
+        <definition>double Library.Aldeano.Velocidad</definition>
+        <argsstring></argsstring>
+        <name>Velocidad</name>
+        <qualifiedname>Library.Aldeano.Velocidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c">Velocidad</reimplements>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="12" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_aldeano_1a142e0ce5f10041d50dff29f2bd3cd087" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Aldeano.Salud</definition>
+        <argsstring></argsstring>
+        <name>Salud</name>
+        <qualifiedname>Library.Aldeano.Salud</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df">Salud</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="15" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_aldeano_1ab8ad629efd37b4f5c578f552feb6ddaf" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.Aldeano.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.Aldeano.Posicion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093">Posicion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="17" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_aldeano_1a42195acfd1ede0e04123d33d70c44da1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Aldeano.TiempoDeCreacion</definition>
+        <argsstring></argsstring>
+        <name>TiempoDeCreacion</name>
+        <qualifiedname>Library.Aldeano.TiempoDeCreacion</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d">TiempoDeCreacion</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="19" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_aldeano_1a30c9acac64c6119eec6015ecc656bb2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Aldeano.Aldeano</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>Aldeano</name>
+        <qualifiedname>Library.Aldeano.Aldeano</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="21" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_aldeano_1aa59ef730c5640c07c911775a47fe17e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Aldeano.Mover</definition>
+        <argsstring>(Point destino, Mapa mapa)</argsstring>
+        <name>Mover</name>
+        <qualifiedname>Library.Aldeano.Mover</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a">Mover</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="27" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="27" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_aldeano_1a4081a387763cc1eb47b84c1b94519100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Aldeano.CalcularDaño</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>CalcularDaño</name>
+        <qualifiedname>Library.Aldeano.CalcularDaño</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151">CalcularDaño</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="44" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_aldeano_1aa9018ff7e7391cae55ce74b0ac6d4582" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Aldeano.AtacarEdificio</definition>
+        <argsstring>(IEdificio objetivo)</argsstring>
+        <name>AtacarEdificio</name>
+        <qualifiedname>Library.Aldeano.AtacarEdificio</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="50" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_aldeano_1a99c892fe24172b39120d5b8940541f7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Aldeano.AtacarUnidad</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>AtacarUnidad</name>
+        <qualifiedname>Library.Aldeano.AtacarUnidad</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="55" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_aldeano_1ae9eace7bd0bccab7b24f65f125918841" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Aldeano.RecolectarEn</definition>
+        <argsstring>(Point coordenada, Mapa mapa)</argsstring>
+        <name>RecolectarEn</name>
+        <qualifiedname>Library.Aldeano.RecolectarEn</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_recolector_1a9074e4b242b7323733869f07d03eea14">RecolectarEn</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="62" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="62" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_library_1_1_aldeano_1aa1829c294e796445a2de85d193329f3e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.Aldeano.EsCompatible</definition>
+        <argsstring>(IAlmacenamiento almacen, string nombre)</argsstring>
+        <name>EsCompatible</name>
+        <qualifiedname>Library.Aldeano.EsCompatible</qualifiedname>
+        <param>
+          <type><ref refid="interface_library_1_1_i_almacenamiento" kindref="compound">IAlmacenamiento</ref></type>
+          <declname>almacen</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="114" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="114" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_aldeano_1ae20f6a4f7f96de85d130f383a4dcc734" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.Aldeano.CalcularDistancia</definition>
+        <argsstring>(Point a, Point b)</argsstring>
+        <name>CalcularDistancia</name>
+        <qualifiedname>Library.Aldeano.CalcularDistancia</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="123" column="20" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="123" bodyend="128"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.Aldeano</label>
+        <link refid="class_library_1_1_aldeano"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IRecolector</label>
+        <link refid="interface_library_1_1_i_recolector"/>
+      </node>
+      <node id="2">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.Aldeano</label>
+        <link refid="class_library_1_1_aldeano"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IRecolector</label>
+        <link refid="interface_library_1_1_i_recolector"/>
+      </node>
+      <node id="2">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Aldeano.cs" bodystart="4" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_aldeano_1a30c9acac64c6119eec6015ecc656bb2a" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Aldeano</name></member>
+      <member refid="class_library_1_1_aldeano_1aa9018ff7e7391cae55ce74b0ac6d4582" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>AtacarEdificio</name></member>
+      <member refid="class_library_1_1_aldeano_1a99c892fe24172b39120d5b8940541f7c" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>AtacarUnidad</name></member>
+      <member refid="class_library_1_1_aldeano_1acbc3c0e9f1b96ad57e96dea9edaaa8c9" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Ataque</name></member>
+      <member refid="class_library_1_1_aldeano_1a4081a387763cc1eb47b84c1b94519100" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>CalcularDaño</name></member>
+      <member refid="class_library_1_1_aldeano_1ae20f6a4f7f96de85d130f383a4dcc734" prot="private" virt="non-virtual"><scope>Library::Aldeano</scope><name>CalcularDistancia</name></member>
+      <member refid="class_library_1_1_aldeano_1ac6e9791cf5504ce02fb80c3a37fc8d69" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Defensa</name></member>
+      <member refid="class_library_1_1_aldeano_1aa1829c294e796445a2de85d193329f3e" prot="private" virt="non-virtual"><scope>Library::Aldeano</scope><name>EsCompatible</name></member>
+      <member refid="class_library_1_1_aldeano_1aa59ef730c5640c07c911775a47fe17e0" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Mover</name></member>
+      <member refid="class_library_1_1_aldeano_1ab8ad629efd37b4f5c578f552feb6ddaf" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_aldeano_1ab3e32ee8e696a44d5bf4962923b67e73" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_aldeano_1ae9eace7bd0bccab7b24f65f125918841" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>RecolectarEn</name></member>
+      <member refid="class_library_1_1_aldeano_1a142e0ce5f10041d50dff29f2bd3cd087" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Salud</name></member>
+      <member refid="class_library_1_1_aldeano_1a42195acfd1ede0e04123d33d70c44da1" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>TiempoDeCreacion</name></member>
+      <member refid="class_library_1_1_aldeano_1ae229146ae1c4b28d59ae2988360746dc" prot="public" virt="non-virtual"><scope>Library::Aldeano</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

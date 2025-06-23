@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_infanteria_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::InfanteriaTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_infanteria_tests_1ab6dec7adacde584ce04cefccb2127f34" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.InfanteriaTests.jugadorAzteca</definition>
+        <argsstring></argsstring>
+        <name>jugadorAzteca</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.jugadorAzteca</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="9" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_infanteria_tests_1aa0d5170425e337ccbe71a4e11b083315" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.InfanteriaTests.jugadorRival</definition>
+        <argsstring></argsstring>
+        <name>jugadorRival</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.jugadorRival</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="10" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_infanteria_tests_1aab46b6da2a042ad9892a31b46fa51056" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_infanteria" kindref="compound">Infanteria</ref></type>
+        <definition>Infanteria Library.Tests.InfanteriaTests.infanteria</definition>
+        <argsstring></argsstring>
+        <name>infanteria</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.infanteria</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="11" column="28" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_infanteria_tests_1a0838d8c9961227f492e1a6dab6910cd2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+        <definition>Mapa Library.Tests.InfanteriaTests.mapa</definition>
+        <argsstring></argsstring>
+        <name>mapa</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="12" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1a7d3c3795f858c71f41dd9112c77497fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.SetUp</definition>
+        <argsstring>()</argsstring>
+        <name>SetUp</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.SetUp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="15" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="15" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1a5983507deaa9364dc630b79ee29fff35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.Mover_DestinoValido_MueveCorrectamente</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_DestinoValido_MueveCorrectamente</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.Mover_DestinoValido_MueveCorrectamente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="28" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="28" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1a03decaedcf892914a10505d5d75b76ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.Mover_DestinoFueraDeMapa_LanzaExcepcion</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_DestinoFueraDeMapa_LanzaExcepcion</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.Mover_DestinoFueraDeMapa_LanzaExcepcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="40" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1ae7c579d2b31a081f055b9d9d5b82f4b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.AtacarU_ContraCaballeria_AplicaBonus</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarU_ContraCaballeria_AplicaBonus</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.AtacarU_ContraCaballeria_AplicaBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="49" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="49" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1a83730f0cfce49c6489c229955d988995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="67" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="67" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1a1929915ac6fa81e1af470cce0ca6c115" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.AtacarE_ContraEdificio_CausaDaño</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarE_ContraEdificio_CausaDaño</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.AtacarE_ContraEdificio_CausaDaño</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="86" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_infanteria_tests_1aecefd14f34876714dc6025642fd84f0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.InfanteriaTests.AtacarU_UnidadEliminada_SeEliminaDeLista</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarU_UnidadEliminada_SeEliminaDeLista</name>
+        <qualifiedname>Library.Tests.InfanteriaTests.AtacarU_UnidadEliminada_SeEliminaDeLista</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="97" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="97" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" line="7" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/InfanteriaTests.cs" bodystart="8" bodyend="114"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a1929915ac6fa81e1af470cce0ca6c115" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>AtacarE_ContraEdificio_CausaDaño</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1ae7c579d2b31a081f055b9d9d5b82f4b4" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>AtacarU_ContraCaballeria_AplicaBonus</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a83730f0cfce49c6489c229955d988995" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>AtacarU_ContraInfanteriaAztecaGuerreroJaguar_AplicaBonus</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1aecefd14f34876714dc6025642fd84f0e" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>AtacarU_UnidadEliminada_SeEliminaDeLista</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1aab46b6da2a042ad9892a31b46fa51056" prot="private" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>infanteria</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1ab6dec7adacde584ce04cefccb2127f34" prot="private" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>jugadorAzteca</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1aa0d5170425e337ccbe71a4e11b083315" prot="private" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>jugadorRival</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a0838d8c9961227f492e1a6dab6910cd2" prot="private" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>mapa</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a03decaedcf892914a10505d5d75b76ef" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>Mover_DestinoFueraDeMapa_LanzaExcepcion</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a5983507deaa9364dc630b79ee29fff35" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>Mover_DestinoValido_MueveCorrectamente</name></member>
+      <member refid="class_library_1_1_tests_1_1_infanteria_tests_1a7d3c3795f858c71f41dd9112c77497fe" prot="public" virt="non-virtual"><scope>Library::Tests::InfanteriaTests</scope><name>SetUp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

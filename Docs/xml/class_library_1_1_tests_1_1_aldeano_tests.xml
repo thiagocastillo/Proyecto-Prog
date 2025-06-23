@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_aldeano_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::AldeanoTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_aldeano_tests_1ae471ebcf321aa3786a34472e7dc8133a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.Tests.AldeanoTests.jugador</definition>
+        <argsstring></argsstring>
+        <name>jugador</name>
+        <qualifiedname>Library.Tests.AldeanoTests.jugador</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="9" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_aldeano_tests_1a70b338d3d9eb4011f432741947a2742a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_aldeano" kindref="compound">Aldeano</ref></type>
+        <definition>Aldeano Library.Tests.AldeanoTests.aldeano</definition>
+        <argsstring></argsstring>
+        <name>aldeano</name>
+        <qualifiedname>Library.Tests.AldeanoTests.aldeano</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="10" column="25" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_aldeano_tests_1abc2a230f3237ea0b88df1a2c44598e76" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+        <definition>Mapa Library.Tests.AldeanoTests.mapa</definition>
+        <argsstring></argsstring>
+        <name>mapa</name>
+        <qualifiedname>Library.Tests.AldeanoTests.mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="11" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a0de36f6c8827141ce1265939ca0878e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <qualifiedname>Library.Tests.AldeanoTests.Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="14" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1af002a65b8623d9ff203fc728ffdc637f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.Constructor_AsignaPropietario</definition>
+        <argsstring>()</argsstring>
+        <name>Constructor_AsignaPropietario</name>
+        <qualifiedname>Library.Tests.AldeanoTests.Constructor_AsignaPropietario</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="23" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a2fe42c4e02a6749e51ca2ce243513294" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.PropiedadesPorDefecto</definition>
+        <argsstring>()</argsstring>
+        <name>PropiedadesPorDefecto</name>
+        <qualifiedname>Library.Tests.AldeanoTests.PropiedadesPorDefecto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="29" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1ad3df7baf113a9d9cfdfae0bc74bfb6a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.Mover_PosicionValida_ActualizaPosicion</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_PosicionValida_ActualizaPosicion</name>
+        <qualifiedname>Library.Tests.AldeanoTests.Mover_PosicionValida_ActualizaPosicion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="37" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="37" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a7e45d08b12c3418e5a091b4e303fb36d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.Mover_PosicionInvalida_NoMueve</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_PosicionInvalida_NoMueve</name>
+        <qualifiedname>Library.Tests.AldeanoTests.Mover_PosicionInvalida_NoMueve</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="46" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a8035964d482770da5d35c3ea4583fb1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.Mover_DestinoNulo_LanzaExcepcion</definition>
+        <argsstring>()</argsstring>
+        <name>Mover_DestinoNulo_LanzaExcepcion</name>
+        <qualifiedname>Library.Tests.AldeanoTests.Mover_DestinoNulo_LanzaExcepcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="54" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a6cd6a3b1f6839f34ca4ab3f7ce163105" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.CalcularDaño_SiempreCero</definition>
+        <argsstring>()</argsstring>
+        <name>CalcularDaño_SiempreCero</name>
+        <qualifiedname>Library.Tests.AldeanoTests.CalcularDaño_SiempreCero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="60" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1acb8864db81366d06c29058a5a49e9094" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.AtacarUnidad_SiempreDevuelveMensajeNoAtaca</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarUnidad_SiempreDevuelveMensajeNoAtaca</name>
+        <qualifiedname>Library.Tests.AldeanoTests.AtacarUnidad_SiempreDevuelveMensajeNoAtaca</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="66" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1ab3d666982cb51ddf05a38cd97bda7f38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.AtacarEdificio_SiempreDevuelveMensajeNoAtaca</definition>
+        <argsstring>()</argsstring>
+        <name>AtacarEdificio_SiempreDevuelveMensajeNoAtaca</name>
+        <qualifiedname>Library.Tests.AldeanoTests.AtacarEdificio_SiempreDevuelveMensajeNoAtaca</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="74" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="74" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1abbce3f0902340c3f2c801141d8a3a403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.RecolectarEn_RecursoNoExiste_LanzaExcepcion</definition>
+        <argsstring>()</argsstring>
+        <name>RecolectarEn_RecursoNoExiste_LanzaExcepcion</name>
+        <qualifiedname>Library.Tests.AldeanoTests.RecolectarEn_RecursoNoExiste_LanzaExcepcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="82" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a1062b3da694e127f142b2fe02f81cff8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.RecolectarEn_RecursoAgotado_LanzaExcepcion</definition>
+        <argsstring>()</argsstring>
+        <name>RecolectarEn_RecursoAgotado_LanzaExcepcion</name>
+        <qualifiedname>Library.Tests.AldeanoTests.RecolectarEn_RecursoAgotado_LanzaExcepcion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="89" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1abe06649f0143ca3dbdeb8d2eb10d5c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.RecolectarEn_AlmacenCompatible_ActualizaRecursos</definition>
+        <argsstring>()</argsstring>
+        <name>RecolectarEn_AlmacenCompatible_ActualizaRecursos</name>
+        <qualifiedname>Library.Tests.AldeanoTests.RecolectarEn_AlmacenCompatible_ActualizaRecursos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="98" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="98" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1a29939fbd4155a11fea23937039b4ede4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.RecolectarEn_BonoAzteca</definition>
+        <argsstring>()</argsstring>
+        <name>RecolectarEn_BonoAzteca</name>
+        <qualifiedname>Library.Tests.AldeanoTests.RecolectarEn_BonoAzteca</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="112" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="112" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_aldeano_tests_1aa6e55221a8f311b7ffd71f78a0332934" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.AldeanoTests.RecolectarEn_AlmacenYaTieneRecurso_Suma</definition>
+        <argsstring>()</argsstring>
+        <name>RecolectarEn_AlmacenYaTieneRecurso_Suma</name>
+        <qualifiedname>Library.Tests.AldeanoTests.RecolectarEn_AlmacenYaTieneRecurso_Suma</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="125" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="125" bodyend="136"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" line="7" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/AldeanoTests.cs" bodystart="8" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a70b338d3d9eb4011f432741947a2742a" prot="private" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>aldeano</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1ab3d666982cb51ddf05a38cd97bda7f38" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>AtacarEdificio_SiempreDevuelveMensajeNoAtaca</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1acb8864db81366d06c29058a5a49e9094" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>AtacarUnidad_SiempreDevuelveMensajeNoAtaca</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a6cd6a3b1f6839f34ca4ab3f7ce163105" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>CalcularDaño_SiempreCero</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1af002a65b8623d9ff203fc728ffdc637f" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>Constructor_AsignaPropietario</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1ae471ebcf321aa3786a34472e7dc8133a" prot="private" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>jugador</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1abc2a230f3237ea0b88df1a2c44598e76" prot="private" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>mapa</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a8035964d482770da5d35c3ea4583fb1d" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>Mover_DestinoNulo_LanzaExcepcion</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a7e45d08b12c3418e5a091b4e303fb36d" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>Mover_PosicionInvalida_NoMueve</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1ad3df7baf113a9d9cfdfae0bc74bfb6a5" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>Mover_PosicionValida_ActualizaPosicion</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a2fe42c4e02a6749e51ca2ce243513294" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>PropiedadesPorDefecto</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1abe06649f0143ca3dbdeb8d2eb10d5c6a" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>RecolectarEn_AlmacenCompatible_ActualizaRecursos</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1aa6e55221a8f311b7ffd71f78a0332934" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>RecolectarEn_AlmacenYaTieneRecurso_Suma</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a29939fbd4155a11fea23937039b4ede4" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>RecolectarEn_BonoAzteca</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a1062b3da694e127f142b2fe02f81cff8" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>RecolectarEn_RecursoAgotado_LanzaExcepcion</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1abbce3f0902340c3f2c801141d8a3a403" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>RecolectarEn_RecursoNoExiste_LanzaExcepcion</name></member>
+      <member refid="class_library_1_1_tests_1_1_aldeano_tests_1a0de36f6c8827141ce1265939ca0878e1" prot="public" virt="non-virtual"><scope>Library::Tests::AldeanoTests</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

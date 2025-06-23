@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="interface_library_1_1_i_unidad" kind="interface" language="C#" prot="public">
+    <compoundname>Library::IUnidad</compoundname>
+    <derivedcompoundref refid="class_library_1_1_aldeano" prot="public" virt="non-virtual">Library.Aldeano</derivedcompoundref>
+    <derivedcompoundref refid="interface_library_1_1_i_unidad_militar" prot="public" virt="non-virtual">Library.IUnidadMilitar</derivedcompoundref>
+    <derivedcompoundref refid="class_library_1_1_tests_1_1_mock_unidad" prot="public" virt="non-virtual">Library.Tests.MockUnidad</derivedcompoundref>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+        <definition>Jugador Library.IUnidad.Propietario</definition>
+        <argsstring></argsstring>
+        <name>Propietario</name>
+        <qualifiedname>Library.IUnidad.Propietario</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1ab3e32ee8e696a44d5bf4962923b67e73">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1a5254a589c629faf65e120c7c93b2cedf">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a86034d8c8f215e1cbffd86a85a8dd9da">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1ac8e783c818c72d6b4c197aae8f0b604d">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1a602b61a9b3a8fb117bb2b40ecf8c07ad">Propietario</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1aa649d07cd0b24fc4b5d59c33cf29b095">Propietario</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="5" column="13" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IUnidad.Ataque</definition>
+        <argsstring></argsstring>
+        <name>Ataque</name>
+        <qualifiedname>Library.IUnidad.Ataque</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1acbc3c0e9f1b96ad57e96dea9edaaa8c9">Ataque</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1afa7b51d2465726444ae19aed3abd5daf">Ataque</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a177bdd9b26851c3e01bdb051f6388132">Ataque</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1ae1dbed6ff8e06ec318521d67331f2a17">Ataque</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1a83505a158f1cf7e6d9af1a7eaf2598ae">Ataque</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1a4935fb7185118fdaa7e1a7dde50a2b8a">Ataque</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="6" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="6" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IUnidad.Defensa</definition>
+        <argsstring></argsstring>
+        <name>Defensa</name>
+        <qualifiedname>Library.IUnidad.Defensa</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1ac6e9791cf5504ce02fb80c3a37fc8d69">Defensa</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1ab2d74f99420b0b3b8f44ff4822a2a77d">Defensa</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1ad4d2a437d6b271d0981d07cac063e729">Defensa</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1ae099a58e816a3877c5d5d76b5964de43">Defensa</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1ae4e216e1fe1380ebe3ae86ad9f596411">Defensa</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1a9775d793cb478ffed3b0631282a2c7a7">Defensa</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="7" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="7" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double Library.IUnidad.Velocidad</definition>
+        <argsstring></argsstring>
+        <name>Velocidad</name>
+        <qualifiedname>Library.IUnidad.Velocidad</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1ae229146ae1c4b28d59ae2988360746dc">Velocidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1abb4ff4db2d25c2e729a9fbe5b082ea94">Velocidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_compuesto_1a6a20cc7eb5a069bec6243eb40bc4723c">Velocidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a9a2d2f83fb6b9863b82bb57930da7e67">Velocidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1a6c2472826edc81362cc38ce319cbf707">Velocidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1adb3754ff69b23b1af84bff3e66f4f1cd">Velocidad</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1aabc6b7df89c5e60853b9e14935a0301f">Velocidad</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="8" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IUnidad.Salud</definition>
+        <argsstring></argsstring>
+        <name>Salud</name>
+        <qualifiedname>Library.IUnidad.Salud</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1a142e0ce5f10041d50dff29f2bd3cd087">Salud</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1a1cdeaf6ac7c8c9c75b1696cc8c890300">Salud</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a4c8210860547bcb33624700180c43af5">Salud</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1ab4fd366993080cb1b8bfc1dc62f59645">Salud</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1ab9743113694d02527b91c627f0b9f309">Salud</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1ab2968524d38fac9ec926b928e353b474">Salud</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="9" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+        <definition>Point Library.IUnidad.Posicion</definition>
+        <argsstring></argsstring>
+        <name>Posicion</name>
+        <qualifiedname>Library.IUnidad.Posicion</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1ab8ad629efd37b4f5c578f552feb6ddaf">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1acc2756bf3196b334f6c17ab457e87cea">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1acfe19b7c1191a1b002b648801a980200">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1ac0a04cf2960f9e881cc00e04b5affcde">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1ab84c8384cf61ac7e2a5cf2a04e840032">Posicion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1a284dcdc192b23a0d1a8e6c67713135c9">Posicion</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="10" column="11" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.IUnidad.TiempoDeCreacion</definition>
+        <argsstring></argsstring>
+        <name>TiempoDeCreacion</name>
+        <qualifiedname>Library.IUnidad.TiempoDeCreacion</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1a42195acfd1ede0e04123d33d70c44da1">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1a2e3be0ecd7ed1e70f2f8c2a173ce4395">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a2ee05023d8881ff2863a42ba63c74201">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1adfc0ba2e0b717411fbdbc054398d77e2">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="interface_library_1_1_i_unidad_militar_1acc872bea12425b9e375165327879fdbe">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1acbf7b61a0ad3a5418126b6c184f40c1c">TiempoDeCreacion</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1aa34260c22157c8bcdacda5d0f58334f0">TiempoDeCreacion</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="13" column="9" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Library.IUnidad.Mover</definition>
+        <argsstring>(Point destino, Mapa mapa)</argsstring>
+        <name>Mover</name>
+        <qualifiedname>Library.IUnidad.Mover</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1aa59ef730c5640c07c911775a47fe17e0">Mover</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1a2ce5d2b0a7cd1ae9910c01319cd1b91f">Mover</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1ac552cbb49e975bb0699ebdca6fd2cb15">Mover</reimplementedby>
+        <reimplementedby refid="class_library_1_1_guerrero_jaguar_1a3b04c949816ecdf4f4a5e3736b7d96f6">Mover</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1a7b637d67be932f49adeff2d416abb04b">Mover</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1ad474ac984a92a672c08be9984951e1c8">Mover</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1a2f30ee80d2196f7cddd676663c05f3b5">Mover</reimplementedby>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="11" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.IUnidad.CalcularDaño</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>CalcularDaño</name>
+        <qualifiedname>Library.IUnidad.CalcularDaño</qualifiedname>
+        <reimplementedby refid="class_library_1_1_aldeano_1a4081a387763cc1eb47b84c1b94519100">CalcularDaño</reimplementedby>
+        <reimplementedby refid="class_library_1_1_arquero_1a35a322f8b72ecca4547d9343af8be7f5">CalcularDaño</reimplementedby>
+        <reimplementedby refid="class_library_1_1_caballeria_1a426ed8414b1ae4108509302d9d60dd43">CalcularDaño</reimplementedby>
+        <reimplementedby refid="class_library_1_1_guerrero_jaguar_1a068a36cca34f59ffe623fdcb98a1d840">CalcularDaño</reimplementedby>
+        <reimplementedby refid="class_library_1_1_infanteria_1a3f634ea4650d8aa286dfc394296c85c6">CalcularDaño</reimplementedby>
+        <reimplementedby refid="class_library_1_1_ratha_1a23e39eea9d04f5599e79c6257e94d07c">CalcularDaño</reimplementedby>
+        <reimplementedby refid="class_library_1_1_tests_1_1_mock_unidad_1ade5c2d889603827f2778da04eaf19588">CalcularDaño</reimplementedby>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="14" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="2">
+        <label>Library.Aldeano</label>
+        <link refid="class_library_1_1_aldeano"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Library.Arquero</label>
+        <link refid="class_library_1_1_arquero"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Library.ArqueroCompuesto</label>
+        <link refid="class_library_1_1_arquero_compuesto"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Library.Caballeria</label>
+        <link refid="class_library_1_1_caballeria"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Library.GuerreroJaguar</label>
+        <link refid="class_library_1_1_guerrero_jaguar"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Library.Infanteria</label>
+        <link refid="class_library_1_1_infanteria"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Library.Ratha</label>
+        <link refid="class_library_1_1_ratha"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Library.Tests.MockUnidad</label>
+        <link refid="class_library_1_1_tests_1_1_mock_unidad"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" line="3" column="18" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/IUnidad.cs" bodystart="4" bodyend="15"/>
+    <listofallmembers>
+      <member refid="interface_library_1_1_i_unidad_1a10d5d60242194a85aec2d747d02f55c4" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Ataque</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>CalcularDaño</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a5b6049029c5ade3a536e0ca00a5a1ba0" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Defensa</name></member>
+      <member refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Mover</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a030bc8f49c4673795d1eccbc9437a093" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Posicion</name></member>
+      <member refid="interface_library_1_1_i_unidad_1ab56b44a43d9fbb0609898c01d289c876" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Propietario</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a585bd658b9d13695b5eb2a66ab6dd9df" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Salud</name></member>
+      <member refid="interface_library_1_1_i_unidad_1a35af05afa675fb9eb03a0858a3c3521d" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>TiempoDeCreacion</name></member>
+      <member refid="interface_library_1_1_i_unidad_1aac42517d27f3332fb324f563c3c6188c" prot="public" virt="non-virtual"><scope>Library::IUnidad</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

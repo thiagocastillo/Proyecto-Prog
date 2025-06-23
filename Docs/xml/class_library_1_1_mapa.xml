@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_mapa" kind="class" language="C#" prot="public">
+    <compoundname>Library::Mapa</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_library_1_1_mapa_1a9b937b1318c4352df3c2c27bc8c60cbe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Mapa.Ancho</definition>
+        <argsstring></argsstring>
+        <name>Ancho</name>
+        <qualifiedname>Library.Mapa.Ancho</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="9" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_mapa_1a9d7996d0b7e1ec8464a536cb906eb296" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int Library.Mapa.Alto</definition>
+        <argsstring></argsstring>
+        <name>Alto</name>
+        <qualifiedname>Library.Mapa.Alto</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="11" column="16" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="property" id="class_library_1_1_mapa_1a5def4a00be5cd72316bbbecc0a92da37" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_library_1_1_recurso_natural" kindref="compound">RecursoNatural</ref> &gt;</type>
+        <definition>List&lt;RecursoNatural&gt; Library.Mapa.Recursos</definition>
+        <argsstring></argsstring>
+        <name>Recursos</name>
+        <qualifiedname>Library.Mapa.Recursos</qualifiedname>
+        <initializer>= new List&lt;<ref refid="class_library_1_1_recurso_natural" kindref="compound">RecursoNatural</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="13" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="13" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_library_1_1_mapa_1a208515de822912428a225fe04241e8d8" prot="private" static="yes" mutable="no">
+        <type>Random</type>
+        <definition>Random Library.Mapa.random</definition>
+        <argsstring></argsstring>
+        <name>random</name>
+        <qualifiedname>Library.Mapa.random</qualifiedname>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="15" column="27" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_mapa_1ac68f95081768b8b3c9b7d3675d268362" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.Mapa.Mapa</definition>
+        <argsstring>()</argsstring>
+        <name>Mapa</name>
+        <qualifiedname>Library.Mapa.Mapa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="18" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_mapa_1a97a88850bd3ac9da38910fdd9f9e9dcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref> &gt;</type>
+        <definition>List&lt; IUnidad &gt; Library.Mapa.ObtenerUnidadesEn</definition>
+        <argsstring>(Point coordenada, List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>ObtenerUnidadesEn</name>
+        <qualifiedname>Library.Mapa.ObtenerUnidadesEn</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="24" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="24" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_mapa_1a04295c1e65ae4c1bef520179e43b748e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref> &gt;</type>
+        <definition>List&lt; IEdificio &gt; Library.Mapa.ObtenerEdificiosEn</definition>
+        <argsstring>(Point coordenada, List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>ObtenerEdificiosEn</name>
+        <qualifiedname>Library.Mapa.ObtenerEdificiosEn</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="37" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_mapa_1a93044283864a4179ac18794523517c67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Mapa.GenerarRecursosAleatorios</definition>
+        <argsstring>(int min, int max)</argsstring>
+        <name>GenerarRecursosAleatorios</name>
+        <qualifiedname>Library.Mapa.GenerarRecursosAleatorios</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="49" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="49" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_mapa_1a6df7a03781b2f63628644fc3d1ffdbb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Library.Mapa.MostrarMapa</definition>
+        <argsstring>(List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>MostrarMapa</name>
+        <qualifiedname>Library.Mapa.MostrarMapa</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="98" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="98" bodyend="205"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" line="6" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Mapa.cs" bodystart="7" bodyend="206"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_mapa_1a9d7996d0b7e1ec8464a536cb906eb296" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>Alto</name></member>
+      <member refid="class_library_1_1_mapa_1a9b937b1318c4352df3c2c27bc8c60cbe" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>Ancho</name></member>
+      <member refid="class_library_1_1_mapa_1a93044283864a4179ac18794523517c67" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>GenerarRecursosAleatorios</name></member>
+      <member refid="class_library_1_1_mapa_1ac68f95081768b8b3c9b7d3675d268362" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>Mapa</name></member>
+      <member refid="class_library_1_1_mapa_1a6df7a03781b2f63628644fc3d1ffdbb5" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>MostrarMapa</name></member>
+      <member refid="class_library_1_1_mapa_1a04295c1e65ae4c1bef520179e43b748e" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>ObtenerEdificiosEn</name></member>
+      <member refid="class_library_1_1_mapa_1a97a88850bd3ac9da38910fdd9f9e9dcb" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>ObtenerUnidadesEn</name></member>
+      <member refid="class_library_1_1_mapa_1a208515de822912428a225fe04241e8d8" prot="private" virt="non-virtual"><scope>Library::Mapa</scope><name>random</name></member>
+      <member refid="class_library_1_1_mapa_1a5def4a00be5cd72316bbbecc0a92da37" prot="public" virt="non-virtual"><scope>Library::Mapa</scope><name>Recursos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_tests_1_1_partida_tests" kind="class" language="C#" prot="public">
+    <compoundname>Library::Tests::PartidaTests</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_library_1_1_tests_1_1_partida_tests_1a390a8e26b10b43ffa923b0a205ff866a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_library_1_1_partida" kindref="compound">Partida</ref></type>
+        <definition>Partida Library.Tests.PartidaTests.partida</definition>
+        <argsstring></argsstring>
+        <name>partida</name>
+        <qualifiedname>Library.Tests.PartidaTests.partida</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="5" column="22" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_partida_tests_1a13de2820959aef9a35e5c4b2d91424a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PartidaTests.Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Setup</name>
+        <qualifiedname>Library.Tests.PartidaTests.Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="8" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_partida_tests_1a2384776e4f978ef1d9e17e73be8126e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PartidaTests.AgregarJugador_MenosDeDos</definition>
+        <argsstring>()</argsstring>
+        <name>AgregarJugador_MenosDeDos</name>
+        <qualifiedname>Library.Tests.PartidaTests.AgregarJugador_MenosDeDos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="14" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="14" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_partida_tests_1a5f2f78a04c3833956e266da298d33fba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PartidaTests.AgregarJugador_TercerJugador_NoSePermitenMasDeDos</definition>
+        <argsstring>()</argsstring>
+        <name>AgregarJugador_TercerJugador_NoSePermitenMasDeDos</name>
+        <qualifiedname>Library.Tests.PartidaTests.AgregarJugador_TercerJugador_NoSePermitenMasDeDos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="25" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="25" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_partida_tests_1ace481b7e98bf0cb5004bbf25391d1484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PartidaTests.VerificarGanador_JugadorPierdeCentroCivico</definition>
+        <argsstring>()</argsstring>
+        <name>VerificarGanador_JugadorPierdeCentroCivico</name>
+        <qualifiedname>Library.Tests.PartidaTests.VerificarGanador_JugadorPierdeCentroCivico</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="44" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="44" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_partida_tests_1a7b4d66179f9e39438641ff5451ecba21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PartidaTests.VerificarGanador_AmbosTienenCentroCivico</definition>
+        <argsstring>()</argsstring>
+        <name>VerificarGanador_AmbosTienenCentroCivico</name>
+        <qualifiedname>Library.Tests.PartidaTests.VerificarGanador_AmbosTienenCentroCivico</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="62" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="62" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_tests_1_1_partida_tests_1ac300cce31a0537c867fe1f32b305050f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Library.Tests.PartidaTests.VerificarGanador_NoHayGanador</definition>
+        <argsstring>()</argsstring>
+        <name>VerificarGanador_NoHayGanador</name>
+        <qualifiedname>Library.Tests.PartidaTests.VerificarGanador_NoHayGanador</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="82" column="17" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="82" bodyend="95"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" line="3" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/test/Library.Tests/PartidaTests.cs" bodystart="4" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1a2384776e4f978ef1d9e17e73be8126e3" prot="public" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>AgregarJugador_MenosDeDos</name></member>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1a5f2f78a04c3833956e266da298d33fba" prot="public" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>AgregarJugador_TercerJugador_NoSePermitenMasDeDos</name></member>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1a390a8e26b10b43ffa923b0a205ff866a" prot="private" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>partida</name></member>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1a13de2820959aef9a35e5c4b2d91424a9" prot="public" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>Setup</name></member>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1a7b4d66179f9e39438641ff5451ecba21" prot="public" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>VerificarGanador_AmbosTienenCentroCivico</name></member>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1ace481b7e98bf0cb5004bbf25391d1484" prot="public" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>VerificarGanador_JugadorPierdeCentroCivico</name></member>
+      <member refid="class_library_1_1_tests_1_1_partida_tests_1ac300cce31a0537c867fe1f32b305050f" prot="public" virt="non-virtual"><scope>Library::Tests::PartidaTests</scope><name>VerificarGanador_NoHayGanador</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

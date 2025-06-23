@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_arbol_8cs" kind="file" language="C#">
+    <compoundname>Arbol.cs</compoundname>
+    <innerclass refid="class_library_1_1_arbol" prot="public">Library::Arbol</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_library_1_1_arbol" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_arbol_1a7961260d418bc1e6bf6af2785a023bde" kindref="member">Arbol</ref><sp/>:<sp/><ref refid="class_library_1_1_recurso_natural_1ab7064255670032bbe121cb68cd10658d" kindref="member">RecursoNatural</ref>,<sp/><ref refid="interface_library_1_1_i_tipo_recurso" kindref="compound">ITipoRecurso</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_arbol_1a7961260d418bc1e6bf6af2785a023bde" kindref="member">Arbol</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vidaBase,<sp/><ref refid="class_library_1_1_point" kindref="compound">Point</ref><sp/>ubicacion)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>base(</highlight><highlight class="stringliteral">&quot;Madera&quot;</highlight><highlight class="normal">,<sp/>vidaBase,<sp/>0.75,<sp/>ubicacion)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/Arbol.cs"/>
+  </compounddef>
+</doxygen>

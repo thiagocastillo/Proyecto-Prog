@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="class_library_1_1_guerrero_jaguar" kind="class" language="C#" prot="public">
+    <compoundname>Library::GuerreroJaguar</compoundname>
+    <basecompoundref refid="class_library_1_1_infanteria" prot="public" virt="non-virtual">Library.Infanteria</basecompoundref>
+    <basecompoundref refid="interface_library_1_1_i_unidad_militar" prot="public" virt="non-virtual">Library.IUnidadMilitar</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_library_1_1_guerrero_jaguar_1a8a9e565ac2a6d5540c0f18d532eb7ab5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Library.GuerreroJaguar.GuerreroJaguar</definition>
+        <argsstring>(Jugador propietario)</argsstring>
+        <name>GuerreroJaguar</name>
+        <qualifiedname>Library.GuerreroJaguar.GuerreroJaguar</qualifiedname>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>propietario</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" line="7" column="12" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_guerrero_jaguar_1a068a36cca34f59ffe623fdcb98a1d840" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Library.GuerreroJaguar.CalcularDaño</definition>
+        <argsstring>(IUnidad objetivo)</argsstring>
+        <name>CalcularDaño</name>
+        <qualifiedname>Library.GuerreroJaguar.CalcularDaño</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1a3831a9d0ca3d77a5e3a7b9b15e8bf151">CalcularDaño</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_unidad" kindref="compound">IUnidad</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" line="13" column="19" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" bodystart="13" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_guerrero_jaguar_1a3b04c949816ecdf4f4a5e3736b7d96f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new bool</type>
+        <definition>new bool Library.GuerreroJaguar.Mover</definition>
+        <argsstring>(Point destino, Mapa mapa)</argsstring>
+        <name>Mover</name>
+        <qualifiedname>Library.GuerreroJaguar.Mover</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_1ae82077bbd08d7e1fae0b3e656f86e89a">Mover</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>destino</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" line="32" column="21" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" bodystart="32" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_guerrero_jaguar_1a9591883c274acff3fc73a4e85da54421" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new string</type>
+        <definition>new string Library.GuerreroJaguar.AtacarUnidad</definition>
+        <argsstring>(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List&lt; Jugador &gt; jugadores)</argsstring>
+        <name>AtacarUnidad</name>
+        <qualifiedname>Library.GuerreroJaguar.AtacarUnidad</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1a7e5aae6437562afc57f21c664fea2216">AtacarUnidad</reimplements>
+        <param>
+          <type><ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref></type>
+          <declname>atacante</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tipoUnidad</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cantidad</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_point" kindref="compound">Point</ref></type>
+          <declname>coordenada</declname>
+        </param>
+        <param>
+          <type><ref refid="class_library_1_1_mapa" kindref="compound">Mapa</ref></type>
+          <declname>mapa</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref> &gt;</type>
+          <declname>jugadores</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" line="46" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" bodystart="46" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_library_1_1_guerrero_jaguar_1afab6df46dadd15b6a00af00896cfeb13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new string</type>
+        <definition>new string Library.GuerreroJaguar.AtacarEdificio</definition>
+        <argsstring>(IEdificio objetivo)</argsstring>
+        <name>AtacarEdificio</name>
+        <qualifiedname>Library.GuerreroJaguar.AtacarEdificio</qualifiedname>
+        <reimplements refid="interface_library_1_1_i_unidad_militar_1af4b40a85d7a01c9e152a72bccfd16aa0">AtacarEdificio</reimplements>
+        <param>
+          <type><ref refid="interface_library_1_1_i_edificio" kindref="compound">IEdificio</ref></type>
+          <declname>objetivo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" line="77" column="23" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" bodystart="77" bodyend="90"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Library.GuerreroJaguar</label>
+        <link refid="class_library_1_1_guerrero_jaguar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="3">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.Infanteria</label>
+        <link refid="class_library_1_1_infanteria"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Library.GuerreroJaguar</label>
+        <link refid="class_library_1_1_guerrero_jaguar"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Library.IUnidad</label>
+        <link refid="interface_library_1_1_i_unidad"/>
+      </node>
+      <node id="3">
+        <label>Library.IUnidadMilitar</label>
+        <link refid="interface_library_1_1_i_unidad_militar"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Library.Infanteria</label>
+        <link refid="class_library_1_1_infanteria"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" line="4" column="7" bodyfile="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/GuerreroJaguar.cs" bodystart="5" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_library_1_1_guerrero_jaguar_1afab6df46dadd15b6a00af00896cfeb13" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>AtacarEdificio</name></member>
+      <member refid="class_library_1_1_guerrero_jaguar_1a9591883c274acff3fc73a4e85da54421" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>AtacarUnidad</name></member>
+      <member refid="class_library_1_1_infanteria_1ae1dbed6ff8e06ec318521d67331f2a17" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Ataque</name></member>
+      <member refid="class_library_1_1_guerrero_jaguar_1a068a36cca34f59ffe623fdcb98a1d840" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>CalcularDaño</name></member>
+      <member refid="class_library_1_1_infanteria_1ae099a58e816a3877c5d5d76b5964de43" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Defensa</name></member>
+      <member refid="class_library_1_1_guerrero_jaguar_1a8a9e565ac2a6d5540c0f18d532eb7ab5" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>GuerreroJaguar</name></member>
+      <member refid="class_library_1_1_infanteria_1a823c475b77a395679b4846a0853c72a5" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Infanteria</name></member>
+      <member refid="class_library_1_1_guerrero_jaguar_1a3b04c949816ecdf4f4a5e3736b7d96f6" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Mover</name></member>
+      <member refid="class_library_1_1_infanteria_1ac0a04cf2960f9e881cc00e04b5affcde" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Posicion</name></member>
+      <member refid="class_library_1_1_infanteria_1ac8e783c818c72d6b4c197aae8f0b604d" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Propietario</name></member>
+      <member refid="class_library_1_1_infanteria_1ab4fd366993080cb1b8bfc1dc62f59645" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Salud</name></member>
+      <member refid="class_library_1_1_infanteria_1adfc0ba2e0b717411fbdbc054398d77e2" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>TiempoDeCreacion</name></member>
+      <member refid="class_library_1_1_infanteria_1a6c2472826edc81362cc38ce319cbf707" prot="public" virt="non-virtual"><scope>Library::GuerreroJaguar</scope><name>Velocidad</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

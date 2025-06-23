@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="_arquero_compuesto_8cs" kind="file" language="C#">
+    <compoundname>ArqueroCompuesto.cs</compoundname>
+    <innerclass refid="class_library_1_1_arquero_compuesto" prot="public">Library::ArqueroCompuesto</innerclass>
+    <innernamespace refid="namespace_library">Library</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_library" kindref="compound">Library</ref>;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Clase<sp/>que<sp/>representa<sp/>la<sp/>unidad<sp/>especial<sp/>Arquero<sp/>Compuesto,<sp/>hereda<sp/>de<sp/>Arquero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_library_1_1_arquero_compuesto" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_library_1_1_arquero_compuesto_1a98b49168c27dea50f057bb25d736c80e" kindref="member">ArqueroCompuesto</ref><sp/>:<sp/><ref refid="class_library_1_1_arquero_1a5614423199ee6b9845f962fdb5e0ab97" kindref="member">Arquero</ref>,<sp/><ref refid="interface_library_1_1_i_unidad_militar" kindref="compound">IUnidadMilitar</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_arquero_compuesto_1a6a20cc7eb5a069bec6243eb40bc4723c" kindref="member">Velocidad</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}<sp/>=<sp/>1.3;<sp/></highlight><highlight class="comment">//<sp/>Velocidad<sp/>ligeramente<sp/>mayor<sp/>que<sp/>el<sp/>Arquero<sp/>normal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor:<sp/>inicializa<sp/>la<sp/>unidad<sp/>y<sp/>aplica<sp/>bonificaciones<sp/>especiales</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_library_1_1_arquero_compuesto_1a98b49168c27dea50f057bb25d736c80e" kindref="member">ArqueroCompuesto</ref>(<ref refid="class_library_1_1_jugador" kindref="compound">Jugador</ref><sp/>propietario)<sp/>:<sp/>base(propietario)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ajusta<sp/>los<sp/>valores<sp/>base<sp/>para<sp/>el<sp/>Arquero<sp/>Compuesto</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.Ataque<sp/>=<sp/>12;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ataque<sp/>mayor<sp/>que<sp/>el<sp/>Arquero<sp/>normal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.Defensa<sp/>=<sp/>5;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Defensa<sp/>mayor<sp/>que<sp/>el<sp/>Arquero<sp/>normal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Si<sp/>la<sp/>civilización<sp/>es<sp/>Armenios<sp/>y<sp/>la<sp/>unidad<sp/>especial<sp/>es<sp/>Arquero<sp/>Compuesto,<sp/>aplica<sp/>bonificación<sp/>extra</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(propietario.<ref refid="class_library_1_1_jugador_1a4be88d86a0aafd3ba2fb04e46108d955" kindref="member">Civilizacion</ref>.<ref refid="class_library_1_1_civilizacion_1aa7b61162e90fdec944dae79cb8115b6a" kindref="member">Nombre</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Armenios&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>propietario.<ref refid="class_library_1_1_jugador_1a4be88d86a0aafd3ba2fb04e46108d955" kindref="member">Civilizacion</ref>.<ref refid="class_library_1_1_civilizacion_1a19d54629ab8745bc1d3fc12a93f8257f" kindref="member">UnidadEspecial</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Arquero<sp/>Compuesto&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.Ataque<sp/>+=<sp/>2;<sp/></highlight><highlight class="comment">//<sp/>Bonificación<sp/>adicional<sp/>de<sp/>ataque</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>El<sp/>resto<sp/>de<sp/>métodos<sp/>(CalcularDaño,<sp/>Mover,<sp/>AtacarUnidad,<sp/>AtacarEdificio)<sp/>se<sp/>heredan<sp/>de<sp/>Arquero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Usuario/Desktop/Prog2/Proyecto-Prog/src/Library/ArqueroCompuesto.cs"/>
+  </compounddef>
+</doxygen>
