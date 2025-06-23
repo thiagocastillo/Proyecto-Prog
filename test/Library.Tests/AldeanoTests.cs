@@ -10,17 +10,10 @@ namespace Library.Tests
         private Aldeano aldeano;
         private Mapa mapa;
 
-        // Clase concreta para el recurso
-        public class Madera : RecursoNatural
-        {
-            public Madera(int cantidad, double tasa, Point ubicacion)
-                : base("Madera", cantidad, tasa, ubicacion) { }
-        }
-
         [SetUp]
         public void Setup()
         {
-            var civilizacion = new Civilizacion("Aztecas", new List<string>(), "");
+            Civilizacion civilizacion = new Civilizacion("Aztecas", new List<string>(), "");
             jugador = new Jugador("Jugador1", civilizacion);
             aldeano = new Aldeano(jugador) { Salud = 50, Posicion = new Point(0, 0) };
             mapa = new Mapa(); // Usa el constructor adecuado para ancho/alto
@@ -43,7 +36,7 @@ namespace Library.Tests
         [Test]
         public void Mover_PosicionValida_ActualizaPosicion()
         {
-            var destino = new Point(5, 5);
+            Point destino = new Point(5, 5);
             bool resultado = aldeano.Mover(destino, mapa);
             Assert.IsTrue(resultado);
             Assert.AreEqual(destino, aldeano.Posicion);
@@ -52,7 +45,7 @@ namespace Library.Tests
         [Test]
         public void Mover_PosicionInvalida_NoMueve()
         {
-            var destino = new Point(-1, 100);
+            Point destino = new Point(-1, 100);
             bool resultado = aldeano.Mover(destino, mapa);
             Assert.IsFalse(resultado);
         }
@@ -72,7 +65,7 @@ namespace Library.Tests
         [Test]
         public void AtacarUnidad_SiempreDevuelveMensajeNoAtaca()
         {
-            var dummy = new MockUnidad();
+            MockUnidad dummy = new MockUnidad();
             string res = aldeano.AtacarUnidad(dummy);
             Assert.That(res, Is.EqualTo("Los aldeanos no atacan unidades."));
         }
@@ -80,7 +73,7 @@ namespace Library.Tests
         [Test]
         public void AtacarEdificio_SiempreDevuelveMensajeNoAtaca()
         {
-            var dummy = new MockEdificio();
+            MockEdificio dummy = new MockEdificio();
             string res = aldeano.AtacarEdificio(dummy);
             Assert.That(res, Is.EqualTo("Los aldeanos no atacan edificios."));
         }
@@ -95,7 +88,7 @@ namespace Library.Tests
         [Test]
         public void RecolectarEn_RecursoAgotado_LanzaExcepcion()
         {
-            var recurso = new Madera(0, 0.75, new Point(2, 2));
+            Arbol recurso = new Arbol(0, new Point(2, 2));
             mapa.Recursos.Add(recurso);
             Assert.Throws<System.InvalidOperationException>(() =>
                 aldeano.RecolectarEn(new Point(2, 2), mapa));
@@ -104,9 +97,9 @@ namespace Library.Tests
         [Test]
         public void RecolectarEn_AlmacenCompatible_ActualizaRecursos()
         {
-            var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
+            DepositoMadera almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
             jugador.Edificios.Add(almacen);
-            var recurso = new Madera(100, 0.75, new Point(4, 4));
+            Arbol recurso = new Arbol(100, new Point(4, 4));
             mapa.Recursos.Add(recurso);
 
             aldeano.RecolectarEn(new Point(4, 4), mapa);
@@ -118,9 +111,9 @@ namespace Library.Tests
         [Test]
         public void RecolectarEn_BonoAzteca()
         {
-            var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
+            DepositoMadera almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
             jugador.Edificios.Add(almacen);
-            var recurso = new Madera(100, 0.75, new Point(5, 5));
+            Arbol recurso = new Arbol(100, new Point(5, 5));
             mapa.Recursos.Add(recurso);
 
             aldeano.RecolectarEn(new Point(5, 5), mapa);
@@ -131,10 +124,10 @@ namespace Library.Tests
         [Test]
         public void RecolectarEn_AlmacenYaTieneRecurso_Suma()
         {
-            var almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
+            DepositoMadera almacen = new DepositoMadera(jugador) { Posicion = new Point(0, 0) };
             almacen.Recursos["Madera"] = 10;
             jugador.Edificios.Add(almacen);
-            var recurso = new Madera(100, 0.75, new Point(6, 6));
+            Arbol recurso = new Arbol(100, new Point(6, 6));
             mapa.Recursos.Add(recurso);
 
             aldeano.RecolectarEn(new Point(6, 6), mapa);
