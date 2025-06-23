@@ -35,7 +35,8 @@ public abstract class RecursoNatural
 
         int extraido = Math.Min(Cantidad, Math.Max(1, (int)Math.Floor(cantidad)));
         Cantidad -= extraido;
-        Console.WriteLine($"Cantidad restante: {Cantidad}");
+        Console.WriteLine($"Cantidad restante: {Cantidad}"); //.............................................................................
+       
         if (Cantidad <= 0)
         {
             Cantidad = 0;
