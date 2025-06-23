@@ -9,7 +9,6 @@ public static class Ayuda
         
         - Crear una nueva partida:                         CrearPartida
         - Mostrar el mapa del juego:                       MostrarMapa (muestra el mapa con coordenadas en un txt)
-        - Mostrar el mapa del juego con colores:           MostrarMapaColores(muestra el mapa con colores en la consola)
         - Ver civilizaciones disponibles:                  Civilizaciones                                                    
         - Agregar un jugador a la partida:                 AgregarJugador <nombreJugador> <civilización>                     
         - Construir un edificio:                           ConstruirEdificio <nombreJugador> <tipo> <x> <y>                  
