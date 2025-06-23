@@ -14,7 +14,7 @@ public class Partida
     {
         Jugadores.Add(jugador);
         
-        if (Jugadores.Count != 2)
+        if (Jugadores.Count > 2)
         {
            return "Solo se permiten dos jugadores";  // el maximo son dos jugadores.
         }

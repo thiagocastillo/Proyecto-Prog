@@ -44,7 +44,7 @@ public class PartidaTests
     public void VerificarGanador_JugadorPierdeCentroCivico() //Gana el jugador que aun tenga su centro civico
     {
         Civilizacion civilizacion1 = new Civilizacion("Chinos", new List<string>(), "Samurai");
-        Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Dragon");
+        Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Guerrero Berserker");
         
         Jugador jugador1 = new Jugador("Nicolas", civilizacion1);
         jugador1.Edificios.Add(new CentroCivico(propietario:jugador1));
@@ -63,7 +63,7 @@ public class PartidaTests
     public void VerificarGanador_AmbosTienenCentroCivico() //No pueden ganar, ambos tienen centro civico
     {
         Civilizacion civilizacion1 = new Civilizacion("Chinos", new List<string>(), "Samurai");
-        Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Dragon");
+        Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Guerrero Berserker");
         
         Jugador jugador1 = new Jugador("Nicolas", civilizacion1);
         jugador1.Edificios.Add(new CentroCivico(propietario:jugador1));
@@ -83,7 +83,7 @@ public class PartidaTests
     public void VerificarGanador_NoHayGanador() //Los dos no tienen centro civico, no hay ganador
     {
         Civilizacion civilizacion1 = new Civilizacion("Chinos", new List<string>(), "Samurai");
-        Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Samurai");
+        Civilizacion civilizacion2 = new Civilizacion("Vikingos", new List<string>(), "Guerrero Berserker");
         
         Jugador jugador1 = new Jugador("Nicolas", civilizacion1); 
         Jugador jugador2 = new Jugador("Tiago", civilizacion2); 
