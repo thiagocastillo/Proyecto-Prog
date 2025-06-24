@@ -1,5 +1,4 @@
 using System.Drawing;
-
 namespace Library;
 
 // Representa un depósito de piedra con tiempo de construcción de 3 segundos

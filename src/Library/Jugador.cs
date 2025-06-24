@@ -80,7 +80,6 @@ public class Jugador
                 total[key] += par.Value;
             }
         }
-
         return total;
     }
 

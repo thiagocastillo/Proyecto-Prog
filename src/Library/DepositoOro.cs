@@ -1,5 +1,4 @@
 using System.Drawing;
-
 namespace Library;
 
 // Representa un depósito de oro con tiempo de construcción de 3 segundos

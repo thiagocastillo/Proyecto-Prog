@@ -111,6 +111,7 @@ public class Infanteria : IUnidadMilitar
             return $"No se encontraron unidades de tipo {tipoUnidad} en la coordenada ({coordenada.X},{coordenada.Y}).";
 
         string resultado = "";
+        
         foreach (var unidad in unidadesEnCoordenada)
         {
             int daño = (int)CalcularDaño(unidad);

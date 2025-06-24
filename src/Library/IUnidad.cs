@@ -9,7 +9,6 @@ public interface IUnidad
     int Salud { get; set; }
     Point Posicion { get; set; }
     bool Mover(Point destino, Mapa mapa);
- 
     int TiempoDeCreacion { get; }
     double CalcularDaño(IUnidad objetivo);
 }

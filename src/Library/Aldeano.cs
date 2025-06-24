@@ -95,6 +95,7 @@ public class Aldeano : IUnidad, IRecolector
 
         // Calcular cantidad a recolectar según tasa de recolección y bono de civilización
         double cantidadRecolectada = recurso.Cantidad * recurso.TasaRecoleccion;
+        
         if (Propietario.Civilizacion.Nombre == "Aztecas")
             cantidadRecolectada += 3;
 

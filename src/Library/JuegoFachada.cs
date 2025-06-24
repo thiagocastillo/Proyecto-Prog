@@ -37,7 +37,6 @@ public class JuegoFachada
         return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
     }
     
-
     // Lista todos los recursos presentes en el mapa
     public string ListarRecursos()
     {
@@ -76,7 +75,6 @@ public class JuegoFachada
             // Si la civilización no es válida, lanza una excepción
             if (civilizacion == null)
                 throw new ArgumentException($"La civilización '{nombreCivilizacion}' no es válida.");
-            
             
             if (civilizacion != null)
             {
@@ -387,8 +385,6 @@ public class JuegoFachada
         // Devuelve la lista de mensajes generados durante el movimiento
         return mensaje;
     }
-
-
     
    public string AtacarUnidad(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idUnidadObjetivo)
    {
@@ -424,8 +420,7 @@ public class JuegoFachada
        }
        return "Ataque fallido: unidad atacante o objetivo no válidas. No se pudo realizar el ataque.";
    }
-
-
+   
     // Ordena a una unidad militar atacar un edificio enemigo
     public string AtacarEdificio(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idEdificioObjetivo)
     {
