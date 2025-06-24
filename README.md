@@ -219,6 +219,8 @@ Criterios de aceptación:
 | Defensa | 7 al 9 de julio |
 
    
+
+
    
 ## DOCUMENTACION PATRONES Y PRINCIPIOS DE DISEÑO:
 
