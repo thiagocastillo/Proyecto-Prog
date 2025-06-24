@@ -261,13 +261,31 @@ Por ejemplo, en el tiempo de construcción, solo se permite leer su estado (Tiem
 
 ## Single Responsibility Principle (SRP):
 
-Cada clase tiene una responsabilidad clara y única, por ejemplo, Mapa gestiona el mapa, Casa representa un edificio específico, etc.
+Cada clase encapsula una sola responsabilidad clara y única, por ejemplo, Mapa se encarga de la representación y administración del entorno de juego, mientras que Jugador gestiona sus propios recursos, población, edificios y unidades. Casa representa un edificio específico, etc.
 
-Se respeta el Principio de Responsabilidad Única (SRP) en todas las clases, por ejemplo, Jugador se ocupa exclusivamente de gestionar el estado del jugador (recursos, unidades, edificios y población), mientras que Mapa se responsabiliza de la disposición y visualización de recursos y entidades en el entorno. Esto evita acoplamientos innecesarios y mejora la claridad del código.
+Se respeta el Principio de Responsabilidad Única (SRP) en todas las clases, por ejemplo, Tiempo Construccion se ocupa exclusivamente de calcular los tiempos de construcción, y Motor se encarga de recibir comandos y delegar la ejecución a la lógica de fachada. Esto evita acoplamientos innecesarios y mejora la claridad del código.
 
 ## Principio Expert:
 
 El principio de Expert se aplica al asignar responsabilidades a las clases que tienen la información suficiente para cumplirlas, por ejemplo, Jugador calcula el total de recursos porque posee tanto los recursos individuales como los contenidos en edificios de almacenamiento. RecursoNatural conoce su propia tasa de recolección y agotamiento, y Unidad sabe cómo moverse o atacar basándose en sus atributos internos.
+
+## Excepciones y Diseño por Contrato:
+
+En nuestro proyecto, utilizamos Excepciones y Diseño por Contrato especialmente para validar precondiciones, y sabemos que quizás no fue de la forma más exhaustiva en todos los métodos de nuestras clases. Hay excepciones para validar precondiciones y algunas postcondiciones.
+
+Ejemplo de aplicación de los conceptos:
+
+Precondición validada en AgregarJugadorAPartida (JuegoFachada): 
+  
+  if(_partidaActual.Jugadores.Any(j => j.Nombre.Equals(nombreJugador, StringComparison.OrdinalIgnoreCase)))
+    throw new InvalidOperationException($"Ya existe un jugador con el nombre '{nombreJugador}'.");
+
+En este caso concreto, por diseño por contrato, no se puede agregar dos veces el mismo jugador con el mismo nombre. Se lanza una excepción si no se cumple dicha precondición.
+
+Por otro lado, en el caso del método Recolectar dentro de RecursoNatural.cs, se realiza la validación de la postcondición de si un recurso se encuentra agotado o no. En este caso, la postcondición es que haya recurso disponible, pero en caso contrario, se lanza una excepción.
+
+if (EstaAgotado)
+    throw new InvalidOperationException("El recurso está agotado.");
 
 
 ## Uso de Colecciones y LINQ:
