@@ -224,7 +224,7 @@ Criterios de aceptación:
 
 # DOCUMENTACION PATRONES Y PRINCIPIOS DE DISEÑO:
 
-El diseño del sistema implementa de forma rigurosa los principios de la programación orientada a objetos, en particular los principios SOLID y los patrones GRASP
+El diseño del sistema implementa de forma rigurosa los principios de la programación orientada a objetos, en particular los principios SOLID y los patrones GRASP.
 
 ## Fachada (Facade):
 
@@ -233,11 +233,11 @@ La clase JuegoFachada centraliza y simplifica la interacción con la lógica del
 
 ## Herencia y Polimorfismo:
 
-Las unidades militares como Infanteria, GuerreroJaguar, Arquero y Caballeria implementan la interfaz común IUnidadMilitar, además de heredar de clases base (Infanteria, etc.). Esto aprovecha el polimorfismo, permitiendo tratar todas las unidades de forma uniforme desde la fachada (JuegoFachada) o el motor (Motor.cs), sin importar su tipo específico.
+Las unidades militares como Infanteria, GuerreroJaguar, Arquero y Caballería implementan la interfaz común IUnidadMilitar, además de heredar de clases base (Infanteria, etc.). Esto aprovecha el polimorfismo, permitiendo tratar todas las unidades de forma uniforme desde la fachada (JuegoFachada) o el motor (Motor.cs), sin importar su tipo específico.
 
 Esto cumple con el Principio de Sustitución de Liskov (LSP), cualquier clase que herede de otra puede reemplazar a su clase base sin alterar la lógica del programa.
 
-Además, la herencia permite reutilizar código común, como la lógica de movimiento y combate, y redefinir solo lo necesario (override / new), manteniendo cada clase simple y enfocada.
+Además, la herencia permite reutilizar código común, como la lógica de movimiento y combate, y redefinir solo lo necesario con override / new, manteniendo cada clase simple y enfocada.
 
 ## Interfaz (Interface):
 
@@ -249,12 +249,12 @@ Por ejemplo, el uso de la interfaz IUnidad permite que cualquier tipo de unidad 
 
 Asimismo, IAlmacenamiento define operaciones genéricas para depósitos de recursos (Recursos, CapacidadMaxima, Eficiencia, etc.), lo cual permite que edificios como CentroCivico, Granja, Molino y Depositos compartan comportamiento sin necesidad de duplicar código. Además, gracias al polimorfismo, un aldeano puede recolectar recursos y depositarlos sin necesidad de conocer el tipo exacto de edificio, siempre y cuando implemente IAlmacenamiento.
 
-Desde el enfoque de patrones de diseño, este uso de interfaces se alinea también con el patrón Strategy, ya que permite variar comportamientos de forma intercambiable por ejemplo, las unidades militares implementan AtacarUnidad() con distintas lógicas según su tipo (bonificaciones, rango, daño), pero todas exponen la misma operación—. También está presente el patrón de composición, ya que tanto Jugador como Partida manipulan colecciones de IUnidad y IEdificio de forma identica, delegando comportamiento sin necesidad de conocer los detalles internos de cada tipo concreto.
+Desde el enfoque de patrones de diseño, este uso de interfaces se alinea también con el patrón Strategy, ya que permite variar comportamientos de forma intercambiable por ejemplo, las unidades militares implementan AtacarUnidad() con distintas lógicas según su tipo (bonificaciones, daño), pero todas exponen la misma operación. También está presente el patrón de composición, ya que tanto Jugador como Partida manipulan colecciones de IUnidad y IEdificio de forma identica, delegando comportamiento sin necesidad de conocer los detalles internos de cada tipo concreto.
 
 
 ## Encapsulamiento:
 
-Las propiedades privadas y los métodos públicos/protegidos en las clases aseguran que los datos internos estén protegidos y solo sean accesibles a través de métodos concretos.
+Las propiedades privadas y los métodos públicos o protegidos en las clases aseguran que los datos internos estén protegidos y solo sean accesibles a través de métodos concretos.
 
 Por ejemplo, en el tiempo de construcción, solo se permite leer su estado (TiempoRestante, EstaCompleta) desde fuera, pero el avance del tiempo está controlado internamente. Por otro lado, las clases Jugador, Mapa y Unidad gestionan sus colecciones y propiedades de forma controlada, previniendo efectos colaterales o manipulaciones indebidas.
 
@@ -272,6 +272,6 @@ El principio de Expert se aplica al asignar responsabilidades a las clases que t
 
 ## Uso de Colecciones y LINQ:
 
-Se utilizan colecciones genéricas (List<>, Dictionary<>) y expresiones LINQ como FirstOrDefault(), Where(), Any(), Select() y ToList(), para manipular datos de manera eficiente y expresiva.
+Se utilizan colecciones genéricas (List <>, Dictionary <>) y expresiones LINQ como FirstOrDefault (), Where (), Any (), Select () y ToList (), para manipular datos de manera eficiente y expresiva.
 
-Por ejemplo, la búsqueda de unidades en una coordenada específica se realiza de manera eficiente con Where y SelectMany. Por otro lado, la lógica de verificación del ganador (VerificarGanador) o la validación de construcciones (Any) emplea LINQ para evitar estructuras repetitivas.
+Por ejemplo, la búsqueda de unidades en una coordenada específica se realiza de manera eficiente con Where y SelectMany. Por otro lado, la lógica de verificación del ganador (verificarGanador) o la validación de construcciones (any) emplea LINQ para evitar estructuras repetitivas.
