@@ -112,7 +112,8 @@ public class Aldeano : IUnidad, IRecolector
         {
             mapa.Recursos.Remove(recurso);
         }
-    }    private bool EsCompatible(IAlmacenamiento almacen, string nombre)
+    }    
+    private bool EsCompatible(IAlmacenamiento almacen, string nombre)
     {
         return (nombre == "Madera" && (almacen is DepositoMadera || almacen is CentroCivico)) ||
                (nombre == "Alimento" && (almacen is Granja || almacen is Molino|| almacen is CentroCivico)) ||

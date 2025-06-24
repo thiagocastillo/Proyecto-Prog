@@ -11,6 +11,8 @@ public abstract class RecursoNatural
     // Cantidad actual disponible para ser recolectada
     public int Cantidad { get; set; }
     // Indica si el recurso esta completamente recolectado
+    
+    
     public bool EstaAgotado;
     // Coordenadas del mapa donde se encuentra el recurso
     public Point Ubicacion { get; set; }
