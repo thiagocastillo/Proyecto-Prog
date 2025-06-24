@@ -221,17 +221,17 @@ Criterios de aceptación:
    
 
 
-   
-## DOCUMENTACION PATRONES Y PRINCIPIOS DE DISEÑO:
+
+# DOCUMENTACION PATRONES Y PRINCIPIOS DE DISEÑO:
 
 El diseño del sistema implementa de forma rigurosa los principios de la programación orientada a objetos, en particular los principios SOLID y los patrones GRASP
 
-# Fachada (Facade):
+## Fachada (Facade):
 
 La clase JuegoFachada centraliza y simplifica la interacción con la lógica del juego, ocultando la complejidad de las operaciones internas. Esto es un claro ejemplo del patrón Fachada.
 
 
-# Herencia y Polimorfismo:
+## Herencia y Polimorfismo:
 
 Las unidades militares como Infanteria, GuerreroJaguar, Arquero y Caballeria implementan la interfaz común IUnidadMilitar, además de heredar de clases base (Infanteria, etc.). Esto aprovecha el polimorfismo, permitiendo tratar todas las unidades de forma uniforme desde la fachada (JuegoFachada) o el motor (Motor.cs), sin importar su tipo específico.
 
@@ -239,7 +239,7 @@ Esto cumple con el Principio de Sustitución de Liskov (LSP), cualquier clase qu
 
 Además, la herencia permite reutilizar código común, como la lógica de movimiento y combate, y redefinir solo lo necesario (override / new), manteniendo cada clase simple y enfocada.
 
-# Interfaz (Interface):
+## Interfaz (Interface):
 
 En este proyecto se utiliza el concepto de interfaces como IUnidad, IEdificio, IAlmacenamiento, IRecolector e IUnidadMilitar, lo que colabora con el polimorfismo, el principio de abstracción y separación de responsabilidades y especialmente el principio de inversión de dependencias (Dependency Inversion Principle del grupo SOLID). 
 
@@ -252,25 +252,25 @@ Asimismo, IAlmacenamiento define operaciones genéricas para depósitos de recur
 Desde el enfoque de patrones de diseño, este uso de interfaces se alinea también con el patrón Strategy, ya que permite variar comportamientos de forma intercambiable por ejemplo, las unidades militares implementan AtacarUnidad() con distintas lógicas según su tipo (bonificaciones, rango, daño), pero todas exponen la misma operación—. También está presente el patrón de composición, ya que tanto Jugador como Partida manipulan colecciones de IUnidad y IEdificio de forma identica, delegando comportamiento sin necesidad de conocer los detalles internos de cada tipo concreto.
 
 
-# Encapsulamiento:
+## Encapsulamiento:
 
 Las propiedades privadas y los métodos públicos/protegidos en las clases aseguran que los datos internos estén protegidos y solo sean accesibles a través de métodos concretos.
 
 Por ejemplo, en el tiempo de construcción, solo se permite leer su estado (TiempoRestante, EstaCompleta) desde fuera, pero el avance del tiempo está controlado internamente. Por otro lado, las clases Jugador, Mapa y Unidad gestionan sus colecciones y propiedades de forma controlada, previniendo efectos colaterales o manipulaciones indebidas.
 
 
-# Single Responsibility Principle (SRP):
+## Single Responsibility Principle (SRP):
 
 Cada clase tiene una responsabilidad clara y única, por ejemplo, Mapa gestiona el mapa, Casa representa un edificio específico, etc.
 
 Se respeta el Principio de Responsabilidad Única (SRP) en todas las clases, por ejemplo, Jugador se ocupa exclusivamente de gestionar el estado del jugador (recursos, unidades, edificios y población), mientras que Mapa se responsabiliza de la disposición y visualización de recursos y entidades en el entorno. Esto evita acoplamientos innecesarios y mejora la claridad del código.
 
-# Principio Expert:
+## Principio Expert:
 
 El principio de Expert se aplica al asignar responsabilidades a las clases que tienen la información suficiente para cumplirlas, por ejemplo, Jugador calcula el total de recursos porque posee tanto los recursos individuales como los contenidos en edificios de almacenamiento. RecursoNatural conoce su propia tasa de recolección y agotamiento, y Unidad sabe cómo moverse o atacar basándose en sus atributos internos.
 
 
-# Uso de Colecciones y LINQ:
+## Uso de Colecciones y LINQ:
 
 Se utilizan colecciones genéricas (List<>, Dictionary<>) y expresiones LINQ como FirstOrDefault(), Where(), Any(), Select() y ToList(), para manipular datos de manera eficiente y expresiva.
 
