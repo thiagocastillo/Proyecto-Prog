@@ -218,7 +218,8 @@ Criterios de aceptación:
 | [Entrega final](Entregas/Entrega3.md) | 7 de julio | Bot funcionando y entregables según se indica en la [consigna de la entrega](./Entregas/Entrega3.md) |
 | Defensa | 7 al 9 de julio |
 
-
+   
+   
 ## DOCUMENTACION PATRONES Y PRINCIPIOS DE DISEÑO:
 
 El diseño del sistema implementa de forma rigurosa los principios de la programación orientada a objetos, en particular los principios SOLID y los patrones GRASP
