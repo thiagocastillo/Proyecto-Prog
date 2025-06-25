@@ -1,17 +1,36 @@
-﻿using System;
-using System.Collections.Generic; 
-using Discord.WebSocket;
-namespace Library.Domain;
+﻿using Library.Domain;
+using Library.Services;
 
-internal class Program
+namespace Program;
+
+internal static class Program
 {
-    static void Main(string[] args)
+    /// <summary>
+    /// Punto de entrada al programa.
+    /// </summary>
+    private static void Main()
     {
-        var motor = new Motor();
-        Console.WriteLine("Bienvenido. Escriba 'Ayuda' para ver los comandos disponibles.");
-
-        // Cargar el bot de Discord
+        //DemoFacade();
         Bot();
+    }
+
+   /* private static void DemoFacade()
+    {
+        Console.WriteLine(Facade.Instance.AddTrainerToWaitingList("player"));
+        Console.WriteLine(Facade.Instance.AddTrainerToWaitingList("opponent"));
+        Console.WriteLine(Facade.Instance.GetAllTrainersWaiting());
+        Console.WriteLine(Facade.Instance.StartBattle("player", "opponent"));
+        Console.WriteLine(Facade.Instance.GetAllTrainersWaiting());
+    }*/
+
+    private static void Bot()
+    {
+        BotLoader.LoadAsync().GetAwaiter().GetResult();
+    }
+}
+       /* var motor = new Motor();
+        Console.WriteLine("Bienvenido. Escriba 'Ayuda' para ver los comandos disponibles.");
+        */
 
         /*while (true)
         {
@@ -31,11 +50,5 @@ internal class Program
             if (comando == "salir" || comando == "exit" || resultado.Contains("ganó la partida"))
                 break;
         }*/
-    }
 
-    private static void Bot()
-    {
-        BotLoader.LoadAsync().GetAwaiter().GetResult();
-    }
-}
     
