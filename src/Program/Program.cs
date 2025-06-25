@@ -1,19 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using Library;
+using System.Collections.Generic; 
+using Discord.WebSocket;
+namespace Library.Domain;
 
-class Program
+internal class Program
 {
     static void Main(string[] args)
     {
         var motor = new Motor();
         Console.WriteLine("Bienvenido. Escriba 'Ayuda' para ver los comandos disponibles.");
 
-        while (true)
+        // Cargar el bot de Discord
+        Bot();
+
+        /*while (true)
         {
             Console.Write("\nComando: ");
             var entrada = Console.ReadLine();
-            
+
             if (string.IsNullOrWhiteSpace(entrada))
                 continue;
 
@@ -26,6 +30,12 @@ class Program
 
             if (comando == "salir" || comando == "exit" || resultado.Contains("ganó la partida"))
                 break;
-        }
+        }*/
+    }
+
+    private static void Bot()
+    {
+        BotLoader.LoadAsync().GetAwaiter().GetResult();
     }
 }
+    
