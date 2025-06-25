@@ -31,7 +31,7 @@ internal static class Program
        /* var motor = new Motor();
         Console.WriteLine("Bienvenido. Escriba 'Ayuda' para ver los comandos disponibles.");
         */
-
+ 
         /*while (true)
         {
             Console.Write("\nComando: ");
