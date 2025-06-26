@@ -1,32 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Discord.Commands;
-using Library.Domain;
+﻿using Library.Services;
 
-namespace Library.Services;
-
-public class MotorModule : ModuleBase<SocketCommandContext>
+namespace Program
 {
-    private static readonly Motor motor = new Motor();
-
-    [Command("")]
-    public async Task Procesar([Remainder] string input)
+    internal static class Program
     {
-        if (string.IsNullOrWhiteSpace(input))
+        private static void Main()
         {
-            await ReplyAsync("Debes ingresar un comando. Escribe 'ayuda' para ver los comandos disponibles.");
-            return;
+            BotLoader.LoadAsync().GetAwaiter().GetResult();
         }
-
-        var partes = input.Split(' ', System.StringSplitOptions.RemoveEmptyEntries);
-        var comando = partes[0].ToLower();
-        var argumentos = new List<string>(partes.Length > 1 ? partes[1..] : System.Array.Empty<string>());
-
-        var resultado = motor.ProcesarComando(comando, argumentos);
-
-        if (resultado.Length > 1900)
-            resultado = resultado.Substring(0, 1900) + "...";
-
-        await ReplyAsync(resultado);
     }
 }
