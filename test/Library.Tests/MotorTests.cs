@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Library.Tests
+namespace Library.Domain.Tests
 {
     [TestFixture]
     public class MotorTests

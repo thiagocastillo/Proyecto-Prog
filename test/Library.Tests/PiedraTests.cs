@@ -1,4 +1,4 @@
-namespace Library.Tests;
+namespace Library.Domain.Tests;
 
 public class PiedraTests
 {

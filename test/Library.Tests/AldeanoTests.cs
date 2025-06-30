@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Library.Tests
+namespace Library.Domain.Tests
 {
     public class AldeanoTests
     {
