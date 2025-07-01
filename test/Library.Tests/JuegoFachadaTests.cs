@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Drawing;
 using System.Collections.Generic;
 
-namespace Library.Tests
+namespace Library.Domain.Tests
 {
     [TestFixture]
     public class JuegoFachadaTests

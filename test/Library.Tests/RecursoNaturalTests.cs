@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System;
 
-namespace Library.Tests
+namespace Library.Domain.Tests
 {
     // Clase derivada para testear la abstracción
     public class RecursoNaturalDummy : RecursoNatural
