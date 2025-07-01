@@ -17,7 +17,7 @@ namespace Library.Domain.Tests
         [Test]
         public void Constructor_ValoresInicialesCorrectos()
         {
-            var recurso = new RecursoNaturalDummy("Madera", 100, 1.5, new Point(2, 3));
+            RecursoNatural recurso = new RecursoNaturalDummy("Madera", 100, 1.5, new Point(2, 3));
             Assert.AreEqual("Madera", recurso.Nombre);
             Assert.AreEqual(100, recurso.VidaBase);
             Assert.AreEqual(1.5, recurso.TasaRecoleccion);
@@ -30,7 +30,7 @@ namespace Library.Domain.Tests
         [Test]
         public void Recolectar_ExtraeCantidadCorrecta()
         {
-            var recurso = new RecursoNaturalDummy("Oro", 50, 2, new Point(1, 1));
+            RecursoNatural recurso = new RecursoNaturalDummy("Oro", 50, 2, new Point(1, 1));
             int extraido = recurso.Recolectar(10);
             Assert.AreEqual(10, extraido);
             Assert.AreEqual(90, recurso.Cantidad);
@@ -40,7 +40,7 @@ namespace Library.Domain.Tests
         [Test]
         public void Recolectar_AgoteRecurso_EstaAgotadoTrue()
         {
-            var recurso = new RecursoNaturalDummy("Piedra", 10, 1, new Point(0, 0));
+            RecursoNatural recurso = new RecursoNaturalDummy("Piedra", 10, 1, new Point(0, 0));
             int extraido = recurso.Recolectar(20); // Solo hay 10 disponibles
             Assert.AreEqual(10, extraido);
             Assert.AreEqual(0, recurso.Cantidad);
@@ -50,7 +50,7 @@ namespace Library.Domain.Tests
         [Test]
         public void Recolectar_RecursoAgotado_LanzaExcepcion()
         {
-            var recurso = new RecursoNaturalDummy("Madera", 5, 1, new Point(0, 0));
+            RecursoNatural recurso = new RecursoNaturalDummy("Madera", 5, 1, new Point(0, 0));
             recurso.Recolectar(10); // Agota el recurso
             Assert.Throws<InvalidOperationException>(() => recurso.Recolectar(1));
         }
