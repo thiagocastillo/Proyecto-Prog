@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Library.Domain.Tests
+namespace Library.Tests
 {
     public class CuartelTests
     {

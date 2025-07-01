@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace Library.Domain.Tests
+namespace Library.Tests
 {
     public class ArqueroTests
     {

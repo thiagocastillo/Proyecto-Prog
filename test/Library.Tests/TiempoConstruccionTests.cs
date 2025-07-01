@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Threading;
 using Library;
-namespace Library.Domain.Tests;
+namespace Library.Tests;
 
 [TestFixture]
 public class TiempoConstruccionTests

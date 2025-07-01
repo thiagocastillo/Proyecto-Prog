@@ -1,5 +1,4 @@
-namespace Library.Domain.Tests;
-
+namespace Library.Tests;
 
 public class GranjaTests
 {

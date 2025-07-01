@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
-namespace Library.Domain.Tests
+namespace Library.Tests
 {
     [TestFixture]
     public class MapaTests
