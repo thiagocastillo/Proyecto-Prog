@@ -9,7 +9,7 @@ public class Motor
     private readonly JuegoFachada _fachada = new JuegoFachada();
     // Indica si la partida ha finalizado
     private bool partidaFinalizada = false;
-
+ 
     // Procesa un comando recibido junto con sus argumentos y devuelve el resultado como string
     public string ProcesarComando(string comando, List<string> argumentos)
     {
