@@ -1,34 +1,22 @@
 ﻿using Discord.Commands;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Library.Domain;
 
-namespace Ucu.Poo.DiscordBot.Commands;
-
-public class JuegoCommand : ModuleBase<SocketCommandContext>
+namespace Library.Commands
 {
-    // Instancia del motor (puedes inyectarla si usas DI)
-    private static readonly Motor motor = new Motor();
-
-    [Command("juego")]
-    [Summary("Procesa comandos del juego. Ejemplo: !juego crearpartida")]
-    public async Task ExecuteAsync([Remainder] string input)
+    public class JuegoCommand : ModuleBase<SocketCommandContext>
     {
-        // Separar comando y argumentos
-        var partes = input.Split(' ', System.StringSplitOptions.RemoveEmptyEntries);
-        if (partes.Length == 0)
+        private static readonly Motor motor = new Motor();
+        private readonly JuegoFachada _fachada = new JuegoFachada();
+
+        [Command("crearpartida")]
+        [Summary("Procesa comandos del juego. Ejemplo: !juego crearpartida")]
+        public async Task CrearPartidaAsync()
         {
-            await ReplyAsync("Debes ingresar un comando.");
-            return;
+            _fachada.CrearNuevaPartida();
+            await Task.CompletedTask;
         }
-
-        string comando = partes[0];
-        List<string> argumentos = partes.Skip(1).ToList();
-
-        // Procesar comando con el motor
-        string resultado = motor.ProcesarComando(comando, argumentos);
-
-        // Responder en Discord
-        await ReplyAsync(resultado);
     }
 }
