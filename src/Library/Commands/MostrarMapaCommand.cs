@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-public class Mostrarmapa : ModuleBase<SocketCommandContext>
+public class MostrarMapaCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();
 
