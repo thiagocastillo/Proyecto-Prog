@@ -1,4 +1,5 @@
-﻿using Discord.Commands;
+﻿
+using Discord.Commands;
 using System.Threading.Tasks;
 using Library.Domain;
 
@@ -8,7 +9,7 @@ public class AgregarJugadorCommand : ModuleBase<SocketCommandContext>
 
     [Command("agregarjugador")]
     [Summary("Agrega un jugador a la partida.")]
-    public async Task ExecuteAsync(string nombreJugador = null, [Remainder] string civilizacion = null)
+    public async Task ExecuteAsync(string nombreJugador = null, string civilizacion = null)
     {
         if (string.IsNullOrWhiteSpace(nombreJugador) || string.IsNullOrWhiteSpace(civilizacion))
         {

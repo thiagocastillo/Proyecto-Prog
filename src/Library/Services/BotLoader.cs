@@ -16,6 +16,7 @@ public static class BotLoader
         var configuration = new ConfigurationBuilder()
             .AddUserSecrets(Assembly.GetExecutingAssembly())
             .Build();
+        
 
         var serviceProvider = new ServiceCollection()
             .AddLogging(options =>
