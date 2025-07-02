@@ -2,15 +2,15 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-public class CrearPartidaCommand : ModuleBase<SocketCommandContext>
+public class Mostrarmapa : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();
 
-    [Command("crearpartida")]
+    [Command("mostrarmapa")]
     [Summary("Crea una nueva partida.")]
     public async Task ExecuteAsync()
     {
-        _fachada.CrearNuevaPartida();
-        await ReplyAsync("Partida creada.");
+         _fachada.MostrarMapa();
+        await Task.CompletedTask;
     }
 }
