@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-namespace Ucu.Poo.DiscordBot.Commands;
+
 
 public class EntrenarUnidadCommand : ModuleBase<SocketCommandContext>
 {
@@ -12,14 +12,7 @@ public class EntrenarUnidadCommand : ModuleBase<SocketCommandContext>
     [Summary("Entrena una unidad para un jugador. Sintaxis: entrenarunidad <nombreJugador> <tipoUnidad> <x> <y>")]
     public async Task ExecuteAsync(string nombreJugador, string tipoUnidad, int x, int y)
     {
-        try
-        {
-            _fachada.EntrenarUnidad(nombreJugador, tipoUnidad, new Point(x, y));
-            await ReplyAsync($"Unidad '{tipoUnidad}' entrenada en ({x}, {y}) para el jugador '{nombreJugador}'.");
-        }
-        catch (Exception ex)
-        {
-            await ReplyAsync($"Error al entrenar unidad: {ex:Message}");
-        }
+        _fachada.EntrenarUnidad(nombreJugador, tipoUnidad, new Point(x, y));
+        await ReplyAsync($"Unidad '{tipoUnidad}' entrenada en ({x}, {y}) para el jugador '{nombreJugador}'");
     }
 }

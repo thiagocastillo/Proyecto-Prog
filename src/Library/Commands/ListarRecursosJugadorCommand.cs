@@ -3,8 +3,6 @@ using System.Threading.Tasks;
 using Library.Domain;
 using System.Collections.Generic;
 
-namespace Ucu.Poo.DiscordBot.Commands;
-
 public class ListarRecursosJugadorCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();
