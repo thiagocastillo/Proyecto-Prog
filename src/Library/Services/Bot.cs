@@ -15,7 +15,7 @@ namespace Library.Services;
 
 public class Bot : IBot
 {
-    private ServiceProvider? serviceProvider;
+    private IServiceProvider? serviceProvider;
     private readonly ILogger<Bot> logger;
     private readonly IConfiguration configuration;
     private readonly DiscordSocketClient client;
@@ -39,12 +39,12 @@ public class Bot : IBot
         commands = new CommandService();
     }
 
-    public async Task StartAsync(ServiceProvider services)
+    public async Task StartAsync(IServiceProvider services)
     {
         string discordToken = configuration["DiscordToken"] ?? throw new Exception("Falta el token");
 
         logger.LogInformation("Iniciando el con token {Token}", discordToken);
-        
+
         serviceProvider = services;
 
         await commands.AddModulesAsync(Assembly.GetExecutingAssembly(), serviceProvider);
@@ -54,6 +54,7 @@ public class Bot : IBot
 
         client.MessageReceived += HandleCommandAsync;
     }
+
 
     public async Task StopAsync()
     {

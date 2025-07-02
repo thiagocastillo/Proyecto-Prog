@@ -7,7 +7,7 @@ namespace Library.Services;
 
 public interface IBot
 {
-    Task StartAsync(ServiceProvider services);
+    Task StartAsync(IServiceProvider services);
 
     Task StopAsync();
 }

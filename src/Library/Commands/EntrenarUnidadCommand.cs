@@ -15,7 +15,7 @@ public class EntrenarUnidadCommand : ModuleBase<SocketCommandContext>
         try
         {
             _fachada.EntrenarUnidad(nombreJugador, tipoUnidad, new Point(x, y));
-            await ReplyAsync($"Unidad '{tipoUnidad}' entrenada en ({x}, {y}) para el jugador '{nombreJugador}'.");
+            await ReplyAsync($"Unidad '{tipoUnidad}' entrenada en ({x}, {y}) para el jugador '{nombreJugador}'");
         }
         catch (Exception ex)
         {
