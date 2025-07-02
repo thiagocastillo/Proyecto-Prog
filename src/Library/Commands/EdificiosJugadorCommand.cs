@@ -1,6 +1,7 @@
 using Discord.Commands;
 using System.Threading.Tasks;
 using Library.Domain;
+using System.Collections.Generic;
 
 public class EdificiosJugadorCommand : ModuleBase<SocketCommandContext>
 {
@@ -11,6 +12,7 @@ public class EdificiosJugadorCommand : ModuleBase<SocketCommandContext>
     public async Task ExecuteAsync()
     {
         string jugadorId = Context.User.Id.ToString();
+        // Asegúrate de que este método busque por ID, o adapta tu lógica de jugadores
         List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
 
         if (edificios == null || edificios.Count == 0)
@@ -19,7 +21,7 @@ public class EdificiosJugadorCommand : ModuleBase<SocketCommandContext>
         }
         else
         {
-            var lista = new List<string>();
+            List<string> lista = new List<string>();
             for (int i = 0; i < edificios.Count; i++)
             {
                 lista.Add($"{i}: {edificios[i].GetType().Name}");
