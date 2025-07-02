@@ -12,7 +12,14 @@ public class MoverUnidadCommand : ModuleBase<SocketCommandContext>
     [Summary("Mueve una unidad a una nueva posicion. Sintaxis: moverUnidad <nombreJugador> <idUnidad> <x> <y>")]
     public async Task ExecuteAsync(string tipoUnidad, int idUnidad, int x, int y)
     {
-        _fachada.MoverUnidad(tipoUnidad, idUnidad, new Point(x, y));
-        await ReplyAsync($"Unidad '{tipoUnidad}' se movio a la posicion ({x}, {y}) ");
+        try
+        {
+            _fachada.MoverUnidad(tipoUnidad, idUnidad, new Point(x, y));
+            await ReplyAsync($"Unidad '{tipoUnidad}' se movio a la posicion ({x}, {y}) ");
+        }
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error al mover unidad: {ex:Message}");
+        }
     }
 }
