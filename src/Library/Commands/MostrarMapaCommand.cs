@@ -7,7 +7,7 @@ public class MostrarMapaCommand : ModuleBase<SocketCommandContext>
     private readonly JuegoFachada _fachada = new JuegoFachada();
 
     [Command("mostrarmapa")]
-    [Summary("Crea una nueva partida.")]
+    [Summary("Muestra el Mapa de la Partida actual.")]
     public async Task ExecuteAsync()
     {
          _fachada.MostrarMapa();
