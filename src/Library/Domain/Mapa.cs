@@ -23,7 +23,7 @@ public class Mapa
     // Devuelve todas las unidades en una coordenada específica
     public List<IUnidad> ObtenerUnidadesEn(Point coordenada, List<Jugador> jugadores)
     {
-        var unidades = new List<IUnidad>();
+        List<IUnidad> unidades = new List<IUnidad>();
         
         foreach (var jugador in jugadores)
         {
@@ -36,7 +36,7 @@ public class Mapa
     // Devuelve todos los edificios en una coordenada específica
     public List<IEdificio> ObtenerEdificiosEn(Point coordenada, List<Jugador> jugadores)
     {
-        var edificios = new List<IEdificio>();
+        List<IEdificio> edificios = new List<IEdificio>();
         foreach (var jugador in jugadores)
         {
             if (jugador?.Edificios == null) continue;
