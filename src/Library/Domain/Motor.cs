@@ -172,9 +172,9 @@ public class Motor
                     return sbE.ToString().TrimEnd();
 
                 // Lista todos los recursos en el mapa
-                case "listarrecursos":
+               /* case "listarrecursos":
                     
-                    return _fachada.ListarRecursos();
+                    return _fachada.ListarRecursos();*/
 
                 // Lista todos los jugadores de la partida
                 case "listarjugadores":

@@ -38,7 +38,7 @@ public class JuegoFachada
     }
     
     // Lista todos los recursos presentes en el mapa
-    public string ListarRecursos()
+    /*public string ListarRecursos()
     {
         if (_partidaActual == null || _partidaActual.Mapa == null || _partidaActual.Mapa.Recursos == null || !_partidaActual.Mapa.Recursos.Any())
             return "No hay recursos en el mapa.";
@@ -51,7 +51,7 @@ public class JuegoFachada
         }
         return sb.ToString().TrimEnd();
     }
-
+*/
     // Devuelve la lista de jugadores de la partida actual
     public List<Jugador> ObtenerJugadores()
     {
