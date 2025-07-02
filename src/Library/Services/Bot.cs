@@ -72,12 +72,16 @@ public class Bot : IBot
         int position = 0;
         bool messageIsCommand = message.HasCharPrefix('!', ref position);
 
+        
         if (messageIsCommand)
         {
-            await commands.ExecuteAsync(
-                new SocketCommandContext(client, message),
-                position,
-                serviceProvider);
+            SocketCommandContext context = new SocketCommandContext(client, message);
+            IResult result = await commands.ExecuteAsync(context, position, serviceProvider);
+
+            if (!result.IsSuccess && result.Error == CommandError.UnknownCommand)
+            {
+                await context.Channel.SendMessageAsync("Comando no reconocido.");
+            }
         }
     }
 }
