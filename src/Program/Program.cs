@@ -1,4 +1,5 @@
-﻿using Library.Domain;
+﻿using Discord.Commands;
+using Library.Domain;
 using Library.Services;
 
 namespace Program;
@@ -12,8 +13,20 @@ internal static class Program
     {
         Bot();
     }
+<<<<<<< HEAD
 
    
+=======
+    
+   /* private static void DemoFacade()
+    {
+        Console.WriteLine(Facade.Instance.AddTrainerToWaitingList("player"));
+        Console.WriteLine(Facade.Instance.AddTrainerToWaitingList("opponent"));
+        Console.WriteLine(Facade.Instance.GetAllTrainersWaiting());
+        Console.WriteLine(Facade.Instance.StartBattle("player", "opponent"));
+        Console.WriteLine(Facade.Instance.GetAllTrainersWaiting());
+    }*/
+>>>>>>> f78aa9b869a28216a17766ea99e5357496e6b148
 
     private static void Bot()
     {
