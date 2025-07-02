@@ -23,6 +23,6 @@ public class ListarJugadoresCommand: ModuleBase<SocketCommandContext>
         {
             string lista = string.Join(", ", jugadores);
             await ReplyAsync($"Jugadores: {lista}");
-        }l
+        }
     }
 }
