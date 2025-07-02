@@ -1,0 +1,29 @@
+using Discord.Commands;
+using System.Threading.Tasks;
+using Library.Domain;
+using System.Collections.Generic;
+
+namespace Ucu.Poo.DiscordBot.Commands;
+
+public class ListarRecursosJugadorCommand : ModuleBase<SocketCommandContext>
+{
+    private readonly JuegoFachada _fachada = new JuegoFachada();
+
+    [Command("listarrecursosjugador")]
+    [Summary("Lista los recursos del jugador actual.")]
+    public async Task ExecuteAsync()
+    {
+        string jugadorId = Context.User.Id.ToString();
+        var recursos = _fachada.ObtenerRecursosJugador(jugadorId); 
+
+        if (recursos == null || recursos.Count == 0)
+        {
+            await ReplyAsync("No tienes recursos.");
+        }
+        else
+        {
+            string lista = string.Join(", ", recursos);
+            await ReplyAsync($"Tus recursos: {lista}");
+        }
+    }
+}
