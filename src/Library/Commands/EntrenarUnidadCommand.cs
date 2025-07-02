@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-namespace Ucu.Poo.DiscordBot.Commands;
+
 
 public class EntrenarUnidadCommand : ModuleBase<SocketCommandContext>
 {
