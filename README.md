@@ -294,7 +294,7 @@ Se utilizan colecciones genéricas (List <>, Dictionary <>) y expresiones LINQ c
 
 Por ejemplo, la búsqueda de unidades en una coordenada específica se realiza de manera eficiente con Where y SelectMany. Por otro lado, la lógica de verificación del ganador (verificarGanador) o la validación de construcciones (any) emplea LINQ para evitar estructuras repetitivas.  
 
-
+<br>
 
 
 # NOTAS Y ACLARACIONES DEL EQUIPO:
