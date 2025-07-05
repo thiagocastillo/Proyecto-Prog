@@ -1,17 +1,17 @@
 ﻿using Discord.Commands;
+using System.Threading.Tasks;
 using Library.Domain;
 
 public class AtacarUnidadCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
-    [Command("AtacarUnidadEnemiga")]
-    [Summary("Ataca unidad del enemigo elegida por el jugador")]
+    [Command("atacarunidad")]
+    [Summary("Ataca unidad del enemigo elegida por el jugador. Sintaxis: atacarunidad <nombreJugadorAtacante> <idUnidadAtacante> <nombreJugadorObjetivo> <idUnidadObjetivo>")]
 
-    public async Task ExecuteAsync(string nombreJugador, int idUnidadAtacante, string nombreJugadorRecibeAtaque, int idUnidadRecibeAtaque)
+    public async Task ExecuteAsync(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idUnidadObjetivo)
     {
-        _fachada.AtacarUnidad(nombreJugador, idUnidadAtacante, nombreJugadorRecibeAtaque, idUnidadRecibeAtaque);
-        await ReplyAsync($"{idUnidadAtacante} del jugador {nombreJugador} ataca unidad {idUnidadRecibeAtaque} del jugador {nombreJugadorRecibeAtaque}");
-    
+        string resultado = _fachada.AtacarUnidad(nombreJugadorAtacante, idUnidadAtacante, nombreJugadorObjetivo, idUnidadObjetivo);
+        await ReplyAsync(resultado);
     }
 }
