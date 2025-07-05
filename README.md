@@ -298,6 +298,7 @@ Por ejemplo, la búsqueda de unidades en una coordenada específica se realiza d
 
 # NOTAS Y ACLARACIONES DEL EQUIPO:
 
+<br>
 
 ## ANÁLISIS PRINCIPIO SRP EN LA RELACIÓN EDIFICIO - POSICIÓN:
 
