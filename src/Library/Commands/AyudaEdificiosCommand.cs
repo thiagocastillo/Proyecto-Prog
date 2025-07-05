@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class AyudaEdificiosCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("ayudaedificios")]
     [Summary("Ver edificios disponibles y sus costos: ")]

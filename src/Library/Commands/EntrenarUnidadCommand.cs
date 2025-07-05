@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class EntrenarUnidadCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("entrenarunidad")]
     [Summary("Entrena una unidad para un jugador. Sintaxis: entrenarunidad <nombreJugador> <tipoUnidad> <x> <y>")]

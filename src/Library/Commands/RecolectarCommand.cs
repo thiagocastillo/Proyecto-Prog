@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class RecolectarCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("recolectar")]
     [Summary("Ordena a un aldeano recolectar en una posicion. Sintaxis: recolectar <nombreJugador> <idAldeano> <x> <y>")]

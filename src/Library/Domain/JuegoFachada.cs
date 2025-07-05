@@ -7,7 +7,8 @@ public class JuegoFachada
 {
     // Referencia a la partida actual en curso
     private Partida? _partidaActual;
-
+    private static readonly JuegoFachada _instancia = new JuegoFachada();
+    public static JuegoFachada Instancia => _instancia;
     // Lista de civilizaciones disponibles para elegir al crear jugadores
     private List<Civilizacion> _civilizacionesDisponibles = new List<Civilizacion>()
     {

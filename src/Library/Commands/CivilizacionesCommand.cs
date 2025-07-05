@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class CivilizacionesCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("civilizaciones")]
     [Summary("Lista las civilizaciones disponibles.")]

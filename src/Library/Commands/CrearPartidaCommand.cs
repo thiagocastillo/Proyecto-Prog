@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class CrearPartidaCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("crearpartida")]
     [Summary("Crea una nueva partida.")]

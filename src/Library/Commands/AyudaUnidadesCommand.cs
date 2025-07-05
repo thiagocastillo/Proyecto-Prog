@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class AyudaUnidadesCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("ayudaunidades")]
     [Summary("Muestra la ayuda del juego.")]

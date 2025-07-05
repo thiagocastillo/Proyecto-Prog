@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class EdificiosJugadorCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("listaredificiosjugador")]
     [Summary("Lista los edificios del jugador actual.")]

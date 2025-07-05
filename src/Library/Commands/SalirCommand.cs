@@ -6,7 +6,7 @@ namespace Ucu.Poo.DiscordBot.Commands;
 
 public class SalirCommand: ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("salir")]
     [Alias("exit")]

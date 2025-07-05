@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class AtacarEdificioCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("atacaredificio")]
     [Summary("Ordena a una unidad militar atacar un edificio enemigo. Sintaxis: atacaredificio <nombreJugadorAtacante> <idAtacante> <nombreJugadorObjetivo> <idObjetivo>")]

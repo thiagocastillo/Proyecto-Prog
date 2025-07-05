@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class MostrarMapaCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("mostrarmapa")]
     [Summary("Muestra el Mapa de la Partida actual.")]

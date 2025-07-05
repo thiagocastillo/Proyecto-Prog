@@ -8,7 +8,7 @@ namespace Ucu.Poo.DiscordBot.Commands;
 
 public class ListarJugadoresCommand: ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("listarjugadores")]
     [Summary("Lista los Jugadores existentes en la Partida Actual.")]

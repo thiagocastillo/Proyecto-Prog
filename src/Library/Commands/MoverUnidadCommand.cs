@@ -4,7 +4,7 @@ using Library.Domain;
 
 public class MoverUnidadCommand : ModuleBase<SocketCommandContext>
 {
-    private readonly JuegoFachada _fachada = new JuegoFachada();
+    private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("moverunidad")]
     [Summary("Mueve una unidad a una nueva posicion. Sintaxis: moverUnidad <nombreJugador> <idUnidad> <x> <y>")]
