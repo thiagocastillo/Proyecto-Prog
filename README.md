@@ -298,3 +298,18 @@ Por ejemplo, la búsqueda de unidades en una coordenada específica se realiza d
 
 # NOTAS Y ACLARACIONES DEL EQUIPO:
 
+
+## ANÁLISIS PRINCIPIO SRP EN LA RELACIÓN EDIFICIO - POSICIÓN:
+
+Continuando con lo ya documentado acerca del principio de diseño SRP (Single Responsibility Principle), una clase debe tener una sola razón para cambiar.
+En este caso, nuestras clases DepositoMadera.cs, CentroCivico.cs, Granja.cs, Molino.cs, etc., que implementan IEdificio, IAlmacenamiento, actualmente tienen dos responsabilidades claramente diferenciables.
+
+En primer lugar, estas tienen la responsabilidad funcional propias de cada una, que consiste en representar y gestionar los atributos y comportamientos de un edificio como por ejemplo, la vida, los recursos almacenados, la eficiencia, el tiempo de construcción, etc.
+
+Por otro lado, estas tienen la responsabilidad de saber cual es su posicion geografica en el mapa actual de dicha partida. A traves de la clase Point, que almacena las coordenadas de donde se encuentra dicho edificio.
+
+
+Estas dos responsabilidades no deberían convivir en la misma clase, ya que responden a distintas razones de cambio. Si cambia la lógica del juego, por ejemplo, cómo se calcula la eficiencia o el daño a edificios, entonces hay una razón para modificar la clase.
+Pero si cambia la forma en que se representa o gestiona el mapa, por ejemplo, si se introduce una grilla con otro tamaño o comportamiento, eso también requeriría modificar las mismas clases, lo cual viola SRP.
+
+Por lo tanto, luego de escuchar y conversar sobre la devolución de nuestro docente en esta segunda etapa del proyecto, decidimos documentar el por qué la posición no deberia estar en las clases que implementan IEdificio como una propiedad y decidimos documentar está observación reconociendo la violación del principio de diseño SRP en las clases ya mencionadas.
