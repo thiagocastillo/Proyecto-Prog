@@ -12,7 +12,7 @@ public class ListarRecursosJugadorCommand : ModuleBase<SocketCommandContext>
     public async Task ExecuteAsync()
     {
         string jugadorId = Context.User.Id.ToString();
-        var recursos = _fachada.ObtenerRecursosJugador(jugadorId); 
+        Dictionary<string,int> recursos = _fachada.ObtenerRecursosJugador(jugadorId); 
 
         if (recursos == null || recursos.Count == 0)
         {

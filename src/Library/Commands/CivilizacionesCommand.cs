@@ -7,7 +7,7 @@ public class CivilizacionesCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
-    [Command("civilizaciones")]
+    [Command("vercivilizaciones")]
     [Summary("Lista las civilizaciones disponibles.")]
     public async Task ExecuteAsync()
     {

@@ -11,7 +11,7 @@ public class UnidadesJugadorCommand : ModuleBase<SocketCommandContext>
     [Summary("Lista las unidades del jugador. Sintaxis: unidadesjugador <nombreJugador>")]
     public async Task ExecuteAsync(string nombreJugador)
     {
-        var unidades = _fachada.ObtenerUnidadesJugador(nombreJugador);
+        List<IUnidad> unidades = _fachada.ObtenerUnidadesJugador(nombreJugador);
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < unidades.Count; i++)
