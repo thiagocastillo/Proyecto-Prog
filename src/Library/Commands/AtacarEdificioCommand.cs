@@ -2,8 +2,6 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-namespace Ucu.Poo.DiscordBot.Commands;
-
 public class AtacarEdificioCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();

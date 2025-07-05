@@ -1,8 +1,6 @@
 ﻿using Discord.Commands;
 using Library.Domain;
 
-namespace Ucu.Poo.DiscordBot.Commands;
-
 public class AtacarUnidadEnemigaCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();

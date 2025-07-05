@@ -2,8 +2,6 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-
-
 public class EntrenarUnidadCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();

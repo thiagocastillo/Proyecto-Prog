@@ -2,8 +2,6 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-namespace Ucu.Poo.DiscordBot.Commands;
-
 public class MoverUnidadCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = new JuegoFachada();
