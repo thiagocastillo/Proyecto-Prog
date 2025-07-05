@@ -10,7 +10,7 @@ public class MostrarMapaCommand : ModuleBase<SocketCommandContext>
     [Summary("Muestra el Mapa de la Partida actual.")]
     public async Task ExecuteAsync()
     {
-         _fachada.MostrarMapa();
-        await Task.CompletedTask;
+        string mapa = _fachada.MostrarMapa();
+        await ReplyAsync(mapa);
     }
 }

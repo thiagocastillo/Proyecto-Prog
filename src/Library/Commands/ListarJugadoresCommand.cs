@@ -1,12 +1,11 @@
 using Discord.Commands;
 using System.Threading.Tasks;
 using Library.Domain;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace Ucu.Poo.DiscordBot.Commands;
 
-public class ListarJugadoresCommand: ModuleBase<SocketCommandContext>
+public class ListarJugadoresCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
@@ -14,14 +13,14 @@ public class ListarJugadoresCommand: ModuleBase<SocketCommandContext>
     [Summary("Lista los Jugadores existentes en la Partida Actual.")]
     public async Task ExecuteAsync()
     {
-        var jugadores = _fachada.ObtenerJugadores(); // Ajusta el método según tu fachada
+        var jugadores = _fachada.ObtenerJugadores();
         if (jugadores == null || jugadores.Count == 0)
         {
             await ReplyAsync("No hay jugadores en la partida.");
         }
         else
         {
-            string lista = string.Join(", ", jugadores);
+            string lista = string.Join(", ", jugadores.Select(j => $"{j.Nombre} ({j.Civilizacion.Nombre})"));
             await ReplyAsync($"Jugadores: {lista}");
         }
     }
