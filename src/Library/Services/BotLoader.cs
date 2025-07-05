@@ -11,7 +11,8 @@ namespace Library.Services;
 /// </summary>
 public static class BotLoader
 {
-    public static async Task LoadAsync()
+    // Commit
+    public static async Task  LoadAsync()
     {
         var configuration = new ConfigurationBuilder()
             .AddUserSecrets(Assembly.GetExecutingAssembly())
