@@ -447,6 +447,7 @@ public class JuegoFachada
                 if (jugadoresConCC.Count == 1)
                 {
                     resultado += $"\n¡{jugadoresConCC[0].Nombre} ganó la partida! Muchas gracias por jugar.";
+                    //_partidaActual = null; // Termina la partida
                 }
             }
             return resultado;

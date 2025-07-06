@@ -16,8 +16,8 @@ public class CentroCivico : IAlmacenamiento , IEdificio
         Posicion = new Point { X = 0, Y = 0 }; // Posición inicial por defecto
 
         // Inicializa recursos con 100 de alimento y 100 de madera
-        Recursos["alimento"] = 100;
-        Recursos["madera"] = 100;
+        Recursos["Alimento"] = 100;
+        Recursos["Madera"] = 100;
         
         // Bonificacion especial para Bangalies (Comienzan con un aldeano adicional)
         if (propietario.Civilizacion.Nombre == "Bengalies")

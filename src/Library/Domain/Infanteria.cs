@@ -6,7 +6,7 @@ public class Infanteria : IUnidadMilitar
     // Propietario de la unidad
     public Jugador Propietario { get; private set; }
     // Valor de ataque de la unidad
-    public int Ataque { get; private set; } = 100;
+    public int Ataque { get; private set; } = 100000;
     // Valor de defensa de la unidad
     public int Defensa { get; private set; } = 5;
     // Velocidad de movimiento
