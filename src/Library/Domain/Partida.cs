@@ -22,7 +22,7 @@ public class Partida
     }
     public Jugador VerificarGanador()   // Método que verifica si hay un ganador de la partida.
     {
-        foreach (var jugador in Jugadores)  // Recorre todos los jugadores para verificar si perdieron su centro cívico
+        foreach (Jugador jugador in Jugadores)  // Recorre todos los jugadores para verificar si perdieron su centro cívico
         {
             bool tieneCentroCivico = jugador.Edificios.Any(e => e is CentroCivico);  // Comprueba si el jugador tiene al menos un edificio que sea un Centro Cívico
          

@@ -71,7 +71,7 @@ public class Bot : IBot
     {
         string mensaje = "Bienvenido al juego de estrategia en tiempo real. Ejecute el comando '!ayuda' para ver la lista de comandos disponibles.";
 
-        foreach (var guild in client.Guilds)
+        foreach (SocketGuild guild in client.Guilds)
         {
             IEnumerable<SocketTextChannel> generalChannels = guild.TextChannels
                 .Where(c => c.Name.Equals("general", StringComparison.OrdinalIgnoreCase));

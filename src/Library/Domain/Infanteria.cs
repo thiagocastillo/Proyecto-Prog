@@ -24,9 +24,9 @@ public class Infanteria : IUnidadMilitar
         Propietario = propietario;
 
         // Obtiene la posición del Centro Cívico del jugador
-        var ccPos = propietario.CentroCivico.Posicion;
+        Point ccPos = propietario.CentroCivico.Posicion;
         // Calcula posiciones adyacentes al Centro Cívico
-        var adyacentes = new List<Point>
+        List<Point> adyacentes = new List<Point>
         {
             new Point { X = ccPos.X + 1, Y = ccPos.Y },
             new Point { X = ccPos.X - 1, Y = ccPos.Y },
@@ -39,7 +39,7 @@ public class Infanteria : IUnidadMilitar
         };
 
         // Obtiene las posiciones ya ocupadas por otras unidades del jugador
-        var ocupadas = propietario.Unidades.Select(u => u.Posicion).ToHashSet();
+        HashSet<Point> ocupadas = propietario.Unidades.Select(u => u.Posicion).ToHashSet();
 
         // Asigna la primera posición adyacente libre, o el Centro Cívico si todas están ocupadas
         this.Posicion = adyacentes.FirstOrDefault(p => !ocupadas.Contains(p), ccPos);
@@ -102,7 +102,7 @@ public class Infanteria : IUnidadMilitar
     public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List<Jugador> jugadores)
     {
         // Busca unidades enemigas del tipo indicado en la coordenada
-        var unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
+        List<IUnidad> unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
             .Where(u => u.Propietario != atacante && u.GetType().Name.ToLower() == tipoUnidad.ToLower())
             .Take(cantidad)
             .ToList();
@@ -112,7 +112,7 @@ public class Infanteria : IUnidadMilitar
 
         string resultado = "";
         
-        foreach (var unidad in unidadesEnCoordenada)
+        foreach (IUnidad unidad in unidadesEnCoordenada)
         {
             int daño = (int)CalcularDaño(unidad);
             unidad.Salud -= daño;

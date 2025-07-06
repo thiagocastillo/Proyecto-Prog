@@ -62,7 +62,7 @@ public class Caballeria : IUnidadMilitar
     public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List<Jugador> jugadores)
     {
         // Busca unidades enemigas del tipo indicado en la coordenada
-        var unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
+        List<IUnidad> unidadesEnCoordenada = mapa.ObtenerUnidadesEn(coordenada, jugadores)
             .Where(u => u.Propietario != atacante && u.GetType().Name.ToLower() == tipoUnidad.ToLower())
             .Take(cantidad)
             .ToList();
@@ -72,7 +72,7 @@ public class Caballeria : IUnidadMilitar
 
         string resultado = "";
        
-        foreach (var unidad in unidadesEnCoordenada)
+        foreach (IUnidad unidad in unidadesEnCoordenada)
         {
             int daño = (int)CalcularDaño(unidad);
             unidad.Salud -= daño;

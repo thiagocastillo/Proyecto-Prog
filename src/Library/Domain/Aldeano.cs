@@ -62,7 +62,7 @@ public class Aldeano : IUnidad, IRecolector
     public void RecolectarEn(Point coordenada, Mapa mapa)
     {
         // Buscar el recurso natural en la coordenada
-        var recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.X == coordenada.X && r.Ubicacion.Y == coordenada.Y);
+        RecursoNatural recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.X == coordenada.X && r.Ubicacion.Y == coordenada.Y);
 
         if (recurso == null)
             throw new InvalidOperationException("No hay recurso natural en la coordenada especificada.");
@@ -74,7 +74,7 @@ public class Aldeano : IUnidad, IRecolector
         IAlmacenamiento almacenMasCercano = null;
         double distanciaMinima = double.MaxValue;
 
-        foreach (var edificio in Propietario.Edificios)
+        foreach (IEdificio edificio in Propietario.Edificios)
         {
             if (edificio is IAlmacenamiento almacen && EsCompatible(almacen, recurso.Nombre))
             {
