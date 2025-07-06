@@ -8,9 +8,34 @@ public class ConstruirEdificioCommand : ModuleBase<SocketCommandContext>
 
     [Command("construiredificio")]
     [Summary("Construye un edificio en la posicion indicada. Sintaxis: construiredificio <nombreJugador> <tipoEdificio> <x> <y>")]
-    public async Task ExecuteAsync(string nombreJugador, string tipoEdificio, int x, int y)
+   
+    public async Task ConstruirEdificioAsync(string nombreJugador, string tipoEdificio, int x, int y)
     {
-        _fachada.ConstruirEdificio(nombreJugador, tipoEdificio, new Point(x, y));
-        await ReplyAsync($"Edificio '{tipoEdificio}' contruido en ({x}, {y}) para el jugador '{nombreJugador}'");
+        try
+        {
+            _fachada.ConstruirEdificio(nombreJugador, tipoEdificio, new Point(x, y));
+            Dictionary<string,int> recursos = _fachada.ObtenerRecursosJugador(nombreJugador);
+
+            string mensaje = $"Edificio '{tipoEdificio}' contruido en ({x}, {y}) para el jugador '{nombreJugador}'";
+
+            // Umbral de alerta
+            int umbralAlerta = 50;
+            List<string> alertas = new();
+
+            foreach (KeyValuePair<string, int> recurso in recursos)
+            {
+                if (recurso.Value <= umbralAlerta)
+                    alertas.Add($"¡Atención! Te quedan solo {recurso.Value} de {recurso.Key}.");
+            }
+
+            if (alertas.Count > 0)
+                mensaje += "\n" + string.Join("\n", alertas);
+
+            await ReplyAsync(mensaje);
+        }
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error: {ex.Message}");
+        }
     }
 }

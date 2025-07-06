@@ -24,7 +24,6 @@ public class AyudaCommand : ModuleBase<SocketCommandContext>
         - Mover varias unidades en bloque:                 MoverUnidades <nombreJugador> <x> <y> <id1> <id2> ...
         - Atacar una unidad enemiga:                       AtacarUnidad <nombreJugadorAtacante> <idUnidadAtacante> <nombreJugadorObjetivo> <idUnidadObjetivo>
         - Atacar un edificio enemigo:                      AtacarEdificio <nombreJugadorAtacante> <idUnidadAtacante> <nombreJugadorObjetivo> <idEdificioObjetivo>
-        - Ver recursos de un jugador:                      RecursosJugador <nombreJugador>
         - Ver unidades de un jugador:                      UnidadesJugador <nombreJugador>
         - Ver edificios de un jugador:                     ListarEdificiosJugador <nombreJugador>
         - Listar todos los recursos en el mapa:            listarRecursosJugador <nombreJugador>

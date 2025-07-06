@@ -133,46 +133,42 @@ public class JuegoFachada
         Dictionary<string,int> recursosTotales = jugador.ObtenerResumenRecursosTotales();
         IEdificio? nuevoEdificio = null;
         
-        // Verifica si el jugador tiene suficientes recursos para construir el edificio
-        if (recursosTotales == null || !recursosTotales.ContainsKey("madera") || recursosTotales["Madera"] <= 0)
-            throw new InvalidOperationException("No hay suficientes recursos para construir un edificio.");
+        // Verifica si el jugador tiene recursos suficientes para construir el edificio
+       
         
-        if(recursosTotales.ContainsKey("madera") && recursosTotales["madera"] < 50)
-            throw new InvalidOperationException("No hay suficiente madera para construir un edificio.");
-        
-        
-
         // Selecciona el tipo de edificio y descuenta recursos
         switch (tipoEdificio.ToLower())
         {
             case "casa":
                 
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 50)
-                    throw new InvalidOperationException("No hay suficiente madera para construir una casa.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 50)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir una casa.");
+                
                 nuevoEdificio = new Casa(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 50;
                 break;
             
             case "cuartel":
                 
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 100)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un cuartel.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 100)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir un cuartel.");
+                
                 nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 100;
                 break;
             
             case "molino":
                 
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 75)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un molino.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 75)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir un molino.");
                 nuevoEdificio = new Molino(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 75;
                 break;
             
             case "depositomadera":
                 
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de madera.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 60)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir un depósito de madera.");
                 
                 nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
@@ -180,8 +176,8 @@ public class JuegoFachada
             
             case "depositooro":
                 
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de oro.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 60)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir un depósito de oro.");
                 
                 nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
@@ -189,8 +185,8 @@ public class JuegoFachada
             
             case "depositopiedra":
                 
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 60)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un depósito de piedra.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 60)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir un depósito de piedra.");
                 
                 nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
@@ -198,8 +194,8 @@ public class JuegoFachada
             
             case "centrocivico":
                
-                if (!recursosTotales.ContainsKey("madera") || recursosTotales["madera"] < 200)
-                    throw new InvalidOperationException("No hay suficiente madera para construir un centro cívico.");
+                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 200)
+                    throw new InvalidOperationException("No hay suficiente Madera para construir un centro cívico.");
                 
                 nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 200;
