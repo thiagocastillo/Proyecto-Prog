@@ -67,9 +67,6 @@ public class JuegoFachada
             if(_partidaActual.Jugadores.Any(j => j.Nombre.Equals(nombreJugador, StringComparison.OrdinalIgnoreCase)))
                 throw new InvalidOperationException($"Ya existe un jugador con el nombre '{nombreJugador}'.");
             
-            //Civilizacion civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);
-            //var civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre == nombreCivilizacion);-> si no modifica nada sacarla
-            
             // Busca la civilización por nombre, ignorando mayusculas/minusculas dentro de la lista de civilizaciones disponibles
             Civilizacion civilizacion = _civilizacionesDisponibles.FirstOrDefault(c => c.Nombre.Equals(nombreCivilizacion, StringComparison.OrdinalIgnoreCase));
 
