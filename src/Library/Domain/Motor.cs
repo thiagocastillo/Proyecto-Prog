@@ -193,7 +193,7 @@ public class Motor
                 // Muestra el mapa actual
                 case "mostrarmapa":
                    
-                    return _fachada.MostrarMapa();
+                    return _fachada.MostrarMapaTXT();
                  // Sale del juego
                 case "salir":
                 case "exit":

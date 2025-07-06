@@ -1,6 +1,11 @@
 namespace Library.Domain;
 using System.IO;
 using System.Diagnostics;
+using System.Xml.Linq;
+using System.Diagnostics;
+using System.Diagnostics;
+using System.IO;
+using System.Text;
 
 // Clase que representa el mapa del juego
 public class Mapa
@@ -95,7 +100,7 @@ public class Mapa
     }
 
     // Muestra el mapa en un archivo de texto, representando recursos, unidades y edificios
-    public string MostrarMapa(List<Jugador> jugadores)
+    public string MostrarMapaTXT(List<Jugador> jugadores)
     {
         // Matriz de caracteres para representar el mapa
         char[,] grid = new char[Alto, Ancho];
@@ -203,4 +208,106 @@ public class Mapa
 
         return "Abriendo Mapa en el Bloc de notas...";
     }
+    
+
+
+public string MostrarMapaHtml(List<Jugador> jugadores)
+{
+    var coloresJugadores = new[] { "#FF0000", "#0000FF" }; // Rojo, Azul
+    var colorArbol = "#228B22";   // Verde
+    var colorPiedra = "#A9A9A9";  // Gris
+    var colorOro = "#FFD700";     // Amarillo
+    var colorVacio = "#FFFFFF";   // Blanco
+
+    var jugadorIndices = jugadores
+        .Select((j, idx) => new { Jugador = j, Indice = idx })
+        .ToDictionary(x => x.Jugador, x => x.Indice);
+
+    var sb = new System.Text.StringBuilder();
+    sb.AppendLine("<html><head><meta charset='UTF-8'><title>Mapa</title></head><body>");
+    sb.AppendLine("<table border='1' cellspacing='0' cellpadding='2' style='font-family:monospace;font-size:10px;border-collapse:collapse;'>");
+
+    // Encabezado de columnas (coordenadas X)
+    sb.Append("<tr><td></td>");
+    for (int x = 0; x < Ancho; x++)
+        sb.Append($"<td style='background:#eee'>{x:D2}</td>");
+    sb.AppendLine("</tr>");
+
+    for (int y = 0; y < Alto; y++)
+    {
+        sb.Append($"<tr><td style='background:#eee'>{y:D2}</td>");
+        for (int x = 0; x < Ancho; x++)
+        {
+            string color = colorVacio;
+            string contenido = "&nbsp;";
+
+            // Recurso
+            var recurso = Recursos.FirstOrDefault(r => r.Ubicacion.X == x && r.Ubicacion.Y == y);
+            if (recurso != null)
+            {
+                if (recurso is Arbol)
+                {
+                    color = colorArbol;
+                    contenido = "T";
+                }
+                else if (recurso is Piedra)
+                {
+                    color = colorPiedra;
+                    contenido = "#";
+                }
+                else if (recurso is Oro)
+                {
+                    color = colorOro;
+                    contenido = "$";
+                }
+            }
+
+            // Edificio o unidad de jugador (tienen prioridad sobre recursos)
+            for (int j = 0; j < jugadores.Count; j++)
+            {
+                var jugador = jugadores[j];
+                var colorJugador = coloresJugadores[j % coloresJugadores.Length];
+
+                var edificio = jugador.Edificios?.FirstOrDefault(e => e.Posicion.X == x && e.Posicion.Y == y);
+                if (edificio != null)
+                {
+                    color = colorJugador;
+                    contenido = edificio switch
+                    {
+                        CentroCivico => "C",
+                        Granja => "G",
+                        _ => "X"
+                    };
+                }
+
+                var unidad = jugador.Unidades?.FirstOrDefault(u => u.Posicion.X == x && u.Posicion.Y == y);
+                if (unidad != null)
+                {
+                    color = colorJugador;
+                    contenido = unidad switch
+                    {
+                        Aldeano => "A",
+                        Arquero => "Æ",
+                        Caballeria => "©",
+                        Ratha => "®",
+                        GuerreroJaguar => "J",
+                        Infanteria => "I",
+                        _ => "?"
+                    };
+                }
+            }
+
+            sb.Append($"<td style='width:12px;height:12px;background:{color};text-align:center'>{contenido}</td>");
+        }
+        sb.AppendLine("</tr>");
+    }
+
+    sb.AppendLine("</table></body></html>");
+
+    string ruta = "mapa.html";
+    System.IO.File.WriteAllText(ruta, sb.ToString());
+    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(ruta) { UseShellExecute = true });
+
+    return "Mapa abierto en el navegador.";
+}
 }

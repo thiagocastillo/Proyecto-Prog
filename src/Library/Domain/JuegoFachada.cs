@@ -30,12 +30,19 @@ public class JuegoFachada
     }
 
     // Muestra el mapa actual de la partida
-    public string MostrarMapa()
+    public string MostrarMapaTXT()
     {
         if (_partidaActual == null || _partidaActual.Mapa == null)
             return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el Mapa.";
         
-        return _partidaActual.Mapa.MostrarMapa(_partidaActual.Jugadores);
+        return _partidaActual.Mapa.MostrarMapaTXT(_partidaActual.Jugadores);
+    }
+    public string MostrarMapaHTML()
+    {
+        if (_partidaActual == null || _partidaActual.Mapa == null)
+            return "No hay partida o mapa disponible. Use 'crearpartida' antes de mostrar el Mapa.";
+        
+        return _partidaActual.Mapa.MostrarMapaHtml(_partidaActual.Jugadores);
     }
     
     // Lista todos los recursos presentes en el mapa

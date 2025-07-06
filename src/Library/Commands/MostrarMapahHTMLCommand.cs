@@ -2,17 +2,17 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-public class MostrarMapaCommand : ModuleBase<SocketCommandContext>
+public class MostrarMapaHTMLCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
-    [Command("mostrarmapa")]
+    [Command("mostrarmapaHTML")]
     [Summary("Muestra el Mapa de la Partida actual.")]
     public async Task ExecuteAsync()
     {
         try
         {
-            string mapa = _fachada.MostrarMapa();
+            string mapa = _fachada.MostrarMapaHTML();
             await ReplyAsync(mapa);
         }
         catch (Exception ex)
