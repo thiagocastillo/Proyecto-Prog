@@ -230,7 +230,7 @@ public class JuegoFachada
         if (ocupado)
             throw new InvalidOperationException("Ya hay una unidad en esa posición.");
 
-        var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+        Dictionary<string,int> recursosTotales = jugador.ObtenerResumenRecursosTotales();
         
         IUnidad? nuevaUnidad = null;
 
@@ -319,7 +319,7 @@ public class JuegoFachada
     // Busca una posición libre adyacente a un punto dado para colocar una unidad o edificio
     private Point BuscarPosicionLibreCercana(Point origen, Jugador jugador)
     {
-        var adyacentes = new List<Point>
+        List<Point> adyacentes = new List<Point>
         {
             new Point { X = origen.X + 1, Y = origen.Y },
             new Point { X = origen.X - 1, Y = origen.Y },
@@ -330,7 +330,8 @@ public class JuegoFachada
             new Point { X = origen.X + 1, Y = origen.Y - 1 },
             new Point { X = origen.X - 1, Y = origen.Y + 1 }
         };
-        var ocupadas = jugador.Unidades.Select(u => u.Posicion).ToHashSet();
+        
+        HashSet<Point> ocupadas = jugador.Unidades.Select(u => u.Posicion).ToHashSet();
         return adyacentes.FirstOrDefault(p => !ocupadas.Contains(p), origen);
     }   
 
@@ -379,7 +380,7 @@ public class JuegoFachada
                 continue;
             }
 
-            var unidad = jugador.Unidades[id];
+            IUnidad unidad = jugador.Unidades[id];
             
             //Calcula la nueva posición destino sumando el índice al destino original evitando superposiciones
             Point destinoUnitario = new Point(xDestino + i, yDestino);
@@ -399,15 +400,15 @@ public class JuegoFachada
    public string AtacarUnidad(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idUnidadObjetivo)
    {
        // Obtener jugador atacante y su unidad
-       var jugadorAtacante = _partidaActual?.Jugadores
+       Jugador jugadorAtacante = _partidaActual?.Jugadores
            .FirstOrDefault(j => j.Nombre.Equals(nombreJugadorAtacante, StringComparison.OrdinalIgnoreCase));
-       var unidadAtacante = jugadorAtacante?.Unidades
+       IUnidadMilitar unidadAtacante = jugadorAtacante?.Unidades
            .ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
 
        // Obtener jugador objetivo y la unidad objetivo
-       var jugadorObjetivo = _partidaActual?.Jugadores
+       Jugador jugadorObjetivo = _partidaActual?.Jugadores
            .FirstOrDefault(j => j.Nombre.Equals(nombreJugadorObjetivo, StringComparison.OrdinalIgnoreCase));
-       var unidadObjetivo = jugadorObjetivo?.Unidades
+       IUnidad unidadObjetivo = jugadorObjetivo?.Unidades
            .ElementAtOrDefault(idUnidadObjetivo);
 
        // Validar que las unidades existan, sean de distintos jugadores, y que la atacante sea militar
@@ -434,11 +435,11 @@ public class JuegoFachada
     // Ordena a una unidad militar atacar un edificio enemigo
     public string AtacarEdificio(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idEdificioObjetivo)
     {
-        var jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugadorAtacante);
-        var unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
+        Jugador jugadorAtacante = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugadorAtacante);
+        IUnidadMilitar unidadAtacante = jugadorAtacante?.Unidades.ElementAtOrDefault(idUnidadAtacante) as IUnidadMilitar;
 
-        var jugadorObjetivo = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugadorObjetivo);
-        var edificioObjetivo = jugadorObjetivo?.Edificios.ElementAtOrDefault(idEdificioObjetivo);
+        Jugador jugadorObjetivo = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugadorObjetivo);
+        IEdificio edificioObjetivo = jugadorObjetivo?.Edificios.ElementAtOrDefault(idEdificioObjetivo);
 
         if (unidadAtacante != null && edificioObjetivo != null && unidadAtacante.Propietario != edificioObjetivo.Propietario)
         {
@@ -457,7 +458,7 @@ public class JuegoFachada
             // Si el edificio destruido es un CentroCivico, verifica si hay un ganador
             if (edificioObjetivo is CentroCivico && edificioObjetivo.Vida <= 0)
             {
-                var jugadoresConCC = _partidaActual.Jugadores
+                List<Jugador> jugadoresConCC = _partidaActual.Jugadores
                     .Where(j => j.Edificios.Any(e => e is CentroCivico && e.Vida > 0))
                     .ToList();
                     

@@ -19,7 +19,7 @@ namespace Library.Domain.Tests
         public void CrearNuevaPartida_InicializaPartida()
         {
             fachada.CrearNuevaPartida();
-            var civilizaciones = fachada.ObtenerCivilizacionesDisponibles();
+            List<string> civilizaciones = fachada.ObtenerCivilizacionesDisponibles();
             Assert.IsNotNull(civilizaciones);
             Assert.IsTrue(civilizaciones.Count > 0);
         }
@@ -29,7 +29,7 @@ namespace Library.Domain.Tests
         {
             fachada.CrearNuevaPartida();
             fachada.AgregarJugadorAPartida("Juan", "aztecas");
-            var jugadores = fachada.ObtenerJugadores();
+            List<Jugador> jugadores = fachada.ObtenerJugadores();
             Assert.AreEqual(1, jugadores.Count);
             Assert.AreEqual("Juan", jugadores[0].Nombre);
         }
@@ -48,7 +48,7 @@ namespace Library.Domain.Tests
         {
             fachada.CrearNuevaPartida();
             fachada.AgregarJugadorAPartida("Ana", "armenios");
-            var jugador = fachada.ObtenerJugadores()[0];
+            Jugador jugador = fachada.ObtenerJugadores()[0];
             jugador.Recursos["Madera"] = 200;
             fachada.ConstruirEdificio("Ana", "casa", new Point(1, 1));
             Assert.AreEqual(150, jugador.Recursos["Madera"]);
@@ -60,7 +60,7 @@ namespace Library.Domain.Tests
         {
             fachada.CrearNuevaPartida();
             fachada.AgregarJugadorAPartida("Luis", "aztecas");
-            var jugador = fachada.ObtenerJugadores()[0];
+            Jugador jugador = fachada.ObtenerJugadores()[0];
             jugador.Recursos["Alimento"] = 100;
             jugador.PoblacionActual = 0;
             jugador.PoblacionMaxima = 5;
