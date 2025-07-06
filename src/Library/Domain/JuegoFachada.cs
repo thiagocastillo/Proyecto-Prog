@@ -453,11 +453,12 @@ public class JuegoFachada
                 var jugadoresConCC = _partidaActual.Jugadores
                     .Where(j => j.Edificios.Any(e => e is CentroCivico && e.Vida > 0))
                     .ToList();
-
+                    
                 if (jugadoresConCC.Count == 1)
                 {
                     resultado += $"\n¡{jugadoresConCC[0].Nombre} ganó la partida! Muchas gracias por jugar.";
                     //_partidaActual = null; // Termina la partida
+                    
                 }
             }
             return resultado;
