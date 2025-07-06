@@ -104,7 +104,7 @@ public class JuegoFachada
     }
 
     // Ordena a un aldeano recolectar recursos en una posición específica
-    public void OrdenarRecolectar(string nombreJugador, int idAldeano, int x, int y)
+    public int OrdenarRecolectar(string nombreJugador, int idAldeano, int x, int y)
     {
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         Aldeano aldeano = jugador?.Aldeanos.ElementAtOrDefault(idAldeano);
@@ -112,9 +112,10 @@ public class JuegoFachada
         if (aldeano != null && _partidaActual != null)
         {
             aldeano.RecolectarEn(new Point(x, y), _partidaActual.Mapa);
+            return aldeano.TiempoRecoleccionS; // Devuelve el tiempo calculado
         }
+        return -1; // Indica error
     }    
-    
     // Permite a un jugador construir un edificio en una posición si tiene recursos y la posición está libre
 public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
 {
@@ -144,7 +145,6 @@ public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point p
             jugador.Recursos["Madera"] -= 50;
             var casa = new Casa(jugador) { Posicion = posicion };
             jugador.EdificiosEnConstruccion.Add(casa);
-            // No agregar a Edificios aún
             break;
 
         case "cuartel":
@@ -483,4 +483,5 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
         
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
+ 
 }

@@ -25,8 +25,22 @@ public class RecolectarCommand : ModuleBase<SocketCommandContext>
 
         try
         {
-            _fachada.OrdenarRecolectar(nombreJugador, idAldeano.Value, x.Value, y.Value);
-            await ReplyAsync($"Aldeano {idAldeano} del jugador '{nombreJugador}' recolectando en ({x}, {y})");
+            int tiempoRecoleccion = _fachada.OrdenarRecolectar(nombreJugador, idAldeano.Value, x.Value, y.Value);
+
+            if (tiempoRecoleccion < 0)
+            {
+                await ReplyAsync("No se pudo ordenar la recolección. Verifica los datos.");
+                return;
+            }
+
+            await ReplyAsync($"Aldeano {idAldeano} del jugador '{nombreJugador}' recolectando en ({x}, {y}). Tiempo estimado: {tiempoRecoleccion} segundos.");
+
+            // Mensaje de finalización tras el tiempo de recolección
+            _ = Task.Run(async () =>
+            {
+                await Task.Delay(tiempoRecoleccion * 1000);
+                await ReplyAsync($"Aldeano {idAldeano} del jugador '{nombreJugador}' ha finalizado la recolección en ({x}, {y}).");
+            });
         }
         catch (System.Exception ex)
         {
