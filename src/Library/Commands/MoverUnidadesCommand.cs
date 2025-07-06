@@ -20,7 +20,7 @@ public class MoverUnidadesCommand : ModuleBase<SocketCommandContext>
                 ids.Add(int.Parse(parte));
             }
         }
-        var resultados = _fachada.MoverUnidades(nombreJugador, ids, new Point(x, y));
+        List<string> resultados = _fachada.MoverUnidades(nombreJugador, ids, new Point(x, y));
         await ReplyAsync(string.Join("\n", resultados));
-        }
     }
+}

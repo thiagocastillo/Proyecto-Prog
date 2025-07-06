@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Library.Domain;
 using System.Collections.Generic;
 
-public class EdificiosJugadorCommand : ModuleBase<SocketCommandContext>
+public class ListarEdificiosJugadorCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
@@ -12,7 +12,7 @@ public class EdificiosJugadorCommand : ModuleBase<SocketCommandContext>
     public async Task ExecuteAsync()
     {
         string jugadorId = Context.User.Id.ToString();
-        // Asegúrate de que este método busque por ID, o adapta tu lógica de jugadores
+        
         List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
 
         if (edificios == null || edificios.Count == 0)

@@ -26,7 +26,7 @@ public class AyudaCommand : ModuleBase<SocketCommandContext>
         - Atacar un edificio enemigo:                      AtacarEdificio <nombreJugadorAtacante> <idUnidadAtacante> <nombreJugadorObjetivo> <idEdificioObjetivo>
         - Ver recursos de un jugador:                      RecursosJugador <nombreJugador>
         - Ver unidades de un jugador:                      UnidadesJugador <nombreJugador>
-        - Ver edificios de un jugador:                     EdificiosJugador <nombreJugador>
+        - Ver edificios de un jugador:                     ListarEdificiosJugador <nombreJugador>
         - Listar todos los recursos en el mapa:            ListarRecursos
         - Listar todos los jugadores en la partida:        ListarJugadores
         - Muestra este menú de ayuda:                      Ayuda

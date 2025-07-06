@@ -130,8 +130,17 @@ public class JuegoFachada
         if (ocupado)
             throw new InvalidOperationException("Ya hay un edificio en esa posición.");
 
-        var recursosTotales = jugador.ObtenerResumenRecursosTotales();
+        Dictionary<string,int> recursosTotales = jugador.ObtenerResumenRecursosTotales();
         IEdificio? nuevoEdificio = null;
+        
+        // Verifica si el jugador tiene suficientes recursos para construir el edificio
+        if (recursosTotales == null || !recursosTotales.ContainsKey("madera") || recursosTotales["Madera"] <= 0)
+            throw new InvalidOperationException("No hay suficientes recursos para construir un edificio.");
+        
+        if(recursosTotales.ContainsKey("madera") && recursosTotales["madera"] < 50)
+            throw new InvalidOperationException("No hay suficiente madera para construir un edificio.");
+        
+        
 
         // Selecciona el tipo de edificio y descuenta recursos
         switch (tipoEdificio.ToLower())
