@@ -14,7 +14,6 @@ public class AtacarUnidadCommand : ModuleBase<SocketCommandContext>
         string nombreJugadorObjetivo = null,
         int? idUnidadObjetivo = null)
     {
-<<<<<<< HEAD
         if (string.IsNullOrWhiteSpace(nombreJugadorAtacante) ||
             idUnidadAtacante == null ||
             string.IsNullOrWhiteSpace(nombreJugadorObjetivo) ||
@@ -31,16 +30,5 @@ public class AtacarUnidadCommand : ModuleBase<SocketCommandContext>
             idUnidadObjetivo.Value);
 
         await ReplyAsync(resultado);
-=======
-        try
-        {
-            string resultado = _fachada.AtacarUnidad(nombreJugadorAtacante, idUnidadAtacante, nombreJugadorObjetivo, idUnidadObjetivo);
-            await ReplyAsync(resultado);
-        }
-        catch (Exception ex)
-        {
-            await ReplyAsync(ex.Message);
-        }
->>>>>>> a2322a90539cdade8ea7fe520d133588925952d2
     }
 }

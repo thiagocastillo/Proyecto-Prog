@@ -14,7 +14,6 @@ public class ListarEdificiosJugadorCommand : ModuleBase<SocketCommandContext>
         try
         {
             string jugadorId = Context.User.Id.ToString();
-<<<<<<< HEAD
             List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
 
             if (edificios == null || edificios.Count == 0)
@@ -25,29 +24,10 @@ public class ListarEdificiosJugadorCommand : ModuleBase<SocketCommandContext>
 
             List<string> lista = new();
             for (int i = 0; i < edificios.Count; i++)
-=======
-
-            List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
-
-            if (edificios == null || edificios.Count == 0)
->>>>>>> a2322a90539cdade8ea7fe520d133588925952d2
             {
-                await ReplyAsync("No tienes edificios.");
+                lista.Add($"{i}: {edificios[i].GetType().Name}");
             }
-            else
-            {
-                List<string> lista = new List<string>();
-                for (int i = 0; i < edificios.Count; i++)
-                {
-                    lista.Add($"{i}: {edificios[i].GetType().Name}");
-                }
-
-                await ReplyAsync($"Tus edificios:\n{string.Join("\n", lista)}");
-            }
-        }
-        catch (Exception ex)
-        {
-            await ReplyAsync($"Error al listar edificios: {ex.Message}");
+            await ReplyAsync($"Tus edificios:\n{string.Join("\n", lista)}");
         }
         catch (System.Exception ex)
         {
