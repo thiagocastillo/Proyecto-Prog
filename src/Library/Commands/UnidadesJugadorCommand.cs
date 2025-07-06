@@ -12,6 +12,7 @@ public class UnidadesJugadorCommand : ModuleBase<SocketCommandContext>
     [Summary("Lista las unidades del jugador. Sintaxis: unidadesjugador <nombreJugador>")]
     public async Task ExecuteAsync(string nombreJugador = null)
     {
+<<<<<<< HEAD
         if (string.IsNullOrWhiteSpace(nombreJugador))
         {
             await ReplyAsync("Faltan argumentos en comando, recordar sintaxis: unidadesjugador <nombreJugador>");
@@ -28,6 +29,12 @@ public class UnidadesJugadorCommand : ModuleBase<SocketCommandContext>
                 return;
             }
 
+=======
+        try
+        {
+            List<IUnidad> unidades = _fachada.ObtenerUnidadesJugador(nombreJugador);
+
+>>>>>>> a2322a90539cdade8ea7fe520d133588925952d2
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < unidades.Count; i++)
             {
@@ -36,9 +43,15 @@ public class UnidadesJugadorCommand : ModuleBase<SocketCommandContext>
 
             await ReplyAsync(sb.ToString().TrimEnd());
         }
+<<<<<<< HEAD
         catch (System.Exception ex)
         {
             await ReplyAsync($"Error: {ex.Message}");
+=======
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error al listar unidades: {ex.Message}");
+>>>>>>> a2322a90539cdade8ea7fe520d133588925952d2
         }
     }
 }
