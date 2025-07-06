@@ -11,7 +11,8 @@ internal static class Program
     /// </summary>
     private static void Main()
     {
-        
+        Console.WriteLine("Bienvenido al juego de estrategia en tiempo real. Ejecute el comando '!ayuda' para ver la lista de comandos disponibles.");
+
         Bot();
     }
 

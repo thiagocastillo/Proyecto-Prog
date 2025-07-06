@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
+using System.Linq; //..
 
 namespace Library.Services;
 
@@ -53,6 +54,23 @@ public class Bot : IBot
         await client.StartAsync();
 
         client.MessageReceived += HandleCommandAsync;
+        client.Ready += OnReadyAsync; //...
+    }
+
+    private async Task OnReadyAsync() //...
+    {
+        string mensaje = "Bienvenido al juego de estrategia en tiempo real. Ejecute el comando '!ayuda' para ver la lista de comandos disponibles.";
+
+        foreach (var guild in client.Guilds)
+        {
+            IEnumerable<SocketTextChannel> generalChannels = guild.TextChannels
+                .Where(c => c.Name.Equals("general", StringComparison.OrdinalIgnoreCase));
+
+            foreach (SocketTextChannel channel in generalChannels)
+            {
+                await channel.SendMessageAsync(mensaje);
+            }
+        }
     }
 
 

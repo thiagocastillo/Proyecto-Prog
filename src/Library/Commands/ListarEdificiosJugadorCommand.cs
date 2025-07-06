@@ -9,12 +9,11 @@ public class ListarEdificiosJugadorCommand : ModuleBase<SocketCommandContext>
 
     [Command("listaredificiosjugador")]
     [Summary("Lista los edificios del jugador actual.")]
-    public async Task ExecuteAsync()
+    public async Task ExecuteAsync(string nombreJugador)
     {
         try
         {
-            string jugadorId = Context.User.Id.ToString();
-            List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
+            List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(nombreJugador);
 
             if (edificios == null || edificios.Count == 0)
             {
@@ -23,6 +22,7 @@ public class ListarEdificiosJugadorCommand : ModuleBase<SocketCommandContext>
             }
 
             List<string> lista = new();
+            
             for (int i = 0; i < edificios.Count; i++)
             {
                 lista.Add($"{i}: {edificios[i].GetType().Name}");
