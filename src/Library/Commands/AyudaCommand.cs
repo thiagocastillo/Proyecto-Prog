@@ -15,7 +15,7 @@ public class AyudaCommand : ModuleBase<SocketCommandContext>
 
         - Crear una nueva partida:                         CrearPartida
         - Mostrar el mapa del juego:                       MostrarMapa
-        - Ver civilizaciones disponibles:                  Civilizaciones
+        - Ver civilizaciones disponibles:                  VerCivilizaciones
         - Agregar un jugador a la partida:                 AgregarJugador <nombreJugador> <civilización>
         - Construir un edificio:                           ConstruirEdificio <nombreJugador> <tipo> <x> <y>
         - Entrenar una unidad:                             EntrenarUnidad <nombreJugador> <tipo> <x> <y>
@@ -27,7 +27,7 @@ public class AyudaCommand : ModuleBase<SocketCommandContext>
         - Ver recursos de un jugador:                      RecursosJugador <nombreJugador>
         - Ver unidades de un jugador:                      UnidadesJugador <nombreJugador>
         - Ver edificios de un jugador:                     ListarEdificiosJugador <nombreJugador>
-        - Listar todos los recursos en el mapa:            ListarRecursos
+        - Listar todos los recursos en el mapa:            listarRecursosJugador <nombreJugador>
         - Listar todos los jugadores en la partida:        ListarJugadores
         - Muestra este menú de ayuda:                      Ayuda
         - Ver edificios disponibles y sus costos:          AyudaEdificios

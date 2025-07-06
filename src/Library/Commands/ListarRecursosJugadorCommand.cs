@@ -2,6 +2,7 @@ using Discord.Commands;
 using System.Threading.Tasks;
 using Library.Domain;
 using System.Collections.Generic;
+using System.Text;
 
 public class ListarRecursosJugadorCommand : ModuleBase<SocketCommandContext>
 {
@@ -9,19 +10,24 @@ public class ListarRecursosJugadorCommand : ModuleBase<SocketCommandContext>
 
     [Command("listarrecursosjugador")]
     [Summary("Lista los recursos del jugador actual.")]
-    public async Task ExecuteAsync()
+    public async Task ExecuteAsync(string nombreJugador = null)
     {
-        string jugadorId = Context.User.Id.ToString();
-        Dictionary<string,int> recursos = _fachada.ObtenerRecursosJugador(jugadorId); 
-
-        if (recursos == null || recursos.Count == 0)
+        if (string.IsNullOrWhiteSpace(nombreJugador))
         {
-            await ReplyAsync("No tienes recursos.");
+            await ReplyAsync("¡Usá bien el comando! Sintaxis: listarrecursosjugador <nombreJugador>");
+            return;
         }
-        else
-        {
-            string lista = string.Join(", ", recursos);
-            await ReplyAsync($"Tus recursos: {lista}");
-        }
+        
+        Dictionary<string, int> recursos = _fachada.ObtenerRecursosJugador(nombreJugador);
+                    
+        if (recursos.Count == 0)
+            await ReplyAsync ("El jugador no existe, cree uno usando el comando correspondiente.");
+                   
+        StringBuilder sb = new StringBuilder();
+                    
+        foreach (KeyValuePair<string, int> r in recursos)
+            sb.AppendLine($"{r.Key}: {r.Value}");
+                    
+        await ReplyAsync( sb.ToString().TrimEnd());
     }
 }
