@@ -57,6 +57,7 @@ public class Bot : IBot
             }
             foreach (var jugador in jugadores)
             {
+                jugador.ActualizarUnidades();
                 jugador.ActualizarConstrucciones();
             }
         }, null, TimeSpan.Zero, TimeSpan.FromSeconds(1));

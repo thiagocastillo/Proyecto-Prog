@@ -28,9 +28,12 @@ public class ConstruirEdificioCommand : ModuleBase<SocketCommandContext>
             int tiempoConstruccion = tipoEdificio.ToLower() switch
             {
                 "casa" => 15,
-                "cuartel" => 30,
-                "molino" => 20,
-                _ => 10
+                "cuartel" => 60,
+                "molino" => 40,
+                "depositomadera" => 30,
+                "depositpiedra" => 30,
+                "depositooro" => 30,
+                _ => throw new ArgumentException("Tipo de edificio no válido.")
             };
 
             _fachada.ConstruirEdificio(

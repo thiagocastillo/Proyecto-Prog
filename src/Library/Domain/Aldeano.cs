@@ -16,11 +16,15 @@ public class Aldeano : IUnidad, IRecolector
     // Posicion actual en el mapa
     public Point Posicion { get; set; }
     // Tiempo necesario para crear aldeano
-    public int TiempoDeCreacion { get; }
+    public int TiempoDeCreacion => TiempoGeneracion.TiempoTotalSegundos;
+    public TiempoDeGeneracion TiempoGeneracion { get; private set; }
+
     
     public Aldeano(Jugador propietario)
     {
         Propietario = propietario;
+        TiempoGeneracion = new TiempoDeGeneracion(10);
+
     }
 
     // Mueve al aldeano a una nueva posicion si es valida en el mapa

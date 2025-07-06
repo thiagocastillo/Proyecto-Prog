@@ -25,12 +25,12 @@ public class DepositoPiedra : IAlmacenamiento ,IEdificio
     // Indica si el depósito ya está construido
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
 
-    // Constructor: inicializa el depósito y su tiempo de construcción (3 segundos)
+    // Constructor: inicializa el depósito y su tiempo de construcción (30 segundos)
     public DepositoPiedra(Jugador propietario)
     {
         Propietario = propietario;
         Vida = 5000; // Vida inicial
-        tiempoconstruccion = new TiempoDeGeneracion(3); // 3 segundos para construir
+        tiempoconstruccion = new TiempoDeGeneracion(30); // 30 segundos para construir
     }
     
     // Calcula la eficiencia según la distancia
