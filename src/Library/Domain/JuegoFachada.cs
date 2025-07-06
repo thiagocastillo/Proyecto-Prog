@@ -436,7 +436,17 @@ public class JuegoFachada
         if (unidadAtacante != null && edificioObjetivo != null && unidadAtacante.Propietario != edificioObjetivo.Propietario)
         {
             string resultado = unidadAtacante.AtacarEdificio(edificioObjetivo);
-
+            
+            // Notificación si el CentroCivico está cerca de ser destruido
+            if (edificioObjetivo is CentroCivico cc)
+            {
+                double porcentajeVida = (double)cc.Vida / cc.VidaMaxima;
+                if (porcentajeVida > 0 && porcentajeVida <= 0.20)  // Si la vida es menor o igual al 20% y aun no está destruido -> advertencia
+                {
+                    resultado += $"\n¡Atención! El Centro Cívico de {jugadorObjetivo.Nombre} está a punto de ser destruido ({cc.Vida} de {cc.VidaMaxima} de vida).";
+                }
+            }
+            
             // Si el edificio destruido es un CentroCivico, verifica si hay un ganador
             if (edificioObjetivo is CentroCivico && edificioObjetivo.Vida <= 0)
             {

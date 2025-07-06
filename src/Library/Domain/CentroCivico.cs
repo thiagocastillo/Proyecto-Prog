@@ -6,13 +6,15 @@ public class CentroCivico : IAlmacenamiento , IEdificio
     public Point Posicion { get; set; }
     public int MaxAldeanos { get; private set; } = 10;
     public int Vida { get; set; }
+    public int VidaMaxima { get; private set; }
     public int CapacidadMaxima { get; private set; } = 500;
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
     public CentroCivico(Jugador propietario)
     {
         Propietario = propietario;
-        Vida = 100000;
+        VidaMaxima = 100000;
+        Vida = VidaMaxima;
         Posicion = new Point { X = 0, Y = 0 }; // Posición inicial por defecto
 
         // Inicializa recursos con 100 de alimento y 100 de madera
