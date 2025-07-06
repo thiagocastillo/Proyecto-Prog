@@ -11,15 +11,23 @@ public class ListarJugadoresCommand : ModuleBase<SocketCommandContext>
     [Summary("Lista los Jugadores existentes en la Partida Actual.")]
     public async Task ExecuteAsync()
     {
-        List<Jugador> jugadores = _fachada.ObtenerJugadores();
-        if (jugadores == null || jugadores.Count == 0)
+        try
         {
-            await ReplyAsync("No hay jugadores en la partida.");
+
+            List<Jugador> jugadores = _fachada.ObtenerJugadores();
+            if (jugadores == null || jugadores.Count == 0)
+            {
+                await ReplyAsync("No hay jugadores en la partida.");
+            }
+            else
+            {
+                string lista = string.Join(", ", jugadores.Select(j => $"{j.Nombre} ({j.Civilizacion.Nombre})"));
+                await ReplyAsync($"Jugadores: {lista}");
+            }
         }
-        else
+        catch (Exception ex)
         {
-            string lista = string.Join(", ", jugadores.Select(j => $"{j.Nombre} ({j.Civilizacion.Nombre})"));
-            await ReplyAsync($"Jugadores: {lista}");
+            await ReplyAsync($"Error al listar jugadores: {ex.Message}");
         }
     }
 }

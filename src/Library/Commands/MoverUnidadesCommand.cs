@@ -10,17 +10,23 @@ public class MoverUnidadesCommand : ModuleBase<SocketCommandContext>
     [Summary("Mueve multiples unidades a una posicion. Sintaxis: moverunidades <nombreJugador> <x> <y> <id1> <id2>")]
     public async Task ExecuteAsync(string nombreJugador, int x, int y, [Remainder] string idsTexto)
     {
-        
-        string[] partes = idsTexto.Split(' ');
-        List<int> ids = new List<int>();
-        foreach (string parte in partes)
+        try
         {
-            if (!string.IsNullOrWhiteSpace(parte))
+            string[] partes = idsTexto.Split(' ');
+            List<int> ids = new List<int>();
+            foreach (string parte in partes)
             {
-                ids.Add(int.Parse(parte));
+                if (!string.IsNullOrWhiteSpace(parte))
+                {
+                    ids.Add(int.Parse(parte));
+                }
             }
+            List<string> resultados = _fachada.MoverUnidades(nombreJugador, ids, new Point(x, y));
+            await ReplyAsync(string.Join("\n", resultados));
         }
-        List<string> resultados = _fachada.MoverUnidades(nombreJugador, ids, new Point(x, y));
-        await ReplyAsync(string.Join("\n", resultados));
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error al mover unidades: {ex.Message}");
+        }
     }
 }

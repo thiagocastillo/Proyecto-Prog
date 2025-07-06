@@ -11,14 +11,21 @@ public class UnidadesJugadorCommand : ModuleBase<SocketCommandContext>
     [Summary("Lista las unidades del jugador. Sintaxis: unidadesjugador <nombreJugador>")]
     public async Task ExecuteAsync(string nombreJugador)
     {
-        List<IUnidad> unidades = _fachada.ObtenerUnidadesJugador(nombreJugador);
-
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < unidades.Count; i++)
+        try
         {
-            sb.AppendLine($"{i}: {unidades[i].GetType().Name}");
-        }
+            List<IUnidad> unidades = _fachada.ObtenerUnidadesJugador(nombreJugador);
 
-        await ReplyAsync(sb.ToString().TrimEnd());
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < unidades.Count; i++)
+            {
+                sb.AppendLine($"{i}: {unidades[i].GetType().Name}");
+            }
+
+            await ReplyAsync(sb.ToString().TrimEnd());
+        }
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error al listar unidades: {ex.Message}");
+        }
     }
 }

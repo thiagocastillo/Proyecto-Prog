@@ -17,17 +17,26 @@ public class ListarRecursosJugadorCommand : ModuleBase<SocketCommandContext>
             await ReplyAsync("¡Usá bien el comando! Sintaxis: listarrecursosjugador <nombreJugador>");
             return;
         }
-        
-        Dictionary<string, int> recursos = _fachada.ObtenerRecursosJugador(nombreJugador);
-                    
-        if (recursos.Count == 0)
-            await ReplyAsync ("El jugador no existe, cree uno usando el comando correspondiente.");
-                   
-        StringBuilder sb = new StringBuilder();
-                    
-        foreach (KeyValuePair<string, int> r in recursos)
-            sb.AppendLine($"{r.Key}: {r.Value}");
-                    
-        await ReplyAsync( sb.ToString().TrimEnd());
+
+        try
+        {
+
+
+            Dictionary<string, int> recursos = _fachada.ObtenerRecursosJugador(nombreJugador);
+
+            if (recursos.Count == 0)
+                await ReplyAsync("El jugador no existe, cree uno usando el comando correspondiente.");
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (KeyValuePair<string, int> r in recursos)
+                sb.AppendLine($"{r.Key}: {r.Value}");
+
+            await ReplyAsync(sb.ToString().TrimEnd());
+        }
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error al listar recursos: {ex.Message}");
+        }
     }
 }

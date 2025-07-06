@@ -11,22 +11,30 @@ public class ListarEdificiosJugadorCommand : ModuleBase<SocketCommandContext>
     [Summary("Lista los edificios del jugador actual.")]
     public async Task ExecuteAsync()
     {
-        string jugadorId = Context.User.Id.ToString();
-        
-        List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
+        try
+        {
+            string jugadorId = Context.User.Id.ToString();
 
-        if (edificios == null || edificios.Count == 0)
-        {
-            await ReplyAsync("No tienes edificios.");
-        }
-        else
-        {
-            List<string> lista = new List<string>();
-            for (int i = 0; i < edificios.Count; i++)
+            List<IEdificio> edificios = _fachada.ObtenerEdificiosJugador(jugadorId);
+
+            if (edificios == null || edificios.Count == 0)
             {
-                lista.Add($"{i}: {edificios[i].GetType().Name}");
+                await ReplyAsync("No tienes edificios.");
             }
-            await ReplyAsync($"Tus edificios:\n{string.Join("\n", lista)}");
+            else
+            {
+                List<string> lista = new List<string>();
+                for (int i = 0; i < edificios.Count; i++)
+                {
+                    lista.Add($"{i}: {edificios[i].GetType().Name}");
+                }
+
+                await ReplyAsync($"Tus edificios:\n{string.Join("\n", lista)}");
+            }
+        }
+        catch (Exception ex)
+        {
+            await ReplyAsync($"Error al listar edificios: {ex.Message}");
         }
     }
 }

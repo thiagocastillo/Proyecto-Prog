@@ -11,7 +11,14 @@ public class AtacarUnidadCommand : ModuleBase<SocketCommandContext>
 
     public async Task ExecuteAsync(string nombreJugadorAtacante, int idUnidadAtacante, string nombreJugadorObjetivo, int idUnidadObjetivo)
     {
-        string resultado = _fachada.AtacarUnidad(nombreJugadorAtacante, idUnidadAtacante, nombreJugadorObjetivo, idUnidadObjetivo);
-        await ReplyAsync(resultado);
+        try
+        {
+            string resultado = _fachada.AtacarUnidad(nombreJugadorAtacante, idUnidadAtacante, nombreJugadorObjetivo, idUnidadObjetivo);
+            await ReplyAsync(resultado);
+        }
+        catch (Exception ex)
+        {
+            await ReplyAsync(ex.Message);
+        }
     }
 }
