@@ -1,39 +1,36 @@
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-using System.Linq; //..
+using System.Linq;
+using Library.Domain;
 
 namespace Library.Services;
 
 /// <summary>
 /// Esta clase implementa el bot de Discord.
 /// </summary>
-
-
 public class Bot : IBot
 {
+    private readonly JuegoFachada _fachada;
     private IServiceProvider? serviceProvider;
     private readonly ILogger<Bot> logger;
     private readonly IConfiguration configuration;
     private readonly DiscordSocketClient client;
     private readonly CommandService commands;
-    
-    public Bot(ILogger<Bot> logger, IConfiguration configuration)
+    private System.Threading.Timer? updateTimer;
+
+    public Bot(ILogger<Bot> logger, IConfiguration configuration, JuegoFachada fachada)
     {
         this.logger = logger;
         this.configuration = configuration;
-
+        this._fachada = fachada;
         DiscordSocketConfig config = new()
         {
             AlwaysDownloadUsers = true,
-            GatewayIntents = 
-                GatewayIntents.AllUnprivileged
-                | GatewayIntents.MessageContent/*
-                | GatewayIntents.GuildMembers*/
+            GatewayIntents = GatewayIntents.AllUnprivileged | GatewayIntents.MessageContent
         };
 
         client = new DiscordSocketClient(config);
@@ -49,15 +46,28 @@ public class Bot : IBot
         serviceProvider = services;
 
         await commands.AddModulesAsync(Assembly.GetExecutingAssembly(), serviceProvider);
-
+        updateTimer = new System.Threading.Timer(_ =>
+        {
+            logger.LogInformation("Timer ejecutado");
+            var jugadores = _fachada.ObtenerJugadores();
+            if (jugadores == null)
+            {
+                logger.LogWarning("La lista de jugadores es null.");
+                return;
+            }
+            foreach (var jugador in jugadores)
+            {
+                jugador.ActualizarConstrucciones();
+            }
+        }, null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
         await client.LoginAsync(TokenType.Bot, discordToken);
         await client.StartAsync();
 
         client.MessageReceived += HandleCommandAsync;
-        client.Ready += OnReadyAsync; //...
+        client.Ready += OnReadyAsync;
     }
 
-    private async Task OnReadyAsync() //...
+    private async Task OnReadyAsync()
     {
         string mensaje = "Bienvenido al juego de estrategia en tiempo real. Ejecute el comando '!ayuda' para ver la lista de comandos disponibles.";
 
@@ -73,7 +83,6 @@ public class Bot : IBot
         }
     }
 
-
     public async Task StopAsync()
     {
         logger.LogInformation("Finalizando");
@@ -87,11 +96,10 @@ public class Bot : IBot
         {
             return;
         }
-        
+
         int position = 0;
         bool messageIsCommand = message.HasCharPrefix('!', ref position);
 
-        
         if (messageIsCommand)
         {
             SocketCommandContext context = new SocketCommandContext(client, message);

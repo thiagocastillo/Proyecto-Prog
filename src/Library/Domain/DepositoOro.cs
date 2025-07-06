@@ -16,7 +16,7 @@ public class DepositoOro : IAlmacenamiento , IEdificio
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
     // Objeto que gestiona el tiempo de construcción
-    private TiempoConstruccion tiempoconstruccion;
+    private TiempoDeGeneracion tiempoconstruccion;
 
     // Tiempo total de construcción en segundos
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotalSegundos;
@@ -30,7 +30,7 @@ public class DepositoOro : IAlmacenamiento , IEdificio
     {
         Propietario = propietario;
         Vida = 5000;
-        tiempoconstruccion = new TiempoConstruccion(3); // 3 segundos para construir
+        tiempoconstruccion = new TiempoDeGeneracion(3); // 3 segundos para construir
     }
 
     // Calcula la eficiencia según la distancia

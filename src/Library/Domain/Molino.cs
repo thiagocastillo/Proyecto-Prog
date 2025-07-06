@@ -17,7 +17,7 @@ public class Molino : IAlmacenamiento ,IEdificio
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
     // Objeto que gestiona el tiempo de construcción del molino
-    private TiempoConstruccion tiempoconstruccion;
+    private TiempoDeGeneracion tiempoconstruccion;
 
     // Tiempo total de construcción en segundos
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotalSegundos;
@@ -31,7 +31,7 @@ public class Molino : IAlmacenamiento ,IEdificio
     {
         Propietario = propietario;
         Vida = 10000;
-        tiempoconstruccion = new TiempoConstruccion(40); // 40 segundos para construir
+        tiempoconstruccion = new TiempoDeGeneracion(40); // 40 segundos para construir
     }
     
     // Calcula la eficiencia del molino según la distancia al recurso

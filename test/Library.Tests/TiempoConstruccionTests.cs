@@ -11,7 +11,7 @@ public class TiempoConstruccionTests
     public void Constructor_AlInicializar_TiempoTotalEsCorrecto()
     {
         int tiempo = 5;
-        var tiempoConstruccion = new TiempoConstruccion(tiempo);
+        var tiempoConstruccion = new TiempoDeGeneracion(tiempo);
 
         Assert.That(tiempoConstruccion.TiempoTotalSegundos, Is.EqualTo(tiempo));
     }
@@ -20,7 +20,7 @@ public class TiempoConstruccionTests
     public void Fin_CalculadoCorrectamente()
     {
         int tiempo = 3;
-        var tiempoConstruccion = new TiempoConstruccion(tiempo);
+        var tiempoConstruccion = new TiempoDeGeneracion(tiempo);
 
         var esperado = tiempoConstruccion.Inicio.AddSeconds(tiempo);
 
@@ -30,7 +30,7 @@ public class TiempoConstruccionTests
     [Test]
     public void TiempoRestante_DisminuyeConElTiempo()
     {
-        var tiempoConstruccion = new TiempoConstruccion(3);
+        var tiempoConstruccion = new TiempoDeGeneracion(3);
 
         int restanteInicial = tiempoConstruccion.TiempoRestanteSegundos;
 
@@ -44,7 +44,7 @@ public class TiempoConstruccionTests
     [Test]
     public void EstaCompleta_DevuelveTrue_DespuesDeTiempo()
     {
-        var tiempoConstruccion = new TiempoConstruccion(1); // 1 segundo
+        var tiempoConstruccion = new TiempoDeGeneracion(1); // 1 segundo
 
         Thread.Sleep(1500); // Esperar 1.5 segundos
 
@@ -54,7 +54,7 @@ public class TiempoConstruccionTests
     [Test]
     public void EstaCompleta_DevuelveFalse_SiAunNoPasoElTiempo()
     {
-        var tiempoConstruccion = new TiempoConstruccion(2); // 2 segundos
+        var tiempoConstruccion = new TiempoDeGeneracion(2); // 2 segundos
 
         Thread.Sleep(500); // Esperar medio segundo
 
@@ -64,7 +64,7 @@ public class TiempoConstruccionTests
     [Test]
     public void TiempoRestante_CuandoCompletado_EsCero()
     {
-        var tiempoConstruccion = new TiempoConstruccion(1); // 1 segundo
+        var tiempoConstruccion = new TiempoDeGeneracion(1); // 1 segundo
 
         Thread.Sleep(1100); // Esperar un poco más de 1 segundo
 

@@ -2,7 +2,7 @@
 
 namespace Library.Domain;
 
-public class TiempoConstruccion
+public class TiempoDeGeneracion
 {
     // Tiempo total de construcción en segundos
     public int TiempoTotalSegundos { get; private set; }
@@ -27,7 +27,7 @@ public class TiempoConstruccion
     public bool EstaCompleta => DateTime.Now >= Fin;
 
     // Inicializa el tiempo de construcción con un valor en segundos
-    public TiempoConstruccion(int tiempoEnSegundos)
+    public TiempoDeGeneracion(int tiempoEnSegundos)
     {
         TiempoTotalSegundos = tiempoEnSegundos;
         Inicio = DateTime.Now;

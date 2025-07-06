@@ -1,12 +1,14 @@
 namespace Library.Domain;
 
-public class Granja : IAlmacenamiento ,IEdificio
+public class Granja : IAlmacenamiento, IEdificio
 {
     public Jugador Propietario { get; private set; }  //Granja del jugador
     public Point Posicion { get; set; }  //Ubicacion de la granja
     public int CapacidadMaxima { get; private set; } = 500; //Maxima capacidad
     public int Vida { get; set; } //Vida
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();  //Mapea el nombre del recurso
+
+    public int TiempoConstruccionTotal { get; } = 20; // Tiempo de construcción en segundos
 
     public Granja(Jugador propietario)  //Metodo constructor
     {

@@ -13,7 +13,7 @@ public class Cuartel : IEdificio
     public int Vida { get; set; }
 
     // Objeto que gestiona el tiempo de construcción
-    private TiempoConstruccion tiempoconstruccion;
+    private TiempoDeGeneracion tiempoconstruccion;
 
     // Tiempo total de construcción en segundos
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotalSegundos;
@@ -27,6 +27,6 @@ public class Cuartel : IEdificio
     {
         Propietario = propietario;
         Vida = 10000;
-        tiempoconstruccion = new TiempoConstruccion(60); // 60 segundos para construir
+        tiempoconstruccion = new TiempoDeGeneracion(60); // 60 segundos para construir
     }
 }

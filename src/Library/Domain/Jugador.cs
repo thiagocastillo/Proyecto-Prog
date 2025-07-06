@@ -16,6 +16,7 @@ public class Jugador
     // Datos principales del jugador
     public string Nombre { get; set; }
     public Civilizacion Civilizacion { get; set; }
+    public List<IEdificio> EdificiosEnConstruccion { get; set; } = new();
     // Edificio principal del jugador
     public CentroCivico CentroCivico { get; set; }
     // Lista de aldeanos del jugador
@@ -160,7 +161,31 @@ public class Jugador
         return $"Población: {PoblacionActual}/{PoblacionMaxima}";
     }
 
-    // Indica si se puede crear un nuevo aldeano
+    public string ActualizarConstrucciones()
+    {   
+        Console.WriteLine($"Actualizando construcciones de {Nombre}");
+        var mensajes = new List<string>();
+        var terminados = EdificiosEnConstruccion
+            .Where(e =>
+                (e is Casa casa && casa.EstaConstruido) ||
+                (e is Cuartel cuartel && cuartel.EstaConstruido) ||
+                (e is Molino molino && molino.EstaConstruido) ||
+                (e is DepositoMadera dm && dm.EstaConstruido) ||
+                (e is DepositoOro doo && doo.EstaConstruido) ||
+                (e is DepositoPiedra dp && dp.EstaConstruido)
+            )
+            .ToList();
+
+        foreach (var edificio in terminados)
+        {
+            Edificios.Add(edificio);
+            EdificiosEnConstruccion.Remove(edificio);
+            mensajes.Add($"El edificio {edificio.GetType().Name} en {edificio.Posicion} ha sido construido para el jugador {Nombre}.");
+        }
+
+        return string.Join("\n", mensajes);
+    }
+
     public bool PuedeCrearAldeano()
     {
         int cantidadCentroCivico = Edificios.Count(e => e is CentroCivico);

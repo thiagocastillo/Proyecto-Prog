@@ -17,7 +17,7 @@ public class DepositoMadera : IAlmacenamiento ,IEdificio
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
     // Objeto que gestiona el tiempo de construcción
-    private TiempoConstruccion tiempoconstruccion;
+    private TiempoDeGeneracion tiempoconstruccion;
 
     // Tiempo total de construcción en segundos
     public int TiempoConstruccionTotal => tiempoconstruccion.TiempoTotalSegundos;
@@ -26,12 +26,12 @@ public class DepositoMadera : IAlmacenamiento ,IEdificio
     // Indica si el depósito ya está construido
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
 
-    // Constructor: inicializa el depósito y su tiempo de construcción (3 segundos)
+    // Constructor: inicializa el depósito y su tiempo de construcción (30 segundos)
     public DepositoMadera(Jugador propietario)
     {
         Propietario = propietario;
         Vida = 5000;
-        tiempoconstruccion = new TiempoConstruccion(30); // 30 segundos para construir
+        tiempoconstruccion = new TiempoDeGeneracion(30); // 30 segundos para construir
     }
 
     // Calcula la eficiencia según la distancia
