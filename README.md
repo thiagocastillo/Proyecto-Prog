@@ -324,3 +324,6 @@ Estas son algunas de las paginas que utilice para expandir mi conocimiento:
 - https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop => Microsoft Learn
 - https://www.freecodecamp.org/news/how-to-use-oop-in-c-sharp/ => freeCodeCamp
 - https://learn.microsoft.com/en-us/dotnet/csharp/ => Microsoft Learn
+
+Nicolas: Durante el proyecto, creo que fui mejorando mi entendimiento del lenguaje de programacion C# y lograr entender como las clases intereactuaban entre ellas. Pero con ver ejemplos y releer las lecturas donde estaban ejemplos de los conceptos que tenia que implementar para lograr el objetivo. Tambien, con ayuda de compañeros con conocimiento previo en el lenguaje y por buscar soluciones por mi cuenta hasta lograr entender mis dificultades, pude entender mas este lenguaje y entender la logica de la programacion orientada a objetos. 
+Ademas de poder entender mas la programacion orientada a objetos, tambien pude mejorar mi manera de trabajar en equipo gracias a mis compañeros que me han ayudado a mejorar.
