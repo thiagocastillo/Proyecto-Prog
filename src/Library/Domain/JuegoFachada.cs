@@ -496,15 +496,17 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
         }
 
         string ruta = Path.Combine(carpeta, $"Partida_{nombreArchivo}.json");
-        string json = JsonSerializer.Serialize(_partidaActual, new JsonSerializerOptions
+        var opciones = new JsonSerializerOptions
         {
             WriteIndented = true,
-            ReferenceHandler = ReferenceHandler.Preserve
-        });
+            ReferenceHandler = ReferenceHandler.Preserve,
+            IncludeFields = true // Incluye campos públicos si los hay
+        };
+
+        string json = JsonSerializer.Serialize(_partidaActual, opciones);
 
         File.WriteAllText(ruta, json);
     }
-
 
     public void CargarPartida(string nombreArchivo)
     {
@@ -515,7 +517,12 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
             throw new FileNotFoundException($"No se encontró la partida '{nombreArchivo}'.");
 
         string contenido = File.ReadAllText(ruta);
-        Partida partida = JsonSerializer.Deserialize<Partida>(contenido);
+        var opciones = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve,
+            IncludeFields = true
+        };
+        Partida partida = JsonSerializer.Deserialize<Partida>(contenido, opciones);
         _partidaActual = partida;
     }
 

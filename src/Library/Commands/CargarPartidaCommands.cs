@@ -8,13 +8,13 @@ public class CargarPartidaCommand : ModuleBase<SocketCommandContext>
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
     [Command("cargarpartida")]
-    [Summary("Carga la partida desde la ruta especificada.")]
-    public async Task ExecuteAsync(string rutaArchivo = "partida.json")
+    [Summary("Carga la partida guardada con el nombre especificado (sin extensión).")]
+    public async Task ExecuteAsync(string nombreArchivo = "partida")
     {
         try
         {
-            _fachada.CargarPartida(rutaArchivo);
-            await ReplyAsync($"Partida cargada desde `{rutaArchivo}`.");
+            _fachada.CargarPartida(nombreArchivo);
+            await ReplyAsync($"Partida cargada desde `{nombreArchivo}`.");
         }
         catch (Exception ex)
         {
