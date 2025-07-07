@@ -32,6 +32,9 @@ public class AyudaCommand : ModuleBase<SocketCommandContext>
         - Muestra este menú de ayuda:                      !Ayuda
         - Ver edificios disponibles y sus costos:          !AyudaEdificios
         - Ver unidades disponibles y sus costos:           !AyudaUnidades
+        - Guardar Partida:                                 !GuardarPartida <nombrePartida>
+        - Cargar Partida:                                  !CargarPartida <nombrePartida>
+        - Listar Partidas:                                 !ListarPartidas
         - Salir del juego:                                 !Salir o !Exit");
     }
 }
