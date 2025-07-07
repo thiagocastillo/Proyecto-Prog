@@ -1,7 +1,8 @@
 namespace Library.Domain;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Text.Json;
+using System.IO;
 // Fachada principal para gestionar la lógica del juego y exponer operaciones de alto nivel
 public class JuegoFachada
 {
@@ -482,6 +483,33 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
         Jugador jugador = _partidaActual?.Jugadores.FirstOrDefault(j => j.Nombre == nombreJugador);
         
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
+    }
+   
+
+    public void GuardarPartida(string rutaArchivo)
+    {
+        if (_partidaActual == null)
+            throw new InvalidOperationException("No hay partida activa para guardar.");
+
+        var opciones = new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            IncludeFields = true // Si usas campos públicos
+        };
+        string json = JsonSerializer.Serialize(_partidaActual, opciones);
+        File.WriteAllText(rutaArchivo, json);
+    }
+
+    public void CargarPartida(string rutaArchivo)
+    {
+        if (!File.Exists(rutaArchivo))
+            throw new FileNotFoundException("No se encontró el archivo de partida guardada.");
+
+        var opciones = new JsonSerializerOptions
+        {
+            IncludeFields = true
+        };
+        _partidaActual = JsonSerializer.Deserialize<Partida>(File.ReadAllText(rutaArchivo), opciones);
     }
  
 }
