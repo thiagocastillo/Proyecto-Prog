@@ -448,6 +448,8 @@ public class JuegoFachada
                 {
                     resultado += $"\n¡{jugadoresConCC[0].Nombre} ganó la partida! Muchas gracias por jugar.";
                     //_partidaActual = null; // Termina la partida
+                    Environment.Exit(0); // Termina el proceso del bot
+
                 }
             }
             return resultado;
