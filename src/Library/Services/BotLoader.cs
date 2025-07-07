@@ -2,6 +2,7 @@ using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Library.Domain;
 
 namespace Library.Services;
 
@@ -16,7 +17,6 @@ public static class BotLoader
         var configuration = new ConfigurationBuilder()
             .AddUserSecrets(Assembly.GetExecutingAssembly())
             .Build();
-        
 
         var serviceProvider = new ServiceCollection()
             .AddLogging(options =>
@@ -25,6 +25,7 @@ public static class BotLoader
                 options.AddConsole();
             })
             .AddSingleton<IConfiguration>(configuration)
+            .AddSingleton<JuegoFachada>(JuegoFachada.Instancia)
             .AddScoped<IBot, Bot>()
             .BuildServiceProvider();
 
@@ -41,10 +42,10 @@ public static class BotLoader
                 var keyInfo = Console.ReadKey();
 
                 if (keyInfo.Key != ConsoleKey.Q) continue;
-                
+
                 Console.WriteLine("\nFinalizado");
                 await bot.StopAsync();
-                
+
                 return;
             } while (true);
         }

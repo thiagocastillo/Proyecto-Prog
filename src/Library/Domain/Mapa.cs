@@ -1,30 +1,27 @@
+// src/Library/Domain/Mapa.cs
 namespace Library.Domain;
 using System.IO;
 using System.Diagnostics;
+using System.Linq;
+using System.Collections.Generic;
+using System.Text;
 
 // Clase que representa el mapa del juego
 public class Mapa
 {
-    // Ancho del mapa (número de columnas)
     public int Ancho { get; private set; } = 100;
-    // Alto del mapa (número de filas)
     public int Alto { get; private set; } = 100;
-    // Lista de recursos naturales presentes en el mapa
     public List<RecursoNatural> Recursos { get; set; } = new List<RecursoNatural>();
-    // Generador de números aleatorios para posiciones y recursos
     private static Random random = new Random();
 
-    // Constructor: genera recursos aleatorios al crear el mapa
     public Mapa()
     {
         GenerarRecursosAleatorios(50, 200);
     }
 
-    // Devuelve todas las unidades en una coordenada específica
     public List<IUnidad> ObtenerUnidadesEn(Point coordenada, List<Jugador> jugadores)
     {
         List<IUnidad> unidades = new List<IUnidad>();
-        
         foreach (var jugador in jugadores)
         {
             if (jugador?.Unidades == null) continue;
@@ -33,7 +30,6 @@ public class Mapa
         return unidades;
     }
 
-    // Devuelve todos los edificios en una coordenada específica
     public List<IEdificio> ObtenerEdificiosEn(Point coordenada, List<Jugador> jugadores)
     {
         List<IEdificio> edificios = new List<IEdificio>();
@@ -45,30 +41,28 @@ public class Mapa
         return edificios;
     }
 
-    // Genera recursos naturales aleatorios en el mapa
     public void GenerarRecursosAleatorios(int min, int max)
     {
         Recursos.Clear();
         int cantidad = random.Next(min, max + 1);
         var posicionesOcupadas = new HashSet<(int, int)>();
 
-        // Asegura que haya al menos 5 árboles
+        // Al menos 5 árboles
         for (int i = 0; i < 5; i++)
         {
             int x, y;
-            
             do
             {
                 x = random.Next(0, Ancho);
                 y = random.Next(0, Alto);
-            } 
+            }
             while (!posicionesOcupadas.Add((x, y)));
 
             int vidaBase = random.Next(80, 151);
             Recursos.Add(new Arbol(vidaBase, new Point(x, y)));
         }
 
-        // Genera el resto de los recursos aleatoriamente
+        // Resto de recursos
         for (int i = 5; i < cantidad; i++)
         {
             int x, y;
@@ -76,14 +70,13 @@ public class Mapa
             {
                 x = random.Next(0, Ancho);
                 y = random.Next(0, Alto);
-            } 
+            }
             while (!posicionesOcupadas.Add((x, y)));
 
             int vidaBase = random.Next(80, 151);
             Point ubicacion = new Point(x, y);
 
             int tipo = random.Next(0, 3);
-            
             RecursoNatural recurso = tipo switch
             {
                 0 => new Arbol(vidaBase, ubicacion),
@@ -94,24 +87,19 @@ public class Mapa
         }
     }
 
-    // Muestra el mapa en un archivo de texto, representando recursos, unidades y edificios
-    public string MostrarMapa(List<Jugador> jugadores)
-    {
-        // Matriz de caracteres para representar el mapa
+    public string MostrarMapaTXT(List<Jugador> jugadores)
+    { 
+        
         char[,] grid = new char[Alto, Ancho];
-
-        // Inicializa el mapa vacío con puntos
         for (int y = 0; y < Alto; y++)
             for (int x = 0; x < Ancho; x++)
                 grid[y, x] = '.';
 
-        // Coloca los recursos en el mapa
         foreach (var recurso in Recursos)
         {
             if (recurso?.Ubicacion == null) continue;
             int x = recurso.Ubicacion.X;
             int y = recurso.Ubicacion.Y;
-            
             if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
             {
                 char simbolo = recurso switch
@@ -125,12 +113,9 @@ public class Mapa
             }
         }
 
-        // Coloca los edificios y unidades de cada jugador en el mapa
         foreach (var jugador in jugadores)
         {
             if (jugador == null) continue;
-
-            // Edificios
             if (jugador.Edificios != null)
             {
                 foreach (var edificio in jugador.Edificios)
@@ -138,7 +123,6 @@ public class Mapa
                     if (edificio?.Posicion == null) continue;
                     int x = edificio.Posicion.X;
                     int y = edificio.Posicion.Y;
-                    
                     if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
                     {
                         grid[y, x] = edificio switch
@@ -150,8 +134,6 @@ public class Mapa
                     }
                 }
             }
-
-            // Unidades
             if (jugador.Unidades != null)
             {
                 foreach (var unidad in jugador.Unidades)
@@ -159,7 +141,6 @@ public class Mapa
                     if (unidad?.Posicion == null) continue;
                     int x = unidad.Posicion.X;
                     int y = unidad.Posicion.Y;
-                    
                     if (x >= 0 && x < Ancho && y >= 0 && y < Alto)
                     {
                         grid[y, x] = unidad switch
@@ -177,17 +158,12 @@ public class Mapa
             }
         }
 
-        // Construye el string del mapa con coordenadas
-        var sb = new System.Text.StringBuilder();
-
-        // Encabezado de columnas
+        var sb = new StringBuilder();
         sb.Append("    ");
-        
         for (int x = 0; x < Ancho; x++)
             sb.Append(x.ToString("D2") + " ");
         sb.AppendLine();
 
-        // Filas del mapa
         for (int y = 0; y < Alto; y++)
         {
             sb.Append(y.ToString("D2") + "  ");
@@ -196,11 +172,104 @@ public class Mapa
             sb.AppendLine();
         }
 
-        // Guarda el mapa en un archivo de texto y lo abre con el Bloc de notas
         string ruta = "mapa.txt";
         File.WriteAllText(ruta, sb.ToString());
         Process.Start(new ProcessStartInfo("notepad.exe", ruta) { UseShellExecute = true });
 
         return "Abriendo Mapa en el Bloc de notas...";
+    }
+
+    public string MostrarMapaHtml(List<Jugador> jugadores)
+    {
+   
+        var coloresJugadores = new[] { "#FF0000", "#0000FF" };
+        var colorArbol = "#228B22";
+        var colorPiedra = "#A9A9A9";
+        var colorOro = "#FFD700";
+        var colorVacio = "#FFFFFF";
+
+        var sb = new StringBuilder();
+        sb.AppendLine("<html><head><meta charset='UTF-8'><title>Mapa</title></head><body>");
+        sb.AppendLine("<table border='1' cellspacing='0' cellpadding='2' style='font-family:monospace;font-size:10px;border-collapse:collapse;'>");
+
+        sb.Append("<tr><td></td>");
+        for (int x = 0; x < Ancho; x++)
+            sb.Append($"<td style='background:#eee'>{x:D2}</td>");
+        sb.AppendLine("</tr>");
+
+        for (int y = 0; y < Alto; y++)
+        {
+            sb.Append($"<tr><td style='background:#eee'>{y:D2}</td>");
+            for (int x = 0; x < Ancho; x++)
+            {
+                string color = colorVacio;
+                string contenido = "&nbsp;";
+
+                var recurso = Recursos.FirstOrDefault(r => r.Ubicacion.X == x && r.Ubicacion.Y == y);
+                if (recurso != null)
+                {
+                    if (recurso is Arbol)
+                    {
+                        color = colorArbol;
+                        contenido = "T";
+                    }
+                    else if (recurso is Piedra)
+                    {
+                        color = colorPiedra;
+                        contenido = "#";
+                    }
+                    else if (recurso is Oro)
+                    {
+                        color = colorOro;
+                        contenido = "$";
+                    }
+                }
+
+                for (int j = 0; j < jugadores.Count; j++)
+                {
+                    var jugador = jugadores[j];
+                    var colorJugador = coloresJugadores[j % coloresJugadores.Length];
+                    
+                    var edificio = jugador.Edificios?.FirstOrDefault(e => e.Posicion.X == x && e.Posicion.Y == y);
+                    if (edificio != null)
+                    {
+                        color = colorJugador;
+                        contenido = edificio switch
+                        {
+                            CentroCivico => "C",
+                            Granja => "G",
+                            _ => "X"
+                        };
+                    }
+
+                    var unidad = jugador.Unidades?.FirstOrDefault(u => u.Posicion.X == x && u.Posicion.Y == y);
+                    if (unidad != null)
+                    {
+                        color = colorJugador;
+                        contenido = unidad switch
+                        {
+                            Aldeano => "A",
+                            Arquero => "Æ",
+                            Caballeria => "©",
+                            Ratha => "®",
+                            GuerreroJaguar => "J",
+                            Infanteria => "I",
+                            _ => "?"
+                        };
+                    }
+                }
+
+                sb.Append($"<td style='width:12px;height:12px;background:{color};text-align:center'>{contenido}</td>");
+            }
+            sb.AppendLine("</tr>");
+        }
+
+        sb.AppendLine("</table></body></html>");
+
+        string ruta = "mapa.html";
+        File.WriteAllText(ruta, sb.ToString());
+        Process.Start(new ProcessStartInfo(ruta) { UseShellExecute = true });
+
+        return "Mapa abierto en el navegador.";
     }
 }

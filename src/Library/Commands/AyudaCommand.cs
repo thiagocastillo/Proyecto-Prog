@@ -14,7 +14,8 @@ public class AyudaCommand : ModuleBase<SocketCommandContext>
         await ReplyAsync(@"Comandos disponibles:
 
         - Crear una nueva partida:                         !CrearPartida
-        - Mostrar el mapa del juego:                       !MostrarMapa
+        - Mostrar el mapa del juego en TXT:                !MostrarMapaTXT
+        - Mostrar el mapa del juego en html:               !MostrarMapaHTML
         - Ver civilizaciones disponibles:                  !VerCivilizaciones
         - Agregar un jugador a la partida:                 !AgregarJugador <nombreJugador> <civilización>
         - Construir un edificio:                           !ConstruirEdificio <nombreJugador> <tipo> <x> <y>

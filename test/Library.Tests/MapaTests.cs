@@ -47,11 +47,19 @@ namespace Library.Domain.Tests
         }
 
         [Test]
-        public void MostrarMapa_DevuelveMensajeCorrecto()
+        public void MostrarMapatxt_DevuelveMensajeCorrecto()
         {
             var mapa = new Mapa();
-            var resultado = mapa.MostrarMapa(new List<Jugador>());
+            var resultado = mapa.MostrarMapaTXT(new List<Jugador>());
             Assert.AreEqual("Abriendo Mapa en el Bloc de notas...", resultado);
+            Assert.IsTrue(System.IO.File.Exists("mapa.txt"));
+        }
+        [Test]
+        public void MostrarMapahtml_DevuelveMensajeCorrecto()
+        {
+            var mapa = new Mapa();
+            var resultado = mapa.MostrarMapaHtml(new List<Jugador>());
+            Assert.AreEqual("Mapa abierto en el navegador.", resultado);
             Assert.IsTrue(System.IO.File.Exists("mapa.txt"));
         }
     }

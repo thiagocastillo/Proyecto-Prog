@@ -25,25 +25,45 @@ public class ConstruirEdificioCommand : ModuleBase<SocketCommandContext>
 
         try
         {
-            _fachada.ConstruirEdificio(nombreJugador, tipoEdificio, new Point(x.Value, y.Value));
+            int tiempoConstruccion = tipoEdificio.ToLower() switch
+            {
+                "casa" => 15,
+                "cuartel" => 60,
+                "molino" => 40,
+                "depositomadera" => 30,
+                "depositpiedra" => 30,
+                "depositooro" => 30,
+                _ => throw new ArgumentException("Tipo de edificio no válido.")
+            };
+
+            _fachada.ConstruirEdificio(
+                nombreJugador,
+                tipoEdificio,
+                new Library.Domain.Point(x.Value, y.Value)
+            );
+
+            await ReplyAsync($"Construcción de {tipoEdificio} en proceso en ({x}, {y}) para el jugador '{nombreJugador}', tiempo de demora {tiempoConstruccion} segundos.");
             Dictionary<string, int> recursos = _fachada.ObtenerRecursosJugador(nombreJugador);
-
-            string mensaje = $"Edificio '{tipoEdificio}' contruido en ({x}, {y}) para el jugador '{nombreJugador}'";
-
-            // Umbral de alerta
             int umbralAlerta = 50;
             List<string> alertas = new();
 
-            foreach (KeyValuePair<string, int> recurso in recursos)
+            foreach (var recurso in recursos)
             {
                 if (recurso.Value <= umbralAlerta)
                     alertas.Add($"¡Atención! Te quedan solo {recurso.Value} de {recurso.Key}.");
             }
 
             if (alertas.Count > 0)
-                mensaje += "\n" + string.Join("\n", alertas);
+                await ReplyAsync(string.Join("\n", alertas));
+            // Lanza la tarea en segundo plano
+            _ = Task.Run(async () =>
+            {
+                await Task.Delay(tiempoConstruccion * 1000);
 
-            await ReplyAsync(mensaje);
+                await ReplyAsync($"El edificio {tipoEdificio} en ({x}, {y}) ha sido construido para el jugador {nombreJugador}.");
+
+               
+            });
         }
         catch (Exception ex)
         {

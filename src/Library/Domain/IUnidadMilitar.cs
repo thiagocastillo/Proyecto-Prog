@@ -2,9 +2,8 @@ namespace Library.Domain;
 
 public interface IUnidadMilitar : IUnidad
 {
+    TiempoDeGeneracion TiempoGeneracion { get; }
     int TiempoDeCreacion { get; }
-    public string AtacarEdificio(IEdificio objetivo);
-
-    public string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa,
-        List<Jugador> jugadores);
+    string AtacarEdificio(IEdificio objetivo);
+    string AtacarUnidad(Jugador atacante, string tipoUnidad, int cantidad, Point coordenada, Mapa mapa, List<Jugador> jugadores);
 }
