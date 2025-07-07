@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace Library.Domain;
 
@@ -32,6 +33,7 @@ public class Jugador
     // NUEVO: Unidades militares en entrenamiento
     public List<IUnidadMilitar> UnidadesEnEntrenamiento { get; set; } = new List<IUnidadMilitar>();
 
+    [JsonConstructor]
     public Jugador(string nombre, Civilizacion civilizacion)
     {
         Nombre = nombre;
