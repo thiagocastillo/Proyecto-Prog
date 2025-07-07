@@ -27,6 +27,10 @@ public class TiempoDeGeneracion
     public bool EstaCompleta => DateTime.Now >= Fin;
 
     // Inicializa el tiempo de construcción con un valor en segundos
+    public TiempoDeGeneracion()
+    {
+        
+    }
     public TiempoDeGeneracion(int tiempoEnSegundos)
     {
         TiempoTotalSegundos = tiempoEnSegundos;

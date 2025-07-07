@@ -10,6 +10,10 @@ public class Granja : IAlmacenamiento, IEdificio
 
     public int TiempoConstruccionTotal { get; } = 20; // Tiempo de construcción en segundos
 
+    public Granja()
+    {
+        
+    }
     public Granja(Jugador propietario)  //Metodo constructor
     {
         Propietario = propietario;

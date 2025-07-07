@@ -10,6 +10,7 @@ public class Civilizacion
     public string UnidadEspecial { get; set; }
 
     // Constructor que define los datos de una civilizacion
+   
     public Civilizacion(string nombre, List<string> bonificaciones, string unidadEspecial)
     {
         Nombre = nombre;

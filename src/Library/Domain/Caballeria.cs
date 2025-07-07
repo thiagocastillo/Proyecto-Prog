@@ -15,6 +15,10 @@ public class Caballeria : IUnidadMilitar
     // Implementación requerida por la interfaz
     public int TiempoDeCreacion => TiempoGeneracion.TiempoTotalSegundos;
 
+    public Caballeria()
+    {
+        
+    }
     public Caballeria(Jugador propietario)
     {
         Propietario = propietario;

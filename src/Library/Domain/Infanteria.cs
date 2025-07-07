@@ -15,6 +15,10 @@ public class Infanteria : IUnidadMilitar
     // Implementación requerida por la interfaz
     public int TiempoDeCreacion => TiempoGeneracion.TiempoTotalSegundos;
 
+    public Infanteria()
+    {
+        
+    }
     public Infanteria(Jugador propietario)
     {
         Propietario = propietario;
