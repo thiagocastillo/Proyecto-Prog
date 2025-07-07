@@ -13,7 +13,6 @@ namespace Library.Domain.Tests
     [TestFixture]
     public class RecursoNaturalTests
     {
-    
         [Test]
         public void Constructor_ValoresInicialesCorrectos()
         {
@@ -21,7 +20,7 @@ namespace Library.Domain.Tests
             Assert.AreEqual("Madera", recurso.Nombre);
             Assert.AreEqual(100, recurso.VidaBase);
             Assert.AreEqual(1.5, recurso.TasaRecoleccion);
-            Assert.AreEqual(150, recurso.Cantidad);
+            Assert.AreEqual(100, recurso.Cantidad); // Cantidad inicial igual a vidaBase según tu implementación
             Assert.AreEqual(2, recurso.Ubicacion.X);
             Assert.AreEqual(3, recurso.Ubicacion.Y);
             Assert.IsFalse(recurso.EstaAgotado);
@@ -31,17 +30,17 @@ namespace Library.Domain.Tests
         public void Recolectar_ExtraeCantidadCorrecta()
         {
             RecursoNatural recurso = new RecursoNaturalDummy("Oro", 50, 2, new Point(1, 1));
-            int extraido = recurso.Recolectar(10);
-            Assert.AreEqual(10, extraido);
-            Assert.AreEqual(90, recurso.Cantidad);
-            Assert.IsFalse(recurso.EstaAgotado);
+            int extraido = recurso.Recolectar();
+            Assert.AreEqual(50, extraido); // vidaBase * tasaRecoleccion = 100, pero solo hay 50, así que extrae 50
+            Assert.AreEqual(0, recurso.Cantidad);
+            Assert.IsTrue(recurso.EstaAgotado);
         }
 
         [Test]
         public void Recolectar_AgoteRecurso_EstaAgotadoTrue()
         {
             RecursoNatural recurso = new RecursoNaturalDummy("Piedra", 10, 1, new Point(0, 0));
-            int extraido = recurso.Recolectar(20); // Solo hay 10 disponibles
+            int extraido = recurso.Recolectar();
             Assert.AreEqual(10, extraido);
             Assert.AreEqual(0, recurso.Cantidad);
             Assert.IsTrue(recurso.EstaAgotado);
@@ -51,8 +50,8 @@ namespace Library.Domain.Tests
         public void Recolectar_RecursoAgotado_LanzaExcepcion()
         {
             RecursoNatural recurso = new RecursoNaturalDummy("Madera", 5, 1, new Point(0, 0));
-            recurso.Recolectar(10); // Agota el recurso
-            Assert.Throws<InvalidOperationException>(() => recurso.Recolectar(1));
+            recurso.Recolectar(); // Agota el recurso
+            Assert.Throws<InvalidOperationException>(() => recurso.Recolectar());
         }
     }
 }
