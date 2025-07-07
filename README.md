@@ -316,11 +316,16 @@ Por lo tanto, luego de escuchar y conversar sobre la devolución de nuestro doce
 
 # NOTAS Y ACLARACIONES DEL EQUIPO:
 
-Reflexion de equipo: (...)
+## Reflexion de equipo: (...)
 
-Tiago: Durante la entrega y el desarrollo del proyecto, senti que lo que mas me costaba y desafiaba mas era el entender como las clases iban a interactuar entre ellas para lograr el resultado esperado, ademas de otros varios desafios como aplicar los conceptos aprendidos durante el curso, en el proyecto. Tambien, ya que en Programación 2 trabajamos con C#, me costo acomodarme con el lenguaje ya que solo habia programado en Pascal y en Python, pero con ayuda de compañeros experimentados y varias repasadas al lenguaje, le logre agarrar la mano, y no solo eso, sino que aprendi mas alla del lenguaje basico de C#. 
+## Tiago: 
+Durante la entrega y el desarrollo del proyecto, senti que lo que mas me costaba y desafiaba mas era el entender como las clases iban a interactuar entre ellas para lograr el resultado esperado, ademas de otros varios desafios como aplicar los conceptos aprendidos durante el curso, en el proyecto. Tambien, ya que en Programación 2 trabajamos con C#, me costo acomodarme con el lenguaje ya que solo habia programado en Pascal y en Python, pero con ayuda de compañeros experimentados y varias repasadas al lenguaje, le logre agarrar la mano, y no solo eso, sino que aprendi mas alla del lenguaje basico de C#. 
 Durante el desarrollo del Proyecto, logre entender el lenguaje y la Programación Orientada a Objetos mas a fondo. Fui creciendo con algunas paginas web que voy a dejar al final de mi reflexion, y mirando la forma de programar y diferentes formas de encarar los problemas de mis compañeros experimentados, ya que considero que aprendo rapido mirando y observando a detalle como trabajan personas con cierta experiencia. Resumiendo, este Proyecto me ayudo mucho para expandir mi conocimiento, entender mejor, ver las capacidades y a hasta donde puede llegar la Programación.
 Estas son algunas de las paginas que utilice para expandir mi conocimiento: 
 - https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop => Microsoft Learn
 - https://www.freecodecamp.org/news/how-to-use-oop-in-c-sharp/ => freeCodeCamp
 - https://learn.microsoft.com/en-us/dotnet/csharp/ => Microsoft Learn
+
+## Nicolas: 
+Durante el proyecto, creo que fui mejorando mi entendimiento del lenguaje de programacion C# y lograr entender como las clases intereactuaban entre ellas. Pero con ver ejemplos y releer las lecturas donde estaban ejemplos de los conceptos que tenia que implementar para lograr el objetivo. Tambien, con ayuda de compañeros con conocimiento previo en el lenguaje y por buscar soluciones por mi cuenta hasta lograr entender mis dificultades, pude entender mas este lenguaje y entender la logica de la programacion orientada a objetos. 
+Ademas de poder entender mas la programacion orientada a objetos, tambien pude mejorar mi manera de trabajar en equipo gracias a mis compañeros que me han ayudado a mejorar.
