@@ -22,6 +22,10 @@ public class Casa : IEdificio
     public int TiempoConstruccionRestante
         => Math.Max(0, TiempoConstruccionTotal - (int)(DateTime.Now - InicioConstruccion).TotalSeconds);
 
+    public Casa()
+    {
+        
+    }
     public Casa(Jugador propietario)
     {
         Propietario = propietario;

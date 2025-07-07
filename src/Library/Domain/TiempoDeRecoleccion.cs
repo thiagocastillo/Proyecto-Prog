@@ -19,6 +19,10 @@ public class TiempoDeRecoleccion
 
     public bool EstaCompleta => DateTime.Now >= Fin;
 
+    public TiempoDeRecoleccion()
+    {
+        
+    }
     public TiempoDeRecoleccion(int tiempoEnSegundos)
     {
         TiempoTotalSegundos = tiempoEnSegundos;

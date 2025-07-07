@@ -10,6 +10,10 @@ public class ArqueroCompuesto : Arquero, IUnidadMilitar
 
     public new double Velocidad { get; protected set; } = 1.3; // Velocidad ligeramente mayor que el Arquero normal
 
+    public ArqueroCompuesto()
+    {
+        
+    }
     public ArqueroCompuesto(Jugador propietario) : base(propietario)
     {
         // Ajusta los valores base para el Arquero Compuesto

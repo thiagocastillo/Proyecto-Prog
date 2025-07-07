@@ -27,6 +27,10 @@ public class DepositoMadera : IAlmacenamiento ,IEdificio
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
 
     // Constructor: inicializa el depósito y su tiempo de construcción (30 segundos)
+    public DepositoMadera()
+    {
+        
+    }
     public DepositoMadera(Jugador propietario)
     {
         Propietario = propietario;
