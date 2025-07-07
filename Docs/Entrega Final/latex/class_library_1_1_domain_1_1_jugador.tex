@@ -1,0 +1,255 @@
+\doxysection{Library.\+Domain.\+Jugador Class Reference}
+\hypertarget{class_library_1_1_domain_1_1_jugador}{}\label{class_library_1_1_domain_1_1_jugador}\index{Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ad861504c2344dc2767a92c85dccbbfcb}{Jugador}} ()
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ad9cd25bbd6e6eb641b072bd97442ad3d}{Jugador}} (string nombre, \mbox{\hyperlink{class_library_1_1_domain_1_1_civilizacion}{Civilizacion}} civilizacion)
+\item 
+Dictionary$<$ string, int $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a6de46599bb127e6873fbd219503a91c7}{Obtener\+Resumen\+Recursos\+Totales}} ()
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a69e3454e2fb539c40cb94838b575909c}{Agregar\+Recurso}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_tipo_recurso}{ITipo\+Recurso}} tipo, int cantidad)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ac6922705c67d265619bacc4744c27f45}{Depositar\+Recursos}} (Dictionary$<$ string, int $>$ recursos\+Edificio)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a53326a09d5fa76e8d7636e43cc9dbe06}{Aumentar\+Poblacion\+Maxima}} (int incremento)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_adba4e484228faa71a5d96204319376cc}{Agregar\+Edificio}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} edificio)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a6f6ff730f8d3a156d84179581313c8d3}{Agregar\+Unidad}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} unidad)
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ae419b4d9654708ef0adb35f2107f8ff7}{Obtener\+Resumen\+Poblacion}} ()
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_af517cc8e5d94f71e68da39a7ed2e342b}{Actualizar\+Unidades}} ()
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a4e9911b2f53f10df6c482179953399f3}{Actualizar\+Construcciones}} ()
+\item 
+bool \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_aac38f144e1ee9899da9bc30c79bd93a6}{Puede\+Crear\+Aldeano}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a0bb7e0a73d6cb9b2073e195f936ca442}{Limite\+Aldeanos}} = 20
+\item 
+const int \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a0f6d239880e476854b2e9ab081062b6a}{Limite\+Militares}} = 30
+\item 
+static Random \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ad81d34d5d26a7c6085b648cf55f3056b}{random}} = new Random()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ad238fb952414c9be3022056c578a4fa6}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_civilizacion}{Civilizacion}} \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a8558756e5b8dfec2c13da258766ddf57}{Civilizacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a4e25a66c5191864a7e122a82c9ead809}{Edificios\+En\+Construccion}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_centro_civico}{Centro\+Civico}} \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a570ef013fb760e5e4f98c1a728827edd}{Centro\+Civico}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano}{Aldeano}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a5b2e8cbd75c7f5ae90c203b8aca45814}{Aldeanos}} = new List$<$\mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano}{Aldeano}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Dictionary$<$ string, int $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a9f1e78721bcdb9c2dbcb8d867122f487}{Recursos}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a46889af8cd34e967b521729ef0d84bf0}{Poblacion\+Actual}} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_a933286ed3dc226949e5be4401f28d805}{Poblacion\+Maxima}} = 5\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_ab0c6c719b17f604cd5eb33e6ff31eb4b}{Edificios}} = new List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_aff264013cb03a7b566268d7797984523}{Unidades}} = new List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar}{IUnidad\+Militar}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador_aa46e1a6741bf4d9064a444b24c7e02ac}{Unidades\+En\+Entrenamiento}} = new List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar}{IUnidad\+Militar}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ad861504c2344dc2767a92c85dccbbfcb}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ad861504c2344dc2767a92c85dccbbfcb} 
+Library.\+Domain.\+Jugador.\+Jugador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ad9cd25bbd6e6eb641b072bd97442ad3d}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ad9cd25bbd6e6eb641b072bd97442ad3d} 
+Library.\+Domain.\+Jugador.\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nombre}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_civilizacion}{Civilizacion}}}]{civilizacion}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a4e9911b2f53f10df6c482179953399f3}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!ActualizarConstrucciones@{ActualizarConstrucciones}}
+\index{ActualizarConstrucciones@{ActualizarConstrucciones}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{ActualizarConstrucciones()}{ActualizarConstrucciones()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a4e9911b2f53f10df6c482179953399f3} 
+string Library.\+Domain.\+Jugador.\+Actualizar\+Construcciones (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_af517cc8e5d94f71e68da39a7ed2e342b}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!ActualizarUnidades@{ActualizarUnidades}}
+\index{ActualizarUnidades@{ActualizarUnidades}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{ActualizarUnidades()}{ActualizarUnidades()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_af517cc8e5d94f71e68da39a7ed2e342b} 
+string Library.\+Domain.\+Jugador.\+Actualizar\+Unidades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_adba4e484228faa71a5d96204319376cc}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!AgregarEdificio@{AgregarEdificio}}
+\index{AgregarEdificio@{AgregarEdificio}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{AgregarEdificio()}{AgregarEdificio()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_adba4e484228faa71a5d96204319376cc} 
+void Library.\+Domain.\+Jugador.\+Agregar\+Edificio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}}]{edificio}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a69e3454e2fb539c40cb94838b575909c}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!AgregarRecurso@{AgregarRecurso}}
+\index{AgregarRecurso@{AgregarRecurso}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{AgregarRecurso()}{AgregarRecurso()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a69e3454e2fb539c40cb94838b575909c} 
+void Library.\+Domain.\+Jugador.\+Agregar\+Recurso (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_tipo_recurso}{ITipo\+Recurso}}}]{tipo}{, }\item[{int}]{cantidad}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a6f6ff730f8d3a156d84179581313c8d3}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!AgregarUnidad@{AgregarUnidad}}
+\index{AgregarUnidad@{AgregarUnidad}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{AgregarUnidad()}{AgregarUnidad()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a6f6ff730f8d3a156d84179581313c8d3} 
+void Library.\+Domain.\+Jugador.\+Agregar\+Unidad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}}}]{unidad}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a53326a09d5fa76e8d7636e43cc9dbe06}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!AumentarPoblacionMaxima@{AumentarPoblacionMaxima}}
+\index{AumentarPoblacionMaxima@{AumentarPoblacionMaxima}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{AumentarPoblacionMaxima()}{AumentarPoblacionMaxima()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a53326a09d5fa76e8d7636e43cc9dbe06} 
+void Library.\+Domain.\+Jugador.\+Aumentar\+Poblacion\+Maxima (\begin{DoxyParamCaption}\item[{int}]{incremento}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ac6922705c67d265619bacc4744c27f45}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!DepositarRecursos@{DepositarRecursos}}
+\index{DepositarRecursos@{DepositarRecursos}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{DepositarRecursos()}{DepositarRecursos()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ac6922705c67d265619bacc4744c27f45} 
+void Library.\+Domain.\+Jugador.\+Depositar\+Recursos (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, int $>$}]{recursos\+Edificio}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ae419b4d9654708ef0adb35f2107f8ff7}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!ObtenerResumenPoblacion@{ObtenerResumenPoblacion}}
+\index{ObtenerResumenPoblacion@{ObtenerResumenPoblacion}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{ObtenerResumenPoblacion()}{ObtenerResumenPoblacion()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ae419b4d9654708ef0adb35f2107f8ff7} 
+string Library.\+Domain.\+Jugador.\+Obtener\+Resumen\+Poblacion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a6de46599bb127e6873fbd219503a91c7}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!ObtenerResumenRecursosTotales@{ObtenerResumenRecursosTotales}}
+\index{ObtenerResumenRecursosTotales@{ObtenerResumenRecursosTotales}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{ObtenerResumenRecursosTotales()}{ObtenerResumenRecursosTotales()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a6de46599bb127e6873fbd219503a91c7} 
+Dictionary$<$ string, int $>$ Library.\+Domain.\+Jugador.\+Obtener\+Resumen\+Recursos\+Totales (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_aac38f144e1ee9899da9bc30c79bd93a6}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!PuedeCrearAldeano@{PuedeCrearAldeano}}
+\index{PuedeCrearAldeano@{PuedeCrearAldeano}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{PuedeCrearAldeano()}{PuedeCrearAldeano()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_aac38f144e1ee9899da9bc30c79bd93a6} 
+bool Library.\+Domain.\+Jugador.\+Puede\+Crear\+Aldeano (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a0bb7e0a73d6cb9b2073e195f936ca442}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!LimiteAldeanos@{LimiteAldeanos}}
+\index{LimiteAldeanos@{LimiteAldeanos}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{LimiteAldeanos}{LimiteAldeanos}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a0bb7e0a73d6cb9b2073e195f936ca442} 
+const int Library.\+Domain.\+Jugador.\+Limite\+Aldeanos = 20\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a0f6d239880e476854b2e9ab081062b6a}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!LimiteMilitares@{LimiteMilitares}}
+\index{LimiteMilitares@{LimiteMilitares}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{LimiteMilitares}{LimiteMilitares}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a0f6d239880e476854b2e9ab081062b6a} 
+const int Library.\+Domain.\+Jugador.\+Limite\+Militares = 30\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ad81d34d5d26a7c6085b648cf55f3056b}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!random@{random}}
+\index{random@{random}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{random}{random}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ad81d34d5d26a7c6085b648cf55f3056b} 
+Random Library.\+Domain.\+Jugador.\+random = new Random()\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a5b2e8cbd75c7f5ae90c203b8aca45814}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Aldeanos@{Aldeanos}}
+\index{Aldeanos@{Aldeanos}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Aldeanos}{Aldeanos}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a5b2e8cbd75c7f5ae90c203b8aca45814} 
+List$<$\mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano}{Aldeano}}$>$ Library.\+Domain.\+Jugador.\+Aldeanos = new List$<$\mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano}{Aldeano}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a570ef013fb760e5e4f98c1a728827edd}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!CentroCivico@{CentroCivico}}
+\index{CentroCivico@{CentroCivico}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{CentroCivico}{CentroCivico}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a570ef013fb760e5e4f98c1a728827edd} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_centro_civico}{Centro\+Civico}} Library.\+Domain.\+Jugador.\+Centro\+Civico\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a8558756e5b8dfec2c13da258766ddf57}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Civilizacion@{Civilizacion}}
+\index{Civilizacion@{Civilizacion}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Civilizacion}{Civilizacion}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a8558756e5b8dfec2c13da258766ddf57} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_civilizacion}{Civilizacion}} Library.\+Domain.\+Jugador.\+Civilizacion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ab0c6c719b17f604cd5eb33e6ff31eb4b}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Edificios@{Edificios}}
+\index{Edificios@{Edificios}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Edificios}{Edificios}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ab0c6c719b17f604cd5eb33e6ff31eb4b} 
+List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}$>$ Library.\+Domain.\+Jugador.\+Edificios = new List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a4e25a66c5191864a7e122a82c9ead809}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!EdificiosEnConstruccion@{EdificiosEnConstruccion}}
+\index{EdificiosEnConstruccion@{EdificiosEnConstruccion}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{EdificiosEnConstruccion}{EdificiosEnConstruccion}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a4e25a66c5191864a7e122a82c9ead809} 
+List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}$>$ Library.\+Domain.\+Jugador.\+Edificios\+En\+Construccion = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_ad238fb952414c9be3022056c578a4fa6}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_ad238fb952414c9be3022056c578a4fa6} 
+string Library.\+Domain.\+Jugador.\+Nombre\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a46889af8cd34e967b521729ef0d84bf0}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!PoblacionActual@{PoblacionActual}}
+\index{PoblacionActual@{PoblacionActual}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{PoblacionActual}{PoblacionActual}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a46889af8cd34e967b521729ef0d84bf0} 
+int Library.\+Domain.\+Jugador.\+Poblacion\+Actual = 3\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a933286ed3dc226949e5be4401f28d805}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!PoblacionMaxima@{PoblacionMaxima}}
+\index{PoblacionMaxima@{PoblacionMaxima}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{PoblacionMaxima}{PoblacionMaxima}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a933286ed3dc226949e5be4401f28d805} 
+int Library.\+Domain.\+Jugador.\+Poblacion\+Maxima = 5\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_a9f1e78721bcdb9c2dbcb8d867122f487}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Recursos@{Recursos}}
+\index{Recursos@{Recursos}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Recursos}{Recursos}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_a9f1e78721bcdb9c2dbcb8d867122f487} 
+Dictionary$<$string, int$>$ Library.\+Domain.\+Jugador.\+Recursos\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ Dictionary<string,\ int>()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Alimento"{}},\ 0\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Madera"{}},\ 0\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Oro"{}},\ 0\ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \textcolor{stringliteral}{"{}Piedra"{}},\ 0\ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_library_1_1_domain_1_1_jugador_aff264013cb03a7b566268d7797984523}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!Unidades@{Unidades}}
+\index{Unidades@{Unidades}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{Unidades}{Unidades}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_aff264013cb03a7b566268d7797984523} 
+List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}}$>$ Library.\+Domain.\+Jugador.\+Unidades = new List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_jugador_aa46e1a6741bf4d9064a444b24c7e02ac}\index{Library.Domain.Jugador@{Library.Domain.Jugador}!UnidadesEnEntrenamiento@{UnidadesEnEntrenamiento}}
+\index{UnidadesEnEntrenamiento@{UnidadesEnEntrenamiento}!Library.Domain.Jugador@{Library.Domain.Jugador}}
+\doxysubsubsection{\texorpdfstring{UnidadesEnEntrenamiento}{UnidadesEnEntrenamiento}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_jugador_aa46e1a6741bf4d9064a444b24c7e02ac} 
+List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar}{IUnidad\+Militar}}$>$ Library.\+Domain.\+Jugador.\+Unidades\+En\+Entrenamiento = new List$<$\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar}{IUnidad\+Militar}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+SANTIAGO/\+Desktop/\+UCU/\+P2/\+PROYECTO FINAL/\+Proyecto-\/\+Prog/src/\+Library/\+Domain/\mbox{\hyperlink{_jugador_8cs}{Jugador.\+cs}}\end{DoxyCompactItemize}

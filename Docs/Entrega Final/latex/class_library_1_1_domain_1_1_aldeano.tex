@@ -1,0 +1,202 @@
+\doxysection{Library.\+Domain.\+Aldeano Class Reference}
+\hypertarget{class_library_1_1_domain_1_1_aldeano}{}\label{class_library_1_1_domain_1_1_aldeano}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+Inheritance diagram for Library.\+Domain.\+Aldeano\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_library_1_1_domain_1_1_aldeano}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a1122b977f49183323e4370a318fb185a}{Aldeano}} ()
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a6b6b5405c93ae219589e996e10da0ed6}{Aldeano}} (\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} propietario)
+\item 
+bool \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a00cdf65b4f897a061e4643784eb1d78e}{Mover}} (\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} destino, \mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}} mapa)
+\item 
+double \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_aa941f221c3bfc7dd158b299d0c9a663f}{Calcular\+Daño}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} objetivo)
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a95fe95fc1ac3ca0b507beb4c2015f23c}{Atacar\+Edificio}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} objetivo)
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a9cba43202087c840229fc58afdc15093}{Atacar\+Unidad}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} objetivo)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a74517943ef28fa5ddaaf704d8c8aa2c3}{Recolectar\+En}} (\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} coordenada, \mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}} mapa)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a0017e9a3ccfc709b001b58df7fbcf6ba}{Propietario}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a9339153d7f35daa7ce7a67cf8db15b70}{Ataque}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a67b1defd2a2c16315528478e7c91a355}{Defensa}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a12d69adb13472635ab2d0b27e9c33d97}{Tiempo\+RecoleccionS}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a81ec4fc32e1bb753acf03f056b79f074}{Velocidad}} = 1.\+0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a8459cccd1ad1ecfe2ba7653241d0bf3d}{Salud}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a3116fef55caf59241b2a2e73dc63783f}{Posicion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_ac00a99e0f89903f4f5d2b15ea00b6de5}{Tiempo\+De\+Creacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_tiempo_de_generacion}{Tiempo\+De\+Generacion}} \mbox{\hyperlink{class_library_1_1_domain_1_1_aldeano_a1246a0c4abf6e2ca2c88cb6e5315aa24}{Tiempo\+Generacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a1122b977f49183323e4370a318fb185a}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Aldeano@{Aldeano}}
+\index{Aldeano@{Aldeano}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Aldeano()}{Aldeano()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a1122b977f49183323e4370a318fb185a} 
+Library.\+Domain.\+Aldeano.\+Aldeano (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a6b6b5405c93ae219589e996e10da0ed6}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Aldeano@{Aldeano}}
+\index{Aldeano@{Aldeano}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Aldeano()}{Aldeano()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a6b6b5405c93ae219589e996e10da0ed6} 
+Library.\+Domain.\+Aldeano.\+Aldeano (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}}}]{propietario}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a95fe95fc1ac3ca0b507beb4c2015f23c}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!AtacarEdificio@{AtacarEdificio}}
+\index{AtacarEdificio@{AtacarEdificio}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{AtacarEdificio()}{AtacarEdificio()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a95fe95fc1ac3ca0b507beb4c2015f23c} 
+string Library.\+Domain.\+Aldeano.\+Atacar\+Edificio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a9cba43202087c840229fc58afdc15093}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!AtacarUnidad@{AtacarUnidad}}
+\index{AtacarUnidad@{AtacarUnidad}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{AtacarUnidad()}{AtacarUnidad()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a9cba43202087c840229fc58afdc15093} 
+string Library.\+Domain.\+Aldeano.\+Atacar\+Unidad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_aa941f221c3bfc7dd158b299d0c9a663f}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!CalcularDaño@{CalcularDaño}}
+\index{CalcularDaño@{CalcularDaño}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{CalcularDaño()}{CalcularDaño()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_aa941f221c3bfc7dd158b299d0c9a663f} 
+double Library.\+Domain.\+Aldeano.\+Calcular\+Daño (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a3921df13814258e68a761c8bb8116d96}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a00cdf65b4f897a061e4643784eb1d78e}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Mover@{Mover}}
+\index{Mover@{Mover}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Mover()}{Mover()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a00cdf65b4f897a061e4643784eb1d78e} 
+bool Library.\+Domain.\+Aldeano.\+Mover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{destino}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a079d7355f6437d81bd9c01a520bc65ca}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a74517943ef28fa5ddaaf704d8c8aa2c3}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!RecolectarEn@{RecolectarEn}}
+\index{RecolectarEn@{RecolectarEn}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{RecolectarEn()}{RecolectarEn()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a74517943ef28fa5ddaaf704d8c8aa2c3} 
+void Library.\+Domain.\+Aldeano.\+Recolectar\+En (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{coordenada}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_recolector_a8a43fa8f31e6cdbf04544a44b6d4128a}{Library.\+Domain.\+IRecolector}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a9339153d7f35daa7ce7a67cf8db15b70}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Ataque@{Ataque}}
+\index{Ataque@{Ataque}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Ataque}{Ataque}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a9339153d7f35daa7ce7a67cf8db15b70} 
+int Library.\+Domain.\+Aldeano.\+Ataque = 0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a475c2a11bb9abce6cf9bcd3754477a1a}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a67b1defd2a2c16315528478e7c91a355}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Defensa@{Defensa}}
+\index{Defensa@{Defensa}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Defensa}{Defensa}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a67b1defd2a2c16315528478e7c91a355} 
+int Library.\+Domain.\+Aldeano.\+Defensa = 0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_ac340bb5c7922a22cc601cf0416a2aaec}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a3116fef55caf59241b2a2e73dc63783f}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Posicion@{Posicion}}
+\index{Posicion@{Posicion}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Posicion}{Posicion}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a3116fef55caf59241b2a2e73dc63783f} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} Library.\+Domain.\+Aldeano.\+Posicion\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_af7029b95da6ff0fdf6708b9a195f7ce5}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a0017e9a3ccfc709b001b58df7fbcf6ba}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Propietario@{Propietario}}
+\index{Propietario@{Propietario}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Propietario}{Propietario}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a0017e9a3ccfc709b001b58df7fbcf6ba} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} Library.\+Domain.\+Aldeano.\+Propietario\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a02b8fd381d67ba64631c3671ec98164b}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a8459cccd1ad1ecfe2ba7653241d0bf3d}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Salud@{Salud}}
+\index{Salud@{Salud}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Salud}{Salud}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a8459cccd1ad1ecfe2ba7653241d0bf3d} 
+int Library.\+Domain.\+Aldeano.\+Salud\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_aa5d7477f51e5057a375cc4c4fc4c4da3}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_ac00a99e0f89903f4f5d2b15ea00b6de5}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!TiempoDeCreacion@{TiempoDeCreacion}}
+\index{TiempoDeCreacion@{TiempoDeCreacion}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{TiempoDeCreacion}{TiempoDeCreacion}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_ac00a99e0f89903f4f5d2b15ea00b6de5} 
+int Library.\+Domain.\+Aldeano.\+Tiempo\+De\+Creacion\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a88f230487c92bcb5f1c7384a4d5e3f62}{Library.\+Domain.\+IUnidad}}.
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a1246a0c4abf6e2ca2c88cb6e5315aa24}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!TiempoGeneracion@{TiempoGeneracion}}
+\index{TiempoGeneracion@{TiempoGeneracion}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{TiempoGeneracion}{TiempoGeneracion}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a1246a0c4abf6e2ca2c88cb6e5315aa24} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_tiempo_de_generacion}{Tiempo\+De\+Generacion}} Library.\+Domain.\+Aldeano.\+Tiempo\+Generacion\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a12d69adb13472635ab2d0b27e9c33d97}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!TiempoRecoleccionS@{TiempoRecoleccionS}}
+\index{TiempoRecoleccionS@{TiempoRecoleccionS}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{TiempoRecoleccionS}{TiempoRecoleccionS}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a12d69adb13472635ab2d0b27e9c33d97} 
+int Library.\+Domain.\+Aldeano.\+Tiempo\+RecoleccionS\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_library_1_1_domain_1_1_aldeano_a81ec4fc32e1bb753acf03f056b79f074}\index{Library.Domain.Aldeano@{Library.Domain.Aldeano}!Velocidad@{Velocidad}}
+\index{Velocidad@{Velocidad}!Library.Domain.Aldeano@{Library.Domain.Aldeano}}
+\doxysubsubsection{\texorpdfstring{Velocidad}{Velocidad}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_aldeano_a81ec4fc32e1bb753acf03f056b79f074} 
+double Library.\+Domain.\+Aldeano.\+Velocidad = 1.\+0\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_aa08a2b407af258e5f461453c2a4a028b}{Library.\+Domain.\+IUnidad}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+SANTIAGO/\+Desktop/\+UCU/\+P2/\+PROYECTO FINAL/\+Proyecto-\/\+Prog/src/\+Library/\+Domain/\mbox{\hyperlink{_aldeano_8cs}{Aldeano.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,183 @@
+\doxysection{Library.\+Domain.\+Juego\+Fachada Class Reference}
+\hypertarget{class_library_1_1_domain_1_1_juego_fachada}{}\label{class_library_1_1_domain_1_1_juego_fachada}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a54b324e92b80f88aebbf90ab849737ee}{Crear\+Nueva\+Partida}} ()
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_ad476c11f5299e9d2cd7e863169c747f8}{Obtener\+Civilizaciones\+Disponibles}} ()
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a23ee708e1a3062a46bdb68a6e4e375bf}{Mostrar\+Mapa\+TXT}} ()
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a4718f588a066dab8de931faee40dd991}{Mostrar\+Mapa\+HTML}} ()
+\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a1b52bb7e4f03400b96b1c9f973567d93}{Obtener\+Jugadores}} ()
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_ac4d9075e3e79deb0b13bcf955db0fda5}{Agregar\+Jugador\+APartida}} (string nombre\+Jugador, string nombre\+Civilizacion)
+\item 
+Dictionary$<$ string, int $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a77742cf03d6b29fb5b9130b36770e20c}{Obtener\+Recursos\+Jugador}} (string nombre\+Jugador)
+\item 
+int \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_ae6d2ce4b547f78390e4eb2551c2fabd8}{Ordenar\+Recolectar}} (string nombre\+Jugador, int id\+Aldeano, int x, int y)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_ac4014b1072182a94874ffd416cb2360e}{Construir\+Edificio}} (string nombre\+Jugador, string tipo\+Edificio, \mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} posicion)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_ab135a6ac05f5dd6730075672be986495}{Entrenar\+Unidad}} (string nombre\+Jugador, string tipo\+Unidad, \mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} posicion)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_af06ac46cd6512edc7ea060300c7b5c77}{Mover\+Unidad}} (string nombre\+Jugador, int id\+Unidad, \mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} destino)
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a4c211f22c059c2b2c38dea60476e4816}{Mover\+Unidades}} (string nombre\+Jugador, List$<$ int $>$ ids\+Unidades, \mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} destino)
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a234a667ea16b0ca7d15fd643e9f39504}{Atacar\+Unidad}} (string nombre\+Jugador\+Atacante, int id\+Unidad\+Atacante, string nombre\+Jugador\+Objetivo, int id\+Unidad\+Objetivo)
+\item 
+string \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a38ebe84b31d595c78dba91d7b7512a44}{Atacar\+Edificio}} (string nombre\+Jugador\+Atacante, int id\+Unidad\+Atacante, string nombre\+Jugador\+Objetivo, int id\+Edificio\+Objetivo)
+\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_abc582298c2ee00b53b41d88c13fbefdc}{Obtener\+Unidades\+Jugador}} (string nombre\+Jugador)
+\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a9e5d3103ff8f51ae95582935d35df6a2}{Obtener\+Edificios\+Jugador}} (string nombre\+Jugador)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a5dc0a2789517ef9ae6623d522e49fc48}{Guardar\+Partida}} (string nombre\+Archivo)
+\item 
+void \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_aa6423e40b261eacd7ec713b58dff94c6}{Cargar\+Partida}} (string nombre\+Archivo)
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a5a9b6dd8dfb5082b252bdc5c1a2deed3}{Listar\+Partidas}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada}{Juego\+Fachada}} \mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada_a8cafae390a6b12d19f046cc6b5773f37}{Instancia}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_ac4d9075e3e79deb0b13bcf955db0fda5}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!AgregarJugadorAPartida@{AgregarJugadorAPartida}}
+\index{AgregarJugadorAPartida@{AgregarJugadorAPartida}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{AgregarJugadorAPartida()}{AgregarJugadorAPartida()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_ac4d9075e3e79deb0b13bcf955db0fda5} 
+void Library.\+Domain.\+Juego\+Fachada.\+Agregar\+Jugador\+APartida (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{, }\item[{string}]{nombre\+Civilizacion}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a38ebe84b31d595c78dba91d7b7512a44}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!AtacarEdificio@{AtacarEdificio}}
+\index{AtacarEdificio@{AtacarEdificio}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{AtacarEdificio()}{AtacarEdificio()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a38ebe84b31d595c78dba91d7b7512a44} 
+string Library.\+Domain.\+Juego\+Fachada.\+Atacar\+Edificio (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador\+Atacante}{, }\item[{int}]{id\+Unidad\+Atacante}{, }\item[{string}]{nombre\+Jugador\+Objetivo}{, }\item[{int}]{id\+Edificio\+Objetivo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a234a667ea16b0ca7d15fd643e9f39504}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!AtacarUnidad@{AtacarUnidad}}
+\index{AtacarUnidad@{AtacarUnidad}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{AtacarUnidad()}{AtacarUnidad()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a234a667ea16b0ca7d15fd643e9f39504} 
+string Library.\+Domain.\+Juego\+Fachada.\+Atacar\+Unidad (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador\+Atacante}{, }\item[{int}]{id\+Unidad\+Atacante}{, }\item[{string}]{nombre\+Jugador\+Objetivo}{, }\item[{int}]{id\+Unidad\+Objetivo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_aa6423e40b261eacd7ec713b58dff94c6}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!CargarPartida@{CargarPartida}}
+\index{CargarPartida@{CargarPartida}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{CargarPartida()}{CargarPartida()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_aa6423e40b261eacd7ec713b58dff94c6} 
+void Library.\+Domain.\+Juego\+Fachada.\+Cargar\+Partida (\begin{DoxyParamCaption}\item[{string}]{nombre\+Archivo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_ac4014b1072182a94874ffd416cb2360e}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ConstruirEdificio@{ConstruirEdificio}}
+\index{ConstruirEdificio@{ConstruirEdificio}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ConstruirEdificio()}{ConstruirEdificio()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_ac4014b1072182a94874ffd416cb2360e} 
+void Library.\+Domain.\+Juego\+Fachada.\+Construir\+Edificio (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{, }\item[{string}]{tipo\+Edificio}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{posicion}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a54b324e92b80f88aebbf90ab849737ee}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!CrearNuevaPartida@{CrearNuevaPartida}}
+\index{CrearNuevaPartida@{CrearNuevaPartida}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{CrearNuevaPartida()}{CrearNuevaPartida()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a54b324e92b80f88aebbf90ab849737ee} 
+void Library.\+Domain.\+Juego\+Fachada.\+Crear\+Nueva\+Partida (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_ab135a6ac05f5dd6730075672be986495}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!EntrenarUnidad@{EntrenarUnidad}}
+\index{EntrenarUnidad@{EntrenarUnidad}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{EntrenarUnidad()}{EntrenarUnidad()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_ab135a6ac05f5dd6730075672be986495} 
+void Library.\+Domain.\+Juego\+Fachada.\+Entrenar\+Unidad (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{, }\item[{string}]{tipo\+Unidad}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{posicion}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a5dc0a2789517ef9ae6623d522e49fc48}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!GuardarPartida@{GuardarPartida}}
+\index{GuardarPartida@{GuardarPartida}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{GuardarPartida()}{GuardarPartida()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a5dc0a2789517ef9ae6623d522e49fc48} 
+void Library.\+Domain.\+Juego\+Fachada.\+Guardar\+Partida (\begin{DoxyParamCaption}\item[{string}]{nombre\+Archivo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a5a9b6dd8dfb5082b252bdc5c1a2deed3}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ListarPartidas@{ListarPartidas}}
+\index{ListarPartidas@{ListarPartidas}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ListarPartidas()}{ListarPartidas()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a5a9b6dd8dfb5082b252bdc5c1a2deed3} 
+List$<$ string $>$ Library.\+Domain.\+Juego\+Fachada.\+Listar\+Partidas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a4718f588a066dab8de931faee40dd991}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!MostrarMapaHTML@{MostrarMapaHTML}}
+\index{MostrarMapaHTML@{MostrarMapaHTML}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{MostrarMapaHTML()}{MostrarMapaHTML()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a4718f588a066dab8de931faee40dd991} 
+string Library.\+Domain.\+Juego\+Fachada.\+Mostrar\+Mapa\+HTML (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a23ee708e1a3062a46bdb68a6e4e375bf}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!MostrarMapaTXT@{MostrarMapaTXT}}
+\index{MostrarMapaTXT@{MostrarMapaTXT}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{MostrarMapaTXT()}{MostrarMapaTXT()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a23ee708e1a3062a46bdb68a6e4e375bf} 
+string Library.\+Domain.\+Juego\+Fachada.\+Mostrar\+Mapa\+TXT (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_af06ac46cd6512edc7ea060300c7b5c77}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!MoverUnidad@{MoverUnidad}}
+\index{MoverUnidad@{MoverUnidad}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{MoverUnidad()}{MoverUnidad()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_af06ac46cd6512edc7ea060300c7b5c77} 
+void Library.\+Domain.\+Juego\+Fachada.\+Mover\+Unidad (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{, }\item[{int}]{id\+Unidad}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{destino}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a4c211f22c059c2b2c38dea60476e4816}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!MoverUnidades@{MoverUnidades}}
+\index{MoverUnidades@{MoverUnidades}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{MoverUnidades()}{MoverUnidades()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a4c211f22c059c2b2c38dea60476e4816} 
+List$<$ string $>$ Library.\+Domain.\+Juego\+Fachada.\+Mover\+Unidades (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{, }\item[{List$<$ int $>$}]{ids\+Unidades}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{destino}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_ad476c11f5299e9d2cd7e863169c747f8}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ObtenerCivilizacionesDisponibles@{ObtenerCivilizacionesDisponibles}}
+\index{ObtenerCivilizacionesDisponibles@{ObtenerCivilizacionesDisponibles}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ObtenerCivilizacionesDisponibles()}{ObtenerCivilizacionesDisponibles()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_ad476c11f5299e9d2cd7e863169c747f8} 
+List$<$ string $>$ Library.\+Domain.\+Juego\+Fachada.\+Obtener\+Civilizaciones\+Disponibles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a9e5d3103ff8f51ae95582935d35df6a2}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ObtenerEdificiosJugador@{ObtenerEdificiosJugador}}
+\index{ObtenerEdificiosJugador@{ObtenerEdificiosJugador}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ObtenerEdificiosJugador()}{ObtenerEdificiosJugador()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a9e5d3103ff8f51ae95582935d35df6a2} 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} $>$ Library.\+Domain.\+Juego\+Fachada.\+Obtener\+Edificios\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a1b52bb7e4f03400b96b1c9f973567d93}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ObtenerJugadores@{ObtenerJugadores}}
+\index{ObtenerJugadores@{ObtenerJugadores}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ObtenerJugadores()}{ObtenerJugadores()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a1b52bb7e4f03400b96b1c9f973567d93} 
+List$<$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} $>$ Library.\+Domain.\+Juego\+Fachada.\+Obtener\+Jugadores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a77742cf03d6b29fb5b9130b36770e20c}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ObtenerRecursosJugador@{ObtenerRecursosJugador}}
+\index{ObtenerRecursosJugador@{ObtenerRecursosJugador}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ObtenerRecursosJugador()}{ObtenerRecursosJugador()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a77742cf03d6b29fb5b9130b36770e20c} 
+Dictionary$<$ string, int $>$ Library.\+Domain.\+Juego\+Fachada.\+Obtener\+Recursos\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_abc582298c2ee00b53b41d88c13fbefdc}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!ObtenerUnidadesJugador@{ObtenerUnidadesJugador}}
+\index{ObtenerUnidadesJugador@{ObtenerUnidadesJugador}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{ObtenerUnidadesJugador()}{ObtenerUnidadesJugador()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_abc582298c2ee00b53b41d88c13fbefdc} 
+List$<$ \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} $>$ Library.\+Domain.\+Juego\+Fachada.\+Obtener\+Unidades\+Jugador (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_ae6d2ce4b547f78390e4eb2551c2fabd8}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!OrdenarRecolectar@{OrdenarRecolectar}}
+\index{OrdenarRecolectar@{OrdenarRecolectar}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{OrdenarRecolectar()}{OrdenarRecolectar()}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_ae6d2ce4b547f78390e4eb2551c2fabd8} 
+int Library.\+Domain.\+Juego\+Fachada.\+Ordenar\+Recolectar (\begin{DoxyParamCaption}\item[{string}]{nombre\+Jugador}{, }\item[{int}]{id\+Aldeano}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_domain_1_1_juego_fachada_a8cafae390a6b12d19f046cc6b5773f37}\index{Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}!Instancia@{Instancia}}
+\index{Instancia@{Instancia}!Library.Domain.JuegoFachada@{Library.Domain.JuegoFachada}}
+\doxysubsubsection{\texorpdfstring{Instancia}{Instancia}}
+{\footnotesize\ttfamily \label{class_library_1_1_domain_1_1_juego_fachada_a8cafae390a6b12d19f046cc6b5773f37} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_juego_fachada}{Juego\+Fachada}} Library.\+Domain.\+Juego\+Fachada.\+Instancia\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+SANTIAGO/\+Desktop/\+UCU/\+P2/\+PROYECTO FINAL/\+Proyecto-\/\+Prog/src/\+Library/\+Domain/\mbox{\hyperlink{_juego_fachada_8cs}{Juego\+Fachada.\+cs}}\end{DoxyCompactItemize}

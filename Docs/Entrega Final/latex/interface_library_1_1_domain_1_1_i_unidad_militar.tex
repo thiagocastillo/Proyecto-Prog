@@ -1,0 +1,103 @@
+\doxysection{Library.\+Domain.\+IUnidad\+Militar Interface Reference}
+\hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar}{}\label{interface_library_1_1_domain_1_1_i_unidad_militar}\index{Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}}
+Inheritance diagram for Library.\+Domain.\+IUnidad\+Militar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.704718cm]{interface_library_1_1_domain_1_1_i_unidad_militar}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar_a146066cda8bd63698c9bf469c103a45a}{Atacar\+Edificio}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}} objetivo)
+\item 
+string \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar_a0c65c7e703f8cdbba22bd24edb0a090e}{Atacar\+Unidad}} (\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} atacante, string tipo\+Unidad, int cantidad, \mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} coordenada, \mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}} mapa, List$<$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} $>$ jugadores)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{Library.\+Domain.\+IUnidad}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a079d7355f6437d81bd9c01a520bc65ca}{Mover}} (\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} destino, \mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}} mapa)
+\item 
+double \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a3921df13814258e68a761c8bb8116d96}{Calcular\+Daño}} (\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{IUnidad}} objetivo)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_tiempo_de_generacion}{Tiempo\+De\+Generacion}} \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar_a0164cbd4dbb93e0b07d49659d7a9c8d3}{Tiempo\+Generacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_militar_a524a8c2159d339ad1cd70b441975d080}{Tiempo\+De\+Creacion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad}{Library.\+Domain.\+IUnidad}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a02b8fd381d67ba64631c3671ec98164b}{Propietario}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a475c2a11bb9abce6cf9bcd3754477a1a}{Ataque}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_ac340bb5c7922a22cc601cf0416a2aaec}{Defensa}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_aa08a2b407af258e5f461453c2a4a028b}{Velocidad}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_aa5d7477f51e5057a375cc4c4fc4c4da3}{Salud}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}} \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_af7029b95da6ff0fdf6708b9a195f7ce5}{Posicion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar_a146066cda8bd63698c9bf469c103a45a}\index{Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}!AtacarEdificio@{AtacarEdificio}}
+\index{AtacarEdificio@{AtacarEdificio}!Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}}
+\doxysubsubsection{\texorpdfstring{AtacarEdificio()}{AtacarEdificio()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_domain_1_1_i_unidad_militar_a146066cda8bd63698c9bf469c103a45a} 
+string Library.\+Domain.\+IUnidad\+Militar.\+Atacar\+Edificio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_domain_1_1_i_edificio}{IEdificio}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_domain_1_1_arquero_aee401983ea38f45a71cf5c0b1d219825}{Library.\+Domain.\+Arquero}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_caballeria_a180dd443f9e19df14c2246c800bb9158}{Library.\+Domain.\+Caballeria}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_guerrero_jaguar_a4cc7a5ed03b6710a95913048182def95}{Library.\+Domain.\+Guerrero\+Jaguar}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_infanteria_ac5fcbd5ddfe93b81e5ddd4165de7f70d}{Library.\+Domain.\+Infanteria}}, and \mbox{\hyperlink{class_library_1_1_domain_1_1_ratha_aec7d974eece13a853d3ae6de5ef9e589}{Library.\+Domain.\+Ratha}}.
+
+\Hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar_a0c65c7e703f8cdbba22bd24edb0a090e}\index{Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}!AtacarUnidad@{AtacarUnidad}}
+\index{AtacarUnidad@{AtacarUnidad}!Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}}
+\doxysubsubsection{\texorpdfstring{AtacarUnidad()}{AtacarUnidad()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_domain_1_1_i_unidad_militar_a0c65c7e703f8cdbba22bd24edb0a090e} 
+string Library.\+Domain.\+IUnidad\+Militar.\+Atacar\+Unidad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}}}]{atacante}{, }\item[{string}]{tipo\+Unidad}{, }\item[{int}]{cantidad}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_point}{Point}}}]{coordenada}{, }\item[{\mbox{\hyperlink{class_library_1_1_domain_1_1_mapa}{Mapa}}}]{mapa}{, }\item[{List$<$ \mbox{\hyperlink{class_library_1_1_domain_1_1_jugador}{Jugador}} $>$}]{jugadores}{}\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_domain_1_1_arquero_a4c856b418a784c458b18499786379d49}{Library.\+Domain.\+Arquero}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_caballeria_a54822a2d88dc8952abff344daea7899c}{Library.\+Domain.\+Caballeria}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_guerrero_jaguar_af83287205b27e4027406c8d280c8f60c}{Library.\+Domain.\+Guerrero\+Jaguar}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_infanteria_aabf03bd754103c9c56ddcaa45a192499}{Library.\+Domain.\+Infanteria}}, and \mbox{\hyperlink{class_library_1_1_domain_1_1_ratha_ae80ca0b126592a5a221f4db2d38150f4}{Library.\+Domain.\+Ratha}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar_a524a8c2159d339ad1cd70b441975d080}\index{Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}!TiempoDeCreacion@{TiempoDeCreacion}}
+\index{TiempoDeCreacion@{TiempoDeCreacion}!Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}}
+\doxysubsubsection{\texorpdfstring{TiempoDeCreacion}{TiempoDeCreacion}}
+{\footnotesize\ttfamily \label{interface_library_1_1_domain_1_1_i_unidad_militar_a524a8c2159d339ad1cd70b441975d080} 
+int Library.\+Domain.\+IUnidad\+Militar.\+Tiempo\+De\+Creacion\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_domain_1_1_i_unidad_a88f230487c92bcb5f1c7384a4d5e3f62}{Library.\+Domain.\+IUnidad}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_domain_1_1_arquero_a885d6217464a6cf6426e84512ab4bc4c}{Library.\+Domain.\+Arquero}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_arquero_compuesto_af490807d8c426653bc1ba47a3f560718}{Library.\+Domain.\+Arquero\+Compuesto}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_caballeria_a7cb867b3373c57a6d5b472824bf6dc7e}{Library.\+Domain.\+Caballeria}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_guerrero_jaguar_a9abebe936f9dce3ea614ad9a4f42d93e}{Library.\+Domain.\+Guerrero\+Jaguar}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_infanteria_ad7b00796acc83b2dac2f81dde190571a}{Library.\+Domain.\+Infanteria}}, and \mbox{\hyperlink{class_library_1_1_domain_1_1_ratha_ab014202caa563dcd51b1692673888bc3}{Library.\+Domain.\+Ratha}}.
+
+\Hypertarget{interface_library_1_1_domain_1_1_i_unidad_militar_a0164cbd4dbb93e0b07d49659d7a9c8d3}\index{Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}!TiempoGeneracion@{TiempoGeneracion}}
+\index{TiempoGeneracion@{TiempoGeneracion}!Library.Domain.IUnidadMilitar@{Library.Domain.IUnidadMilitar}}
+\doxysubsubsection{\texorpdfstring{TiempoGeneracion}{TiempoGeneracion}}
+{\footnotesize\ttfamily \label{interface_library_1_1_domain_1_1_i_unidad_militar_a0164cbd4dbb93e0b07d49659d7a9c8d3} 
+\mbox{\hyperlink{class_library_1_1_domain_1_1_tiempo_de_generacion}{Tiempo\+De\+Generacion}} Library.\+Domain.\+IUnidad\+Militar.\+Tiempo\+Generacion\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_domain_1_1_arquero_a6615d77ba558bfeb09415c69fa884f45}{Library.\+Domain.\+Arquero}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_arquero_compuesto_a9618d97bfd3bb856a1ab6478c4665644}{Library.\+Domain.\+Arquero\+Compuesto}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_caballeria_a70f04501a4fc8d2394fb6f2e11794c06}{Library.\+Domain.\+Caballeria}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_guerrero_jaguar_a6e023c9dfb3b7cb286e9d2c33d0100bb}{Library.\+Domain.\+Guerrero\+Jaguar}}, \mbox{\hyperlink{class_library_1_1_domain_1_1_infanteria_a072218076978c12f544df0ab0e6d1b3b}{Library.\+Domain.\+Infanteria}}, and \mbox{\hyperlink{class_library_1_1_domain_1_1_ratha_ac7fece3d22f05ce0b002c89a47f9d181}{Library.\+Domain.\+Ratha}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+SANTIAGO/\+Desktop/\+UCU/\+P2/\+PROYECTO FINAL/\+Proyecto-\/\+Prog/src/\+Library/\+Domain/\mbox{\hyperlink{_i_unidad_militar_8cs}{IUnidad\+Militar.\+cs}}\end{DoxyCompactItemize}

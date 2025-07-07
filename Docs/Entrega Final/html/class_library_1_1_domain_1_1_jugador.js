@@ -1,0 +1,26 @@
+var class_library_1_1_domain_1_1_jugador =
+[
+    [ "Jugador", "class_library_1_1_domain_1_1_jugador.html#ad861504c2344dc2767a92c85dccbbfcb", null ],
+    [ "Jugador", "class_library_1_1_domain_1_1_jugador.html#ad9cd25bbd6e6eb641b072bd97442ad3d", null ],
+    [ "ActualizarConstrucciones", "class_library_1_1_domain_1_1_jugador.html#a4e9911b2f53f10df6c482179953399f3", null ],
+    [ "ActualizarUnidades", "class_library_1_1_domain_1_1_jugador.html#af517cc8e5d94f71e68da39a7ed2e342b", null ],
+    [ "AgregarEdificio", "class_library_1_1_domain_1_1_jugador.html#adba4e484228faa71a5d96204319376cc", null ],
+    [ "AgregarRecurso", "class_library_1_1_domain_1_1_jugador.html#a69e3454e2fb539c40cb94838b575909c", null ],
+    [ "AgregarUnidad", "class_library_1_1_domain_1_1_jugador.html#a6f6ff730f8d3a156d84179581313c8d3", null ],
+    [ "AumentarPoblacionMaxima", "class_library_1_1_domain_1_1_jugador.html#a53326a09d5fa76e8d7636e43cc9dbe06", null ],
+    [ "DepositarRecursos", "class_library_1_1_domain_1_1_jugador.html#ac6922705c67d265619bacc4744c27f45", null ],
+    [ "ObtenerResumenPoblacion", "class_library_1_1_domain_1_1_jugador.html#ae419b4d9654708ef0adb35f2107f8ff7", null ],
+    [ "ObtenerResumenRecursosTotales", "class_library_1_1_domain_1_1_jugador.html#a6de46599bb127e6873fbd219503a91c7", null ],
+    [ "PuedeCrearAldeano", "class_library_1_1_domain_1_1_jugador.html#aac38f144e1ee9899da9bc30c79bd93a6", null ],
+    [ "Aldeanos", "class_library_1_1_domain_1_1_jugador.html#a5b2e8cbd75c7f5ae90c203b8aca45814", null ],
+    [ "CentroCivico", "class_library_1_1_domain_1_1_jugador.html#a570ef013fb760e5e4f98c1a728827edd", null ],
+    [ "Civilizacion", "class_library_1_1_domain_1_1_jugador.html#a8558756e5b8dfec2c13da258766ddf57", null ],
+    [ "Edificios", "class_library_1_1_domain_1_1_jugador.html#ab0c6c719b17f604cd5eb33e6ff31eb4b", null ],
+    [ "EdificiosEnConstruccion", "class_library_1_1_domain_1_1_jugador.html#a4e25a66c5191864a7e122a82c9ead809", null ],
+    [ "Nombre", "class_library_1_1_domain_1_1_jugador.html#ad238fb952414c9be3022056c578a4fa6", null ],
+    [ "PoblacionActual", "class_library_1_1_domain_1_1_jugador.html#a46889af8cd34e967b521729ef0d84bf0", null ],
+    [ "PoblacionMaxima", "class_library_1_1_domain_1_1_jugador.html#a933286ed3dc226949e5be4401f28d805", null ],
+    [ "Recursos", "class_library_1_1_domain_1_1_jugador.html#a9f1e78721bcdb9c2dbcb8d867122f487", null ],
+    [ "Unidades", "class_library_1_1_domain_1_1_jugador.html#aff264013cb03a7b566268d7797984523", null ],
+    [ "UnidadesEnEntrenamiento", "class_library_1_1_domain_1_1_jugador.html#aa46e1a6741bf4d9064a444b24c7e02ac", null ]
+];
