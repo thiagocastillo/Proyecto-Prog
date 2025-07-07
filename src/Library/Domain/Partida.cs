@@ -1,10 +1,15 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Library.Services;
+
 namespace Library.Domain;
 
-public class Partida
+public class Partida: IJsonConvertible
 {
     public Mapa Mapa { get; private set; }  //Se representa el mapa
     public List<Jugador> Jugadores { get; private set; } = new List<Jugador>();  // Lista de jugadores que participan en la partida.
 
+    [JsonConstructor]
     public Partida()  // Constructor de la clase Partida.
     {
         Mapa = new Mapa();
@@ -32,5 +37,30 @@ public class Partida
             }
         }
         return null; // Si ambos tienen su centro cívico, aún no hay ganador
+    }
+    
+    public string ConvertToJson()
+    {
+        JsonSerializerOptions options = new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            ReferenceHandler = ReferenceHandler.Preserve
+        };
+    
+        return JsonSerializer.Serialize(this, options);
+    }
+
+    
+    public void LoadFromJson(string json)
+    {
+        JsonSerializerOptions options = new JsonSerializerOptions
+        {
+            ReferenceHandler = ReferenceHandler.Preserve
+        };
+
+        Partida deserialized = JsonSerializer.Deserialize<Partida>(json, options);
+
+        this.Mapa = deserialized.Mapa;
+        this.Jugadores = deserialized.Jugadores;
     }
 }

@@ -1,8 +1,10 @@
 namespace Library.Domain;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json;
 using System.IO;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+
 // Fachada principal para gestionar la lógica del juego y exponer operaciones de alto nivel
 public class JuegoFachada
 {
@@ -484,32 +486,52 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
         
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
-   
-
-    public void GuardarPartida(string rutaArchivo)
+ 
+    public void GuardarPartida(string nombreArchivo)
     {
-        if (_partidaActual == null)
-            throw new InvalidOperationException("No hay partida activa para guardar.");
+        string carpeta = "./partidas";
+        if (!Directory.Exists(carpeta))
+        {
+            Directory.CreateDirectory(carpeta);
+        }
 
-        var opciones = new JsonSerializerOptions
+        string ruta = Path.Combine(carpeta, $"Partida_{nombreArchivo}.json");
+        string json = JsonSerializer.Serialize(_partidaActual, new JsonSerializerOptions
         {
             WriteIndented = true,
-            IncludeFields = true // Si usas campos públicos
-        };
-        string json = JsonSerializer.Serialize(_partidaActual, opciones);
-        File.WriteAllText(rutaArchivo, json);
+            ReferenceHandler = ReferenceHandler.Preserve
+        });
+
+        File.WriteAllText(ruta, json);
     }
 
-    public void CargarPartida(string rutaArchivo)
+
+    public void CargarPartida(string nombreArchivo)
     {
-        if (!File.Exists(rutaArchivo))
-            throw new FileNotFoundException("No se encontró el archivo de partida guardada.");
+        string carpeta = "./partidas";
+        string ruta = Path.Combine(carpeta, $"Partida_{nombreArchivo}.json");
 
-        var opciones = new JsonSerializerOptions
-        {
-            IncludeFields = true
-        };
-        _partidaActual = JsonSerializer.Deserialize<Partida>(File.ReadAllText(rutaArchivo), opciones);
+        if (!File.Exists(ruta))
+            throw new FileNotFoundException($"No se encontró la partida '{nombreArchivo}'.");
+
+        string contenido = File.ReadAllText(ruta);
+        Partida partida = JsonSerializer.Deserialize<Partida>(contenido);
+        _partidaActual = partida;
     }
- 
+
+    public List<string> ListarPartidas()
+    {
+        string carpeta = "./partidas"; // 🔴 debe coincidir con GuardarPartida
+
+        if (!Directory.Exists(carpeta))
+            return new List<string>();
+
+        string[] archivos = Directory.GetFiles(carpeta, "Partida_*.json");
+
+        return archivos
+            .Select(path => Path.GetFileNameWithoutExtension(path).Replace("Partida_", ""))
+            .ToList();
+    }
+
+
 }

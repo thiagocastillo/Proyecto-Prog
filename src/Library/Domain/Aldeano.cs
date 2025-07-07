@@ -6,7 +6,7 @@ namespace Library.Domain;
 
 public class Aldeano : IUnidad, IRecolector
 { 
-    public Jugador Propietario { get; private set; }
+    public Jugador Propietario { get; set; }
 
     // Propiedades de combate
     public int Ataque { get; private set; } = 0;
