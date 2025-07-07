@@ -13,7 +13,7 @@ public class ArqueroCompuesto : Arquero, IUnidadMilitar
     public ArqueroCompuesto(Jugador propietario) : base(propietario)
     {
         // Ajusta los valores base para el Arquero Compuesto
-        this.Ataque = 12;
+        this.Ataque = 400;
         this.Defensa = 5;
 
         // Tiempo de generación específico para Arquero Compuesto (puedes ajustar el valor)

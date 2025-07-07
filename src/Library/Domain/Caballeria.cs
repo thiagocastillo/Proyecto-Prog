@@ -3,7 +3,7 @@ namespace Library.Domain;
 public class Caballeria : IUnidadMilitar
 {
     public Jugador Propietario { get; private set; }
-    public int Ataque { get; private set; } = 12;
+    public int Ataque { get; private set; } = 700;
     public int Defensa { get; private set; } = 7;
     public double Velocidad { get; private set; } = 1.5;
     public int Salud { get; set; }

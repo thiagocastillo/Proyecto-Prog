@@ -3,7 +3,7 @@ namespace Library.Domain;
 public class Arquero : IUnidadMilitar
 {
     public Jugador Propietario { get; private set; }
-    public int Ataque { get; set; } = 8; 
+    public int Ataque { get; set; } = 300; 
     public int Defensa { get; set; } = 3;
     public double Velocidad { get; private set; } = 1.2;
     public int Salud { get; set; }
