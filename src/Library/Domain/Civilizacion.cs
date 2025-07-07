@@ -16,4 +16,9 @@ public class Civilizacion
         Bonificaciones = bonificaciones;
         UnidadEspecial = unidadEspecial;
     }
+
+    public Civilizacion()
+    {
+        
+    }
 }

@@ -34,6 +34,11 @@ public class Jugador
     public List<IUnidadMilitar> UnidadesEnEntrenamiento { get; set; } = new List<IUnidadMilitar>();
 
     [JsonConstructor]
+    public Jugador()
+    {
+        
+    }
+    
     public Jugador(string nombre, Civilizacion civilizacion)
     {
         Nombre = nombre;

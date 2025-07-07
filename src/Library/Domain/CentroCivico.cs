@@ -10,6 +10,10 @@ public class CentroCivico : IAlmacenamiento , IEdificio
     public int CapacidadMaxima { get; private set; } = 500;
     public Dictionary<string, int> Recursos { get; private set; } = new Dictionary<string, int>();
 
+    public CentroCivico()
+    {
+        
+    }
     public CentroCivico(Jugador propietario)
     {
         Propietario = propietario;

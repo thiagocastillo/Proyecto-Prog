@@ -8,6 +8,7 @@ public class Partida: IJsonConvertible
 {
     public Mapa Mapa { get; private set; }  //Se representa el mapa
        
+    [JsonInclude]
     public List<Jugador> Jugadores { get; private set; } = new List<Jugador>();  // Lista de jugadores que participan en la partida.
 
     [JsonConstructor]

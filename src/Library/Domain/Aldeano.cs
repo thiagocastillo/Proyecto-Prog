@@ -19,6 +19,12 @@ public class Aldeano : IUnidad, IRecolector
     public int TiempoDeCreacion => TiempoGeneracion.TiempoTotalSegundos;
     public TiempoDeGeneracion TiempoGeneracion { get; private set; }
 
+
+    public Aldeano()
+    {
+        
+    }
+        
     public Aldeano(Jugador propietario)
     {
         Propietario = propietario;
