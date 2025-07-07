@@ -1,4 +1,3 @@
-// src/Library/Domain/Mapa.cs
 namespace Library.Domain;
 using System.IO;
 using System.Diagnostics;
@@ -6,7 +5,6 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 
-// Clase que representa el mapa del juego
 public class Mapa
 {
     public int Ancho { get; private set; } = 100;
@@ -22,7 +20,7 @@ public class Mapa
     public List<IUnidad> ObtenerUnidadesEn(Point coordenada, List<Jugador> jugadores)
     {
         List<IUnidad> unidades = new List<IUnidad>();
-        foreach (var jugador in jugadores)
+        foreach (Jugador jugador in jugadores)
         {
             if (jugador?.Unidades == null) continue;
             unidades.AddRange(jugador.Unidades.Where(u => u.Posicion.Equals(coordenada)));
@@ -33,7 +31,7 @@ public class Mapa
     public List<IEdificio> ObtenerEdificiosEn(Point coordenada, List<Jugador> jugadores)
     {
         List<IEdificio> edificios = new List<IEdificio>();
-        foreach (var jugador in jugadores)
+        foreach (Jugador jugador in jugadores)
         {
             if (jugador?.Edificios == null) continue;
             edificios.AddRange(jugador.Edificios.Where(e => e.Posicion.Equals(coordenada)));
@@ -45,9 +43,8 @@ public class Mapa
     {
         Recursos.Clear();
         int cantidad = random.Next(min, max + 1);
-        var posicionesOcupadas = new HashSet<(int, int)>();
+        HashSet<(int, int)> posicionesOcupadas = new HashSet<(int, int)>();
 
-        // Al menos 5 árboles
         for (int i = 0; i < 5; i++)
         {
             int x, y;
@@ -62,7 +59,6 @@ public class Mapa
             Recursos.Add(new Arbol(vidaBase, new Point(x, y)));
         }
 
-        // Resto de recursos
         for (int i = 5; i < cantidad; i++)
         {
             int x, y;
@@ -88,14 +84,13 @@ public class Mapa
     }
 
     public string MostrarMapaTXT(List<Jugador> jugadores)
-    { 
-        
+    {
         char[,] grid = new char[Alto, Ancho];
         for (int y = 0; y < Alto; y++)
             for (int x = 0; x < Ancho; x++)
                 grid[y, x] = '.';
 
-        foreach (var recurso in Recursos)
+        foreach (RecursoNatural recurso in Recursos)
         {
             if (recurso?.Ubicacion == null) continue;
             int x = recurso.Ubicacion.X;
@@ -113,12 +108,12 @@ public class Mapa
             }
         }
 
-        foreach (var jugador in jugadores)
+        foreach (Jugador jugador in jugadores)
         {
             if (jugador == null) continue;
             if (jugador.Edificios != null)
             {
-                foreach (var edificio in jugador.Edificios)
+                foreach (IEdificio edificio in jugador.Edificios)
                 {
                     if (edificio?.Posicion == null) continue;
                     int x = edificio.Posicion.X;
@@ -136,7 +131,7 @@ public class Mapa
             }
             if (jugador.Unidades != null)
             {
-                foreach (var unidad in jugador.Unidades)
+                foreach (IUnidad unidad in jugador.Unidades)
                 {
                     if (unidad?.Posicion == null) continue;
                     int x = unidad.Posicion.X;
@@ -158,7 +153,7 @@ public class Mapa
             }
         }
 
-        var sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         sb.Append("    ");
         for (int x = 0; x < Ancho; x++)
             sb.Append(x.ToString("D2") + " ");
@@ -181,14 +176,13 @@ public class Mapa
 
     public string MostrarMapaHtml(List<Jugador> jugadores)
     {
-   
-        var coloresJugadores = new[] { "#FF0000", "#0000FF" };
-        var colorArbol = "#228B22";
-        var colorPiedra = "#A9A9A9";
-        var colorOro = "#FFD700";
-        var colorVacio = "#FFFFFF";
+        string[] coloresJugadores = new[] { "#FF0000", "#0000FF" };
+        string colorArbol = "#228B22";
+        string colorPiedra = "#A9A9A9";
+        string colorOro = "#FFD700";
+        string colorVacio = "#FFFFFF";
 
-        var sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         sb.AppendLine("<html><head><meta charset='UTF-8'><title>Mapa</title></head><body>");
         sb.AppendLine("<table border='1' cellspacing='0' cellpadding='2' style='font-family:monospace;font-size:10px;border-collapse:collapse;'>");
 
@@ -205,7 +199,7 @@ public class Mapa
                 string color = colorVacio;
                 string contenido = "&nbsp;";
 
-                var recurso = Recursos.FirstOrDefault(r => r.Ubicacion.X == x && r.Ubicacion.Y == y);
+                RecursoNatural recurso = Recursos.FirstOrDefault(r => r.Ubicacion.X == x && r.Ubicacion.Y == y);
                 if (recurso != null)
                 {
                     if (recurso is Arbol)
@@ -227,10 +221,10 @@ public class Mapa
 
                 for (int j = 0; j < jugadores.Count; j++)
                 {
-                    var jugador = jugadores[j];
-                    var colorJugador = coloresJugadores[j % coloresJugadores.Length];
-                    
-                    var edificio = jugador.Edificios?.FirstOrDefault(e => e.Posicion.X == x && e.Posicion.Y == y);
+                    Jugador jugador = jugadores[j];
+                    string colorJugador = coloresJugadores[j % coloresJugadores.Length];
+
+                    IEdificio edificio = jugador.Edificios?.FirstOrDefault(e => e.Posicion.X == x && e.Posicion.Y == y);
                     if (edificio != null)
                     {
                         color = colorJugador;
@@ -242,7 +236,7 @@ public class Mapa
                         };
                     }
 
-                    var unidad = jugador.Unidades?.FirstOrDefault(u => u.Posicion.X == x && u.Posicion.Y == y);
+                    IUnidad unidad = jugador.Unidades?.FirstOrDefault(u => u.Posicion.X == x && u.Posicion.Y == y);
                     if (unidad != null)
                     {
                         color = colorJugador;
