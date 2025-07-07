@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization.Metadata;
+
 namespace Library.Domain;
 using System.Collections.Generic;
 using System.Linq;
@@ -487,6 +489,52 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
         return jugador?.Edificios.ToList() ?? new List<IEdificio>();
     }
  
+    static void JsonPolymorphicModifier(JsonTypeInfo typeInfo)
+    {
+        if (typeInfo.Type == typeof(IUnidad))
+        {
+            typeInfo.PolymorphismOptions = new JsonPolymorphismOptions
+            {
+                TypeDiscriminatorPropertyName = "$tipo",
+                IgnoreUnrecognizedTypeDiscriminators = true,
+                DerivedTypes =
+                {
+                    new JsonDerivedType(typeof(Infanteria), "infanteria"),
+                    new JsonDerivedType(typeof(Caballeria), "caballeria"),
+                    new JsonDerivedType(typeof(Aldeano), "aldeano"),
+                    new JsonDerivedType(typeof(Arquero), "arquero"),
+                    new JsonDerivedType(typeof(ArqueroCompuesto), "arquerocompuesto"),
+                    new JsonDerivedType(typeof(GuerreroJaguar), "guerrerojaguar"),
+                    new JsonDerivedType(typeof(Ratha), "ratha"),
+
+
+                }
+            };
+        }
+
+        if (typeInfo.Type == typeof(IEdificio))
+            {
+                typeInfo.PolymorphismOptions = new JsonPolymorphismOptions
+                {
+                    TypeDiscriminatorPropertyName = "$tipo",
+                    IgnoreUnrecognizedTypeDiscriminators = true,
+                    DerivedTypes =
+                    {
+                        new JsonDerivedType(typeof(Casa), "casa"),
+                        new JsonDerivedType(typeof(CentroCivico), "centrocivico"),
+                        new JsonDerivedType(typeof(Cuartel), "cuartel"),
+                        new JsonDerivedType(typeof(DepositoOro), "depositooro"),
+                        new JsonDerivedType(typeof(DepositoMadera), "despoitomadera"),
+                        new JsonDerivedType(typeof(DepositoPiedra), "depositopiedra"),
+                        new JsonDerivedType(typeof(Molino), "molino"),
+                        new JsonDerivedType(typeof(Granja), "granja"),
+
+                    
+                    
+                    }
+                };
+        }
+    }
     public void GuardarPartida(string nombreArchivo)
     {
         string carpeta = "./partidas";
@@ -521,8 +569,11 @@ public void EntrenarUnidad(string nombreJugador, string tipoUnidad, Point posici
         string contenido = File.ReadAllText(ruta);
         var opciones = new JsonSerializerOptions
         {
+            WriteIndented = true,
             ReferenceHandler = ReferenceHandler.Preserve,
-            IncludeFields = true
+            IncludeFields = true, // Incluye campos públicos si los hay
+            Converters = { new JsonStringEnumConverter() },
+            TypeInfoResolver = new DefaultJsonTypeInfoResolver { Modifiers = { JsonPolymorphicModifier } }
         };
         Partida partida = JsonSerializer.Deserialize<Partida>(contenido, opciones);
         _partidaActual = partida;

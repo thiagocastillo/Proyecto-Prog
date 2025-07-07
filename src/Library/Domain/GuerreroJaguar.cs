@@ -8,6 +8,10 @@ public class GuerreroJaguar : Infanteria, IUnidadMilitar
     // Implementación requerida por la interfaz
     public int TiempoDeCreacion => TiempoGeneracion.TiempoTotalSegundos;
 
+    public GuerreroJaguar()
+    {
+        
+    }
     public GuerreroJaguar(Jugador propietario) : base(propietario)
     {
         // Tiempo de generación específico para Guerrero Jaguar (puedes ajustar el valor)

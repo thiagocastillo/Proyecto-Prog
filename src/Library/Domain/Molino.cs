@@ -27,6 +27,10 @@ public class Molino : IAlmacenamiento ,IEdificio
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
 
     // Constructor: inicializa el molino con su propietario, vida y tiempo de construcción
+    public Molino()
+    {
+        
+    }
     public Molino(Jugador propietario)
     {
         Propietario = propietario;

@@ -316,7 +316,9 @@ Por lo tanto, luego de escuchar y conversar sobre la devolución de nuestro doce
 
 # NOTAS Y ACLARACIONES DEL EQUIPO:
 
-## Reflexion de equipo: (...)
+## Reflexion de equipo:
+
+(...)
 
 ## Tiago: 
 Durante la entrega y el desarrollo del proyecto, senti que lo que mas me costaba y desafiaba mas era el entender como las clases iban a interactuar entre ellas para lograr el resultado esperado, ademas de otros varios desafios como aplicar los conceptos aprendidos durante el curso, en el proyecto. Tambien, ya que en Programación 2 trabajamos con C#, me costo acomodarme con el lenguaje ya que solo habia programado en Pascal y en Python, pero con ayuda de compañeros experimentados y varias repasadas al lenguaje, le logre agarrar la mano, y no solo eso, sino que aprendi mas alla del lenguaje basico de C#. 

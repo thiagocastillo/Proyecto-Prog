@@ -15,6 +15,10 @@ public class Arquero : IUnidadMilitar
     // Implementación requerida por la interfaz
     public int TiempoDeCreacion => TiempoGeneracion.TiempoTotalSegundos;
 
+    public Arquero()
+    {
+        
+    }
     public Arquero(Jugador propietario)
     {
         Propietario = propietario;

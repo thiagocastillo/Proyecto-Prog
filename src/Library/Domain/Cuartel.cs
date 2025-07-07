@@ -23,6 +23,10 @@ public class Cuartel : IEdificio
     public bool EstaConstruido => tiempoconstruccion.EstaCompleta;
 
     // Constructor: inicializa el cuartel y su tiempo de construcción (60 segundos)
+    public Cuartel()
+    {
+        
+    }
     public Cuartel(Jugador propietario)
     {
         Propietario = propietario;
