@@ -293,19 +293,6 @@ Se utilizan colecciones genéricas (List <>, Dictionary <>) y expresiones LINQ c
 
 Por ejemplo, la búsqueda de unidades en una coordenada específica se realiza de manera eficiente con Where y SelectMany. Por otro lado, la lógica de verificación del ganador (verificarGanador) o la validación de construcciones (any) emplea LINQ para evitar estructuras repetitivas.  
 
-<br>
-
-
-# NOTAS Y ACLARACIONES DEL EQUIPO:
-
-Reflexion de equipo: (...)
-
-Tiago: Durante la entrega y el desarrollo del proyecto, senti que lo que mas me costaba y desafiaba mas era el entender como las clases iban a interactuar entre ellas para lograr el resultado esperado, ademas de otros varios desafios como aplicar los conceptos aprendidos durante el curso, en el proyecto. Tambien, ya que en Programación 2 trabajamos con C#, me costo acomodarme con el lenguaje ya que solo habia programado en Pascal y en Python, pero con ayuda de compañeros experimentados y varias repasadas al lenguaje, le logre agarrar la mano, y no solo eso, sino que aprendi mas alla del lenguaje basico de C#. 
-Durante el desarrollo del Proyecto, logre entender el lenguaje y la Programación Orientada a Objetos mas a fondo. Fui creciendo con algunas paginas web que voy a dejar al final de mi reflexion, y mirando la forma de programar y diferentes formas de encarar los problemas de mis compañeros experimentados, ya que considero que aprendo rapido mirando y observando a detalle como trabajan personas con cierta experiencia. Resumiendo, este Proyecto me ayudo mucho para expandir mi conocimiento, entender mejor, ver las capacidades y a hasta donde puede llegar la Programación.
-Estas son algunas de las paginas que utilice para expandir mi conocimiento: 
-- https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop => Microsoft Learn
-- https://www.freecodecamp.org/news/how-to-use-oop-in-c-sharp/ => freeCodeCamp
-- https://learn.microsoft.com/en-us/dotnet/csharp/ => Microsoft Learn
 
 ## ANÁLISIS PRINCIPIO SRP EN LA RELACIÓN EDIFICIO - POSICIÓN:
 
@@ -321,3 +308,18 @@ Estas dos responsabilidades no deberían convivir en la misma clase, ya que resp
 Pero si cambia la forma en que se representa o gestiona el mapa, por ejemplo, si se introduce una grilla con otro tamaño o comportamiento, eso también requeriría modificar las mismas clases, lo cual viola SRP.
 
 Por lo tanto, luego de escuchar y conversar sobre la devolución de nuestro docente en esta segunda etapa del proyecto, decidimos documentar el por qué la posición no deberia estar en las clases que implementan IEdificio como una propiedad y decidimos documentar está observación reconociendo la violación del principio de diseño SRP en las clases ya mencionadas.
+
+
+<br>
+
+
+# NOTAS Y ACLARACIONES DEL EQUIPO:
+
+Reflexion de equipo: (...)
+
+Tiago: Durante la entrega y el desarrollo del proyecto, senti que lo que mas me costaba y desafiaba mas era el entender como las clases iban a interactuar entre ellas para lograr el resultado esperado, ademas de otros varios desafios como aplicar los conceptos aprendidos durante el curso, en el proyecto. Tambien, ya que en Programación 2 trabajamos con C#, me costo acomodarme con el lenguaje ya que solo habia programado en Pascal y en Python, pero con ayuda de compañeros experimentados y varias repasadas al lenguaje, le logre agarrar la mano, y no solo eso, sino que aprendi mas alla del lenguaje basico de C#. 
+Durante el desarrollo del Proyecto, logre entender el lenguaje y la Programación Orientada a Objetos mas a fondo. Fui creciendo con algunas paginas web que voy a dejar al final de mi reflexion, y mirando la forma de programar y diferentes formas de encarar los problemas de mis compañeros experimentados, ya que considero que aprendo rapido mirando y observando a detalle como trabajan personas con cierta experiencia. Resumiendo, este Proyecto me ayudo mucho para expandir mi conocimiento, entender mejor, ver las capacidades y a hasta donde puede llegar la Programación.
+Estas son algunas de las paginas que utilice para expandir mi conocimiento: 
+- https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop => Microsoft Learn
+- https://www.freecodecamp.org/news/how-to-use-oop-in-c-sharp/ => freeCodeCamp
+- https://learn.microsoft.com/en-us/dotnet/csharp/ => Microsoft Learn
