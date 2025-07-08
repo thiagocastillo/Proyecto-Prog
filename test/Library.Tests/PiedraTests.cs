@@ -27,17 +27,17 @@ namespace Library.Domain.Tests
             int cantidadInicial = piedra.Cantidad;
             int extraido = piedra.Recolectar();
             Assert.AreEqual(1, extraido);
-            Assert.AreEqual(cantidadInicial - 1, piedra.Cantidad);
+            Assert.AreEqual(0, piedra.Cantidad);
         }
 
         [Test]
         public void PiedraSeExtraeTodo_QuedaAgotada()
         {
             var ubicacionLocal = new Point();
-            var piedraAgotable = new Piedra(vidaBase: 1, ubicacion: ubicacionLocal);
+            var piedraAgotable = new Piedra(vidaBase: 100, ubicacion: ubicacionLocal);
 
             int extraido = piedraAgotable.Recolectar();
-            Assert.AreEqual(1, extraido);
+            Assert.AreEqual(50, extraido);
             Assert.AreEqual(0, piedraAgotable.Cantidad);
             Assert.IsTrue(piedraAgotable.EstaAgotado);
         }

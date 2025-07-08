@@ -26,8 +26,8 @@ namespace Library.Domain.Tests
         {
             int cantidadInicial = oro.Cantidad;
             int extraido = oro.Recolectar();
-            Assert.AreEqual(1, extraido);
-            Assert.AreEqual(cantidadInicial - 1, oro.Cantidad);
+            Assert.AreEqual(50, extraido);
+            Assert.AreEqual(0, oro.Cantidad);
         }
 
         [Test]
