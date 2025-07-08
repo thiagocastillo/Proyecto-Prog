@@ -50,21 +50,6 @@ public class JuegoFachada
         return _partidaActual.Mapa.MostrarMapaHtml(_partidaActual.Jugadores);
     }
     
-    // Lista todos los recursos presentes en el mapa
-    /*public string ListarRecursos()
-    {
-        if (_partidaActual == null || _partidaActual.Mapa == null || _partidaActual.Mapa.Recursos == null || !_partidaActual.Mapa.Recursos.Any())
-            return "No hay recursos en el mapa.";
-
-        var sb = new System.Text.StringBuilder();
-        
-        foreach (var recurso in _partidaActual.Mapa.Recursos)
-        {
-            sb.AppendLine($"{recurso.Nombre} en ({recurso.Ubicacion.X}, {recurso.Ubicacion.Y})");
-        }
-        return sb.ToString().TrimEnd();
-    }
-*/
     // Devuelve la lista de jugadores de la partida actual
     public List<Jugador> ObtenerJugadores()
     {
@@ -121,6 +106,7 @@ public class JuegoFachada
         }
         return -1; // Indica error
     }    
+    
     // Permite a un jugador construir un edificio en una posición si tiene recursos y la posición está libre
     public void ConstruirEdificio(string nombreJugador, string tipoEdificio, Point posicion)
     {
@@ -145,35 +131,45 @@ public class JuegoFachada
         switch (tipoEdificio.ToLower())
         {
             case "casa":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 50)
                     throw new InvalidOperationException("No hay suficiente Madera para construir una casa.");
+                
                 jugador.Recursos["Madera"] -= 50;
-                var casa = new Casa(jugador) { Posicion = posicion };
+                
+                Casa casa = new Casa(jugador) { Posicion = posicion };
                 jugador.EdificiosEnConstruccion.Add(casa);
                 break;
 
             case "cuartel":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 100)
                     throw new InvalidOperationException("No hay suficiente Madera para construir un cuartel.");
+                
                 nuevoEdificio = new Cuartel(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 100;
                 break;
 
             case "molino":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 75)
                     throw new InvalidOperationException("No hay suficiente Madera para construir un molino.");
+                
                 nuevoEdificio = new Molino(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 75;
                 break;
 
             case "depositomadera":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 60)
                     throw new InvalidOperationException("No hay suficiente Madera para construir un depósito de madera.");
+                
                 nuevoEdificio = new DepositoMadera(jugador) { Posicion = posicion };
                 jugador.Recursos["Madera"] -= 60;
                 break;
 
             case "depositooro":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 60)
                     throw new InvalidOperationException("No hay suficiente Madera para construir un depósito de oro.");
                 nuevoEdificio = new DepositoOro(jugador) { Posicion = posicion };
@@ -181,6 +177,7 @@ public class JuegoFachada
                 break;
 
             case "depositopiedra":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 60)
                     throw new InvalidOperationException("No hay suficiente Madera para construir un depósito de piedra.");
                 nuevoEdificio = new DepositoPiedra(jugador) { Posicion = posicion };
@@ -188,6 +185,7 @@ public class JuegoFachada
                 break;
 
             case "centrocivico":
+                
                 if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 200)
                     throw new InvalidOperationException("No hay suficiente Madera para construir un centro cívico.");
                 nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
@@ -227,6 +225,7 @@ public class JuegoFachada
         switch (tipoUnidad.ToLower())
         {
             case "aldeano":
+                
                 if (jugador.PuedeCrearAldeano() && recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 50)
                 {
                     Aldeano nuevoAldeano = new Aldeano(jugador) { Posicion = posicion };
@@ -238,6 +237,7 @@ public class JuegoFachada
                 break;
 
             case "guerrerojaguar":
+                
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
                 {
                     GuerreroJaguar nuevaUnidad = new GuerreroJaguar(jugador) { Posicion = posicion };
@@ -247,6 +247,7 @@ public class JuegoFachada
                 break;
 
             case "arquerocompuesto":
+                
                 if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
                 {
                     ArqueroCompuesto nuevaUnidad = new ArqueroCompuesto(jugador) { Posicion = posicion };
@@ -256,6 +257,7 @@ public class JuegoFachada
                 break;
 
             case "ratha":
+                
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
                     recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
                 {
@@ -267,6 +269,7 @@ public class JuegoFachada
                 break;
 
             case "infanteria":
+                
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 60)
                 {
                     Infanteria nuevaUnidad = new Infanteria(jugador) { Posicion = posicion };
@@ -276,6 +279,7 @@ public class JuegoFachada
                 break;
 
             case "arquero":
+                
                 if (recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 70)
                 {
                     Arquero nuevaUnidad = new Arquero(jugador) { Posicion = posicion };
@@ -285,6 +289,7 @@ public class JuegoFachada
                 break;
 
             case "caballeria":
+                
                 if (recursosTotales.ContainsKey("Alimento") && recursosTotales["Alimento"] >= 80 &&
                     recursosTotales.ContainsKey("Madera") && recursosTotales["Madera"] >= 60)
                 {
@@ -432,6 +437,7 @@ public class JuegoFachada
             if (edificioObjetivo is CentroCivico cc)
             {
                 double porcentajeVida = (double)cc.Vida / cc.VidaMaxima;
+                
                 if (porcentajeVida > 0 && porcentajeVida <= 0.20)  // Si la vida es menor o igual al 20% y aun no está destruido -> advertencia
                 {
                     resultado += $"\n¡Atención! El Centro Cívico de {jugadorObjetivo.Nombre} está a punto de ser destruido ({cc.Vida} de {cc.VidaMaxima} de vida).";
@@ -511,7 +517,6 @@ public class JuegoFachada
                 }
             };
         }
-
             if (typeInfo.Type == typeof(IEdificio))
             {
                 typeInfo.PolymorphismOptions = new JsonPolymorphismOptions
@@ -528,13 +533,11 @@ public class JuegoFachada
                         new JsonDerivedType(typeof(DepositoPiedra), "depositopiedra"),
                         new JsonDerivedType(typeof(Molino), "molino"),
                         new JsonDerivedType(typeof(Granja), "granja"),
-
-                    
-                    
                     }
                 };
         }
     }
+    
     public void GuardarPartida(string nombreArchivo)
     {
         string carpeta = "./partidas";
@@ -545,7 +548,8 @@ public class JuegoFachada
         }
 
         string ruta = Path.Combine(carpeta, $"Partida_{nombreArchivo}.json");
-        var opciones = new JsonSerializerOptions
+        
+        JsonSerializerOptions opciones = new JsonSerializerOptions
         {
             WriteIndented = true,
             ReferenceHandler = ReferenceHandler.Preserve,
@@ -568,7 +572,8 @@ public class JuegoFachada
             throw new FileNotFoundException($"No se encontró la partida '{nombreArchivo}'.");
 
         string contenido = File.ReadAllText(ruta);
-        var opciones = new JsonSerializerOptions
+        
+        JsonSerializerOptions opciones = new JsonSerializerOptions
         {
             WriteIndented = true,
             ReferenceHandler = ReferenceHandler.Preserve,
@@ -576,6 +581,7 @@ public class JuegoFachada
             Converters = { new JsonStringEnumConverter() },
             TypeInfoResolver = new DefaultJsonTypeInfoResolver { Modifiers = { JsonPolymorphicModifier } }
         };
+        
         Partida partida = JsonSerializer.Deserialize<Partida>(contenido, opciones);
         _partidaActual = partida;
     }
@@ -593,6 +599,4 @@ public class JuegoFachada
             .Select(path => Path.GetFileNameWithoutExtension(path).Replace("Partida_", ""))
             .ToList();
     }
-
-
 }

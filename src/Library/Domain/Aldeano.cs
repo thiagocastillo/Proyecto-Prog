@@ -52,6 +52,7 @@ public class Aldeano : IUnidad, IRecolector
     public void RecolectarEn(Point coordenada, Mapa mapa)
     {
         RecursoNatural recurso = mapa.Recursos.FirstOrDefault(r => r.Ubicacion.X == coordenada.X && r.Ubicacion.Y == coordenada.Y);
+        
         if (recurso == null)
             throw new InvalidOperationException("No hay recurso natural en la coordenada especificada.");
 
