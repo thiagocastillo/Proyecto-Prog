@@ -70,7 +70,7 @@ public class Bot : IBot
 
     private async Task OnReadyAsync()
     {
-        string mensaje = "Bienvenido al juego de estrategia en tiempo real. Ejecute el comando '!ayuda' para ver la lista de comandos disponibles.";
+        string mensaje = "Bienvenido al juego de estrategia en tiempo real. Ejecute el comando '!ayuda' para ver la lista de comandos disponibles. o !ayudapartida para ver los comandos de la partida.";
 
         foreach (SocketGuild guild in client.Guilds)
         {

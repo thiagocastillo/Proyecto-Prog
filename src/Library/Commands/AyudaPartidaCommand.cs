@@ -2,15 +2,15 @@
 using System.Threading.Tasks;
 using Library.Domain;
 
-public class AyudaCommand : ModuleBase<SocketCommandContext>
+public class AyudaPartidaCommand : ModuleBase<SocketCommandContext>
 {
     private readonly JuegoFachada _fachada = JuegoFachada.Instancia;
 
-    [Command("ayuda")]
+    [Command("ayudapartida")]
     [Summary("Muestra la ayuda del juego.")]
     public async Task AyudaAsync()
     {
-        string ayuda = Ayuda.ObtenerComandos();
+        string ayuda = Ayuda.AyudaPartida();
         await ReplyAsync(ayuda);
     }
 }
