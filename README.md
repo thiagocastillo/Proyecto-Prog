@@ -331,3 +331,9 @@ Estas son algunas de las paginas que utilice para expandir mi conocimiento:
 ## Nicolas: 
 Durante el proyecto, creo que fui mejorando mi entendimiento del lenguaje de programacion C# y lograr entender como las clases intereactuaban entre ellas. Pero con ver ejemplos y releer las lecturas donde estaban ejemplos de los conceptos que tenia que implementar para lograr el objetivo. Tambien, con ayuda de compañeros con conocimiento previo en el lenguaje y por buscar soluciones por mi cuenta hasta lograr entender mis dificultades, pude entender mas este lenguaje y entender la logica de la programacion orientada a objetos. 
 Ademas de poder entender mas la programacion orientada a objetos, tambien pude mejorar mi manera de trabajar en equipo gracias a mis compañeros que me han ayudado a mejorar.
+
+## Santiago:
+
+Durante el proyecto, como equipo tuvimos varios encontronazos en varios aspectos, que al final conversandolo entre los cuatro pudimos mejorar.. Personalmente, si es cierto que viniendo de cursos anteriores donde ya habia visto C#, principios SOLID, GRASP, excepciones, etc., pude destacarme un poco más en el trabajo, pero por suerte pudimos conversar en equipo e intentamos equiparar un poco más el trabajo.
+
+Siento que lo que más nos costó del proyecto, o por lo menos a mi, fue el diseño de UMLs y tarjetas CRC, en cuanto a las relaciones de las distintas clases. El resto del trabajo lo pudimos ir desarrollando consultando con compañeros, docentes y quizas alguna herramienta del Internet, pero pudimos sacar adelante un buen proyecto y fue un gran aprendizaje para todos.
