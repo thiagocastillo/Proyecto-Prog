@@ -337,3 +337,10 @@ Ademas de poder entender mas la programacion orientada a objetos, tambien pude m
 Durante el proyecto, como equipo tuvimos varios encontronazos en varios aspectos, que al final conversandolo entre los cuatro pudimos mejorar.. Personalmente, si es cierto que viniendo de cursos anteriores donde ya habia visto C#, principios SOLID, GRASP, excepciones, etc., pude destacarme un poco más en el trabajo, pero por suerte pudimos conversar en equipo e intentamos equiparar un poco más el trabajo.
 
 Siento que lo que más nos costó del proyecto, o por lo menos a mi, fue el diseño de UMLs y tarjetas CRC, en cuanto a las relaciones de las distintas clases. El resto del trabajo lo pudimos ir desarrollando consultando con compañeros, docentes y quizas alguna herramienta del Internet, pero pudimos sacar adelante un buen proyecto y fue un gran aprendizaje para todos.
+
+## Thiago:
+Enfrentarme a este nuevo equipo fue un desafío revelador. Me mostró la complejidad de trabajar con diferentes personas, donde la comunicación y la adaptación fueron clave.
+
+Este proyecto me obligó a aplicar directamente los conocimientos adquiridos en clase, desde la gestión de proyectos hasta la resolución de conflictos. No fue solo teoría; fue ponerla en práctica.
+
+La experiencia reforzó la importancia del trabajo en equipo y la necesidad de usar lo aprendido para superar obstáculos reales.
