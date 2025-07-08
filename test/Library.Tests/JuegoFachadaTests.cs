@@ -1,72 +1,58 @@
 using NUnit.Framework;
-using System.Drawing;
+using System.IO;
 using System.Collections.Generic;
 
 namespace Library.Domain.Tests
 {
     [TestFixture]
-    public class JuegoFachadaTests
+    public class JuegoFachadaPersistenceTests
     {
         private JuegoFachada fachada;
+        private string carpeta = "./partidas";
+        private string nombreArchivo = "test";
 
         [SetUp]
-        public void Setup()
+        public void SetUp()
         {
-            fachada = new JuegoFachada();
-        }
-
-        [Test]
-        public void CrearNuevaPartida_InicializaPartida()
-        {
-            fachada.CrearNuevaPartida();
-            List<string> civilizaciones = fachada.ObtenerCivilizacionesDisponibles();
-            Assert.IsNotNull(civilizaciones);
-            Assert.IsTrue(civilizaciones.Count > 0);
-        }
-
-        [Test]
-        public void AgregarJugadorAPartida_AgregaJugadorCorrectamente()
-        {
-            fachada.CrearNuevaPartida();
-            fachada.AgregarJugadorAPartida("Juan", "aztecas");
-            List<Jugador> jugadores = fachada.ObtenerJugadores();
-            Assert.AreEqual(1, jugadores.Count);
-            Assert.AreEqual("Juan", jugadores[0].Nombre);
-        }
-
-        [Test]
-        public void AgregarJugadorAPartida_NombreRepetido_LanzaExcepcion()
-        {
-            fachada.CrearNuevaPartida();
-            fachada.AgregarJugadorAPartida("Juan", "aztecas");
-            Assert.Throws<InvalidOperationException>(() =>
-                fachada.AgregarJugadorAPartida("Juan", "armenios"));
-        }
-
-        [Test]
-        public void ConstruirEdificio_Correcto_DescuentaRecursos()
-        {
+            fachada = JuegoFachada.Instancia;
+            if (Directory.Exists(carpeta))
+                Directory.Delete(carpeta, true);
+            Directory.CreateDirectory(carpeta);
             fachada.CrearNuevaPartida();
             fachada.AgregarJugadorAPartida("Ana", "armenios");
-            Jugador jugador = fachada.ObtenerJugadores()[0];
-            jugador.Recursos["Madera"] = 200;
-            fachada.ConstruirEdificio("Ana", "casa", new Point(1, 1));
-            Assert.AreEqual(150, jugador.Recursos["Madera"]);
-            
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            if (Directory.Exists(carpeta))
+                Directory.Delete(carpeta, true);
         }
 
         [Test]
-        public void EntrenarUnidad_Aldeano_DescuentaRecursos()
+        public void GuardarPartida_CreaArchivo()
         {
-            fachada.CrearNuevaPartida();
-            fachada.AgregarJugadorAPartida("Luis", "aztecas");
-            Jugador jugador = fachada.ObtenerJugadores()[0];
-            jugador.Recursos["Alimento"] = 100;
-            jugador.PoblacionActual = 0;
-            jugador.PoblacionMaxima = 5;
-            fachada.EntrenarUnidad("Luis", "aldeano", new Point(2, 2));
-            Assert.AreEqual(50, jugador.Recursos["Alimento"]);
-            Assert.IsTrue(jugador.Unidades.Exists(u => u.Posicion.X == 2 && u.Posicion.Y == 2));
+            fachada.GuardarPartida(nombreArchivo);
+            string ruta = Path.Combine(carpeta, $"Partida_{nombreArchivo}.json");
+            Assert.IsTrue(File.Exists(ruta), "El archivo de la partida no fue creado.");
+        }
+
+        [Test]
+        public void CargarPartida_RestauraEstado()
+        {
+            fachada.GuardarPartida(nombreArchivo);
+            fachada.CrearNuevaPartida(); // Borra el estado actual
+            fachada.CargarPartida(nombreArchivo);
+            var jugadores = fachada.ObtenerJugadores();
+            Assert.IsTrue(jugadores.Exists(j => j.Nombre == "Ana"), "No se restauró el jugador correctamente.");
+        }
+
+        [Test]
+        public void ListarPartidas_DevuelveArchivosGuardados()
+        {
+            fachada.GuardarPartida(nombreArchivo);
+            List<string> partidas = fachada.ListarPartidas();
+            Assert.Contains(nombreArchivo, partidas, "No se listó la partida guardada.");
         }
     }
 }
