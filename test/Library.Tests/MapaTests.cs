@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace Library.Domain.Tests
 {
@@ -12,8 +13,25 @@ namespace Library.Domain.Tests
         [TearDown]
         public void Cleanup()
         {
-            if (File.Exists("mapa.txt")) File.Delete("mapa.txt");
-            if (File.Exists("mapa.html")) File.Delete("mapa.html");
+            TryDeleteFile("mapa.txt");
+            TryDeleteFile("mapa.html");
+        }
+
+        private void TryDeleteFile(string fileName)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                try
+                {
+                    if (File.Exists(fileName))
+                        File.Delete(fileName);
+                    break;
+                }
+                catch (IOException)
+                {
+                    Thread.Sleep(100);
+                }
+            }
         }
 
         [Test]
@@ -105,7 +123,6 @@ namespace Library.Domain.Tests
         public void MostrarMapaTXT_SimbolosCorrectos()
         {
             var mapa = new Mapa();
-            
             mapa.Recursos.Clear();
             mapa.Recursos.Add(new Arbol(100, new Point(1, 1)));
             mapa.Recursos.Add(new Piedra(100, new Point(2, 2)));
@@ -121,7 +138,6 @@ namespace Library.Domain.Tests
         public void MostrarMapaTXT_UnidadYEdificio_SimbolosCorrectos()
         {
             var mapa = new Mapa();
-           
             mapa.Recursos.Clear();
             var jugador = new Jugador("Test", new Civilizacion("aztecas", null, ""));
             var aldeano = new Aldeano(jugador) { Posicion = new Point(0, 0) };
@@ -176,4 +192,4 @@ namespace Library.Domain.Tests
             Assert.That(resultadoHtml, Is.Not.Null);
         }
     }
-}
+} 
