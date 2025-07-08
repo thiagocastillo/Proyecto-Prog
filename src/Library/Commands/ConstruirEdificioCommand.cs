@@ -31,8 +31,9 @@ public class ConstruirEdificioCommand : ModuleBase<SocketCommandContext>
                 "cuartel" => 60,
                 "molino" => 40,
                 "depositomadera" => 30,
-                "depositpiedra" => 30,
+                "depositopiedra" => 30,
                 "depositooro" => 30,
+                "granja" => 20,
                 _ => throw new ArgumentException("Tipo de edificio no válido.")
             };
 

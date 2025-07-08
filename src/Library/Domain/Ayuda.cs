@@ -1,3 +1,4 @@
+﻿
 ﻿namespace Library.Domain;
 
 public static class Ayuda
