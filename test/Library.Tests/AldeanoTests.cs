@@ -16,7 +16,7 @@ namespace Library.Domain.Tests
             Civilizacion civilizacion = new Civilizacion("Aztecas", new List<string>(), "");
             jugador = new Jugador("Jugador1", civilizacion);
             aldeano = new Aldeano(jugador) { Salud = 50, Posicion = new Point(0, 0) };
-            mapa = new Mapa(); // Usa el constructor adecuado para ancho/alto
+            mapa = new Mapa();
         }
 
         [Test]
