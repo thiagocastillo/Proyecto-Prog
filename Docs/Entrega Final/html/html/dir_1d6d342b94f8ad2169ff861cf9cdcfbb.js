@@ -1,0 +1,27 @@
+var dir_1d6d342b94f8ad2169ff861cf9cdcfbb =
+[
+    [ "AgregarJugadorCommand.cs", "_agregar_jugador_command_8cs.html", "_agregar_jugador_command_8cs" ],
+    [ "AtacarEdificioCommand.cs", "_atacar_edificio_command_8cs.html", "_atacar_edificio_command_8cs" ],
+    [ "AtacarUnidadCommand.cs", "_atacar_unidad_command_8cs.html", "_atacar_unidad_command_8cs" ],
+    [ "AyudaCommand.cs", "_ayuda_command_8cs.html", "_ayuda_command_8cs" ],
+    [ "AyudaEdificiosCommand.cs", "_ayuda_edificios_command_8cs.html", "_ayuda_edificios_command_8cs" ],
+    [ "AyudaPartidaCommand.cs", "_ayuda_partida_command_8cs.html", "_ayuda_partida_command_8cs" ],
+    [ "AyudaUnidadesCommand.cs", "_ayuda_unidades_command_8cs.html", "_ayuda_unidades_command_8cs" ],
+    [ "CargarPartidaCommands.cs", "_cargar_partida_commands_8cs.html", "_cargar_partida_commands_8cs" ],
+    [ "CivilizacionesCommand.cs", "_civilizaciones_command_8cs.html", "_civilizaciones_command_8cs" ],
+    [ "ConstruirEdificioCommand.cs", "_construir_edificio_command_8cs.html", "_construir_edificio_command_8cs" ],
+    [ "CrearPartidaCommand.cs", "_crear_partida_command_8cs.html", "_crear_partida_command_8cs" ],
+    [ "EntrenarUnidadCommand.cs", "_entrenar_unidad_command_8cs.html", "_entrenar_unidad_command_8cs" ],
+    [ "GuardarPartidaCommands.cs", "_guardar_partida_commands_8cs.html", "_guardar_partida_commands_8cs" ],
+    [ "ListarEdificiosJugadorCommand.cs", "_listar_edificios_jugador_command_8cs.html", "_listar_edificios_jugador_command_8cs" ],
+    [ "ListarJugadoresCommand.cs", "_listar_jugadores_command_8cs.html", "_listar_jugadores_command_8cs" ],
+    [ "ListarPartidasCommand.cs", "_listar_partidas_command_8cs.html", "_listar_partidas_command_8cs" ],
+    [ "ListarRecursosJugadorCommand.cs", "_listar_recursos_jugador_command_8cs.html", "_listar_recursos_jugador_command_8cs" ],
+    [ "MostrarMapahHTMLCommand.cs", "_mostrar_mapah_h_t_m_l_command_8cs.html", "_mostrar_mapah_h_t_m_l_command_8cs" ],
+    [ "MostrarMapaTXTCommand.cs", "_mostrar_mapa_t_x_t_command_8cs.html", "_mostrar_mapa_t_x_t_command_8cs" ],
+    [ "MoverUnidadCommand.cs", "_mover_unidad_command_8cs.html", "_mover_unidad_command_8cs" ],
+    [ "MoverUnidadesCommand.cs", "_mover_unidades_command_8cs.html", "_mover_unidades_command_8cs" ],
+    [ "RecolectarCommand.cs", "_recolectar_command_8cs.html", "_recolectar_command_8cs" ],
+    [ "SalirCommand.cs", "_salir_command_8cs.html", "_salir_command_8cs" ],
+    [ "UnidadesJugadorCommand.cs", "_unidades_jugador_command_8cs.html", "_unidades_jugador_command_8cs" ]
+];
