@@ -51,7 +51,6 @@ public class Partida: IJsonConvertible
     
         return JsonSerializer.Serialize(this, options);
     }
-
     
     public void LoadFromJson(string json)
     {

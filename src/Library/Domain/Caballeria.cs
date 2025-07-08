@@ -28,14 +28,17 @@ public class Caballeria : IUnidadMilitar
     public double CalcularDaño(IUnidad objetivo)
     {
         double dañoBase = this.Ataque - objetivo.Defensa;
+        
         if (objetivo is Arquero)
         {
             dañoBase += 2;
         }
+        
         if (dañoBase < 0)
         {
             dañoBase = 0;
         }
+        
         return dañoBase;
     }
 
@@ -45,6 +48,7 @@ public class Caballeria : IUnidadMilitar
         {
             return false;
         }
+        
         Posicion = destino;
         return true;
     }
@@ -60,6 +64,7 @@ public class Caballeria : IUnidadMilitar
             return $"No se encontraron unidades de tipo {tipoUnidad} en la coordenada ({coordenada.X},{coordenada.Y}).";
 
         string resultado = "";
+        
         foreach (IUnidad unidad in unidadesEnCoordenada)
         {
             int daño = (int)CalcularDaño(unidad);
@@ -80,6 +85,7 @@ public class Caballeria : IUnidadMilitar
         int daño = this.Ataque;
         objetivo.Vida -= daño;
         string info = $"{GetType().Name} atacó el edificio {objetivo.GetType().Name} causando {daño} de daño. Vida restante del edificio: {Math.Max(0, objetivo.Vida)}.";
+       
         if (objetivo.Vida <= 0)
         {
             objetivo.Propietario.Edificios.Remove(objetivo);

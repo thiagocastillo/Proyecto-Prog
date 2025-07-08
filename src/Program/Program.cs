@@ -15,9 +15,7 @@ internal static class Program
 
         Bot();
     }
-
-    
-
+  
     private static void Bot()
     {
         BotLoader.LoadAsync().GetAwaiter().GetResult();
