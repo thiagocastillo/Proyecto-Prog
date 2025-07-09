@@ -184,14 +184,7 @@ public class JuegoFachada
                 jugador.Recursos["Madera"] -= 60;
                 break;
 
-            case "centrocivico":
-                
-                if (!recursosTotales.ContainsKey("Madera") || recursosTotales["Madera"] < 200)
-                    throw new InvalidOperationException("No hay suficiente Madera para construir un centro cívico.");
-                nuevoEdificio = new CentroCivico(jugador) { Posicion = posicion };
-                jugador.Recursos["Madera"] -= 200;
-                break;
-
+           
             default:
                 throw new ArgumentException("Tipo de edificio no válido.");
         }
