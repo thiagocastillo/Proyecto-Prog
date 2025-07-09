@@ -75,7 +75,7 @@ public class Bot : IBot
         foreach (SocketGuild guild in client.Guilds)
         {
             IEnumerable<SocketTextChannel> generalChannels = guild.TextChannels
-                .Where(c => c.Name.Equals("def-thiago    ", StringComparison.OrdinalIgnoreCase));
+                .Where(c => c.Name.Equals("def-thiago", StringComparison.OrdinalIgnoreCase));
 
             foreach (SocketTextChannel channel in generalChannels)
             {
